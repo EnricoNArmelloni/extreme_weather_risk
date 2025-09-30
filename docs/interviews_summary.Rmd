@@ -1,0 +1,32 @@
+---
+title: "test"
+output: pdf_document
+date: "2025-04-08"
+---
+
+```{r data , echo=FALSE}
+data("iris","airquality","mtcars")
+my_list <- list(iris,airquality,mtcars)
+names(my_list) <- c("iris","airquality","mtcars")
+subs=c('a','b','c')
+header_level='#'
+head_subs='##'
+```
+
+
+
+```{r, include=T, echo=FALSE, fig.width = 1,results = 'asis', fig.pos='H'}
+#knitr::include_graphics(file.path(main.dir,x.folder,j.images), dpi = 300)
+
+for(j in 1:length(names(my_list))){
+cat(sprintf('%s %s\n\n', header_level, names(my_list)[j]))
+  for(i in 1:length(subs)){
+   cat(sprintf('%s %s\n\n', head_subs, subs[i])) 
+   cat(' some random text \n\n')
+   #cat('\n\\newpage\n')
+   i.dat=my_list[[j]]
+   print(kableExtra::kable(head(i.dat)))
+  }
+}
+```
+

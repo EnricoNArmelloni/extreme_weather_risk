@@ -1,0 +1,10 @@
+---
+title: "Summary of the interviews"
+output: pdf_document
+date: "2025-04-08"
+---
+
+\newpage
+
+```{r child = 'interviews_summary_v1_0_0.Rmd'}
+```

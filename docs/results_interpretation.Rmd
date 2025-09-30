@@ -1,0 +1,312 @@
+---
+title: "Summary of the interviews"
+output: pdf_document
+date: "2025-04-08"
+---
+
+```{r data , echo=FALSE,message = FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+coding=read_csv(file.path(scriptDir, '..', 'data', 'coding_report.csv'))
+names(coding)[5]='id_sub'
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "events")
+names(evts)[2]='desc'
+f.style=coding[coding$id_q==0,c('id_I','value')]
+names(f.style)[2]='style'
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "questions")
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "responses")
+#resp$id_I=as.character(resp$id_I)
+
+```
+
+## Results
+
+### Phase 1 - scoring
+ 
+This section only reports the treatment done for answers scored as "-999". For each interviewee and event we computed the proportion of the answers scored as -999. These events with more than 50% of answers scored as -999 were excluded. The events excluded are the following:
+
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+evt.resp=coding[!is.na(coding$id_sub) & coding$id_q!=21  & !is.na(coding$value),]
+evt.resp$type=ifelse(evt.resp$value=='-999' , 'NO' ,'YES')
+tab1=evt.resp%>%
+  dplyr::group_by(id_I, id_sub, type)%>%
+  tally()%>%
+  dplyr::group_by(id_I, id_sub)%>%
+  dplyr::mutate(prop=n/sum(n))%>%
+  #slice_max(prop)%>%
+  dplyr::select(id_I, id_sub,type, prop)%>%
+  left_join(evts)%>%
+  left_join(f.style)
+p=ggplot(data = tab1[tab1$type=='YES',])+
+  geom_tile(aes(x=desc, y=paste(id_I, style), fill=prop))+
+  scale_fill_gradient2(low='red', high = 'blue', midpoint = 0.5)+
+  ylab('Interviewee')+
+  theme(axis.text.x = element_text(angle=45))
+evts.style=evt.resp%>%
+  dplyr::group_by(id_I, id_sub, type)%>%
+  tally()%>%
+  dplyr::group_by(id_I, id_sub)%>%
+  dplyr::mutate(prop=n/sum(n))%>%
+  slice_max(prop)%>%
+  dplyr::filter(type=='NO') # choose which events applies to each style
+
+kableExtra::kable(tab1[tab1$type=='NO' & tab1$prop>0.5,])
+```
+
+
+
+```{r , echo=FALSE,message = FALSE,fig.cap='Proportion of responses that were considered relevant by interviewee and event', fig.width=15, fig.height=8}
+p
+```
+
+
+### Phase 2.1 - Expert scoring
+
+Expert scoring of keywords produced fowlowin
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+
+exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/coding_revision_ALL.xlsx")
+
+kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(exp.scoring)-1),hline_after=T)%>%
+            column_spec(1, width = "2cm")%>%
+            column_spec(2, width = "2.5cm")%>%
+            column_spec(3, width = "2cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+   column_spec(5, width = "0.5cm")%>%
+   column_spec(6, width = "0.5cm")%>%
+   column_spec(7, width = "0.5cm")
+        print(kable.obj)
+```
+
+
+
+
+*Answers reviewed with Artificial Intelligence*
+
+
+
+### Missing questions
+
+#### 999 - need interpretation
+
+- if there is an obvious keyword use it for cross scoring
+
+See attached excel
+
+- if there is no obvious keyword and the question is needed for the CPT use LLM
+
+See annex
+
+- if there is no obvious keyword and the question is needed for the DAG review by expert
+
+These inputs are complex and their use would depend from the kind of scenario we are going to implement. 
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+interpret=coding[coding$value=='999' & !is.na(coding$value),]
+interpret=interpret[which(interpret$id_q%in% c(16, 18,19)),] # exclude 18 and 19
+interpret.llm=interpret%>%
+  left_join(f.style)%>%
+  left_join(evts.style, by=c('id_sub','id_I'))%>%
+  left_join(quest)%>%
+  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
+  left_join(resp)
+
+kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(tab2)-1),hline_after=T)%>%
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "8cm")
+print(kable.obj)
+```
+
+
+- any other: review by expert
+
+Most of these inputs deal with wind coming from different directions. This was not implemented (yet). The last question is very hard to understand. No value assigned so far to these.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+interpret=coding[coding$value=='999' & !is.na(coding$value),]
+interpret=interpret[-which(interpret$id_q%in% c(16, 18,19)),] # exclude 18 and 19
+interpret.llm=interpret%>%
+  left_join(f.style)%>%
+  left_join(evts.style, by=c('id_sub','id_I'))%>%
+  left_join(quest)%>%
+  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
+  left_join(resp)
+
+kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(tab2)-1),hline_after=T)%>%
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "8cm")
+print(kable.obj)
+```
+
+#### -997 - question was not understood
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+interpret=coding[coding$value=='-997' & !is.na(coding$value),]
+interpret.llm=interpret%>%
+  left_join(f.style)%>%
+  left_join(evts.style, by=c('id_sub','id_I'))%>%
+  left_join(quest)%>%
+  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
+  left_join(resp)
+
+kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(tab2)-1),hline_after=T)%>%
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "8cm")
+print(kable.obj)
+```
+
+
+#### -998 - matters but I don't know how to answer
+
+- try to assign a score borrowing from other people
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+# check for relevant missing data
+question.type=data.frame(id_q=as.numeric(c("2","3","4","5","6","7","9","10","13","15","35")),
+           hum.dom=c('human', 'metier', 'fish','fish','human','fish','human','human','desc','human','social'))
+coding.qt=left_join(coding[!is.na(coding$value),], question.type, by='id_q')
+coding.qt=coding.qt%>%
+  left_join(f.style)%>%
+  left_join(evts, by='id_sub')%>%
+  left_join(evts.style, by=c('id_sub','id_I'))
+events.missing=coding.qt[coding.qt$value%in%(c(-998,-997)),]
+
+```
+
+- Human 
+We have only two data that needs to borrow from other in the Human category.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.human=events.missing[events.missing$hum.dom=='human' & !is.na(events.missing$value),]%>%
+  left_join(quest)
+kable.obj=kableExtra::kable((missing.human[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "8cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")
+print(kable.obj)
+```
+
+
+For the coastal fisherman we can borrow from the other two coastal fisherman. This would be done in following steps and so we leave NA for now.
+For the recreational fisherman we can try to look for the same answer in the fishing guide.
+SO WHAT?
+
+
+#### metier
+
+For he category metier we have a handful of missing answers (total = 5) 
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.fish=events.missing[events.missing$hum.dom=='metier',]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)
+missing.fish=missing.fish[!is.na(missing.fish$value),]
+kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "8cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")
+print(kable.obj)
+```
+
+Since this affects the metier, we can inform the missing answers depending on people that attempted a score and fish in similar way. Let's see how this is distributed.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)%>%
+  distinct(id_q, id_sub)%>%
+  left_join(coding.qt)%>%
+  left_join(quest)%>%
+  dplyr::mutate(value=as.numeric(value))%>%
+  dplyr::filter(value>0)%>%
+  dplyr::filter(value<10)
+
+pl=ggplot(data=missing.fish)+
+  geom_histogram(aes(x=value, fill=style))+
+  facet_grid(cols=vars(short_description), rows=vars(desc), scales='free_x')
+print(pl)
+
+```
+
+
+
+
+#### Fish
+
+For he category fish we have a variety of missing answers (total = 23) 
+
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)
+kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "8cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")
+print(kable.obj)
+```
+
+Since this affects the fish, we can inform the missing answers depending on people that attempted a score. Let's see how this is distributed.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)%>%
+  distinct(id_q, id_sub)%>%
+  left_join(coding.qt)%>%
+  left_join(quest)%>%
+  dplyr::mutate(value=as.numeric(value))%>%
+  dplyr::filter(value>0)%>%
+  dplyr::filter(value<10)
+
+pl=ggplot(data=missing.fish)+
+  geom_histogram(aes(x=value, fill=style))+
+  facet_grid(cols=vars(short_description), rows=vars(desc), scales='free_x')
+print(pl)
+
+```
+
+
+
+
+
+
+
+
+

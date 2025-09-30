@@ -67,11 +67,11 @@ for(i in 1:length(sheet.list)){
 }
 
 # check for relevant missing data
-question.type=data.frame(id_q=c("2","3","4","5","6","7","9","10","13","15"),
-           hum.dom=c('human', 'metier', 'fish','fish','human','fish','human','human','desc','human'))
+question.type=data.frame(id_q=c("2","3","4","5","6","7","9","10","13","15", '35'),
+           hum.dom=c('human', 'metier', 'fish','fish','human','fish','human','human','desc','human', 'social'))
 
 events.results.qt=left_join(events.results[!is.na(events.results$score),], question.type, by='id_q')
-events.missing=events.results.qt[events.results.qt$score==999,]
+events.missing=events.results.qt[events.results.qt$score==-998,]
 
 missing.human=events.missing[events.missing$hum.dom=='human',]
 missing.metier=events.missing[events.missing$hum.dom=='metier',]
@@ -81,7 +81,7 @@ missing.fish=events.missing[events.missing$hum.dom=='fish',]
 
 
 
-
+read_csv("data/coding_report.csv")
 
 
 
