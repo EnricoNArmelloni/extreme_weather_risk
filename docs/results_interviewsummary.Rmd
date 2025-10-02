@@ -5,15 +5,22 @@ date: "2025-04-08"
 ---
 
 
-# Interviews Text
+# Interviews - integral text (English)
 
 Legend:
 
--999: does not apply
--998: applies but did not know
--997: the reply does not match the question
-999: pending interpretation
-0-5
+```{r , echo=FALSE,message = FALSE,results = 'asis', message=F}
+library(tidyverse)
+library(kableExtra)
+scoring.system=data.frame(Score=c('x', 999, -999, -998, -997), Type=paste('C', 1:5), Description = c('Number (x) available', 'To be interpreted','Does not apply', 'Cant answer', 'Garbled'))
+
+kableExtra::kable(scoring.system)%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "1cm")%>%
+            column_spec(2, width = "3cm")
+```
+
 
 
 ```{r data , echo=FALSE,message = FALSE}
@@ -75,7 +82,7 @@ for(i in 1:length(u.resp)){
     check.multi=apply(j.coding[,1:3], 2, function(x)unique(is.na(x)))
     if(length(unique(as.character(check.multi)))==1){
         j.resp=merge(j.resp, evts, by='id_sub')
-        j.resp=merge(j.resp, j.coding[,c("id_sub", "value")], by='id_sub')
+        j.resp=merge(j.resp, j.coding[,c("id_sub", "value")], by='id_sub', all.x=T)
         j.resp$type=NA
         j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
         j.resp=j.resp[,c('id_sub','description','text','value','type')]

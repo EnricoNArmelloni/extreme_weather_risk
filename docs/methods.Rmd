@@ -4,46 +4,58 @@ output: pdf_document
 date: "2025-04-08"
 ---
 
-# Treatment of Data
+# Methodology
 
-## Methodology
+## Scoring
 
-#### Phase 1 - scoring
+The interview notes were reviewed to identify quantitative scores applying following criteria (in this ordered):
 
-In pahse 1 we want to have as many numbers as possible. The answers were reviewed to identify self-declared scores applying following criteria (in this ordered):
+-   *C1 (score available)*: When a clear and unique self-declared score was provided, this was used as a score. In case the interviewee provided two scores (e.g.: 4 or 5), it was used the average (4.5). For those answers were alternative were provided for gear/target, create separate scoring.
+-   *C2 (score to be interpreted)*: Answers that were providing meaningful text but not a clear number, or that were considered worth of further attention, were scored as 999.
+-   *C3 (does not apply)*: Answers that were missing because the event/condition does not apply were scored as -999. When the “does not apply” was identified in more than 50% of the answers, the combination of fishing style-event was excluded from further analysis.
+-   *C4 (can't answer)*: Answers that were missing because people did not have a personal experience to refer but refers to an event that is relevant (i.e.: if during a storm you never go out, you might don’t know about how catchability changes) were scored as -998.
+-   *C5 (garbled)*: Answers that were not coherent with the question were scored -997
 
--   For those answers were it was possible to identify a clear and unique self-declared score, this was used. In case the interviewee provided two scores (e.g.: 4 or 5), it was used the average (4.5).
--   For those answers were alternative were provided for gear/target, create separate scoring.
--   Answers that were providing text but not number, or that were considered worth of further attention, were scored as 999.
--   Answers that were missing because the event/condition does not apply were scored as -999. When the “does not apply” was identified in more than 50% of the answers, the combination of fishing style-event was excluded from further analysis.
--   Answers that were missing because people did not attempt answer questions regarding scenarios where they have never been into (i.e.: if during a storm you never go out, you might don’t know about how catchability changes) were scored as -998.
--   Answers that were not coherent with the question were scored -997
+```{r , echo=FALSE,message = FALSE,results = 'asis', message=F}
+library(tidyverse)
+library(kableExtra)
+scoring.system=data.frame(Score=c('x', 999, -999, -998, -997), Type=paste('C', 1:5), Description = c('Number (x) available', 'To be interpreted','Does not apply', 'Cant answer', 'Garbled'))
 
-#### Phase 2 - interpretation
+kableExtra::kable(scoring.system)%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "1cm")%>%
+            column_spec(2, width = "3cm")
+```
 
-In phase 2 we addressed the answers tagged as 999. We applied a structured coding approach to qualitative responses using both human expertise and artificial intelligence assistance.
+
+## Interpretation
+
+A structured coding approach was applied to those answers scored as 999 using both human expertise and artificial intelligence assistance.
 
 -   Text for unclear answers was revised to extract the main keywords (i.e.: most people say; I think it does not affect so much etc.), and to identify wether the answer was needed to support narrative or to provide quantitative information.
 
 -   The keywords were pooled based on the expected type of answer (e.g.:). Three researchers independently assigned quantitative scores to textual descriptions based on predefined LIKERT scale. These expert based ratings were averaged to create a consensus dataset, which was used to establish interpretive patterns linking descriptive terms to quantitative values.
 
--   Answers without keywords that were needed to support narrative (i.e.: management) were left unscored.
-
 -   Answers without keywords needed for quantitative information were reviewed with Artificial Intelligence. We employed OpenAI’s GPT-5 (ChatGPT, September 2025 version) as an assistant to generalize these patterns to new responses. The model was not trained on external data but was guided by the team’s own scoring framework. For each new description, the model produced a suggested numerical score along with a written rationale. All outputs were reviewed and validated by the researchers to ensure consistency with the established coding scheme
 
-#### Phase 3 - reconstruction
+-   Answers without keywords that were needed to support narrative (i.e.: management) were left unscored.
+
+## Reconstruction
 
 The questions tagged as -998 (The “I don’t know”) were revised to understand if it is possible to borrow numbers from other interviewee. In many cases people did not attempt answer questions regarding scenarios where they have never been into (i.e.: if during a storm you never go out, you might don’t know about how catchability changes).
 
 Answers are pooled, with supervision, based on the domain of the answer: human, metier, fish, descriptive. The human domain regards aspects that depend on the specific person and can be pooled only across the same fishing style or closely related. The metier category regards fishing operations and can be pooled for similar gears and seasons. The fish category regards ecological aspects of the fish and can be grouped by fish type and season.
 
-#### Phase 4 - revise the narrative
+## Following tasks: revise the narrative
 
--   Multi gear/multispecies/multiarea: The event can cause to switch gear, and the alternative gear has different implications (this is not very easy to do) – we might just code this as switch area; to cope with bad conditions people go to fish elsewhere instead of applying some special handling; This thing of the switching gear/species is particularly relevant for sport fisherman and it can be coupled in case study 2. In terms of species we might limit to the most important and shared, which are perch, pike, herring, whitefish, sea trout, salmon. Some people mention other species. Like zander, vendace, eel, bream
+-   Multi gear/multiarea: some fisherman switch gear during the season and/or because of the event, and the alternative gear has different implications in terms of target species and risks. This thing of the switching gear/species is particularly relevant for sport fisherman and it can be coupled in case study 2. I am working on the DAG.
+
+-   In terms of species we might limit to the most important and shared, which are perch, pike, herring, whitefish, sea trout, salmon. Some people mention other species. Like zander, vendace, eel, bream.
 
 -   Interactions: the only relevant interactions mentioned were wind with rain (summer) or ice (winter). It was not mentioned often a quantitative answer for this interaction but in general people says that became more dangerous and less likely to go fishing.
 
--   The wind direction: they mention it so much that it might be worth.
+-   The wind direction: they mention it so much that it might be worth. I am trying to think about this.
 
 -   Lag effect. The main lag effect mentioned is what happen after a storm. Depending on the wind direction the catchability can improve or not the days after the event.
 

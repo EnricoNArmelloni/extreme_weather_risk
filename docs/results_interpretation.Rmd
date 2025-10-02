@@ -2,9 +2,12 @@
 title: "Summary of the interviews"
 output: pdf_document
 date: "2025-04-08"
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
-```{r data , echo=FALSE,message = FALSE}
+```{r  , echo=FALSE,message = FALSE}
 remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
@@ -26,12 +29,35 @@ resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'),
 
 ```
 
-## Results
+# Results
 
-### Phase 1 - scoring
- 
-This section only reports the treatment done for answers scored as "-999". For each interviewee and event we computed the proportion of the answers scored as -999. These events with more than 50% of answers scored as -999 were excluded. The events excluded are the following:
+## Scoring - overview
 
+The questionnaires originated more than 500 scores. About half of the responses (266) were including a clear and unequivocal quantitative score. A large number (123) were not considered relevant by interviewee. Answers that were considered relevant but did not provide a clear score were 150, among which the large majority (105) contained enough information to attempt an interpretation.
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+evt.resp=coding[!is.na(coding$id_sub) & !is.na(coding$value),]%>%
+  left_join(resp, by=c('id_I', 'id_q','id_sub'))
+evt.resp[is.na(evt.resp$score_obs),]$score_obs='900'
+evt.resp$fin.score=evt.resp$value
+evt.resp$fin.score=ifelse(evt.resp$fin.score==evt.resp$score_obs,evt.resp$fin.score,
+                          ifelse(evt.resp$score_obs=='900', ifelse(as.numeric(evt.resp$fin.score)<0,evt.resp$fin.score,'999' ), evt.resp$fin.score))
+evt.resp[as.numeric(evt.resp$fin.score)>=0 &as.numeric(evt.resp$fin.score)<=5,]$fin.score='x'
+
+obs=data.frame(table(evt.resp$fin.score))
+names(obs)=c('Score','Frequency')
+
+kableExtra::kable(obs%>%arrange(desc(Frequency)))%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")
+```
+
+### Scoring - does not apply (-999)
+
+For each interviewee and event we computed the proportion of the answers scored as -999. These events with more than 50% of answers
+scored as -999 were excluded. 
+The combination of events/styles excluded are the reported in the table. The image reports the proportion of answers indicating that the event is relevant.
 
 ```{r , echo=FALSE,message = FALSE,results = 'asis'}
 evt.resp=coding[!is.na(coding$id_sub) & coding$id_q!=21  & !is.na(coding$value),]
@@ -58,107 +84,21 @@ evts.style=evt.resp%>%
   slice_max(prop)%>%
   dplyr::filter(type=='NO') # choose which events applies to each style
 
-kableExtra::kable(tab1[tab1$type=='NO' & tab1$prop>0.5,])
+kableExtra::kable(tab1[tab1$type=='NO' & tab1$prop>0.5, c('desc','style')]%>%replace(is.na(.),0))%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")
 ```
-
-
 
 ```{r , echo=FALSE,message = FALSE,fig.cap='Proportion of responses that were considered relevant by interviewee and event', fig.width=15, fig.height=8}
 p
 ```
 
+\newpage
 
-### Phase 2.1 - Expert scoring
+## Scoring - Garbled (-997)
 
-Expert scoring of keywords produced fowlowin
-
-```{r , echo=FALSE,message = FALSE,results = 'asis'}
-
-exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/coding_revision_ALL.xlsx")
-
-kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE) %>%
-            kable_styling(font_size = 8)%>% 
-            row_spec(0,   bold = TRUE)%>%
-            row_spec(1:(nrow(exp.scoring)-1),hline_after=T)%>%
-            column_spec(1, width = "2cm")%>%
-            column_spec(2, width = "2.5cm")%>%
-            column_spec(3, width = "2cm")%>%
-            column_spec(4, width = "1.5cm")%>%
-   column_spec(5, width = "0.5cm")%>%
-   column_spec(6, width = "0.5cm")%>%
-   column_spec(7, width = "0.5cm")
-        print(kable.obj)
-```
-
-
-
-
-*Answers reviewed with Artificial Intelligence*
-
-
-
-### Missing questions
-
-#### 999 - need interpretation
-
-- if there is an obvious keyword use it for cross scoring
-
-See attached excel
-
-- if there is no obvious keyword and the question is needed for the CPT use LLM
-
-See annex
-
-- if there is no obvious keyword and the question is needed for the DAG review by expert
-
-These inputs are complex and their use would depend from the kind of scenario we are going to implement. 
-
-```{r  , echo=FALSE,message = FALSE,results = 'asis'}
-interpret=coding[coding$value=='999' & !is.na(coding$value),]
-interpret=interpret[which(interpret$id_q%in% c(16, 18,19)),] # exclude 18 and 19
-interpret.llm=interpret%>%
-  left_join(f.style)%>%
-  left_join(evts.style, by=c('id_sub','id_I'))%>%
-  left_join(quest)%>%
-  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
-  left_join(resp)
-
-kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
-            kable_styling(font_size = 8)%>% 
-            row_spec(0,   bold = TRUE)%>%
-            row_spec(1:(nrow(tab2)-1),hline_after=T)%>%
-            column_spec(1, width = "1cm")%>%
-            column_spec(2, width = "3cm")%>%
-            column_spec(3, width = "8cm")
-print(kable.obj)
-```
-
-
-- any other: review by expert
-
-Most of these inputs deal with wind coming from different directions. This was not implemented (yet). The last question is very hard to understand. No value assigned so far to these.
-
-```{r  , echo=FALSE,message = FALSE,results = 'asis'}
-interpret=coding[coding$value=='999' & !is.na(coding$value),]
-interpret=interpret[-which(interpret$id_q%in% c(16, 18,19)),] # exclude 18 and 19
-interpret.llm=interpret%>%
-  left_join(f.style)%>%
-  left_join(evts.style, by=c('id_sub','id_I'))%>%
-  left_join(quest)%>%
-  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
-  left_join(resp)
-
-kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
-            kable_styling(font_size = 8)%>% 
-            row_spec(0,   bold = TRUE)%>%
-            row_spec(1:(nrow(tab2)-1),hline_after=T)%>%
-            column_spec(1, width = "1cm")%>%
-            column_spec(2, width = "3cm")%>%
-            column_spec(3, width = "8cm")
-print(kable.obj)
-```
-
-#### -997 - question was not understood
+These answers were clearly not matching the question. We attempted a reconstruction as described in next phases. Most of these relates to the catch composition: we were interested in the behavior of the fish, not of the fisherman. Anyway we can use this information to support other aspects (e.g.: how easy is to avoid an event).
 
 ```{r  , echo=FALSE,message = FALSE,results = 'asis'}
 interpret=coding[coding$value=='-997' & !is.na(coding$value),]
@@ -172,77 +112,298 @@ interpret.llm=interpret%>%
 kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
-            row_spec(1:(nrow(tab2)-1),hline_after=T)%>%
-            column_spec(1, width = "1cm")%>%
-            column_spec(2, width = "3cm")%>%
-            column_spec(3, width = "8cm")
+            row_spec(1:(nrow(interpret.llm)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "3.5cm")%>%
+            column_spec(3, width = "7cm")
 print(kable.obj)
 ```
 
 
-#### -998 - matters but I don't know how to answer
 
-- try to assign a score borrowing from other people
+## Interpretation - Expert scoring
+
+Expert scoring of keywords produced the following results, which were used to assign scores to 87 answers:
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+
+exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/coding_revision_ALL.xlsx")
+names(exp.scoring)[6:10]=c('AG','ENA','JO','mean','sd')
+
+kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE) %>%
+            kable_styling(font_size = 7)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(exp.scoring)-1),hline_after=T)%>%
+            column_spec(1, width = "2cm")%>%
+            column_spec(2, width = "2.5cm")%>%
+            column_spec(3, width = "2cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+   column_spec(5, width = "0.5cm")%>%
+   column_spec(6, width = "0.5cm")%>%
+   column_spec(7, width = "0.5cm")
+        print(kable.obj)
+```
+\newpage
+
+## Interpretation - AI scoring
+
+This option was applied to a limited number of responses.
+
+**Q1**
+
+*Question*: How much do you think the vary among the group of people you represent? Possible answers: [1–5; from 1 – not at all, to 5 – very
+much]
+
+*Observed Answer*: it is so personal, some do not care at all, they just
+drink beer all day; we discuss things like this all the time, most are
+probably quite stressed by such situations
+
+*Score*: 4
+
+*Why*: The reply indicates clear heterogeneity — a minority who “do not
+care at all” vs a majority who are “quite stressed.” That is meaningful
+variation but phrased so that most are similar (stressed) with a
+minority different. In your training examples, minority exceptions vs
+majority agreement tended to map to a high-but-not-maximum value.
+Confidence: medium–high.
+
+**Q2**
+
+*Question*: How much do you think the vary among the group of people you
+represent? Possible answers: [1–5; from 1 – not at all, to 5 – very
+much]
+
+*Observed Answer*: There are some who have rights but don’t practice at
+all, and then some who practice like I do, just now and then. Then there
+are those who have leased out their permits, and in those cases, there
+is somebody who practices quite intensively 
+
+*Score*: 5 
+
+*Why*: The answer describes the full spectrum (no practice → occasional → very intensive).
+That explicit broad distribution matches your examples that consistently
+received top-end variability scores. Confidence: high. Q2 Question: How
+likely is it that you explore new techniques or strategies? Possible
+answers: [1–5; from 1 – very unlikely, to 5 – very likely] Observed
+Answer: Would probably try to find solutions; activity would certainly
+change, and then people would follow that change; there is probably some
+variation among people depending on what one is specialized in Score: 4
+Why: The speaker says they “would probably try” and expects change and
+follow-up by others — language that in your dataset equates to a
+positive likelihood but not the absolute “definitely” (which you
+typically scored a 5). The note about variation reduces absolute
+certainty slightly. Confidence: medium–high. 
+
+**Q3** 
+
+*Question*: If your income
+from activity A decreases, can you complement or replace it? Possible
+answers: [1–5; from 1 – very unlikely, to 5 – very likely] 
+
+*Observed Answer*: It would be very hard to replace activity A it with other
+income. Most have other jobs in winter, but A is such a significant part
+of income 
+
+*Score*: 1 
+
+*Why*: The phrase “very hard to replace” and “A is such
+a significant part” matches wording in your dataset that mapped to the
+low end (very unlikely) — even though there are seasonal other jobs, the
+respondent explicitly indicates replacement is essentially not feasible.
+Confidence: high.
+
+**Q4** 
+
+*Question*: How easy is it to avoid an extreme weather event by going
+to another location?\
+Possible answers: [1–5; from 1 – very difficult to avoid, to 5 – very
+easy to avoid] 
+*Observed Answer*: I Stop my activity Score: 1 Why: The
+respondent says they stop the activity instead of relocating to avoid
+the event — that implies relocation is not used/feasible. In your
+training set, answers that indicate “we don’t/stop” were scored at the
+difficult end (1). Confidence: medium — short reply is slightly
+ambiguous about whether “stop” means temporarily pause or that
+relocation is impossible, but both interpretations point to very low
+ease of avoiding by moving. 
+
+**Q5**
+*Question*: If the following type of extreme event occurs, how likely is it that you go out and do the
+activity? Possible answers: [1–5; from 1 – very unlikely, to 5 – very likely]
+*Observed Answer*: we wait because the product can spoil 
+*Score*: 1 
+*Why*: “We
+wait” because of spoilage risk indicates they do not go out during the
+event — i.e., very unlikely. In your dataset, similar phrasing (“we wait
+/ won’t go because…”) mapped to the lowest likelihood. Confidence: high.
+
+## Interpretation - left unscored
+
+These were left unscored either because are mainly needed to create narrative or because their implementation would require further revision of the network. For example there is a lot of mentions to wind direction, which is not yet implemented.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+interpret=coding[coding$value=='999' & !is.na(coding$value),]
+#interpret=interpret[which(interpret$id_q%in% c(16, 18,19)),] # exclude 18 and 19
+interpret.llm=interpret%>%
+  left_join(f.style)%>%
+  left_join(evts.style, by=c('id_sub','id_I'))%>%
+  left_join(quest)%>%
+  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
+  left_join(resp)
+
+kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(interpret.llm)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "3.5cm")%>%
+            column_spec(3, width = "7cm")
+print(kable.obj)
+```
+
+
+## Reconstruction (-998)
+
+For these questions we try to inspect closely related answers to see if we can borrow the scoring. These numbers are stored and then used to train the BN (so are not reported in section XXX)
 
 ```{r  , echo=FALSE,message = FALSE,results = 'asis'}
 # check for relevant missing data
-question.type=data.frame(id_q=as.numeric(c("2","3","4","5","6","7","9","10","13","15","35")),
-           hum.dom=c('human', 'metier', 'fish','fish','human','fish','human','human','desc','human','social'))
+question.type=data.frame(id_q=as.numeric(c("2","3","4","5","6","9","10","15")),
+           hum.dom=c('human', 'metier', 'fish','fish','human','human','human','human'))
 coding.qt=left_join(coding[!is.na(coding$value),], question.type, by='id_q')
 coding.qt=coding.qt%>%
   left_join(f.style)%>%
   left_join(evts, by='id_sub')%>%
   left_join(evts.style, by=c('id_sub','id_I'))
 events.missing=coding.qt[coding.qt$value%in%(c(-998,-997)),]
-
+event.reco=NULL
 ```
 
-- Human 
-We have only two data that needs to borrow from other in the Human category.
+-   "Personal" feelings
+
+Personal feelings answers deal with personal decisions taken in face of an event. This is personal in first place and so any "borrowing" should be done with caution. We can inspect closely related fishing styles. 
+We have only two records that needs to borrow from other in the Human category.
 
 ```{r  , echo=FALSE,message = FALSE,results = 'asis'}
 missing.human=events.missing[events.missing$hum.dom=='human' & !is.na(events.missing$value),]%>%
-  left_join(quest)
+  left_join(quest)%>%
+  dplyr::filter(!is.na(value))
 kable.obj=kableExtra::kable((missing.human[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
-            column_spec(1, width = "1cm")%>%
-            column_spec(2, width = "8cm")%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "7cm")%>%
             column_spec(3, width = "2.5cm")%>%
             column_spec(4, width = "1cm")
 print(kable.obj)
 ```
 
+The coastal fisherman category is represented by three interviewee. We do not need to reconstruct anything at this stage because the BN can be informed by the other respondents.
+For the recreational fisherman we can try to look for the same answer in the fishing guide. Unfortunately this reflecting too much the commercial purpose of the fishing guide and cannot be applied to the recreational.
 
-For the coastal fisherman we can borrow from the other two coastal fisherman. This would be done in following steps and so we leave NA for now.
-For the recreational fisherman we can try to look for the same answer in the fishing guide.
-SO WHAT?
-
-
-#### metier
-
-For he category metier we have a handful of missing answers (total = 5) 
 ```{r  , echo=FALSE,message = FALSE,results = 'asis'}
-missing.fish=events.missing[events.missing$hum.dom=='metier',]%>%
+borrow.human=coding[coding$id_I==1 & coding$id_q==15 & coding$id_sub=='c',]%>%
   left_join(quest)%>%
-  arrange(id_q, id_sub)
-missing.fish=missing.fish[!is.na(missing.fish$value),]
-kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+  left_join(resp, by =c('id_I','id_q'))%>%
+  dplyr::filter(!is.na(text))
+
+kable.obj=kableExtra::kable((borrow.human[,c('description', 'text', 'value' )]), booktabs = TRUE) %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
-            row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
-            column_spec(1, width = "1cm")%>%
-            column_spec(2, width = "8cm")%>%
+            row_spec(1:(nrow(borrow.human)-1))%>%
+            column_spec(1, width = "3.5cm")%>%
+            column_spec(2, width = "7cm")%>%
+            column_spec(3, width = "1cm")
+print(kable.obj)
+```
+
+
+
+- metier characteristics
+
+Metier characteristics answers deal with technical aspect of the fishing gear or the gear/fish interaction in face of an event. A similar gear can be used by different categories (e.g.: nets, rods). Also, some gears (salmon traps) are very specific and only some people do mention. We have a handful of missing answers (total = 7).
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.met=events.missing[events.missing$hum.dom=='metier',]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)
+missing.met=missing.met[!is.na(missing.met$value),]
+kable.obj=kableExtra::kable((missing.met[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(missing.met)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "7cm")%>%
             column_spec(3, width = "2.5cm")%>%
             column_spec(4, width = "1cm")
 print(kable.obj)
 ```
 
-Since this affects the metier, we can inform the missing answers depending on people that attempted a score and fish in similar way. Let's see how this is distributed.
+The coastal fisherman category is represented by three interviewee. We do not need to reconstruct anything at this stage because the BN can be informed by the other respondents.
+For the recreational and fishing guide, they can inform each other for the effects of winter heatwaves and cloudburst on catchability.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+borrow.met=coding[coding$id_I%in% c(1,5) & coding$id_q==3  & coding$id_sub %in% c('a', 'e', 'g'),]%>%
+  left_join(quest)%>%
+  dplyr::filter(!is.na(value))%>%
+  dplyr::filter(value>0)%>%
+  left_join(f.style)%>%
+  left_join(resp, by =c('id_I','id_q','id_sub'))%>%
+  dplyr::filter(!is.na(text))%>%
+  left_join(evts)
+
+kable.obj=kableExtra::kable((borrow.met[,c('style','gear','description','desc','text','value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(borrow.human)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "1cm")%>%
+            column_spec(3, width = "3cm")%>%
+            column_spec(4, width = "2cm")%>%
+            column_spec(5, width = "5cm")%>%
+            column_spec(6, width = "0.5cm")
+print(kable.obj)
+
+x.reco=borrow.met%>%
+  dplyr::mutate(value=as.numeric(value))%>%
+  dplyr::group_by(id_q, id_sub, apply_to=gear)%>%
+  dplyr::summarise(value.mu=mean(value),
+                   value.sd=sd(value))
+event.reco=rbind(event.reco, x.reco)
+
+```
+
+
+
+- Fish related
+
+The category fish related inform on ecological or physiological characteristics of the fish, which are expected to not be dependent on gear or people. We can try to borrow from other answers dealing with similar species and environment. 
+We have a variety of missing answers falling in this category. The main problems are with species composition (n=X) and fish condition (n=Y). Since this affects the fish, we can inform the missing answers depending on people that attempted a score.
 
 ```{r  , echo=FALSE,message = FALSE,results = 'asis'}
 missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)
+missing.fish=missing.fish[!is.na(missing.fish$description),]
+kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(missing.fish)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "7cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")
+print(kable.obj)
+
+
+```
+
+
+By inspecting the distribution of answers regarding species captured it emerge consistency, with some more variability observed in summer heatwave (expected). We observe one outlier for algal blooms. This is to be revised.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Are the fish in the catch of worse condition or quality [...]?- From 1 much worse to 3 same to 5 much better'}
+borrow.fish=missing.fish[missing.fish$id_q==4, ]%>%
   left_join(quest)%>%
   arrange(id_q, id_sub)%>%
   distinct(id_q, id_sub)%>%
@@ -252,40 +413,25 @@ missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
   dplyr::filter(value>0)%>%
   dplyr::filter(value<10)
 
-pl=ggplot(data=missing.fish)+
+pl=ggplot(data=borrow.fish)+
   geom_histogram(aes(x=value, fill=style))+
-  facet_grid(cols=vars(short_description), rows=vars(desc), scales='free_x')
+  facet_grid(cols=vars(desc), rows=vars(short_description))+
+  theme(legend.position = 'bottom')
 print(pl)
 
+x.reco=borrow.fish%>%
+  dplyr::group_by(id_q, id_sub)%>%
+  dplyr::summarise(value.mu=mean(value),
+                   value.sd=sd(value))
+x.reco$apply_to='all'
+event.reco=rbind(event.reco, x.reco[,names(event.reco)])
+
 ```
 
+By inspecting the distribution of answers regarding fish condition, it emerge a pattern that regards pelagic trawler. This does not apply to other people (it is damage to fish due to rolling in big waves). Other responses can be used.
 
-
-
-#### Fish
-
-For he category fish we have a variety of missing answers (total = 23) 
-
-
-```{r  , echo=FALSE,message = FALSE,results = 'asis'}
-missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
-  left_join(quest)%>%
-  arrange(id_q, id_sub)
-kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
-            kable_styling(font_size = 8)%>% 
-            row_spec(0,   bold = TRUE)%>%
-            row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
-            column_spec(1, width = "1cm")%>%
-            column_spec(2, width = "8cm")%>%
-            column_spec(3, width = "2.5cm")%>%
-            column_spec(4, width = "1cm")
-print(kable.obj)
-```
-
-Since this affects the fish, we can inform the missing answers depending on people that attempted a score. Let's see how this is distributed.
-
-```{r  , echo=FALSE,message = FALSE,results = 'asis'}
-missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: Do you catch a different composition of species during such extreme weather events?- From 1 very similar to 5 very different'}
+borrow.fish=missing.fish[missing.fish$id_q==5, ]%>%
   left_join(quest)%>%
   arrange(id_q, id_sub)%>%
   distinct(id_q, id_sub)%>%
@@ -295,12 +441,49 @@ missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
   dplyr::filter(value>0)%>%
   dplyr::filter(value<10)
 
-pl=ggplot(data=missing.fish)+
+pl=ggplot(data=borrow.fish)+
   geom_histogram(aes(x=value, fill=style))+
-  facet_grid(cols=vars(short_description), rows=vars(desc), scales='free_x')
+  facet_grid(cols=vars(desc), rows=vars(short_description))+
+  theme(legend.position = 'bottom')
 print(pl)
 
+x.reco=borrow.fish%>%
+  dplyr::filter(id_I !=6)%>%
+  dplyr::group_by(id_q, id_sub)%>%
+  dplyr::summarise(value.mu=mean(value),
+                   value.sd=sd(value))
+x.reco$apply_to='all'
+event.reco=rbind(event.reco, x.reco[,names(event.reco)])
 ```
+
+
+- Other
+
+What remains are questions regarding uncertainty, long term effects, and change in fishing practices. Long term effects and change in fishing practices are to be used to support narrative and we do not really need them at this stage. It is more important to have some information on uncertainty-related questions. 
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+missing.fish=events.missing[is.na(events.missing$hum.dom),]%>%
+  left_join(quest)%>%
+  arrange(id_q, id_sub)
+kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(missing.fish)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "7cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")
+print(kable.obj)
+```
+
+
+
+
+
+
+
+
+
 
 
 

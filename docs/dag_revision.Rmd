@@ -1,0 +1,216 @@
+---
+title: "Informing the DAG"
+output: pdf_document
+date: "2025-04-08"
+---
+
+
+```{r  , echo=FALSE,message = FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+setwd(file.path(scriptDir, '..')) 
+library(readxl)
+library(tidyverse)
+
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "responses")
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                         sheet = "questions")
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "events")
+coding= read_csv("C:/github/extreme_weather_risk/data/coding_report.csv")
+names(coding)[5]='id_sub'
+styles= read_csv("C:/github/extreme_weather_risk/data/styles_desc.csv")
+f.style=coding[coding$id_q==0,c('id_I','value')]
+names(f.style)[2]='fishing_style'
+cod.unc= read_csv("C:/github/extreme_weather_risk/data/coding_report_unc.csv")
+
+
+###
+event.vals=cod.unc[!is.na(cod.unc$id_sub) & is.na(cod.unc$unit_range),]
+event.vals$fishing_style=as.factor(event.vals$fishing_style)
+event.vals=event.vals[event.vals$value>=0, ]
+event.vals=event.vals[event.vals$value<=5, ]
+event.vals=event.vals[!is.na(event.vals$value), ]
+event.vals=event.vals[event.vals$short_description %in% c('go_out','catchability','catch_condition','personal_safety','damage','avoidance', 'cope_condition', 'catch_assemblage'), ]
+
+event.vals$uncertainty=ifelse(event.vals$uncertainty<0,NA,event.vals$uncertainty)
+event.vals$description=factor(event.vals$description, levels = c("Heatwave in the winter season" ,         
+                                                                 "Heatwave in the summer season" ,           
+                                                                 "Severe icing (in the winter season)"  ,    
+                                                                 "Algal bloom (in the summer season)"    ,   
+                                                                 "Extreme cloudburst (in the summer season)",
+                                                                 "Gale" ,
+                                                                 "Storm" ))
+
+```
+
+
+## Identifying which links matters to the DAG
+
+This is documentation on the decisions taken to draw links between events and outcomes.
+
+We inspect the responses per event on each single potential response. We decide which to retain based oin importance and sometimes agreement. As we did for the answers to be interpreted, we can identify (i) personal aspects; (ii) metier characteristics and (iii) fish response.
+Each answer regarding personal answer cannot be questioned and should be included as much as possible. What regard metier and fish can be revised more carefully (e.g.: the effect of algal blooms).
+
+### go_out
+
+Going out or not is a personal decision. Thuis link is the most important probably and we keep everything.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: go_out'}
+ch=event.vals[event.vals$short_description=='go_out',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=3)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+## avoidance
+
+For each event there is at least somebody that say he can avoid it. This tipically imply change fishing location, sometime /especially recreational) to change gear.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: avoidance. Answ: 1 is very difficult, 5 is easy.'}
+ch=event.vals[event.vals$short_description=='avoidance',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=1)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+
+## personal_safety
+
+Personal safety NOT apply to algal bloom and to summer heatwaves. Winter heatwaves is associated with ice fishing. The mention that pelagic trawler do is not correct (considers an interaction with storms).
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: personal_safety'}
+ch=event.vals[event.vals$short_description=='personal_safety',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=3)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+### damage
+
+The gear damage that pelagic trawler mention for winter heatwave depend on the storminess, not on the heat itself. For heatwave, int N 2 mention extra work to clean, not real damages. Same for algal bloom ant int 6. At this stage we are not considering "extra work/maintenance" as part of the damages. Why: only a few mention this here. Some other mention this in extra or here and there. Revise it.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: damage'}
+ch=event.vals[event.vals$short_description=='damage',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=3)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+
+
+## Catchability
+
+Catchability is associated with all the events except for cloudburst. Note: winter heatwave change for fishing guide is associated with rod fishing
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: catchability'}
+ch=event.vals[event.vals$short_description=='catchability',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=3)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+
+### catch_condition
+
+For condition we ignore winter heatwave, because that is the effect of storminess. We keep storms and gales because it makes sense (keeping the catch onboard in  a storm may cause the fish the get bad). We also exclude algal blooms because it matters only for two person, and one says that it is only hypotetical.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: catch_condition'}
+ch=event.vals[event.vals$short_description=='catch_condition',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=3)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+
+
+### cope condition
+
+For cope condition we do not want to consider those answers that says "go fishing elsewhere". Because we account for this in another manner. We only keep the link with summer heatwave because it contains things such as ice machines, short hauls etc. So we revise the network and make the 
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: cope_condition'}
+ch=event.vals[event.vals$short_description=='cope_condition',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=3)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+
+### catch_assemblage
+
+For condition we ignore all but summer heatwave. There are meaningful answer about it: a coastal fisherman get more breams, another mention change in distribution between herrinh and perch.
+We exclude algal blooms because it matters only for one person, and it says that it is only hypotetical.
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis', fig.height=5, fig.width=12,fig.cap='Distribution of answers to the question: catch_assemblage'}
+ch=event.vals[event.vals$short_description=='catch_assemblage',]
+ggplot(data=ch)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  geom_hline(yintercept=1)+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')
+```
+
+
+
+# pending decisions
+
+- is extra work part of the damages?
+

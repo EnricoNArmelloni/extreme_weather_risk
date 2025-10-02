@@ -5,85 +5,104 @@ setwd(file.path(scriptDir, '..'))
 library(readxl)
 library(tidyverse)
 
-fish.style=read_excel("data/lists_fishing_styles.xlsx", 
-           sheet = "fishing_style")
-events=read_excel("data/lists_fishing_styles.xlsx", 
-           sheet = "events")
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "responses")
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                         sheet = "questions")
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "events")
+coding= read_csv("C:/github/extreme_weather_risk/data/coding_report.csv")
+names(coding)[5]='id_sub'
+styles= read_csv("C:/github/extreme_weather_risk/data/styles_desc.csv")
+f.style=coding[coding$id_q==0,c('id_I','value')]
+names(f.style)[2]='fishing_style'
 
-summary.path="data/questionnaires_coded.xlsx"
+## formatting
+cod.form=coding%>%
+  dplyr::filter(!is.na(id_sub))%>%
+  left_join(resp, by = join_by(id_q, id_sub, id_I))%>%
+  left_join(evts)
+cod.form2=coding%>%
+  dplyr::filter(is.na(id_sub))%>%
+  left_join(resp[,-which(colnames(resp)=='id_sub')], by = join_by(id_q,  id_I))%>%
+  dplyr::mutate(description=NA,event_code=NA)
+cod.form=rbind(cod.form, cod.form2[,names(cod.form)])%>%
+  left_join(f.style)
 
-sheet.list=readxl::excel_sheets(summary.path)
-int.summary=NULL
-i=2
 
-events.results=NULL
-for(i in 1:length(sheet.list)){
-  #
-  i.dat=readxl:: read_excel(summary.path,sheet.list[i])
-  i.type=i.dat$broad[1]
-  i.id=as.numeric(substr(sheet.list[i], (nchar(sheet.list[i])), nchar(sheet.list[i])))
-  i.dat$broad=as.numeric(i.dat$broad)
-  i.dat$domain=str_remove(i.dat$category, 'hc_')
-  i.dat$id_I=i.id
-  i.dat$style=i.type
-  #i.style=fish.style[fish.style$id==i.id,]
-  
-  # uncertainty
-  i.dat$uncertainty=NA
-  uncertainty.vals=i.dat[grep(i.dat$short_description, pattern='unc'),]
+## adding uncertainty
+cod.form$value=as.numeric(cod.form$value)
+cod.form$uncertainty=NA
+int.i=unique(cod.form$id_I)
+cod.unc=NULL
+for(j in 1:length(int.i)){
+  j.cod=cod.form[cod.form$id_I== int.i[j],]
+  uncertainty.vals=j.cod[grep(j.cod$short_description, pattern='unc'),]
   uncertainty.id=str_split(uncertainty.vals$short_description, '_')
-  for(j in 1:nrow(uncertainty.vals)){
-    j.id=as.numeric(uncertainty.id[[j]][-1])
-    i.unc=uncertainty.vals[j,]$broad/10
-    if(length(j.id) ==2){
-      i.dat[i.dat$id_q %in% j.id[1]:j.id[2],]$uncertainty=i.unc
+  for(i in 1:nrow(uncertainty.vals)){
+    i.id=as.numeric(uncertainty.id[[i]][-1])
+    i.unc=uncertainty.vals[i,]$value/10
+    if(length(i.id) ==2){
+      j.cod[j.cod$id_q %in% i.id[1]:i.id[2],]$uncertainty=i.unc
     }
-    if(length(j.id)==1){
-      i.dat[grep(i.dat$id_q ,pattern= j.id[1]),]$uncertainty=i.unc
+    if(length(i.id)==1){
+      j.cod[grep(j.cod$id_q ,pattern= i.id[1]),]$uncertainty=i.unc
     }
   }
-  i.dat=i.dat[-which(i.dat$id_q %in% uncertainty.vals$id_q),]
-  
-  # event related
-  i.events=events[events$id==i.id,4:10]
-  i.events=i.events[apply(i.events,2,function(x)x==1)]
-  df.events=i.dat[,c( 'id_I', 'style', 'gear', 'area','target','id_q','uncertainty',names(i.events))]
-  exclude.rows=apply(df.events[,8:ncol(df.events)],1,function(x)sum(ifelse(unique(is.na(x))==FALSE,1,0)))
-  df.events=df.events[exclude.rows==1,]
-  
-  df.events[,names(i.events)]=apply(df.events[,names(i.events)],2,
-                                    function(x)as.numeric(str_trim(as.character(x),'both'))) # make sure to remove whitespaces and make it numeric
-  
-  df.events=df.events%>%
-    pivot_longer(cols = names(i.events), names_to = 'event', values_to = 'score')
-  events.results=rbind(events.results, df.events)
-    
-  # prices
-  df.costs=i.dat[!is.na(i.dat$unit_range),c( 'id_I', 'style', 'gear', 'area','target','id_q','short_description','uncertainty','range.lwr','range.upr','unit_range')]
-  
-  # other
-  df.personal=i.dat[!is.na(i.dat$broad),c( 'id_I', 'style', 'gear', 'area','target','id_q','short_description','uncertainty','broad')]
-  
+  # clean
+  j.cod=j.cod[-which(j.cod$id_q %in% uncertainty.vals$id_q),]
+  cod.unc=rbind(cod.unc, j.cod)
 }
 
-# check for relevant missing data
-question.type=data.frame(id_q=c("2","3","4","5","6","7","9","10","13","15", '35'),
-           hum.dom=c('human', 'metier', 'fish','fish','human','fish','human','human','desc','human', 'social'))
 
-events.results.qt=left_join(events.results[!is.na(events.results$score),], question.type, by='id_q')
-events.missing=events.results.qt[events.results.qt$score==-998,]
+## some plotting ####
+# some plots
+hc.vals=cod.unc[is.na(cod.unc$id_sub) & is.na(cod.unc$unit_range),]
+hc.vals$fishing_style=as.factor(hc.vals$fishing_style)
+hc.vals=hc.vals[hc.vals$value>=0, ]
+hc.vals=hc.vals[hc.vals$value<=5, ]
+hc.vals=hc.vals[!is.na(hc.vals$value), ]
 
-missing.human=events.missing[events.missing$hum.dom=='human',]
-missing.metier=events.missing[events.missing$hum.dom=='metier',]
-missing.fish=events.missing[events.missing$hum.dom=='fish',]
+hc.vals$uncertainty=ifelse(hc.vals$uncertainty<0,NA,hc.vals$uncertainty)
+
+plot.demo=ggplot(data=hc.vals)+
+  geom_col(aes(x=id_I, y=value, fill=fishing_style,group=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_wrap(~short_description, scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom');plot.demo
 
 
+ggsave(plot=plot.demo, 'results/images/human_community.jpeg', width = 28,height = 15, units='cm', dpi=500)
 
+event.vals=cod.unc[!is.na(cod.unc$id_sub) & is.na(cod.unc$unit_range),]
+event.vals$fishing_style=as.factor(event.vals$fishing_style)
+event.vals=event.vals[event.vals$value>=0, ]
+event.vals=event.vals[event.vals$value<=5, ]
+event.vals=event.vals[!is.na(event.vals$value), ]
+event.vals=event.vals[event.vals$short_description %in% c('go_out','catchability','catch_condition','personal_safety','damage','avoidance'), ]
 
+event.vals$uncertainty=ifelse(event.vals$uncertainty<0,NA,event.vals$uncertainty)
+event.vals$description=factor(event.vals$description, levels = c("Heatwave in the winter season" ,         
+                                                                 "Heatwave in the summer season" ,           
+                                                                 "Severe icing (in the winter season)"  ,    
+                                                                 "Algal bloom (in the summer season)"    ,   
+                                                                 "Extreme cloudburst (in the summer season)",
+                                                                 "Gale" ,
+                                                                 "Storm" ))
+plot.demo=ggplot(data=event.vals)+
+  geom_col(aes(x=id_I, y=value, group=fishing_style, fill=fishing_style, alpha=6-(uncertainty*10)), position = 'dodge', color='black')+
+  facet_grid(cols=vars(description), rows=vars(short_description), scales='free_x')+
+  theme_bw()+
+  labs(alpha='Certainty', fill='Fisherman')+
+  xlab('Question')+
+  ylab('Answer')+
+  #scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom');plot.demo
 
-read_csv("data/coding_report.csv")
-
-
-
-
-
+ 

@@ -1,0 +1,119 @@
+---
+title: "Informing the DAG"
+output: pdf_document
+date: "2025-04-08"
+---
+
+```{r  , echo=FALSE,message = FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+coding=read_csv(file.path(scriptDir, '..', 'data', 'coding_report.csv'))
+names(coding)[5]='id_sub'
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "events")
+names(evts)[2]='desc'
+f.style=coding[coding$id_q==0,c('id_I','value')]
+names(f.style)[2]='style'
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "questions")
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "responses")
+#resp$id_I=as.character(resp$id_I)
+
+df=coding%>%
+  full_join(resp)%>%
+  left_join(f.style)%>%
+  #left_join(evts.style, by=c('id_sub','id_I'))%>%
+  left_join(quest)%>%
+  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
+  left_join(evts)
+```
+
+## Revision of the narrative
+
+We have now all the information and it is time to include it in the network. For this purpose we might have to adapt the last version of the network. Something will be excluded and something added. I will try to follow these principles (Korb and Nicholson, 2011):
+
+ - Node values are mutually exclusive: if two things can happen at the same time, they have to have a node each one (e.g.: the events should be separate nodes)
+ - Node values are exhaustive: contains all the possible options (so add "No" or "Other" when necessary)
+ 
+ - Do not include complexity that cannot be modeled: if some combination of events/consequences results not important across most of the interviews, then exclude nodes or links
+
+### Treatment of multiple options
+
+I identified all the mentions to alternative options. 
+
+The gear/area can be used to:
+
+- Avoid the event (switching from ice fishing to spinning; casting the nets deeper etc..). There are consequences in terms of cost and, eventually, target species
+
+- Set up scenarios: coastal fisherman seems to plan different activities during the season. Especially for what regard salmon. Maybe we can be explicit for the consequences of salmon fishoing compared to net fishing
+
+The options regarding fish can be used to define the probability to find a species given gear, area and event (only for summer heatwave); as well as to inform the condition (also only for heatwave)
+
+
+### Interactions
+
+
+Very few interactions were mentioned. COnsidering that each event will be a node, there is no problem in implementing intercations.
+
+
+```{r  , echo=FALSE,message = FALSE,results = 'asis'}
+int.df=data.frame(id_I=c(1:7, 1,6,6), id_q=c(rep(2,7), 10,9,10), id_sub=c(rep('h',7),'e','a','a'))
+int.resp=int.df%>%
+  left_join(df)%>%
+  arrange(as.numeric(id_I))
+
+kable.obj=kableExtra::kable(int.resp[,c('style', 'description', 'desc', 'text')], booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(int.resp)-1),hline_after=T)%>%
+            column_spec(1, width = "1.5cm")%>%
+            column_spec(2, width = "3.5cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "7cm")
+print(kable.obj)
+
+
+```
+
+
+
+### Probabilities
+
+Most of the mentions to probability are regarding the wind. Still thinking about this.
+
+List still to be indexed:
+
+I2: (storm mostly damage) to gear. It very rarely happens that we lose gear completely, but a small risk exists
+
+I3: Wind direction matters too (this August mostly W & NW winds, cooling the water – no point fishing perch then, they just stop moving)
+
+I3: storm and gale Could damage or destroy gear/boat, or cause minor damage
+
+I6: Heatwave in the winter season: It can go both better and worse, but it has an impact; for the same weather phenomenon, it can be both better and worse; weather changes affect catchability, as do moon phases and the time of year.
+
+I7: Gale: depends on the wind direction, if it's N then it's from the outside so then it's difficult, if it's S or SW, in gale force winds I don't fish anyway because there's a strong current in the lake so you get crap in your nets, but I do go out in gale force winds sometimes, depends on the wind direction
+
+
+### Lags
+
+The lags can perhaps be implemented externally. I will skipt this part at this stage.
+
+
+I1; cloudburst: fish react to pressure changes; if there is low pressure during a downpour, then they stop biting, but if it rises after the downpour then it can be good.
+
+I3 (gale): after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead
+
+I5: the coast with prolonged winds you can get upwelling; perch may move closer inshore, and trout & whitefish may appear shallower than normal
+
+I5: sea trout fishing is big – if warming lasts longer, the season gets shorter until it cools again
+
+I4: Other factor is wind direction, NW is bad, then the fish disappear. Big impact. This spring it locked in at N & NW with near gale winds for several weeks
+
+I6: force, and waits 1-2 days until it calms down; when the waves are too high, the trawl does not fish as well
+
+
