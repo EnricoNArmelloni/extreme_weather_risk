@@ -6,7 +6,9 @@ output:
     toc_depth: 2
 
 ---
-
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
 \newpage
 
 ```{r child = 'methods.Rmd'}

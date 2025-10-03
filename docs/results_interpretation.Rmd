@@ -7,6 +7,7 @@ editor_options:
     wrap: 72
 ---
 
+
 ```{r  , echo=FALSE,message = FALSE}
 remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
@@ -47,7 +48,7 @@ evt.resp[as.numeric(evt.resp$fin.score)>=0 &as.numeric(evt.resp$fin.score)<=5,]$
 obs=data.frame(table(evt.resp$fin.score))
 names(obs)=c('Score','Frequency')
 
-kableExtra::kable(obs%>%arrange(desc(Frequency)))%>%
+kableExtra::kable(obs%>%arrange(desc(Frequency)), caption='test')%>%
   kable_styling(font_size = 8)%>% 
             column_spec(1, width = "3cm")%>%
             column_spec(2, width = "1.5cm")
