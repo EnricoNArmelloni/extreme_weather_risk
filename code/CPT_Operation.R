@@ -16,7 +16,8 @@ answer.to.cpt_vH=function(x.ans, dim.name, div.factor=5,
   dim.list <- list(dim.labs)
   names(dim.list) <- dim.name
   base.dist=rtruncnorm(a=0,b=1,n=100, mean=x.ans/div.factor, sd=unc)
-  x.breaks=seq(0,1,1/length(dim.labs))
+  min_bin=1/div.factor
+  x.breaks=seq(min_bin,1,(1-min_bin)/length(dim.labs))
   x.breaks[1]=-Inf
   x.breaks[length(x.breaks)]=Inf
   base.dist=cut(base.dist, breaks=x.breaks, labels=dim.labs)
@@ -112,59 +113,324 @@ rank.cpt=function(nodes.df, uncertainty, algorithm = 'equal', meaning='abs', xna
 }
 
 
-
-
-## build a simple mock network ####
-dag="[A][S][E|A:S][O|E][R|E][T|O:R]"
-dag<- model2network(dag)
-plot(dag)
-A.lv <- c("young", "adult", "old") 
-S.lv <- c("M", "F") 
-E.lv <- c("high", "uni") 
-O.lv <- c("emp", "self") 
-R.lv <- c("small", "big") 
-T.lv <- c("car", "train", "other")
-A.prob <- array(c(0.30, 0.50, 0.20), dim = 3, dimnames = list(A = A.lv))
-S.prob <- array(c(0.60, 0.40), dim = 2, dimnames = list(S = S.lv))
-O.prob <- array(c(0.96, 0.04, 0.92, 0.08), dim = c(2, 2), dimnames = list(O = O.lv, E = E.lv))
-R.prob <- array(c(0.25, 0.75, 0.20, 0.80), dim = c(2, 2), dimnames = list(R = R.lv, E = E.lv))
-E.prob <- array(c(0.75, 0.25, 0.72, 0.28, 0.88, 0.12, 0.64, 0.36, 0.70, 0.30, 0.90, 0.10), dim = c(2, 3, 2), dimnames = list(E = E.lv, A = A.lv, S = S.lv))
-T.prob <- array(c(0.48, 0.42, 0.10, 0.56, 0.36, 0.08, 0.58, 0.24, 0.18, 0.70, 0.21, 0.09), dim = c(3, 2, 2), dimnames = list(T = T.lv, O = O.lv, R = R.lv))
-cpt <- list(A = A.prob, S = S.prob, E = E.prob, O = O.prob, R = R.prob, T = T.prob) 
-bn <- custom.fit(dag, cpt)
-
-# get the distribution of childs
-cpdist(bn, nodes = c('T', 'S'), 
-       evidence = (A == 'adult'))
-
-# or the prob that this happen given evidence
-cpquery(bn, 
-        event = (S == "M") & (T == "car"), 
-        evidence = ((A == "young") & (E == "uni")) | (A == "adult"))
-
-
-## make imported network working ####
-test=read.net('~/ARMELLONI_SLU/RiskAnalysis/networks/single_events/test.net', debug = T)
-cpdist(test, nodes = c('c'), 
-       evidence = (a == 'State0'))
-
-
-# load an exmaple of the DAG
-net=read.net('~/ARMELLONI_SLU/RiskAnalysis/networks/single_events/type1_v3_general_simple.net', debug = T)
-graphviz.plot(net, layout = "dot", fontsize = 18)
-
-stress.prob=cpdist(net, nodes = c('Stress'), 
-       evidence = (gal == 'yes'))
-table(stress.prob)
-
 # data from interviews
-dat=read_csv("data/coding_report_unc.csv")
-dat=dat[dat$id_I==3,]
+int.dat=read_csv("data/coding_report_unc.csv")
 evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
                         sheet = "events")
-dat=left_join(dat[,-which(colnames(dat)=='event_code')], evts, by='id_sub')
+int.dat=left_join(int.dat[,-which(colnames(int.dat)=='event_code')], evts, by='id_sub')
 
-# what degree of danger does thee event pose to you?
+style.dataset=read_excel("data/lists_fishing_styles.xlsx", 
+           sheet = "fishing_style")
+# DAG
+net=read.net('~/ARMELLONI_SLU/RiskAnalysis/networks/single_events/type1_v5_general_simple.net', debug = T)
+graphviz.plot(net, layout = "dot", fontsize = 18)
+graphviz.chart(net)
+
+f.styles=unique(int.dat[int.dat$id_q==0,]$text)
+
+
+stress.prob=cpdist(net, nodes = c('stress'), 
+       evidence = (event == 'gal'))
+table(stress.prob)
+
+# check missing data
+x.nodes=nodes(net)
+x.nodes=x.nodes[x.nodes %in% int.dat$short_description]
+int.dat[abs(int.dat$uncertainty)>10 & !is.na(int.dat$uncertainty),]$uncertainty=1/5
+xx=1
+
+
+# start
+x.nodes=nodes(net)
+
+## Set even event probability
+array.var=net[['event']]$prob
+xdim=dim(array.var)
+array.var[1:xdim]=rep(1/xdim, xdim)
+net[['event']]=array.var
+
+## set fisher probability
+array.var=net[['fisher']]$prob
+xdim=dim(array.var)
+array.var[1:xdim]=rep(1/xdim, xdim)
+net[['fisher']]=array.var
+
+## fishing style
+i.node='fishing_style'
+# fishing style in this moment is set manually. COnsider if there is the need to create two different traps. The mani issue here is to properly catch how fisher can switch between gears, especially between nets and traps for coastal and between rod and ice fishing for recreational
+
+## fishing area
+i.node='area' # same as fishing style
+
+## the nodes for potential consequences ####
+p.consequences=c('personal_safety', 'damage' , 'catch_condition', 'catchability')
+
+for(z in 1:length(p.consequences)){
+  
+  # settings for the node
+  i.node=p.consequences[z]
+  if(i.node=='personal_safety'){
+    answ.range=0:2
+  }else if(i.node=='damage'){
+    answ.range=0:3
+  }else{
+    answ.range=1:5
+  }
+  
+  adj.factor=ifelse(min(answ.range)==0,0.5,0)
+  array.var=net[[i.node]]$prob
+  xdim=dim(array.var)
+  xnam=dimnames(array.var)
+  df.var=as.data.frame(array.var)
+  x.lev=levels(df.var[,i.node])
+  i.style=levels(df.var$fishing_style)
+  
+  for(i in 1:length(i.style)){
+    i.fisher=style.dataset[style.dataset$gear==i.style[i],]
+    i.fisher=unique(i.fisher$id)
+    dat=int.dat[int.dat$id_I%in%i.fisher,]
+    x.answ=dat[grep(i.node, dat$short_description),]
+    x.answ=x.answ[is.na(x.answ$unit_range),]
+    
+    # revise the following and make sure to exclude any gear that is different
+    x.answ$target=ifelse(is.na(x.answ$target), 'not_specified', x.answ$target)
+    x.answ$area=ifelse(is.na(x.answ$area), 'not_specified', x.answ$area)
+    x.answ=x.answ[x.answ$area %in% c('not_specified', 'Baltic', 'deep','shallow'),]
+    x.answ$gear=ifelse(is.na(x.answ$gear), 'not_specified', x.answ$gear)
+    x.answ=x.answ[x.answ$gear %in% c('not_specified', i.style[i]), ]
+    x.answ=x.answ[!is.na(x.answ$value),]
+    
+    # prob for each event
+    i.evts=unique(df.var$event)
+    for(j in 1:length(i.evts)){
+    j.event=i.evts[j]
+    j.answ=x.answ[x.answ$event_code==j.event,]  
+    j.answ=j.answ[abs(j.answ$value)<=5,]
+    if(nrow(j.answ)>1){
+     j.answ=j.answ%>%
+       dplyr::group_by(gear,area,target)%>%
+       dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
+     j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty)
+    }
+    # single option
+    if(nrow(j.answ)==1){
+      i.cpt=answer.to.cpt_vH(x.ans=j.answ$value+adj.factor, 
+                             unc=j.answ$uncertainty,
+                             dim.name = i.node,
+                             div.factor = length(answ.range), # this is not always 3!
+                             dim.labs = x.lev)
+      df.var[df.var$event==j.event & df.var$fishing_style== i.style[i],]$Freq=i.cpt  
+    }
+    # multiple options
+    if(nrow(j.answ)>1){
+      check.multi=data.frame(Freq=apply(j.answ[,1:3], 2, function(x)length(unique(x))))
+      check.multi$type=rownames(check.multi)
+      check.multi=check.multi[check.multi$Freq>1,]
+    
+      if(nrow(check.multi)==1){
+        multi.options=j.answ[,check.multi$type]
+        
+        # TO DO make sure to have a generic baseline based on answers. 
+        # FOr instance, in case only some of the species mentioned have a specific value. 
+        # ALl the other should be assimilated to the not_specified
+        
+       for(k in 1:nrow(multi.options)){
+          k.opt=multi.options[k,]
+          k.feature=names(k.opt)
+          k.answ=j.answ[k,]
+          i.cpt=answer.to.cpt_vH(x.ans=k.answ$value+adj.factor, 
+                                 unc=k.answ$uncertainty,
+                                 dim.name = i.node,
+                                 div.factor = length(answ.range), # this is not always 3!
+                                 dim.labs = x.lev)
+          df.var[df.var$event==j.event & df.var$fishing_style== i.style[i] & tolower(df.var[[k.feature]])==k.opt[[1]],]$Freq=i.cpt
+        }
+    }
+   }
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+x.answ=dat[grep(i.node, dat$short_description),]
+
+x.answ$target=ifelse(is.na(x.answ$target), 'not_specified', x.answ$target)
+x.answ$area=ifelse(is.na(x.answ$area), 'not_specified', x.answ$area)
+x.answ$gear=ifelse(is.na(x.answ$gear), 'not_specified', x.answ$gear)
+x.answ=x.answ[!is.na(x.answ$value),]
+
+
+
+store.res=NULL
+for(xx in 1:length(f.styles)){
+  
+  #dat=int.dat[int.dat$fishing_style==f.styles[xx],]
+  dat=int.dat[int.dat$id_I==1,]
+  
+  # root nodes
+  # here is very important that the node definition in GeNie makes sense. Especially the order.- This needs to be revised
+  x.nodes=nodes(net)
+  x.nodes=x.nodes[x.nodes %in% dat$short_description]
+  for(i in 1:length(x.nodes)){
+    i.node=x.nodes[i]
+    array.var=net[[i.node]]$prob
+    xdim=dim(array.var)
+    xnam=dimnames(array.var)
+    df.var=as.data.frame(array.var)
+    x.lev=levels(df.var[,i.node])
+    x.answ=dat[grep(i.node, dat$short_description),]
+    
+    x.answ$target=ifelse(is.na(x.answ$target), 'not_specified', x.answ$target)
+    x.answ$area=ifelse(is.na(x.answ$area), 'not_specified', x.answ$area)
+    x.answ$gear=ifelse(is.na(x.answ$gear), 'not_specified', x.answ$gear)
+    x.answ=x.answ[!is.na(x.answ$value),]
+    
+    # loop for events
+    x.events=xnam$event
+    for(j in 1:length(x.events)){
+      j.event=x.events[j]
+      j.answ=x.answ[x.answ$event_code == j.event,]
+      
+      # no multiple options mentioned: we replicate everything
+      if(nrow(j.answ)==1){
+        i.cpt=answer.to.cpt_vH(x.ans=j.answ$value, 
+                               unc=j.answ$uncertainty,
+                               dim.name = i.node,
+                               div.factor = 5,
+                               dim.labs = x.lev)
+        df.var[df.var$event==j.event,]$Freq=i.cpt
+      }
+      # multiple answers detected
+      if(nrow(j.answ)>1){
+        check.multi=data.frame(Freq=apply(j.answ[,1:3], 2, function(x)length(unique(x))))
+        check.multi$type=rownames(check.multi)
+        check.multi=check.multi[check.multi$Freq>1,]
+        
+        # only one multiple options, therefore no interactions
+        if(nrow(check.multi)==1){
+          multi.options=j.answ[,check.multi$type]
+          
+          for(k in 1:nrow(multi.options)){
+            k.opt=multi.options[k,]
+            k.answ=j.answ[k,]
+            
+            i.cpt=answer.to.cpt_vH(x.ans=k.answ$value, 
+                                   unc=k.answ$uncertainty,
+                                   dim.name = i.node,
+                                   div.factor = 5,
+                                   dim.labs = x.lev)
+            
+            df.var[df.var$event==j.event & df.var[['gear']]=='Rod',]
+            
+            df.var[df.var$event==j.event,]$Freq=i.cpt
+          }
+          
+        }
+        
+        i.cpt=answer.to.cpt_vH(x.ans=j.answ$value, 
+                               unc=j.answ$uncertainty,
+                               dim.name = i.node,
+                               div.factor = 5,
+                               dim.labs = x.lev)
+        df.var[df.var$event==j.event,]$Freq=i.cpt
+      }
+      
+      
+      supp.data=data.frame(node=c(target.dims[2:length(target.dims)],x.var), 
+                          link.w=c(x.answ[x.answ$event_code== target.dims[2:length(target.dims)],]$value, 0),
+                          states=c(trg.size,3),
+                          type=c(rep('parent', length(target.dims)-1) , 'child'),
+                          direction=c(rep('neg', length(target.dims))),
+                          id=1:length(target.dims))
+    
+      x.cpt=get.cpt(nodes.df = supp.data, uncertainty = unique(x.answ$uncertainty), algorithm = 'min', xnam=xnam)
+    }
+    
+    
+    target.dims=names(df.var)
+    target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
+    
+    trg.size=dimnames(array.var)[target.dims[2:length(target.dims)]]
+    trg.size=as.numeric(lapply(trg.size, function(x)length(x)))
+    
+
+    net[[x.var]]=x.cpt$bn.cpt
+    
+    
+    
+    
+    
+    i.dat=dat[dat$short_description==i.node,]
+    i.cpt=answer.to.cpt_vH(x.ans=i.dat$value, 
+                           unc=i.dat$uncertainty,
+                           dim.name = i.node,
+                           div.factor = 5,
+                           dim.labs = i.lev)
+    net.h[[i.node]]=i.cpt
+  }
+  
+  i.node='professional'
+  i.lev=names(net.h[[i.node]]$prob)
+  x.pro=ifelse(f.styles[xx] %in% c('recreational', 'archipelago'),1,5)
+  i.cpt=answer.to.cpt_vH(x.ans=x.pro, 
+                         unc=0.001,
+                         dim.name = i.node,
+                         div.factor = 5,
+                         dim.labs = i.lev)
+  net.h[[i.node]]=i.cpt
+  
+  
+  
+  
+}
+
+
+x.var='catchability'
+array.var=net[[x.var]][['prob']]
+xdim=dim(array.var)
+xnam=dimnames(array.var)
+df.var=as.data.frame(array.var)
+x.lev=levels(df.var[,x.var])
+target.dims=names(df.var)
+target.dims=target.dims[-which(target.dims %in% c(x.var,'Freq'))]
+
+x.answ=dat[grep(x.var, dat$short_description),]
+x.answ=x.answ[x.answ$event_code %in% target.dims,] 
+if(is.na(unique(x.answ$target))){
+  x.answ$target='not_specified'
+}
+
+trg.size=dimnames(array.var)[target.dims[2:length(target.dims)]]
+trg.size=as.numeric(lapply(trg.size, function(x)length(x)))
+
+supp.data=data.frame(node=c(target.dims[2:length(target.dims)],x.var), 
+                     link.w=c(x.answ[x.answ$event_code== target.dims[2:length(target.dims)],]$value, 0),
+                     states=c(trg.size,3),
+                     type=c(rep('parent', length(target.dims)-1) , 'child'),
+                     direction=c(rep('neg', length(target.dims))),
+                     id=1:length(target.dims))
+
+x.cpt=get.cpt(nodes.df = supp.data, uncertainty = unique(x.answ$uncertainty), algorithm = 'min', xnam=xnam)
+net[[x.var]]=x.cpt$bn.cpt
+
+
+
+
+
+
+
+
 # simplest case
 safe.ans=dat[dat$short_description=='personal_safety' & dat$id_sub=='g',]$value
 safe.unc=dat[dat$short_description=='personal_safety' & dat$id_sub=='g',]$uncertainty
@@ -174,6 +440,13 @@ safety.cpt=expand.probs(x.levels=list(c('no','Minor','Major'), c('yes','no')) ,
                         x.names=c( 'personal_safety','gal'),
                         x.probs=list(safety.cpt,c(1,0,0))) 
 net$personal_safety=safety.cpt
+
+
+# data from interviews
+
+
+# what degree of danger does thee event pose to you?
+
 
 # case with multiple independent parents (no intercations) ####
 net$catchability

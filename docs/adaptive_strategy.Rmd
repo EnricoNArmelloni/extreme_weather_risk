@@ -1,0 +1,63 @@
+---
+title: "Informing the DAG"
+output: pdf_document
+date: "2025-04-08"
+---
+
+```{r  , echo=FALSE,message = FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+coding=read_csv(file.path(scriptDir, '..', 'data', 'coding_report.csv'))
+names(coding)[5]='id_sub'
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "events")
+names(evts)[2]='desc'
+f.style=coding[coding$id_q==0,c('id_I','value')]
+names(f.style)[2]='style'
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "questions")
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "responses")
+#resp$id_I=as.character(resp$id_I)
+
+df=coding%>%
+  full_join(resp)%>%
+  left_join(f.style)%>%
+  #left_join(evts.style, by=c('id_sub','id_I'))%>%
+  left_join(quest)%>%
+  dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
+  left_join(evts)
+```
+
+
+
+
+```{r, include=T, echo=FALSE, fig.width = 1,results = 'asis', fig.pos='H', message=FALSE, warning=FALSE}
+#knitr::include_graphics(file.path(main.dir,x.folder,j.images), dpi = 300)
+#for(i in 1:1){
+df.adaptive=df[df$id_q %in% c(2,4,13,15),]
+evts=unique(df.adaptive$id_sub)
+
+for(i in 1:length(evts)){
+  
+  i.df=df.adaptive[df.adaptive$id_sub == evts[i],]%>%
+    distinct(id_I, id_q, short_description, desc, text)%>%
+    arrange(id_q, id_I)%>%
+    dplyr::select(-id_q)
+  
+  kable.obj=kableExtra::kable((i.df), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(i.df)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(2, width = "1cm")%>%
+            column_spec(3, width = "2.5cm")%>%
+            column_spec(4, width = "8cm")
+    print(kable.obj)
+      
+}
+```
