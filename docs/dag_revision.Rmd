@@ -21,12 +21,12 @@ quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'),
                          sheet = "questions")
 evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
                         sheet = "events")
-coding= read_csv("C:/github/extreme_weather_risk/data/coding_report.csv")
+coding= read_csv("C:/github/extreme_weather_risk/data/read_only/coding_report.csv")
 names(coding)[5]='id_sub'
 styles= read_csv("C:/github/extreme_weather_risk/data/styles_desc.csv")
 f.style=coding[coding$id_q==0,c('id_I','value')]
 names(f.style)[2]='fishing_style'
-cod.unc= read_csv("C:/github/extreme_weather_risk/data/coding_report_unc.csv")
+cod.unc= read_csv("C:/github/extreme_weather_risk/data/read_only/coding_report_unc.csv")
 
 
 ###
@@ -209,8 +209,4 @@ ggplot(data=ch)+
 ```
 
 
-
-# pending decisions
-
-- is extra work part of the damages?
 

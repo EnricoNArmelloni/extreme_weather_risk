@@ -21,7 +21,7 @@ library(tidyverse)
 library(kableExtra)
 scoring.system=data.frame(Score=c('x', 999, -999, -998, -997), Type=paste('C', 1:5), Description = c('Number (x) available', 'To be interpreted','Does not apply', 'Cant answer', 'Garbled'))
 
-kableExtra::kable(scoring.system)%>%
+kableExtra::kable(scoring.system, caption = 'coding system used to categorise answers according to their interpretation')%>%
   kable_styling(font_size = 8)%>% 
             column_spec(1, width = "1cm")%>%
             column_spec(2, width = "1cm")%>%

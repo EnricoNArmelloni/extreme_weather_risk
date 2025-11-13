@@ -15,7 +15,7 @@ scriptDir <- dirname(scriptPath)
 library(readxl)
 library(tidyverse)
 library(kableExtra)
-coding=read_csv(file.path(scriptDir, '..', 'data', 'coding_report.csv'))
+coding=read_csv(file.path(scriptDir, '..', 'data/read_only', 'coding_report.csv'))
 names(coding)[5]='id_sub'
 evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
     sheet = "events")
@@ -48,7 +48,7 @@ evt.resp[as.numeric(evt.resp$fin.score)>=0 &as.numeric(evt.resp$fin.score)<=5,]$
 obs=data.frame(table(evt.resp$fin.score))
 names(obs)=c('Score','Frequency')
 
-kableExtra::kable(obs%>%arrange(desc(Frequency)), caption='test')%>%
+kableExtra::kable(obs%>%arrange(desc(Frequency)), caption='number of answers by interpretation category')%>%
   kable_styling(font_size = 8)%>% 
             column_spec(1, width = "3cm")%>%
             column_spec(2, width = "1.5cm")
@@ -85,7 +85,7 @@ evts.style=evt.resp%>%
   slice_max(prop)%>%
   dplyr::filter(type=='NO') # choose which events applies to each style
 
-kableExtra::kable(tab1[tab1$type=='NO' & tab1$prop>0.5, c('desc','style')]%>%replace(is.na(.),0))%>%
+kableExtra::kable(tab1[tab1$type=='NO' & tab1$prop>0.5, c('desc','style')]%>%replace(is.na(.),0), caption = 'table of the correspondence between fishing styles and relevant extreme weather event')%>%
   kable_styling(font_size = 8)%>% 
             column_spec(1, width = "3cm")%>%
             column_spec(2, width = "1.5cm")
@@ -110,7 +110,7 @@ interpret.llm=interpret%>%
   dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
   left_join(resp)
 
-kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
+kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE, caption = 'list of garbled answers') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(interpret.llm)-1),hline_after=T)%>%
@@ -129,9 +129,9 @@ Expert scoring of keywords produced the following results, which were used to as
 ```{r , echo=FALSE,message = FALSE,results = 'asis'}
 
 exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/coding_revision_ALL.xlsx")
-names(exp.scoring)[6:10]=c('AG','ENA','JO','mean','sd')
+names(exp.scoring)[6:10]=c('Exp1','Exp2','Exp3','mean','sd')
 
-kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE, caption = 'scores assigned by experts to answers not providing an explicit scoring') %>%
             kable_styling(font_size = 7)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(exp.scoring)-1),hline_after=T)%>%
@@ -252,7 +252,7 @@ interpret.llm=interpret%>%
   dplyr::mutate(id_sub=ifelse(is.na(id_sub), 'NA', id_sub))%>%
   left_join(resp)
 
-kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE) %>%
+kable.obj=kableExtra::kable(interpret.llm[,c('style', 'description', 'text')], booktabs = TRUE, caption = 'list of answers remaining unscored') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(interpret.llm)-1),hline_after=T)%>%
@@ -289,7 +289,7 @@ We have only two records that needs to borrow from other in the Human category.
 missing.human=events.missing[events.missing$hum.dom=='human' & !is.na(events.missing$value),]%>%
   left_join(quest)%>%
   dplyr::filter(!is.na(value))
-kable.obj=kableExtra::kable((missing.human[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((missing.human[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE, caption = 'answers regarding personal feelings that needs scoring') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(missing.human)-1),hline_after=T)%>%
@@ -309,7 +309,7 @@ borrow.human=coding[coding$id_I==1 & coding$id_q==15 & coding$id_sub=='c',]%>%
   left_join(resp, by =c('id_I','id_q'))%>%
   dplyr::filter(!is.na(text))
 
-kable.obj=kableExtra::kable((borrow.human[,c('description', 'text', 'value' )]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((borrow.human[,c('description', 'text', 'value' )]), booktabs = TRUE, caption = 'answers regarding personal feelings - available answers') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(borrow.human)-1))%>%
@@ -330,7 +330,7 @@ missing.met=events.missing[events.missing$hum.dom=='metier',]%>%
   left_join(quest)%>%
   arrange(id_q, id_sub)
 missing.met=missing.met[!is.na(missing.met$value),]
-kable.obj=kableExtra::kable((missing.met[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((missing.met[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE, caption = 'answers regarding metier characteristics that needs scoring') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(missing.met)-1),hline_after=T)%>%
@@ -354,7 +354,8 @@ borrow.met=coding[coding$id_I%in% c(1,5) & coding$id_q==3  & coding$id_sub %in% 
   dplyr::filter(!is.na(text))%>%
   left_join(evts)
 
-kable.obj=kableExtra::kable((borrow.met[,c('style','gear','description','desc','text','value' )]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((borrow.met[,c('style','gear','description','desc','text','value' )]), booktabs = TRUE,
+                             caption = 'available answers regarding metier') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(borrow.human)-1),hline_after=T)%>%
@@ -387,7 +388,8 @@ missing.fish=events.missing[events.missing$hum.dom=='fish',]%>%
   left_join(quest)%>%
   arrange(id_q, id_sub)
 missing.fish=missing.fish[!is.na(missing.fish$description),]
-kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE,
+                             caption = 'answers regarding fish that needs scoring') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(missing.fish)-1),hline_after=T)%>%
@@ -466,7 +468,8 @@ What remains are questions regarding uncertainty, long term effects, and change 
 missing.fish=events.missing[is.na(events.missing$hum.dom),]%>%
   left_join(quest)%>%
   arrange(id_q, id_sub)
-kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE) %>%
+kable.obj=kableExtra::kable((missing.fish[,c('style', 'description', 'desc', 'value' )]), booktabs = TRUE,
+                             caption = 'answers regarding other categories that needs scoring') %>%
             kable_styling(font_size = 8)%>% 
             row_spec(0,   bold = TRUE)%>%
             row_spec(1:(nrow(missing.fish)-1),hline_after=T)%>%

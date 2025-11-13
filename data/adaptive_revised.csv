@@ -1,0 +1,297 @@
+gear,area,target,id_q,value,id_I,short_description,text,score_obs,style,event_code,strategy
+not_specified,NA,NA,2,1,1,go_out,"1. Usually happens offshore; can’t handle it if I have a trip, e.g., from Sandhamn, but then we can go inland when there’s algal bloom",1,fishing guide,abl,A
+ice fishing,NA,NA,2,NA,1,go_out,"1. Usually happens offshore; can’t handle it if I have a trip, e.g., from Sandhamn, but then we can go inland when there’s algal bloom",1,fishing guide,abl,A
+rod,NA,NA,2,NA,1,go_out,"1. Usually happens offshore; can’t handle it if I have a trip, e.g., from Sandhamn, but then we can go inland when there’s algal bloom",1,fishing guide,abl,A
+NA,NA,NA,4,-997,1,catch_assemblage,"More about changing location (deeper), 5   choose other species (we fish pike & perch, sea trout)",5,fishing guide,abl,A
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,abl,
+NA,NA,NA,15,2,1,avoidance,NA,NA,fishing guide,abl,
+not_specified,NA,NA,2,1,1,go_out,"1, dangerous",1,fishing guide,erf,C
+ice fishing,NA,NA,2,NA,1,go_out,"1, dangerous",1,fishing guide,erf,C
+rod,NA,NA,2,NA,1,go_out,"1, dangerous",1,fishing guide,erf,C
+NA,NA,NA,4,-998,1,catch_assemblage,"No other species, more that we don’t fish",NA,fishing guide,erf,C
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,erf,
+NA,NA,NA,15,1,1,avoidance,NA,NA,fishing guide,erf,
+not_specified,NA,NA,2,5,1,go_out,"5Gale is normal (sometimes we cancel), from strong gale and upwards we stay home (18 19 m/s average and 25 m/s in gusts is not possible) ",5,fishing guide,gal,C
+ice fishing,NA,NA,2,NA,1,go_out,"5Gale is normal (sometimes we cancel), from strong gale and upwards we stay home (18 19 m/s average and 25 m/s in gusts is not possible) ",5,fishing guide,gal,C
+rod,NA,NA,2,NA,1,go_out,"5Gale is normal (sometimes we cancel), from strong gale and upwards we stay home (18 19 m/s average and 25 m/s in gusts is not possible) ",5,fishing guide,gal,C
+NA,NA,NA,4,-997,1,catch_assemblage,": 2 sometimes; if it blows too hard and we are supposed to fish trout, then sometimes we have to go in and fish perch & pike instead",2,fishing guide,gal,A
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,gal,
+NA,NA,NA,15,1,1,avoidance,NA,NA,fishing guide,gal,
+not_specified,NA,NA,2,4,1,go_out,"4. Some fishing is closed if it gets too hot, e.g., river fishing. It’s difficult to fish if it gets extremely hot, but I try to adapt; so far I haven’t canceled coastal fishing, I move it to mornings & evenings. But, for example, Nyköpingsån was closed because the water was too warm. Also depends on how hot it is. It happened in 2018, depends on what happens with our fish",4,fishing guide,hws,R
+ice fishing,NA,NA,2,NA,1,go_out,"4. Some fishing is closed if it gets too hot, e.g., river fishing. It’s difficult to fish if it gets extremely hot, but I try to adapt; so far I haven’t canceled coastal fishing, I move it to mornings & evenings. But, for example, Nyköpingsån was closed because the water was too warm. Also depends on how hot it is. It happened in 2018, depends on what happens with our fish",4,fishing guide,hws,R
+rod,NA,NA,2,NA,1,go_out,"4. Some fishing is closed if it gets too hot, e.g., river fishing. It’s difficult to fish if it gets extremely hot, but I try to adapt; so far I haven’t canceled coastal fishing, I move it to mornings & evenings. But, for example, Nyköpingsån was closed because the water was too warm. Also depends on how hot it is. It happened in 2018, depends on what happens with our fish",4,fishing guide,hws,R
+NA,NA,NA,4,-997,1,catch_assemblage,: 5   redirect the fishing down below the thermocline,5,fishing guide,hws,R
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,hws,
+NA,NA,NA,15,2,1,avoidance,NA,NA,fishing guide,hws,
+not_specified,NA,NA,2,NA,1,go_out,"Very different, depends on what is booked. Sometimes ice fishing is booked and then we have to cancel all bookings, sometimes open water fishing is possible. Lose ice fishing customers and gain spin fishing ones; 1   ice fishing (spin fishing customers can’t be booked in advance in winter, you can’t count on a heatwave in winter)",M,fishing guide,hww,A
+ice fishing,NA,NA,2,1,1,go_out,"Very different, depends on what is booked. Sometimes ice fishing is booked and then we have to cancel all bookings, sometimes open water fishing is possible. Lose ice fishing customers and gain spin fishing ones; 1   ice fishing (spin fishing customers can’t be booked in advance in winter, you can’t count on a heatwave in winter)",M,fishing guide,hww,A
+rod,NA,NA,2,5,1,go_out,"Very different, depends on what is booked. Sometimes ice fishing is booked and then we have to cancel all bookings, sometimes open water fishing is possible. Lose ice fishing customers and gain spin fishing ones; 1   ice fishing (spin fishing customers can’t be booked in advance in winter, you can’t count on a heatwave in winter)",M,fishing guide,hww,A
+NA,NA,NA,4,-997,1,catch_assemblage,": 5   sea trout on open water, instead of perch and pike under the ice",5,fishing guide,hww,A
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,hww,A
+NA,NA,NA,15,1,1,avoidance,NA,NA,fishing guide,hww,A
+not_specified,NA,NA,2,1,1,go_out,"1. Haven’t experienced severe icing, only seen it on YouTube; don’t know if it happens on sportfishing boats; it has to be safe, not dangerous; if it’s icing like on the Great Lakes, then the boat breaks",1,fishing guide,ici,C
+ice fishing,NA,NA,2,NA,1,go_out,"1. Haven’t experienced severe icing, only seen it on YouTube; don’t know if it happens on sportfishing boats; it has to be safe, not dangerous; if it’s icing like on the Great Lakes, then the boat breaks",1,fishing guide,ici,C
+rod,NA,NA,2,NA,1,go_out,"1. Haven’t experienced severe icing, only seen it on YouTube; don’t know if it happens on sportfishing boats; it has to be safe, not dangerous; if it’s icing like on the Great Lakes, then the boat breaks",1,fishing guide,ici,C
+NA,NA,NA,4,-998,1,catch_assemblage,No information,NA,fishing guide,ici,C
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,ici,C
+NA,NA,NA,15,1,1,avoidance,NA,NA,fishing guide,ici,C
+NA,NA,NA,2,NA,1,go_out,"A lot is about safety, combinations become dangerous, e.g., strong icing and strong winds, I avoid this as much as possible; would also get fewer requests, since fishing should be enjoyable",NA,fishing guide,NA,
+NA,NA,NA,13,NA,1,change_practices,"Change all the time according to the conditions; place, species and gear",NA,fishing guide,NA,
+NA,NA,NA,15,NA,1,avoidance,"Easy for me to switch but ask what the customers want (e.g., Americans who are booked for ice fishing). Large differences from the normal are a problem, with bookings   we do not know what we shall book (e.g., closed Nyköpingsån fishing due to heatwave). The customers also have to be flexible. 2 for those that are not dangerous; 1 for what is dangerous (cannot conduct activities)",NA,fishing guide,NA,
+not_specified,NA,NA,2,1,1,go_out,1,1,fishing guide,sto,C
+ice fishing,NA,NA,2,NA,1,go_out,1,1,fishing guide,sto,C
+rod,NA,NA,2,NA,1,go_out,1,1,fishing guide,sto,C
+NA,NA,NA,4,-998,1,catch_assemblage,Cancel,NA,fishing guide,sto,C
+NA,NA,NA,13,-999,1,change_practices,NA,NA,fishing guide,sto,C
+NA,NA,NA,15,1,1,avoidance,NA,NA,fishing guide,sto,C
+NA,NA,NA,2,4,2,go_out,Doesn’t affect us much up here; locally there may be algal bloom in a bay. (4) ,4,coastal,abl,R
+NA,NA,NA,4,-998,2,catch_assemblage,NA,NA,coastal,abl,R
+NA,NA,NA,13,0,2,change_practices,0,0,coastal,abl,R
+NA,NA,NA,15,4,2,avoidance,Quite easy (4).,4,coastal,abl,R
+NA,NA,NA,2,3,2,go_out,3,3,coastal,erf,R
+NA,NA,NA,4,1,2,catch_assemblage,1,1,coastal,erf,R
+NA,NA,NA,13,0,2,change_practices,(0)   We wait until the downpour is over and then go out; usually it only lasts a few hours.,0,coastal,erf,R
+NA,NA,NA,15,-999,2,avoidance,"Doesn’t affect much, so   (not scored).",NA,coastal,erf,R
+NA,NA,NA,2,1,2,go_out,"1, not me at least with my small boat",1,coastal,gal,C
+NA,NA,NA,4,1,2,catch_assemblage,1,1,coastal,gal,C
+NA,NA,NA,13,2,2,change_practices,(2)   Then we may not go out at all.,2,coastal,gal,C
+NA,NA,NA,15,1,2,avoidance,"When it’s windy, it’s windy everywhere, so quite difficult (1)   although you can always find some spot.",1,coastal,gal,C
+NA,NA,NA,2,3,2,go_out,(3) Depends a little on what we are fishing,3,coastal,hws,R
+NA,NA,NA,4,4,2,catch_assemblage,"Somewhat different species if we fish in the same place   e.g., a lot of bream; somewhat different (4).",4,coastal,hws,R
+NA,NA,NA,13,1,2,change_practices,(1)   Might change areas a little bit,1,coastal,hws,R
+NA,NA,NA,15,2,2,avoidance,(2)   Quite difficult.,2,coastal,hws,R
+NA,NA,NA,2,-999,2,go_out,"Extremely warm winter   we ice fish so little, therefore it is a bit difficult to answer. (2)",2,coastal,hww,R
+NA,NA,NA,4,-999,2,catch_assemblage,1,1,coastal,hww,R
+NA,NA,NA,13,1,2,change_practices,(1)   We might choose areas where travel on ice is easier.,1,coastal,hww,R
+NA,NA,NA,15,2,2,avoidance,"Not so easy, rather difficult (2).",2,coastal,hww,R
+NA,NA,NA,2,1,2,go_out,1,1,coastal,ici,C
+NA,NA,NA,4,-998,2,catch_assemblage,NA,NA,coastal,ici,C
+NA,NA,NA,13,-999,2,change_practices,We fish so little during that season that it’s hard to say,NA,coastal,ici,C
+NA,NA,NA,15,-999,2,avoidance,can’t answer,NA,coastal,ici,C
+NA,NA,NA,2,NA,2,go_out,Not really; it’s the wind that is decisive for us,NA,coastal,NA,
+NA,NA,NA,2,1,2,go_out,1,1,coastal,sto,C
+NA,NA,NA,4,-998,2,catch_assemblage,NA,NA,coastal,sto,C
+NA,NA,NA,13,2,2,change_practices,(2)   Then it’s quite certain we won’t go out.,2,coastal,sto,C
+NA,NA,NA,15,1,2,avoidance,Impossible to fish at all (1).,1,coastal,sto,C
+NA,NA,NA,2,5,3,go_out,"Rare up here, but still fish. =5.",5,coastal,abl,R
+NA,NA,NA,4,1,3,catch_assemblage,not directly (1),1,coastal,abl,R
+NA,NA,NA,13,2,3,change_practices,"In bays, same as in heatwaves",NA,coastal,abl,R
+NA,NA,NA,15,2,3,avoidance,"If heat lasts long, algal bloom spreads and worsens fishing. =2.",2,coastal,abl,R
+NA,NA,NA,2,3,3,go_out,"If gear is already out, we go anyway. If not, we wait. =3.",3,coastal,erf,C
+NA,NA,NA,4,1,3,catch_assemblage,no (1),1,coastal,erf,C
+NA,NA,NA,13,0,3,change_practices,0,0,coastal,erf,C
+NA,NA,NA,15,4,3,avoidance,"Yes, possible.",NA,coastal,erf,C
+NA,NA,NA,2,1,3,go_out,"No, we stay home. =1.",1,coastal,gal,C
+NA,NA,NA,4,1,3,catch_assemblage,1,1,coastal,gal,C
+NA,NA,NA,13,2,3,change_practices,"2. Move to less windy spots. For herring it’s harder, so maybe stay home.",2,coastal,gal,C
+NA,NA,NA,15,4,3,avoidance,"Yes, but usually means staying home ",NA,coastal,gal,C
+NA,NA,NA,2,5,3,go_out,"Then we fish, just go further out where it’s cooler. =5.",5,coastal,hws,R
+NA,NA,NA,4,1,3,catch_assemblage,very similar (1),1,coastal,hws,R
+NA,NA,NA,13,2,3,change_practices,"Yes, set in other places, change a lot. =2. Salmon gear is fixed at paid spots all summer, so they stay.",2,coastal,hws,R
+NA,NA,NA,15,5,3,avoidance,Works – go further out (usually warmest inshore). =5. ,5,coastal,hws,R
+NA,NA,NA,2,-999,3,go_out,"Depends on ice. Boats are usually hauled up in winter. If forecast shows winter is over, we might launch. Unlikely to put in and haul up again. Might use the small boat if open water, but ice may return. Large boats remain on land. =1 regardless.",NA,coastal,hww,C
+NA,NA,NA,4,-999,3,catch_assemblage,Not relevant.,NA,coastal,hww,C
+NA,NA,NA,13,-999,3,change_practices,NA,NA,coastal,hww,C
+NA,NA,NA,15,-999,3,avoidance,NA,NA,coastal,hww,C
+NA,NA,NA,2,-999,3,go_out,5 (icing can happen in spring). ,5,coastal,ici,R
+NA,NA,NA,4,-999,3,catch_assemblage,not relevant,NA,coastal,ici,R
+NA,NA,NA,13,-999,3,change_practices,NA,NA,coastal,ici,R
+NA,NA,NA,15,-999,3,avoidance,NA,NA,coastal,ici,R
+NA,NA,NA,2,NA,3,go_out,"Wind has the greatest impact here. Wind direction matters too (this August mostly W & NW winds, cooling the water – no point fishing perch then, they just stop moving).",NA,coastal,NA,
+NA,NA,NA,2,1,3,go_out,"No, we stay home. =1.",1,coastal,sto,C
+NA,NA,NA,4,1,3,catch_assemblage,1,1,coastal,sto,C
+NA,NA,NA,13,-998,3,change_practices,"Don’t go out at all, follow forecasts. Our boat is 12 m, so never in storms",NA,coastal,sto,C
+NA,NA,NA,15,2,3,avoidance,Storms are hard to avoid.,NA,coastal,sto,C
+NA,NA,NA,2,1,4,go_out,1,1,subsistence,abl,C
+NA,NA,NA,4,5,4,catch_assemblage,"We don’t really fish much then; would guess the fish flee from the algal bloom, 5 ",5,subsistence,abl,C
+NA,NA,NA,13,2,4,change_practices,2 then we do not go fish,2,subsistence,abl,C
+NA,NA,NA,15,1,4,avoidance,Stop fishing,NA,subsistence,abl,C
+NA,NA,NA,2,1,4,go_out,"We can get to the boathouse, but from there out onto the lake it’s more difficult; 1, if we don’t have gear in the water. But we check the weather forecast very carefully before putting in the gear.",1,subsistence,erf,C
+NA,NA,NA,4,-998,4,catch_assemblage,Can’t answer,NA,subsistence,erf,C
+NA,NA,NA,13,1,4,change_practices,"Don’t go out to set nets, but we do collect them if already out ",NA,subsistence,erf,C
+NA,NA,NA,15,1,4,avoidance,"1, no, we stop completely",1,subsistence,erf,C
+NA,NA,NA,2,1,4,go_out,1,1,subsistence,gal,R
+NA,NA,NA,4,-998,4,catch_assemblage,"Hard to say, we don’t fish much then",NA,subsistence,gal,R
+NA,NA,NA,13,2,4,change_practices,"We sometimes set in more sheltered bays less exposed, =2.",2,subsistence,gal,R
+NA,NA,NA,15,4,4,avoidance,"4, switch bays",4,subsistence,gal,R
+NA,NA,NA,2,2,4,go_out,2. Depends on how it affects winds and algal blooms; this year we had huge problems with algal blooms (1 month).,2,subsistence,hws,R
+NA,NA,NA,4,-998,4,catch_assemblage,Can’t answer.,NA,subsistence,hws,R
+NA,NA,NA,13,1,4,change_practices,"0 Only with algal bloom. If we want whitefish in summer during heatwave, they move deeper (15 m), =1. Move a few hundred meters",1,subsistence,hws,R
+NA,NA,NA,15,1,4,avoidance,"Drive grandchildren to another bay; no, we don’t change fishing spot, we stop fishing",NA,subsistence,hws,R
+NA,NA,NA,2,4,4,go_out,"Quite likely, if the water is open we’ll go out, 4",4,subsistence,hww,R
+NA,NA,NA,4,-998,4,catch_assemblage,Can’t answer.,NA,subsistence,hww,R
+NA,NA,NA,13,0,4,change_practices,0,0,subsistence,hww,R
+NA,NA,NA,15,-999,4,avoidance,no need,NA,subsistence,hww,R
+NA,NA,NA,2,-999,4,go_out,"No problem for us, too far south.",NA,subsistence,ici,C
+NA,NA,NA,4,-999,4,catch_assemblage,NA,NA,subsistence,ici,C
+NA,NA,NA,13,-999,4,change_practices,NA,NA,subsistence,ici,C
+NA,NA,NA,15,-999,4,avoidance,NA,NA,subsistence,ici,C
+NA,NA,NA,2,NA,4,go_out,Strong winds and high water levels.,NA,subsistence,NA,C
+NA,NA,NA,2,1,4,go_out,1,1,subsistence,sto,R
+NA,NA,NA,4,-998,4,catch_assemblage,"Hard to say, we don’t fish much then",NA,subsistence,sto,R
+NA,NA,NA,13,2,4,change_practices,"We sometimes set in more sheltered bays less exposed, =2.",2,subsistence,sto,R
+NA,NA,NA,15,1,4,avoidance,Don’t go fishing,NA,subsistence,sto,R
+NA,NA,not_specified,2,2,5,go_out,"Less attractive, but still possible to fish; =2.",2,recreational,abl,A
+NA,NA,zander,2,NA,5,go_out,"Less attractive, but still possible to fish; =2.",2,recreational,abl,A
+NA,NA,perch,2,NA,5,go_out,"Less attractive, but still possible to fish; =2.",2,recreational,abl,A
+NA,NA,trout,2,NA,5,go_out,"Less attractive, but still possible to fish; =2.",2,recreational,abl,A
+NA,NA,salmon,2,NA,5,go_out,"Less attractive, but still possible to fish; =2.",2,recreational,abl,A
+NA,NA,pike,2,NA,5,go_out,"Less attractive, but still possible to fish; =2.",2,recreational,abl,A
+NA,NA,NA,4,1,5,catch_assemblage,No,NA,recreational,abl,A
+NA,NA,not_specified,13,1,5,change_practices,"Maybe 1 – switch to another bay; if bloom is everywhere, then skip.",1,recreational,abl,R
+NA,NA,perch,13,NA,5,change_practices,"Maybe 1 – switch to another bay; if bloom is everywhere, then skip.",1,recreational,abl,R
+NA,NA,salmon/trout,13,NA,5,change_practices,"Maybe 1 – switch to another bay; if bloom is everywhere, then skip.",1,recreational,abl,R
+NA,NA,NA,15,4,5,avoidance,Easier – could switch to a lake if planning coastal fishing,NA,recreational,abl,A
+NA,NA,not_specified,2,2,5,go_out,People hold back; it’s a comfort factor. Most stay indoors,NA,recreational,erf,C
+NA,NA,zander,2,NA,5,go_out,People hold back; it’s a comfort factor. Most stay indoors,NA,recreational,erf,C
+NA,NA,perch,2,NA,5,go_out,People hold back; it’s a comfort factor. Most stay indoors,NA,recreational,erf,C
+NA,NA,trout,2,NA,5,go_out,People hold back; it’s a comfort factor. Most stay indoors,NA,recreational,erf,C
+NA,NA,salmon,2,NA,5,go_out,People hold back; it’s a comfort factor. Most stay indoors,NA,recreational,erf,C
+NA,NA,pike,2,NA,5,go_out,People hold back; it’s a comfort factor. Most stay indoors,NA,recreational,erf,C
+NA,NA,NA,4,1,5,catch_assemblage,No,NA,recreational,erf,C
+NA,NA,not_specified,13,2,5,change_practices,2 – you stay indoors,2,recreational,erf,C
+NA,NA,perch,13,NA,5,change_practices,2 – you stay indoors,2,recreational,erf,C
+NA,NA,salmon/trout,13,NA,5,change_practices,2 – you stay indoors,2,recreational,erf,C
+NA,NA,NA,15,2,5,avoidance,Hard,NA,recreational,erf,C
+NA,NA,not_specified,2,2,5,go_out,"Yes, people hold back; most stay home, except the really keen ones who may go out in sheltered spots",NA,recreational,gal,C
+NA,NA,zander,2,NA,5,go_out,"Yes, people hold back; most stay home, except the really keen ones who may go out in sheltered spots",NA,recreational,gal,C
+NA,NA,perch,2,NA,5,go_out,"Yes, people hold back; most stay home, except the really keen ones who may go out in sheltered spots",NA,recreational,gal,C
+NA,NA,trout,2,NA,5,go_out,"Yes, people hold back; most stay home, except the really keen ones who may go out in sheltered spots",NA,recreational,gal,C
+NA,NA,salmon,2,NA,5,go_out,"Yes, people hold back; most stay home, except the really keen ones who may go out in sheltered spots",NA,recreational,gal,C
+NA,NA,pike,2,NA,5,go_out,"Yes, people hold back; most stay home, except the really keen ones who may go out in sheltered spots",NA,recreational,gal,C
+NA,NA,NA,4,999,5,catch_assemblage,"Not directly, but on the coast with prolonged winds you can get upwelling; perch may move closer inshore, and trout & whitefish may appear shallower than normal. Seen within a season",NA,recreational,gal,C
+NA,NA,not_specified,13,1,5,change_practices,"If sheltered, you can fish a little, =1, unless fully blown in.",1,recreational,gal,C
+NA,NA,perch,13,NA,5,change_practices,"If sheltered, you can fish a little, =1, unless fully blown in.",1,recreational,gal,C
+NA,NA,salmon/trout,13,NA,5,change_practices,"If sheltered, you can fish a little, =1, unless fully blown in.",1,recreational,gal,C
+NA,NA,NA,15,3,5,avoidance,to some extent – find a sheltered spot,NA,recreational,gal,C
+NA,NA,not_specified,2,NA,5,go_out,"Yes, but in another way. When it’s hot, fishing in running waters (salmon, trout, grayling) is closed. Perch and zander fishing only gets better in warm weather. Few target pike in a heatwave. But if you booked a salmon-fishing week, it simply gets canceled. Zander & perch = 5; salmon & trout = 1; pike = 2 (or 1, discussed with another angler present). But “vacation fishers” will probably go out regardless. Pike fishing is usually in spring & autumn; high temps affect survival.",M,recreational,hws,A
+NA,NA,zander,2,5,5,go_out,"Yes, but in another way. When it’s hot, fishing in running waters (salmon, trout, grayling) is closed. Perch and zander fishing only gets better in warm weather. Few target pike in a heatwave. But if you booked a salmon-fishing week, it simply gets canceled. Zander & perch = 5; salmon & trout = 1; pike = 2 (or 1, discussed with another angler present). But “vacation fishers” will probably go out regardless. Pike fishing is usually in spring & autumn; high temps affect survival.",M,recreational,hws,A
+NA,NA,perch,2,5,5,go_out,"Yes, but in another way. When it’s hot, fishing in running waters (salmon, trout, grayling) is closed. Perch and zander fishing only gets better in warm weather. Few target pike in a heatwave. But if you booked a salmon-fishing week, it simply gets canceled. Zander & perch = 5; salmon & trout = 1; pike = 2 (or 1, discussed with another angler present). But “vacation fishers” will probably go out regardless. Pike fishing is usually in spring & autumn; high temps affect survival.",M,recreational,hws,A
+NA,NA,trout,2,1,5,go_out,"Yes, but in another way. When it’s hot, fishing in running waters (salmon, trout, grayling) is closed. Perch and zander fishing only gets better in warm weather. Few target pike in a heatwave. But if you booked a salmon-fishing week, it simply gets canceled. Zander & perch = 5; salmon & trout = 1; pike = 2 (or 1, discussed with another angler present). But “vacation fishers” will probably go out regardless. Pike fishing is usually in spring & autumn; high temps affect survival.",M,recreational,hws,A
+NA,NA,salmon,2,1,5,go_out,"Yes, but in another way. When it’s hot, fishing in running waters (salmon, trout, grayling) is closed. Perch and zander fishing only gets better in warm weather. Few target pike in a heatwave. But if you booked a salmon-fishing week, it simply gets canceled. Zander & perch = 5; salmon & trout = 1; pike = 2 (or 1, discussed with another angler present). But “vacation fishers” will probably go out regardless. Pike fishing is usually in spring & autumn; high temps affect survival.",M,recreational,hws,A
+NA,NA,pike,2,2,5,go_out,"Yes, but in another way. When it’s hot, fishing in running waters (salmon, trout, grayling) is closed. Perch and zander fishing only gets better in warm weather. Few target pike in a heatwave. But if you booked a salmon-fishing week, it simply gets canceled. Zander & perch = 5; salmon & trout = 1; pike = 2 (or 1, discussed with another angler present). But “vacation fishers” will probably go out regardless. Pike fishing is usually in spring & autumn; high temps affect survival.",M,recreational,hws,A
+NA,NA,NA,4,2,5,catch_assemblage,"No, you fish where you fish, so you get the species present there. But in mountain areas, if you target trout or grayling but the system also has pike and perch, you might get more of those instead. From a boat it’s usually small differences",NA,recreational,hws,A
+NA,NA,not_specified,13,NA,5,change_practices,Mixed,NA,recreational,hws,A
+NA,NA,perch,13,0,5,change_practices,Mixed,NA,recreational,hws,A
+NA,NA,salmon/trout,13,2,5,change_practices,Mixed,NA,recreational,hws,A
+NA,NA,NA,15,2,5,avoidance,Hard,NA,recreational,hws,A
+NA,NA,not_specified,2,1,5,go_out,"If it’s otherwise a good winter, then it’s just nice weather. But if it’s a mild winter, then you can’t go out. Is ice fishing the dominant form? Few go out in boats? On the big lakes. and at Simrishamn there is some trolling from boats. If we think about ice fishing?Absolutely, =1 if the ice isn’t there or is dangerous to walk on.",1,recreational,hww,A
+NA,NA,zander,2,NA,5,go_out,"If it’s otherwise a good winter, then it’s just nice weather. But if it’s a mild winter, then you can’t go out. Is ice fishing the dominant form? Few go out in boats? On the big lakes. and at Simrishamn there is some trolling from boats. If we think about ice fishing?Absolutely, =1 if the ice isn’t there or is dangerous to walk on.",1,recreational,hww,A
+NA,NA,perch,2,NA,5,go_out,"If it’s otherwise a good winter, then it’s just nice weather. But if it’s a mild winter, then you can’t go out. Is ice fishing the dominant form? Few go out in boats? On the big lakes. and at Simrishamn there is some trolling from boats. If we think about ice fishing?Absolutely, =1 if the ice isn’t there or is dangerous to walk on.",1,recreational,hww,A
+NA,NA,trout,2,NA,5,go_out,"If it’s otherwise a good winter, then it’s just nice weather. But if it’s a mild winter, then you can’t go out. Is ice fishing the dominant form? Few go out in boats? On the big lakes. and at Simrishamn there is some trolling from boats. If we think about ice fishing?Absolutely, =1 if the ice isn’t there or is dangerous to walk on.",1,recreational,hww,A
+NA,NA,salmon,2,NA,5,go_out,"If it’s otherwise a good winter, then it’s just nice weather. But if it’s a mild winter, then you can’t go out. Is ice fishing the dominant form? Few go out in boats? On the big lakes. and at Simrishamn there is some trolling from boats. If we think about ice fishing?Absolutely, =1 if the ice isn’t there or is dangerous to walk on.",1,recreational,hww,A
+NA,NA,pike,2,NA,5,go_out,"If it’s otherwise a good winter, then it’s just nice weather. But if it’s a mild winter, then you can’t go out. Is ice fishing the dominant form? Few go out in boats? On the big lakes. and at Simrishamn there is some trolling from boats. If we think about ice fishing?Absolutely, =1 if the ice isn’t there or is dangerous to walk on.",1,recreational,hww,A
+NA,NA,NA,4,1,5,catch_assemblage,"No, very similar",NA,recreational,hww,A
+NA,NA,not_specified,13,2,5,change_practices,"2 – if the ice is unsafe, you don’t go out.",2,recreational,hww,A
+NA,NA,perch,13,NA,5,change_practices,"2 – if the ice is unsafe, you don’t go out.",2,recreational,hww,A
+NA,NA,salmon/trout,13,NA,5,change_practices,"2 – if the ice is unsafe, you don’t go out.",2,recreational,hww,A
+NA,NA,NA,15,2,5,avoidance,"Hard, scale is large.",NA,recreational,hww,A
+NA,NA,not_specified,2,1,5,go_out,Big impact.,NA,recreational,ici,C
+NA,NA,zander,2,NA,5,go_out,Big impact.,NA,recreational,ici,C
+NA,NA,perch,2,NA,5,go_out,Big impact.,NA,recreational,ici,C
+NA,NA,trout,2,NA,5,go_out,Big impact.,NA,recreational,ici,C
+NA,NA,salmon,2,NA,5,go_out,Big impact.,NA,recreational,ici,C
+NA,NA,pike,2,NA,5,go_out,Big impact.,NA,recreational,ici,C
+NA,NA,NA,4,-998,5,catch_assemblage,"No, icing is rare",NA,recreational,ici,C
+NA,NA,not_specified,13,-998,5,change_practices,NA,NA,recreational,ici,C
+NA,NA,perch,13,NA,5,change_practices,NA,NA,recreational,ici,C
+NA,NA,salmon/trout,13,NA,5,change_practices,NA,NA,recreational,ici,C
+NA,NA,NA,15,-998,5,avoidance,NA,NA,recreational,ici,C
+NA,NA,NA,2,NA,5,go_out,"Combination of gale/storm and heavy rain – Even more unpleasant, a negative synergy effect",NA,recreational,NA,
+NA,NA,not_specified,2,1,5,go_out,"No, impossible to fish.",NA,recreational,sto,C
+NA,NA,zander,2,NA,5,go_out,"No, impossible to fish.",NA,recreational,sto,C
+NA,NA,perch,2,NA,5,go_out,"No, impossible to fish.",NA,recreational,sto,C
+NA,NA,trout,2,NA,5,go_out,"No, impossible to fish.",NA,recreational,sto,C
+NA,NA,salmon,2,NA,5,go_out,"No, impossible to fish.",NA,recreational,sto,C
+NA,NA,pike,2,NA,5,go_out,"No, impossible to fish.",NA,recreational,sto,C
+NA,NA,NA,4,999,5,catch_assemblage,"Not directly, but on the coast with prolonged winds you can get upwelling; perch may move closer inshore, and trout & whitefish may appear shallower than normal. Seen within a season ",NA,recreational,sto,C
+NA,NA,not_specified,13,1,5,change_practices,Same,1,recreational,sto,C
+NA,NA,perch,13,NA,5,change_practices,Same,1,recreational,sto,C
+NA,NA,salmon/trout,13,NA,5,change_practices,Same,1,recreational,sto,C
+NA,NA,NA,15,1,5,avoidance,no,NA,recreational,sto,C
+NA,not_specified,NA,2,5,6,go_out,5,5,pelagic_trawler,abl,C
+NA,Baltic,NA,2,NA,6,go_out,5,5,pelagic_trawler,abl,C
+NA,NorthSea,NA,2,NA,6,go_out,5,5,pelagic_trawler,abl,C
+NA,NA,NA,4,1,6,catch_assemblage,1,1,pelagic_trawler,abl,C
+NA,NA,NA,13,0,6,change_practices,0,0,pelagic_trawler,abl,C
+NA,NA,NA,15,-999,6,avoidance,No effect,NA,pelagic_trawler,abl,C
+NA,not_specified,NA,2,5,6,go_out,5,5,pelagic_trawler,erf,C
+NA,Baltic,NA,2,NA,6,go_out,5,5,pelagic_trawler,erf,C
+NA,NorthSea,NA,2,NA,6,go_out,5,5,pelagic_trawler,erf,C
+NA,NA,NA,4,1,6,catch_assemblage,1,1,pelagic_trawler,erf,C
+NA,NA,NA,13,0,6,change_practices,0,0,pelagic_trawler,erf,C
+NA,NA,NA,15,-999,6,avoidance,No effect,NA,pelagic_trawler,erf,C
+NA,not_specified,NA,2,NA,6,go_out,"4 in the Baltic Sea at least; if we are going to consume the fish in the North Sea, then we wait because the fish can spoil , but in the Baltic Sea we don't fish for human consumption",M,pelagic_trawler,gal,C
+NA,Baltic,NA,2,4,6,go_out,"4 in the Baltic Sea at least; if we are going to consume the fish in the North Sea, then we wait because the fish can spoil , but in the Baltic Sea we don't fish for human consumption",M,pelagic_trawler,gal,C
+NA,NorthSea,NA,2,1,6,go_out,"4 in the Baltic Sea at least; if we are going to consume the fish in the North Sea, then we wait because the fish can spoil , but in the Baltic Sea we don't fish for human consumption",M,pelagic_trawler,gal,C
+NA,NA,NA,4,1,6,catch_assemblage,1,1,pelagic_trawler,gal,C
+NA,NA,NA,13,0,6,change_practices,0,0,pelagic_trawler,gal,C
+NA,NA,NA,15,-999,6,avoidance,No effect,NA,pelagic_trawler,gal,C
+NA,not_specified,NA,2,1.5,6,go_out,"1; wait a minute, spring when the weather changes; in July when it's hottest, the fish are scattered, so there's no point in going out; say 2.",2,pelagic_trawler,hws,C
+NA,Baltic,NA,2,NA,6,go_out,"1; wait a minute, spring when the weather changes; in July when it's hottest, the fish are scattered, so there's no point in going out; say 2.",2,pelagic_trawler,hws,C
+NA,NorthSea,NA,2,NA,6,go_out,"1; wait a minute, spring when the weather changes; in July when it's hottest, the fish are scattered, so there's no point in going out; say 2.",2,pelagic_trawler,hws,C
+NA,NA,NA,4,1,6,catch_assemblage,NA,NA,pelagic_trawler,hws,C
+NA,NA,NA,13,0,6,change_practices,0,0,pelagic_trawler,hws,C
+NA,NA,NA,15,-999,6,avoidance,It has no effec,NA,pelagic_trawler,hws,C
+NA,not_specified,NA,2,5,6,go_out,5,5,pelagic_trawler,hww,C
+NA,Baltic,NA,2,NA,6,go_out,5,5,pelagic_trawler,hww,C
+NA,NorthSea,NA,2,NA,6,go_out,5,5,pelagic_trawler,hww,C
+NA,NA,NA,4,1,6,catch_assemblage,1,1,pelagic_trawler,hww,C
+NA,NA,NA,13,2,6,change_practices,"2, stays upwind or goes ashore when the wind picks up to storm force, and waits 1-2 days until it calms down; when the waves are too high, the trawl does not fish as well.",2,pelagic_trawler,hww,C
+NA,NA,NA,15,3.5,6,avoidance,"We avoid it, we can go down into the Baltic Sea on the other side of Åland; we can move, we go closer to Finland, 3-4.",3.5,pelagic_trawler,hww,C
+NA,not_specified,NA,2,1,6,go_out,"we avoid going out, 1.",1,pelagic_trawler,ici,C
+NA,Baltic,NA,2,NA,6,go_out,"we avoid going out, 1.",1,pelagic_trawler,ici,C
+NA,NorthSea,NA,2,NA,6,go_out,"we avoid going out, 1.",1,pelagic_trawler,ici,C
+NA,NA,NA,4,1,6,catch_assemblage,1,1,pelagic_trawler,ici,C
+NA,NA,NA,13,2,6,change_practices,"2, does not go out",2,pelagic_trawler,ici,C
+NA,NA,NA,15,4,6,avoidance,"Yes, we can change course if we know in advance, but if the wind is too strong, it doesn't help to move closer to land; we can't go closer than 40 km",NA,pelagic_trawler,ici,C
+NA,NA,NA,2,NA,6,go_out,"Icing & high winds, then it's 1",1,pelagic_trawler,NA,C
+NA,not_specified,NA,2,1,6,go_out,"1, we have the quota so we don't need to risk the crew.",1,pelagic_trawler,sto,C
+NA,Baltic,NA,2,NA,6,go_out,"1, we have the quota so we don't need to risk the crew.",1,pelagic_trawler,sto,C
+NA,NorthSea,NA,2,NA,6,go_out,"1, we have the quota so we don't need to risk the crew.",1,pelagic_trawler,sto,C
+NA,NA,NA,4,1,6,catch_assemblage,1,1,pelagic_trawler,sto,C
+NA,NA,NA,13,2,6,change_practices,"2, does not go out",2,pelagic_trawler,sto,C
+NA,NA,NA,15,4,6,avoidance,as we mentioned earlier,NA,pelagic_trawler,sto,C
+NA,NA,not_specified,2,1,7,go_out,"I have not experienced it, but it probably has an impact, so then I don't fish",NA,coastal,abl,C
+NA,NA,herring,2,NA,7,go_out,"I have not experienced it, but it probably has an impact, so then I don't fish",NA,coastal,abl,C
+NA,NA,perch,2,NA,7,go_out,"I have not experienced it, but it probably has an impact, so then I don't fish",NA,coastal,abl,C
+NA,NA,NA,4,-999,7,catch_assemblage,"Haven't experienced it, but heard that it affects fishing ",NA,coastal,abl,C
+NA,NA,NA,13,-999,7,change_practices,NA,NA,coastal,abl,C
+NA,NA,NA,15,-999,7,avoidance,NA,NA,coastal,abl,C
+NA,NA,not_specified,2,4,7,go_out,then I fish anyway ,NA,coastal,erf,C
+NA,NA,herring,2,NA,7,go_out,then I fish anyway ,NA,coastal,erf,C
+NA,NA,perch,2,NA,7,go_out,then I fish anyway ,NA,coastal,erf,C
+NA,NA,NA,4,1,7,catch_assemblage,1,1,coastal,erf,C
+NA,NA,NA,13,0,7,change_practices,0,0,coastal,erf,C
+NA,NA,NA,15,1,7,avoidance,1 (but it doesn't matter),1,coastal,erf,C
+NA,NA,not_specified,2,3,7,go_out,"depends on the wind direction, if it's N then it's from the outside so then it's difficult, if it's S or SW, in gale force winds I don't fish anyway because there's a strong current in the lake so you get crap in your nets, but I do go out in gale force winds sometimes , depends on the wind direction",NA,coastal,gal,R
+NA,NA,herring,2,NA,7,go_out,"depends on the wind direction, if it's N then it's from the outside so then it's difficult, if it's S or SW, in gale force winds I don't fish anyway because there's a strong current in the lake so you get crap in your nets, but I do go out in gale force winds sometimes , depends on the wind direction",NA,coastal,gal,R
+NA,NA,perch,2,NA,7,go_out,"depends on the wind direction, if it's N then it's from the outside so then it's difficult, if it's S or SW, in gale force winds I don't fish anyway because there's a strong current in the lake so you get crap in your nets, but I do go out in gale force winds sometimes , depends on the wind direction",NA,coastal,gal,R
+NA,NA,NA,4,-998,7,catch_assemblage,"Yes, I think it affects the composition;  seaweed gets caught in the nets and creates currents; can't say if other species are affected",NA,coastal,gal,R
+NA,NA,NA,13,1,7,change_practices,Changes the fishing spot,NA,coastal,gal,R
+NA,NA,NA,15,4,7,avoidance,"4, depends on the wind direction, and sometimes the fishing spots don't match where it's sheltered.",4,coastal,gal,R
+NA,NA,not_specified,2,2,7,go_out,"I don't go because the fish won't keep as well, I don't fish for herring at all, in that case I fish for perch, 2",2,coastal,hws,A
+NA,NA,herring,2,1,7,go_out,"I don't go because the fish won't keep as well, I don't fish for herring at all, in that case I fish for perch, 2",2,coastal,hws,A
+NA,NA,perch,2,2,7,go_out,"I don't go because the fish won't keep as well, I don't fish for herring at all, in that case I fish for perch, 2",2,coastal,hws,A
+NA,NA,NA,4,2,7,catch_assemblage,"herring are fished a little further out, and perch closer in; always fish in different places, so the composition is not affected in each place",M,coastal,hws,A
+NA,NA,NA,13,1,7,change_practices,1 changes how much perch I fish compared to herring,1,coastal,hws,A
+NA,NA,NA,15,2,7,avoidance,"I don't know, but you can still fish for perch; the roach moves further out, and I can go a little further out, but I don't have a very big boat, so I can't go that far out, 2",2,coastal,hws,A
+NA,NA,not_specified,2,4.5,7,go_out,"I probably go fishing anyway, it's the wind that matters, I probably try anyway (=5? or =4?)",4.5,coastal,hww,R
+NA,NA,herring,2,NA,7,go_out,"I probably go fishing anyway, it's the wind that matters, I probably try anyway (=5? or =4?)",4.5,coastal,hww,R
+NA,NA,perch,2,NA,7,go_out,"I probably go fishing anyway, it's the wind that matters, I probably try anyway (=5? or =4?)",4.5,coastal,hww,R
+NA,NA,NA,4,-999,7,catch_assemblage,difficult to answer,NA,coastal,hww,R
+NA,NA,NA,13,2,7,change_practices,"Yes, if there is no ice, I cannot fish, so I have to fish from a boat, but that is usually not very productive; 2",2,coastal,hww,R
+NA,NA,NA,15,1,7,avoidance,"1 (if the ice is not strong enough, it's pretty much the same, then you have to go very far),",1,coastal,hww,R
+NA,NA,not_specified,2,-999,7,go_out,I am not on the lake at that time of year when there is a risk of icing (because the ice forms so early,NA,coastal,ici,C
+NA,NA,herring,2,NA,7,go_out,I am not on the lake at that time of year when there is a risk of icing (because the ice forms so early,NA,coastal,ici,C
+NA,NA,perch,2,NA,7,go_out,I am not on the lake at that time of year when there is a risk of icing (because the ice forms so early,NA,coastal,ici,C
+NA,NA,NA,4,-999,7,catch_assemblage,We skip this one,NA,coastal,ici,C
+NA,NA,NA,13,-999,7,change_practices,"I don't know, I haven't experienced it (maybe I'll skip it then),",NA,coastal,ici,C
+NA,NA,NA,15,4,7,avoidance,"I think so , it depends on how it accumulates in certain places",NA,coastal,ici,C
+NA,NA,NA,2,NA,7,go_out,storms and weather like that,NA,coastal,NA,
+NA,NA,not_specified,2,1,7,go_out,1,1,coastal,sto,R
+NA,NA,herring,2,NA,7,go_out,1,1,coastal,sto,R
+NA,NA,perch,2,NA,7,go_out,1,1,coastal,sto,R
+NA,NA,NA,4,-998,7,catch_assemblage,"Yes, I think it affects the composition; seaweed gets caught in the nets and creates currents; can't say if other species are affected",NA,coastal,sto,R
+NA,NA,NA,13,2,7,change_practices,"2; Do you go out in a storm? It has happened that you make a mistake and go out, but you have to put the nets in a sheltered spot, you have your spots",2,coastal,sto,R
+NA,NA,NA,15,4,7,avoidance,"same there, but you rarely fish in a storm if you know about it, but sometimes you have to go out as I said",NA,coastal,sto,R

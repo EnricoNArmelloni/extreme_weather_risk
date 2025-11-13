@@ -1,5 +1,5 @@
 ---
-title: "Appendix X: interviews to fisherman"
+title: "Appendix A1: elicitation of parameters from fishers. Interviews plots, results and data treatment"
 output:
   pdf_document:
     toc: true
@@ -7,8 +7,8 @@ output:
 
 ---
 \setcounter{table}{0}
-\renewcommand{\thetable}{S\arabic{table}}
-\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{A1.\arabic{table}}
+\renewcommand{\thefigure}{A1.\arabic{figure}}
 \newpage
 
 ```{r child = 'methods.Rmd'}

@@ -114,53 +114,268 @@ rank.cpt=function(nodes.df, uncertainty, algorithm = 'equal', meaning='abs', xna
 
 
 # data from interviews
-int.dat=read_csv("data/coding_report_unc.csv")
+int.dat=read_csv("data/read_only/coding_report_unc.csv")
 evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
                         sheet = "events")
+evts=evts[!is.na(evts$event_code),]
+evts$season=c('winter','summer','winter','summer','summer','all','all')
 int.dat=left_join(int.dat[,-which(colnames(int.dat)=='event_code')], evts, by='id_sub')
+f.styles=unique(int.dat[int.dat$id_q==0,]$text)
 
 style.dataset=read_excel("data/lists_fishing_styles.xlsx", 
            sheet = "fishing_style")
+
+strategy.dataset=read.csv("data/adaptive_revised.csv")
+strategy.dataset=strategy.dataset[!is.na(strategy.dataset$event_code),]%>%distinct(id_I, event_code, strategy)
+
 # DAG
-net=read.net('~/ARMELLONI_SLU/RiskAnalysis/networks/single_events/type1_v5_general_simple.net', debug = T)
+net=read.net('~/ARMELLONI_SLU/RiskAnalysis/networks/single_events/type1_v6_general_simple.net', debug = T)
 graphviz.plot(net, layout = "dot", fontsize = 18)
 graphviz.chart(net)
-
-f.styles=unique(int.dat[int.dat$id_q==0,]$text)
-
-
-stress.prob=cpdist(net, nodes = c('stress'), 
-       evidence = (event == 'gal'))
-table(stress.prob)
 
 # check missing data
 x.nodes=nodes(net)
 x.nodes=x.nodes[x.nodes %in% int.dat$short_description]
 int.dat[abs(int.dat$uncertainty)>10 & !is.na(int.dat$uncertainty),]$uncertainty=1/5
-xx=1
 
-
-# start
+# start ####
 x.nodes=nodes(net)
 
-## Set even event probability
+## event probability ####
 array.var=net[['event']]$prob
 xdim=dim(array.var)
 array.var[1:xdim]=rep(1/xdim, xdim)
 net[['event']]=array.var
 
-## set fisher probability
+## fisher probability ####
 array.var=net[['fishing_style']]$prob
 xdim=dim(array.var)
 array.var[1:xdim]=rep(1/xdim, xdim)
 net[['fishing_style']]=array.var
 
-## fishing style
-i.node='gear'
-# gear in this moment is set manually. COnsider if there is the need to create two different traps. The mani issue here is to properly catch how fisher can switch between gears, especially between nets and traps for coastal and between rod and ice fishing for recreational
+## strategy ####
+i.node='strategy'
+array.var=net[[i.node]]$prob
+xdim=dim(array.var)
+xnam=dimnames(array.var)
+df.var=as.data.frame(array.var)
+x.lev=levels(df.var[,i.node])
+target.dims=names(df.var)
+target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
 
-## fishing area
-i.node='area' # same as fishing style
+styles=data.frame(f.style=unique(df.var$fishing_style))
+styles$f.style.2=NA
+styles$season=NA
+styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
+styles[grep('artis', styles$f.style),]$f.style.2='coastal'
+styles[grep('indust', styles$f.style),]$f.style.2='trawler'
+styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
+styles$season=c('winter','summer','summer','all','all','all','winter','summer')
+
+z=1
+
+for(z in 1:length(styles$f.style)){
+
+  answ.range=0:1
+  adj.factor=ifelse(min(answ.range)==0,0.5,0)
+  
+  z.style=styles[z,]
+  i.fisher=style.dataset[style.dataset$style==z.style$f.style.2,]
+  i.fisher=unique(i.fisher$id)
+  
+  i.strategy=strategy.dataset[strategy.dataset$id_I %in% i.fisher,]
+  i.strategy$strategy=ifelse(i.strategy$strategy=='A','A','RC')
+  #i.strategy=i.strategy%>%distinct(event_code, strategy)
+  
+  dat=int.dat[int.dat$id_I%in%i.fisher,]
+  dat=dat[is.na(dat$unit_range),]
+  dat$target=ifelse(is.na(dat$target), 'not_specified', dat$target)
+  dat$area=ifelse(is.na(dat$area), 'not_specified', dat$area)
+  dat=dat[dat$area %in% c('not_specified', 'Baltic', 'deep','shallow'),]
+  dat$gear=ifelse(is.na(dat$gear), 'not_specified', dat$gear)
+  dat=dat[!is.na(dat$value),]
+  
+  # go fishing
+  x.answ.0=dat[grep('go_out', dat$short_description),]
+  # change practice
+  x.answ.1=dat[grep('change_', dat$short_description),]
+  # adapt
+  x.answ.2=dat[grep('avoid', dat$short_description),]
+  
+  i.evts=unique(df.var$event)
+  for(j in 1:length(i.evts)){
+    
+    j.event=i.evts[j]
+    
+    # is the event possible given the seasonality?
+    if(z.style$season!='all'){
+      evt.season=evts[evts$event_code==j.event,]$season
+      if(z.style$season!=evt.season){
+        if(evt.season!='all'){
+          df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(0,0,0,1)
+        next 
+        }
+      }
+    }
+    
+    # if so, go ahead
+    j.strategy=i.strategy[i.strategy$event_code==i.evts[j],]
+    j.strategy.unique=unique(j.strategy$strategy)
+    j.answ=x.answ.2[x.answ.2$event_code==j.event,]  
+    j.answ=j.answ[abs(j.answ$value)<=5,]
+    
+    if(nrow(j.answ)==0){
+      df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(1,0,0,0)
+      next
+    }
+    
+    if(length(j.strategy.unique)>1){
+      
+      j.answ=left_join(j.answ, j.strategy)
+      p1=answer.to.cpt_vH(x.ans=mean(j.answ[j.answ$strategy=='A',]$value), 
+                          unc=mean(j.answ[j.answ$strategy=='A',]$uncertainty),
+                          dim.name = i.node,
+                          div.factor = length(answ.range), # this is not always 3!
+                          dim.labs = c('cope', 'adapt'))
+      p2=answer.to.cpt_vH(x.ans=mean(j.answ[j.answ$strategy=='RC',]$value), 
+                          unc=mean(j.answ[j.answ$strategy=='RC',]$uncertainty),
+                          dim.name = i.node,
+                          div.factor = length(answ.range), # this is not always 3!
+                          dim.labs = c('cope', 'react'))
+      p3=data.frame(p=c(p1,p2), state=names(c(p1, p2)))%>%
+        dplyr::mutate(p=p/sum(p))%>%
+        dplyr::group_by(state)%>%
+        dplyr::summarise(p=sum(p))
+      
+      p3=p3[order(p3$state, c('cope','react','adapt')),]
+      
+      df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(p3$p,0)
+      
+      next  
+    }
+    
+    
+    if(nrow(j.answ)>1){
+      j.answ=j.answ%>%
+        dplyr::group_by(gear,area,target)%>%
+        dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
+      j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty)
+    }
+    
+    if(j.strategy.unique=='A'){
+      # adapt or react? 
+      i.cpt=answer.to.cpt_vH(x.ans=j.answ$value, 
+                             unc=j.answ$uncertainty,
+                             dim.name = i.node,
+                             div.factor = length(answ.range), # this is not always 3!
+                             dim.labs = c('cope', 'adapt'))
+      df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(i.cpt[1],0,i.cpt[2],0)
+      next 
+    }
+    if(j.strategy.unique !='A'){
+      # cope or react? 
+      i.cpt=answer.to.cpt_vH(x.ans=j.answ$value, 
+                             unc=j.answ$uncertainty,
+                             dim.name = i.node,
+                             div.factor = length(answ.range), # this is not always 3!
+                             dim.labs = c('cope', 'react'))
+      df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(i.cpt,0,0)
+      next
+    }
+  }
+}
+net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
+
+df.var%>%
+  ggplot(aes(x=event, y=Freq, fill=strategy))+
+  geom_col()+
+  facet_wrap(~fishing_style)
+
+
+## go fishing
+i.node='go_out'
+array.var=net[[i.node]]$prob
+xdim=dim(array.var)
+xnam=dimnames(array.var)
+df.var=as.data.frame(array.var)
+x.lev=levels(df.var[,i.node])
+target.dims=names(df.var)
+target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
+
+styles=data.frame(f.style=unique(df.var$fishing_style))
+styles$f.style.2=NA
+styles$season=NA
+styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
+styles[grep('artis', styles$f.style),]$f.style.2='coastal'
+styles[grep('indust', styles$f.style),]$f.style.2='trawler'
+styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
+styles$season=c('winter','summer','summer','all','all','all','winter','summer')
+
+z=1
+
+df.var[df.var$strategy=='not_relevant',]$Freq=c(0,0,1)
+df.var[df.var$strategy=='adapt',]$Freq=c(0,1,0)
+df.var[df.var$strategy=='react',]$Freq=c(0,1,0)
+df.var[df.var$strategy=='cope',]$Freq=c(1,0,0)
+
+for(z in 1:length(styles$f.style)){
+  answ.range=0:1
+  adj.factor=ifelse(min(answ.range)==0,0.5,0)
+  z.style=styles[z,]
+  i.fisher=style.dataset[style.dataset$style==z.style$f.style.2,]
+  i.fisher=unique(i.fisher$id)
+  i.strategy=strategy.dataset[strategy.dataset$id_I %in% i.fisher,]
+  i.strategy$strategy=ifelse(i.strategy$strategy=='A','A','RC')
+  #i.strategy=i.strategy%>%distinct(event_code, strategy)
+  
+  dat=int.dat[int.dat$id_I%in%i.fisher,]
+  dat=dat[is.na(dat$unit_range),]
+  dat$target=ifelse(is.na(dat$target), 'not_specified', dat$target)
+  dat$area=ifelse(is.na(dat$area), 'not_specified', dat$area)
+  dat=dat[dat$area %in% c('not_specified', 'Baltic', 'deep','shallow'),]
+  dat$gear=ifelse(is.na(dat$gear), 'not_specified', dat$gear)
+  dat=dat[!is.na(dat$value),]
+  
+  # go fishing
+  x.answ=dat[grep('go_out', dat$short_description),]
+  i.evts=unique(df.var$event)
+  for(j in 1:length(i.evts)){
+    
+  j.event=i.evts[j]
+    
+  j.answ=x.answ[x.answ$event_code==j.event,]  
+  j.answ=j.answ[abs(j.answ$value)<=5,]
+  
+  if(nrow(j.answ)==0){
+    df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style & df.var$strategy=='cope',]$Freq=c(1,0,0)
+    next
+  }
+  
+  if(nrow(j.answ)>1){
+    j.answ=j.answ%>%
+      dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
+    j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty)
+  }
+
+  # cope (accept passively)
+  i.cpt=answer.to.cpt_vH(x.ans=j.answ$value, 
+                       unc=j.answ$uncertainty,
+                       dim.name = i.node,
+                       div.factor = length(answ.range), # this is not always 3!
+                       dim.labs = c('no','yes'))
+  df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style & df.var$strategy=='cope',]$Freq=c(i.cpt,0)
+
+  }
+}
+net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
+
+df.var%>%
+  dplyr::filter(strategy=='cope')%>%
+  ggplot(aes(x=event, y=Freq, fill=go_out))+
+  geom_col()+
+  facet_wrap(~fishing_style)
 
 
 ## infrastructure ####
@@ -179,7 +394,8 @@ styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
 styles[grep('artis', styles$f.style),]$f.style.2='coastal'
 styles[grep('indust', styles$f.style),]$f.style.2='trawler'
 styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
-z=3
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
+z=7
 for(z in 1:length(styles$f.style)){
   
   if(i.node=='infrastructure'){
@@ -231,7 +447,8 @@ styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
 styles[grep('artis', styles$f.style),]$f.style.2='coastal'
 styles[grep('indust', styles$f.style),]$f.style.2='trawler'
 styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
-z=1
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
+z=8
 for(z in 1:length(styles$f.style)){
   
   if(i.node=='infrastructure'){
@@ -267,8 +484,170 @@ for(z in 1:length(styles$f.style)){
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 
-## flexibility ####
 
+## additional mitigation ####
+
+i.node='additional_mitigation'
+array.var=net[[i.node]]$prob
+xdim=dim(array.var)
+xnam=dimnames(array.var)
+df.var=as.data.frame(array.var)
+x.lev=levels(df.var[,i.node])
+target.dims=names(df.var)
+target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
+
+styles=data.frame(f.style=unique(df.var$fishing_style))
+styles$f.style.2=NA
+styles$season=NA
+styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
+styles[grep('artis', styles$f.style),]$f.style.2='coastal'
+styles[grep('indust', styles$f.style),]$f.style.2='trawler'
+styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
+styles$season=c('winter','summer','summer','all','all','all','winter','summer')
+
+z=1
+
+for(z in 1:length(styles$f.style)){
+  
+  answ.range=0:1
+  adj.factor=ifelse(min(answ.range)==0,0.5,0)
+  
+  z.style=styles[z,]
+  i.fisher=style.dataset[style.dataset$style==z.style$f.style.2,]
+  i.fisher=unique(i.fisher$id)
+  
+  i.strategy=strategy.dataset[strategy.dataset$id_I %in% i.fisher,]
+  i.strategy$strategy=ifelse(i.strategy$strategy=='A','A','RC')
+  #i.strategy=i.strategy%>%distinct(event_code, strategy)
+  
+  dat=int.dat[int.dat$id_I%in%i.fisher,]
+  dat=dat[is.na(dat$unit_range),]
+  dat$target=ifelse(is.na(dat$target), 'not_specified', dat$target)
+  dat$area=ifelse(is.na(dat$area), 'not_specified', dat$area)
+  dat=dat[dat$area %in% c('not_specified', 'Baltic', 'deep','shallow'),]
+  dat$gear=ifelse(is.na(dat$gear), 'not_specified', dat$gear)
+  dat=dat[!is.na(dat$value),]
+  
+  # go fishing
+  x.answ=dat[grep('cope_condition', dat$short_description),]
+  
+  i.evts=unique(df.var$event)
+  for(j in 1:length(i.evts)){
+    
+    j.event=i.evts[j]
+    j.answ=x.answ[x.answ$event_code==j.event,]  
+    j.answ=j.answ[abs(j.answ$value)<=5,]
+    
+    if(nrow(j.answ)==0){
+      df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(1,0)
+      next
+    }
+    
+    i.cpt=answer.to.cpt_vH(x.ans=j.answ$value, 
+                           unc=j.answ$uncertainty,
+                           dim.name = i.node,
+                           div.factor = length(answ.range), # this is not always 3!
+                           dim.labs = x.lev)
+    df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]$Freq=c(i.cpt)
+  }
+}
+net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
+
+
+
+
+
+
+
+## fishing area ####
+i.node='area'
+array.var=net[[i.node]]$prob
+xdim=dim(array.var)
+xnam=dimnames(array.var)
+df.var=as.data.frame(array.var)
+x.lev=levels(df.var[,i.node])
+target.dims=names(df.var)
+target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
+
+styles=data.frame(f.style=unique(df.var$fishing_style))
+styles$f.style.2=NA
+styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
+styles[grep('artis', styles$f.style),]$f.style.2='coastal'
+styles[grep('indust', styles$f.style),]$f.style.2='trawler'
+styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
+
+
+df.var[df.var$fishing_style=='industrial',]$Freq=c(0,1,0,0) # pelagic is always deep
+df.var[df.var$fishing_style=='artisanal_salmon',]$Freq=c(1,0,0,0) # salmon traps are fixed and inshore
+
+## artisanal is normally 50% shallow and 50% deep
+df.var[df.var$fishing_style=='artisanal' & df.var$strategy=='cope',]$Freq=c(0.5,0.5,0,0) 
+## archipelago is 80% shallow and 20% deep
+df.var[df.var$fishing_style=='archipelago' & df.var$strategy=='cope',]$Freq=c(0.8,0.2,0,0) 
+## fishing guide in summer is 50% shallow and 40% inland and 10% deep
+df.var[df.var$fishing_style=='guide_summer'& df.var$strategy=='cope',]$Freq=c(0.5,0.4,0.1,0) 
+## fishing guide in winter is 90% inland and 10% shallow
+df.var[df.var$fishing_style=='guide_winter'& df.var$strategy=='cope',]$Freq=c(0.1,0,0.9,0) 
+## fishing guide in summer is 50% shallow and 40% inland and 10% deep
+df.var[df.var$fishing_style=='recreational_summer'& df.var$strategy=='cope',]$Freq=c(0.5,0.4,0.1,0) 
+## fishing guide in winter is 90% inland and 10% shallow
+df.var[df.var$fishing_style=='recreational_winter'& df.var$strategy=='cope',]$Freq=c(0.1,0,0.9,0) 
+
+
+
+df.var[df.var$strategy=='not_relevant',]$Freq=c(0,0,0,1) # make sure that here everything is to 0
+
+
+df.var[df.var$strategy=='adapt',]$Freq=c(0,1,0)
+df.var[df.var$strategy=='react',]$Freq=c(0,1,0)
+df.var[df.var$strategy=='cope',]$Freq=c(1,0,0)
+
+
+
+
+
+for(z in 1:length(styles$f.style)){
+  
+  if(i.node=='infrastructure'){
+    answ.range=0:2
+  }else if(i.node=='damage'){
+    answ.range=0:3
+  }else{
+    answ.range=1:5
+  }
+  adj.factor=ifelse(min(answ.range)==0,0.5,0)
+  
+  z.style=styles[z,]
+  i.fisher=style.dataset[style.dataset$style==z.style$f.style.2,]
+  i.fisher=unique(i.fisher$id)
+  dat=int.dat[int.dat$id_I%in%i.fisher,]
+  x.answ=dat[grep(i.node, dat$short_description),]%>%
+    arrange(short_description)
+  x.answ=x.answ[abs(x.answ$value)<=5,]
+  
+  if(nrow(x.answ)>1){
+    x.answ=x.answ%>%
+      dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
+    x.answ$uncertainty=ifelse(is.na(x.answ$uncertainty),0,x.answ$uncertainty)
+  }
+  
+  i.cpt=answer.to.cpt_vH(x.ans=x.answ$value+adj.factor, 
+                         unc=x.answ$uncertainty,
+                         dim.name = i.node,
+                         div.factor = length(answ.range), # this is not always 3!
+                         dim.labs = x.lev)
+  df.var[df.var$fishing_style==z.style$f.style ,]$Freq=i.cpt  
+}
+net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
+
+
+
+
+
+
+## flexibility ####
 i.node='flexibility'
 array.var=net[[i.node]][['prob']]
 xdim=dim(array.var)
@@ -282,8 +661,6 @@ target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
 df.var[df.var$management=='Rigid'|df.var$infrastructure=='no',]$Freq=c(1,0)
 
 # this should be re4 considered. flexibility is somehow implicit in the definition of adaptive strategy. Sure it is interesting
-
-
 
 
 ## Potential consequences ####
@@ -377,7 +754,6 @@ for(z in 1:length(p.consequences)){
   net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 }
 
-
 # stress
 i.node='stress'
 array.var=net[[i.node]]$prob
@@ -394,6 +770,7 @@ styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
 styles[grep('artis', styles$f.style),]$f.style.2='coastal'
 styles[grep('indust', styles$f.style),]$f.style.2='trawler'
 styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
+styles[grep('guid', styles$f.style),]$f.style.2='guide'
 for(z in 1:length(styles$f.style)){
   
   z.style=styles[z,]
@@ -436,168 +813,18 @@ for(z in 1:length(styles$f.style)){
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 
+  
+  
+  
+  
 
 
-# go out
-i.node='go_out'
-array.var=net[[i.node]]$prob
-array.var=net[[i.node]]$prob
-xdim=dim(array.var)
-xnam=dimnames(array.var)
-df.var=as.data.frame(array.var)
-x.lev=levels(df.var[,i.node])
-target.dims=names(df.var)
-target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
-
-styles=data.frame(f.style=unique(df.var$fishing_style))
-styles$f.style.2=NA
-styles[grep('recreat', styles$f.style),]$f.style.2='recreational'
-styles[grep('artis', styles$f.style),]$f.style.2='coastal'
-styles[grep('indust', styles$f.style),]$f.style.2='trawler'
-styles[grep('archi', styles$f.style),]$f.style.2='archipelago'
-
-z=6
-
-for(z in 1:length(styles$f.style)){
-  
-  z.style=styles[z,]
-  i.fisher=style.dataset[style.dataset$style==z.style$f.style.2,]
-  i.fisher=unique(i.fisher$id)
-  dat=int.dat[int.dat$id_I%in%i.fisher,]
-  dat=dat[is.na(dat$unit_range),]
-  dat$target=ifelse(is.na(dat$target), 'not_specified', dat$target)
-  dat$area=ifelse(is.na(dat$area), 'not_specified', dat$area)
-  dat=dat[dat$area %in% c('not_specified', 'Baltic', 'deep','shallow'),]
-  dat$gear=ifelse(is.na(dat$gear), 'not_specified', dat$gear)
-  dat=dat[!is.na(dat$value),]
-  dat=dat[abs(dat$value)<=5,]
-  
-  
-  # go fishing
-  x.answ=dat[grep(i.node, dat$short_description),]
-  # adapt
-  x.answ.2=dat[grep('avoid', dat$short_description),]
-  
-  i.evts=unique(df.var$event)
-  j=7
-  for(j in 1:length(i.evts)){
-    j.event=i.evts[j]
-    j.answ=x.answ[x.answ$event_code==j.event,]  
-    j.answ=j.answ[abs(j.answ$value)<=5,]
-    if(nrow(j.answ)>1){
-      j.answ=j.answ%>%
-        dplyr::group_by(gear,area,target)%>%
-        dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
-      j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty)
-    }
-    
-    j.answ.2=x.answ.2[x.answ.2$event_code==j.event,]  
-    j.answ.2=j.answ.2[abs(j.answ.2$value)<=5,]
-    if(nrow(j.answ.2)>1){
-      j.answ.2=j.answ.2%>%
-        dplyr::group_by(gear,area,target)%>%
-        dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
-      j.answ.2$uncertainty=ifelse(is.na(j.answ.2$uncertainty),0,j.answ.2$uncertainty)
-    }
-    
-    
-    # without an adaptive strategy
-    i.cpt=answer.to.cpt_vH(x.ans=j.answ$value+adj.factor, 
-                     unc=j.answ$uncertainty,
-                     dim.name = i.node,
-                     div.factor = length(answ.range), # this is not always 3!
-                     dim.labs = x.lev)
-    df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style & df.var$strategy=='no',]$Freq=i.cpt
-    
-    # with an adaptive strategy
-    if(j.answ.2$value>j.answ$value){
-      i.cpt=answer.to.cpt_vH(x.ans=j.answ.2$value+adj.factor, 
-                              unc=j.answ.2$uncertainty,
-                              dim.name = i.node,
-                              div.factor = length(answ.range), # this is not always 3!
-                              dim.labs = x.lev)
-    }
-    df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style & df.var$strategy=='yes',]$Freq=i.cpt
-    
-    
-    df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style,]
-    
-    # single option
-    if(nrow(j.answ)==1){
-      i.cpt=answer.to.cpt_vH(x.ans=j.answ$value+adj.factor, 
-                             unc=j.answ$uncertainty,
-                             dim.name = i.node,
-                             div.factor = length(answ.range), # this is not always 3!
-                             dim.labs = x.lev)
-      df.var[df.var$event==j.event & df.var$gear== i.gear[i],]$Freq=i.cpt  
-    }
-    
-    # multiple options
-    if(nrow(j.answ)>1){
-      check.multi=data.frame(Freq=apply(j.answ[,1:3], 2, function(x)length(unique(x))))
-      check.multi$type=rownames(check.multi)
-      check.multi=check.multi[check.multi$Freq>1,]
-      
-      if(nrow(check.multi)==1){
-        multi.options=j.answ[,check.multi$type]
-        
-        # TO DO make sure to have a generic baseline based on answers. 
-        # FOr instance, in case only some of the species mentioned have a specific value. 
-        # ALl the other should be assimilated to the not_specified
-        
-        for(k in 1:nrow(multi.options)){
-          k.opt=multi.options[k,]
-          k.feature=names(k.opt)
-          if(k.opt %in% df.var[[k.feature]]==F){next}
-          k.answ=j.answ[k,]
-          i.cpt=answer.to.cpt_vH(x.ans=k.answ$value+adj.factor, 
-                                 unc=k.answ$uncertainty,
-                                 dim.name = i.node,
-                                 div.factor = length(answ.range), # this is not always 3!
-                                 dim.labs = x.lev)
-          df.var[df.var$event==j.event & df.var$gear== i.gear[i] & tolower(df.var[[k.feature]])==k.opt[[1]],]$Freq=i.cpt
-        }
-      }
-    }
-  }
-  
-  
-  
-  
-  supp.data=data.frame(node=c('catch_condition',  'damage', 'personal_safety','stress'), 
-                       link.w=c(x.answ$value, 0),
-                       states=c(3,4,3,2),
-                       type=c('parent','parent','parent','child'),
-                       direction=c('neg', 'pos','pos', 'pos'),
-                       id=1:4)
-  x.cpt=rank.cpt(nodes.df = supp.data, uncertainty = unique(x.answ$uncertainty), algorithm = 'min', xnam=xnam)
-  x.cpt[[1]]%>%
-    pivot_longer(cols=c('yes','no'), names_to = 'stress')%>%
-    dplyr::filter(stress=='yes')%>%
-    ggplot(aes(x= personal_safety, y=damage, fill=value))+
-    geom_tile()+
-    facet_wrap(~catch_condition)+
-    scale_fill_viridis_c()
-  
-  z.cpt=x.cpt[[1]]%>%
-    pivot_longer(cols=c('no','yes'), names_to = 'stress')%>%
-    arrange(desc(catch_condition))
-  
-  df.var[df.var$fishing_style==styles[z,]$f.style,]$Freq=z.cpt$value
-  
-  
-}
-net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-
-
-
-# injury
 
 
 
 
 stress.prob=cpdist(net, nodes = c('stress'), 
-                   evidence = (event == 'sto'))
+                   evidence = (event == 'ici'))
 table(stress.prob)
 
 graphviz.chart(net)

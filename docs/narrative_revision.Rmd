@@ -11,7 +11,7 @@ scriptDir <- dirname(scriptPath)
 library(readxl)
 library(tidyverse)
 library(kableExtra)
-coding=read_csv(file.path(scriptDir, '..', 'data', 'coding_report.csv'))
+coding=read_csv(file.path(scriptDir, '..', 'data/read_only', 'coding_report.csv'))
 names(coding)[5]='id_sub'
 evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
     sheet = "events")

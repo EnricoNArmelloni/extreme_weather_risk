@@ -1,0 +1,165 @@
+---
+title: "Appendix A2: conditional probability tables."
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+---
+
+```{r  setup, echo=FALSE,message = FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+setwd(file.path(scriptDir, '..')) 
+library(tidyverse)
+library(bnlearn)
+library(gRain)
+theme_set(theme_bw())
+net=read.net('data/networks/BEWARE_learn_pt2.net', debug = F)
+knitr::opts_chunk$set(fig.width=10, fig.height=5) 
+firstup <- function(x) {
+  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+  x
+}
+head_resp='##'
+```
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{A2.\arabic{table}}
+\renewcommand{\thefigure}{A2.\arabic{figure}}
+
+# Network structure
+
+\newpage
+
+# Decision nodes
+
+Controls the climate and fishing management scenarios, those are defined a priori depending on the conditions to be explored in the scenario analyses.
+
+## Extreme weather events (node: event)
+
+The node *Event* is used to wrap all the extreme weather events we are considering.
+
+*Levels (and acronyms)*
+
+-   **Storms** (sto). Strong wind events, with intensity above 24.5 m/s. Season: summer.
+
+-   **Gales** (gal), or moderately strong wind events, with intensity between 15 m/s and 24.5 m/s;
+
+-   **Extreme precipitation** (erf) – rainstorm (summer), or deviation from average precipitation regime;
+
+-   **Algal bloom** (abl): intense algal bloom;
+
+-   **Summer heatwaves** (hws): prolonged discrete anomalously warm water event (Hobday et al., 2016);
+
+-   **Winter heatwaves** (hww): prolonged discrete anomalously warm water event (Hobday et al., 2016);
+
+-   **Icing** (Ici): strong wind events associated to ice, which then forms icing pile up on gears and boats.
+
+## Fishing style
+
+The node *Fishing style* is used to wrap all the fishing styles and seasons.
+
+*Levels (and acronyms)*
+
+-   **Recreational fisher in winter season** (rew): a fishing style that primarily performs ice fishing and potentially can fish in open water from the shore;
+
+-   **Recreational fisher in summer season** (res): a fishing style that primarily performs ice fishing and potentially can fish in open water from the shore;
+
+-   **fishing guide in winter season** (fgw), a fishing style that primarily performs ice fishing and potentially can fish in open water from the shore;
+
+-   **fishing guide in the summer season** (fgw), which primarily fish in coastal areas from shore or boat and can potentially move to inland fishing;
+
+-   **Coastal small-scale fishers**, (ssf) a fishing style that happen mostly in summer using gillnets in coastal areas, and in some cases with traps (not for salmon) but can perform limited amount of ice fishing in winter;
+
+-   **Coastal small-scale fishers specialised in salmon fishing** (sal): which fish for salmon with fixed traps rigidly regulated;
+
+-   **Pelagic trawlers** (trw), represented by pelagic trawlers mostly active in winter and exclusively fishing for small pelagic;
+
+-   **Archipelago fishers** (arc), which is similar to an artisanal fishers but is by law prevented from selling their catches.
+
+## Fishing management
+
+it controls how much fishing regulations allows fishers to implement adaptation strategies (e.g.: changing target species and gear).
+
+*Levels (and acronyms)*
+
+-   **Business as Usual** (BAU): each fishing style adopts strategies and behaviour according to interviews results
+
+-    **Flexible management** (FLEX). Fishing style is allowed for more flexibility.
+
+
+## Stock status
+
+it controls how much fishing regulations allows fishers to implement adaptation strategies (e.g.: changing target species and gear).
+
+*Levels (and acronyms)*
+
+-   **status quo** (SQ): each fishing style adopts strategies and behaviour according to interviews results
+
+-    **improved stock status** (FLEX). Fishing style is allowed for more flexibility.
+
+-   **worsened stock status**
+
+\newpage
+
+# Operational subsystem
+
+
+
+\newpage
+
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE}
+target.nodes=c('infrastructure', 'flexibility', 'strategy', 'personal_safety', 'gear', 'target', 'catchability')
+for( i in 1:length(target.nodes)){
+  
+  
+  
+  # get values
+  i.node=target.nodes[i]
+  array.var=net[[i.node]]$prob
+  df.var=as.data.frame(array.var)
+  xnam=dimnames(array.var)
+  x.parents=names(xnam)
+  x.parents=x.parents[x.parents!=i.node]
+  x.levs=xnam[[i.node]]
+  # print characteristics
+  cat(knitr::asis_output(sprintf('%s %s\n\n', head_resp, firstup(i.node))))
+  
+  cat(sprintf('_Parents_: %s  \n', paste0(paste(x.parents, collapse = ', '),'.')))
+  cat(sprintf('_Levels_: %s  \n', paste0(paste(x.levs, collapse = ', '),'.')))
+  
+  # plotting
+  if(length(x.parents)==1){
+    p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+      geom_col()
+  }
+  if(length(x.parents)==2){
+    p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+      geom_col()+
+      facet_grid(cols = vars(!!as.name(x.parents[2])))
+  }
+  if(length(x.parents)==3){
+   p= ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+        geom_col()+
+        facet_grid(cols = vars(!!as.name(x.parents[2])),
+               rows = vars(!!as.name(x.parents[3])))
+  }
+  if(length(x.parents)==4){
+    p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+      geom_col()+
+      facet_grid(cols = vars(!!as.name(x.parents[2])),
+                 rows = vars(!!as.name(x.parents[3])))
+  }
+  
+  p=p + labs(caption = sprintf("Figure: Conditional distribution for '%s'", i.node)) +
+    theme(plot.caption = element_text(hjust = 0, face = "italic", size = 9))
+  print(p)
+  
+  #cat('\n\\newpage\n')
+  
+}
+```
+
+

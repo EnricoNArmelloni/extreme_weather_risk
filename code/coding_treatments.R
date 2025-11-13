@@ -48,7 +48,7 @@ for(i in 1:length(target.sheets)){
   
 }
 names(store.results)[5]='id_sub'
-write.csv(store.results, file.path(scriptDir, '../data/coding_report.csv'), row.names = F )
+write.csv(store.results, file.path(scriptDir, '../data/read_only/coding_report.csv'), row.names = F )
 
 
 ###
@@ -68,9 +68,8 @@ quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'),
                          sheet = "questions")
 evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
                         sheet = "events")
-coding= read_csv("C:/github/extreme_weather_risk/data/coding_report.csv")
+coding= read_csv("C:/github/extreme_weather_risk/data/read_only/coding_report.csv")
 names(coding)[5]='id_sub'
-styles= read_csv("C:/github/extreme_weather_risk/data/styles_desc.csv")
 f.style=coding[coding$id_q==0,c('id_I','value')]
 names(f.style)[2]='fishing_style'
 
@@ -111,6 +110,6 @@ for(j in 1:length(int.i)){
   cod.unc=rbind(cod.unc, j.cod)
 }
 
-write.csv(cod.unc, file.path(scriptDir, '../data/coding_report_unc.csv'), row.names = F )
+write.csv(cod.unc, file.path(scriptDir, '../data/read_only/coding_report_unc.csv'), row.names = F )
 
 
