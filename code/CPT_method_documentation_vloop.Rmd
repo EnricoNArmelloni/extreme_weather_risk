@@ -6,22 +6,25 @@ output:
     toc_depth: 3
 ---
 
-```{r  setup, echo=FALSE,message = FALSE}
+```{r  setup, echo=FALSE,message = FALSE, warning=FALSE}
 remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
-setwd(file.path(scriptDir, '..')) 
+#setwd(file.path(scriptDir, '..')) 
 library(tidyverse)
 library(bnlearn)
 library(gRain)
 theme_set(theme_bw())
-net=read.net('data/networks/BEWARE_learn_pt2.net', debug = F)
-knitr::opts_chunk$set(fig.width=10, fig.height=5) 
+net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_learn_pt2.net'), debug = F)
+#knitr::opts_chunk$set(fig.width=10, fig.height=5) 
 firstup <- function(x) {
   substr(x, 1, 1) <- toupper(substr(x, 1, 1))
   x
 }
 head_resp='##'
+#target.nodes=c('infrastructure', 'flexibility', 'strategy', 'personal_safety', 'gear', 'target', 'catchability')
+target.nodes=c('infrastructure', 'flexibility', 'strategy')
+capts.target=c(paste("Figure: Conditional distribution for ", target.nodes))
 ```
 
 \setcounter{table}{0}
@@ -108,14 +111,11 @@ it controls how much fishing regulations allows fishers to implement adaptation 
 
 
 \newpage
-
-
-```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE}
-target.nodes=c('infrastructure', 'flexibility', 'strategy', 'personal_safety', 'gear', 'target', 'catchability')
+```{r, include=T, echo=FALSE,message=FALSE, warning=FALSE}
+# plot creation
+plot.list=list()
 for( i in 1:length(target.nodes)){
-  
-  
-  
+
   # get values
   i.node=target.nodes[i]
   array.var=net[[i.node]]$prob
@@ -124,12 +124,6 @@ for( i in 1:length(target.nodes)){
   x.parents=names(xnam)
   x.parents=x.parents[x.parents!=i.node]
   x.levs=xnam[[i.node]]
-  # print characteristics
-  cat(knitr::asis_output(sprintf('%s %s\n\n', head_resp, firstup(i.node))))
-  
-  cat(sprintf('_Parents_: %s  \n', paste0(paste(x.parents, collapse = ', '),'.')))
-  cat(sprintf('_Levels_: %s  \n', paste0(paste(x.levs, collapse = ', '),'.')))
-  
   # plotting
   if(length(x.parents)==1){
     p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
@@ -152,12 +146,44 @@ for( i in 1:length(target.nodes)){
       facet_grid(cols = vars(!!as.name(x.parents[2])),
                  rows = vars(!!as.name(x.parents[3])))
   }
+  plot.list[[i]]=p
+
+}
+names(plot.list) = c(paste("conditional distribution for ", target.nodes))
+```
+
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+
+for( i in 1:length(target.nodes)){
+
+  # get values
+  i.node=target.nodes[i]
+  array.var=net[[i.node]]$prob
+  df.var=as.data.frame(array.var)
+  xnam=dimnames(array.var)
+  x.parents=names(xnam)
+  x.parents=x.parents[x.parents!=i.node]
+  x.levs=xnam[[i.node]]
   
-  p=p + labs(caption = sprintf("Figure: Conditional distribution for '%s'", i.node)) +
-    theme(plot.caption = element_text(hjust = 0, face = "italic", size = 9))
-  print(p)
+  # print characteristics
+  cat("\n") 
+  cat(sprintf('%s %s\n\n', head_resp, firstup(i.node)))
+  cat("\n")
+  cat(sprintf('_Parents_: %s  \n', paste0(paste(x.parents, collapse = ', '),'.')))
+  cat(sprintf('_Levels_: %s  \n', paste0(paste(x.levs, collapse = ', '),'.')))
   
-  #cat('\n\\newpage\n')
+  # plotting
+  cat('\n\n') 
+  chunk_text <- paste0(
+    "```{r, echo=FALSE, fig.width=10, fig.height=5, fig.pos='H', fig.cap='",
+    (names(plot.list)[i]),
+    "'}\n",
+    "print(plot.list[[", i, "]])\n",
+    "```\n"
+  )
+  cat(knitr::knit_child(text = chunk_text, envir = environment(),quiet = TRUE))
+  cat("\n\\newpage\n")
   
 }
 ```
