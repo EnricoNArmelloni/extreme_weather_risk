@@ -13,9 +13,11 @@ scriptDir <- dirname(scriptPath)
 #setwd(file.path(scriptDir, '..')) 
 library(tidyverse)
 library(bnlearn)
+library(readxl)
 library(gRain)
 theme_set(theme_bw())
 net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_learn_pt2.net'), debug = F)
+node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
 #knitr::opts_chunk$set(fig.width=10, fig.height=5) 
 firstup <- function(x) {
   substr(x, 1, 1) <- toupper(substr(x, 1, 1))
@@ -23,7 +25,8 @@ firstup <- function(x) {
 }
 head_resp='##'
 #target.nodes=c('infrastructure', 'flexibility', 'strategy', 'personal_safety', 'gear', 'target', 'catchability')
-target.nodes=c('infrastructure', 'flexibility', 'strategy')
+target.nodes=unique(node.text$node)
+#target.nodes=c('infrastructure', 'flexibility', 'strategy')
 capts.target=c(paste("Figure: Conditional distribution for ", target.nodes))
 ```
 
@@ -106,7 +109,7 @@ it controls how much fishing regulations allows fishers to implement adaptation 
 
 \newpage
 
-# Operational subsystem
+# Chance nodes
 
 
 
@@ -124,6 +127,17 @@ for( i in 1:length(target.nodes)){
   x.parents=names(xnam)
   x.parents=x.parents[x.parents!=i.node]
   x.levs=xnam[[i.node]]
+  
+  # format
+  if('fishing_style' %in% names(df.var)){
+    df.var=df.var%>%
+      dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational_summer',
+                                     'rcf', ifelse(fishing_style=='coastal', 'ssf',
+                                                   ifelse(fishing_style=='coastal_salmon' , 'sal' ,
+                                                           ifelse(fishing_style=='archipelago' ,'arc',
+                                                                  ifelse(fishing_style=='trawler' ,'trw','fgu'))))))
+  }
+  
   # plotting
   if(length(x.parents)==1){
     p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
@@ -168,10 +182,16 @@ for( i in 1:length(target.nodes)){
   
   # print characteristics
   cat("\n") 
-  cat(sprintf('%s %s\n\n', head_resp, firstup(i.node)))
+  cat(sprintf('%s %s\n\n', head_resp, firstup(str_replace(i.node, '_',' '))))
   cat("\n")
   cat(sprintf('_Parents_: %s  \n', paste0(paste(x.parents, collapse = ', '),'.')))
+  cat("\n")
   cat(sprintf('_Levels_: %s  \n', paste0(paste(x.levs, collapse = ', '),'.')))
+  
+  # print description text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
   
   # plotting
   cat('\n\n') 
