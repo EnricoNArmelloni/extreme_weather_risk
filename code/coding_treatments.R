@@ -97,7 +97,7 @@ for(j in 1:length(int.i)){
   uncertainty.id=str_split(uncertainty.vals$short_description, '_')
   for(i in 1:nrow(uncertainty.vals)){
     i.id=as.numeric(uncertainty.id[[i]][-1])
-    i.unc=uncertainty.vals[i,]$value/10
+    i.unc=uncertainty.vals[i,]$value
     if(length(i.id) ==2){
       j.cod[j.cod$id_q %in% i.id[1]:i.id[2],]$uncertainty=i.unc
     }
@@ -109,6 +109,12 @@ for(j in 1:length(int.i)){
   j.cod=j.cod[-which(j.cod$id_q %in% uncertainty.vals$id_q),]
   cod.unc=rbind(cod.unc, j.cod)
 }
+
+## fix missing uncertainty: i borrowed fishing guide unc 2_7 from 9_13 and 15_19; borrowed archiplegao uncertainty on personal values from avg of all coastal and recreational
+
+## lowest uncertainty means that the answer is 100% pertaining to the declared rank. On the opposite, highest uncertainty let the rank to go all over the place. Then it should be a gradient of betweens
+# when answer is 1 to 5, min = 0.25 and max = 1.5 looks reasonable
+cod.unc$uncertainty=cod.unc$uncertainty/3.3333
 
 write.csv(cod.unc, file.path(scriptDir, '../data/read_only/coding_report_unc.csv'), row.names = F )
 

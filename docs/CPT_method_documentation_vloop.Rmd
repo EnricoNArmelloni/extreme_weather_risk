@@ -131,7 +131,7 @@ for( i in 1:length(target.nodes)){
   # format
   if('fishing_style' %in% names(df.var)){
     df.var=df.var%>%
-      dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational_summer',
+      dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
                                      'rcf', ifelse(fishing_style=='coastal', 'ssf',
                                                    ifelse(fishing_style=='coastal_salmon' , 'sal' ,
                                                            ifelse(fishing_style=='archipelago' ,'arc',
@@ -142,28 +142,34 @@ for( i in 1:length(target.nodes)){
   if(length(x.parents)==1){
     p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
       geom_col()
+    plot.lab='.'
   }
   if(length(x.parents)==2){
     p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
       geom_col()+
       facet_grid(cols = vars(!!as.name(x.parents[2])))
+    plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'.')
   }
   if(length(x.parents)==3){
    p= ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
         geom_col()+
         facet_grid(cols = vars(!!as.name(x.parents[2])),
-               rows = vars(!!as.name(x.parents[3])))
+               rows = vars(!!as.name(x.parents[3])))+
+      scale_x_discrete(guide = guide_axis(n.dodge = 2))
+   plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'; rows are levels of the node ', x.parents[3],'.')
   }
   if(length(x.parents)==4){
     p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
       geom_col()+
       facet_grid(cols = vars(!!as.name(x.parents[2])),
-                 rows = vars(!!as.name(x.parents[3])))
+                 rows = vars(!!as.name(x.parents[3])))+
+      scale_x_discrete(guide = guide_axis(n.dodge = 2))
+    plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'; rows are levels of the node ', x.parents[3],'.')
   }
   plot.list[[i]]=p
-
+  names(plot.list)[[i]] = c(paste("conditional distribution for ", target.nodes[i], plot.lab))
 }
-names(plot.list) = c(paste("conditional distribution for ", target.nodes))
+
 ```
 
 
