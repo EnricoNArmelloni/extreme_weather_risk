@@ -4,6 +4,9 @@ output: pdf_document
 date: "2025-04-08"
 ---
 
+\setcounter{table}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\renewcommand{\thefigure}{A.\arabic{figure}}
 
 # Interviews - integral text (English)
 

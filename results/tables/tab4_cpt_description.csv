@@ -1,0 +1,40 @@
+"name","group","specification","levels","parents","cycle"
+"fishing_style","decision","Probability associated to fishing style","recreational, coastal, archipelago, trawler, guide","NA",1
+"benefit_personal_community","societal","how important is fishing to maintain social relations within your community","Not_important, Somehow_important, Very_important","fishing_style",2
+"credit","economic","The possibility to obtain loans for investments","difficult, neutral, easy","fishing_style",2
+"entrepeneurship","economic","Motivation and capabilities of individuals to explore new technologies and methods for fishing and marketing","low, medium, high","fishing_style",2
+"innovative_capacity","economic","The capacity to pursue different avenues (in fishing, marketing, technology, etc.) and to adapt to changing circumstances","low, medium, high","credit, entrepeneurship",2
+"stock_status","decision","the relative status of fish stocks","worst, status_quo, better","NA",1
+"identity","individual","The degree to which fishing contributes to an individual’s sense of identity, including self-perception","Not_important, Somehow_important, Very_important","fishing_style",2
+"job_mobility","economic","The extent to which non-fishing income-generating activities are accessible to an individual or household","low, medium, high","fishing_style",2
+"benefit_local_community","societal","The extent which an individual value fishing to build/maintain social relations within a community","Not_important, Somehow_important, Very_important","fishing_style",2
+"event","decision","Probability associated to extreme weather event","abl, hws, hww, gal, sto, erf, ici","NA",1
+"management","decision","how much fishing regulations allows fishers to implement adaptation strategies","BAU, FLEX","NA",1
+"infrastructure","operational","Describe the presence of adequate infrastructure (harbor, streets) in the area where fishing can potentially happen","no, some, extensive","fishing_style",2
+"flexibility","operational","possibility to change fishing strategy (both gear and target)","rigid, status_quo, flexible","management, infrastructure",3
+"strategy","operational","Adapt (proactive planning); react (unplanned response); cope (accept passively)","cope, react, adapt, not_relevant","fishing_style, event, flexibility",3
+"gear","operational","The fishing gear deployed","otm, gns_spf, gns_fws, fpn_ana, rod, icefishing, inland","fishing_style, event, strategy",3
+"target","operational","Describes the most probable target species associated to each fishing gear","herring, perch, pike, salmon, sea_trout, whitefish_nei, not_specified","gear, strategy, event",3
+"catchability","operational","Ability to catch fish depending on gear-fish interactions","worse, same, better","target, event, gear",2
+"go_out","operational","The decision on whether to go out fishing or not","no, yes","event, fishing_style, strategy",1
+"Catches","user","catches obtained","no, poor, average, good","go_out, stock_status, catchability",1
+"additional_mitigation","operational","Modification to fishing practices to counterbalance for bad quality of fish","no, travel_further, short_sets, other_technical","strategy, fishing_style, event",2
+"catch_condition","operational","The real or perceived quality of catches in terms of aspect/health","worse, same","target, event, additional_mitigation",1
+"satisfaction","user","non-monetary satisfaction derived from the fishing experience","Low, Medium, High","Catches, catch_condition",2
+"damage","operational","damage to the fishing gear ranging from minor to completely losing the fishing gear or part of it because it was lost or irreparably damaged","no, minor, major, destroy","event, gear, additional_mitigation",2
+"cost","economic","how large is the expense associated with an extreme weather event compared to the annual expected costs","no, low, medium, high","additional_mitigation, damage, fishing_style",1
+"outdoor_benefit","individual","The extent which an individual value the time spent outdoor (while fishing) to his personal well-being","Not_important, Somehow_important, Very_important","fishing_style",2
+"traditional_food","societal","The extent which fishing contributes to provide for traditional food","Not_important, Somehow_important, Very_important","fishing_style",2
+"knowledge_transmission","societal","The extent which an individual value the transmission of fishing knowledge and culture to future generations","Not_important, Somehow_important, Very_important","fishing_style",2
+"societal_importance","societal","Summarizes the importance of the human community dimensions (economic, societal, individual) to different fisherman","Not_important, Somehow_important, Very_important","knowledge_transmission, benefit_local_community, traditional_food, benefit_personal_community",2
+"personal_safety","operational","Potential physical damage for operators out of ordinary","no, minor, major","event, gear, additional_mitigation",1
+"stress","user","Psychological aspect, including elements such as anxiety and sense of fatigue","no, yes","personal_safety, damage, catch_condition, fishing_style",1
+"health","user","“divorced” node that summarizes variables related to physical and mental health","Low, Medium, High","stress, personal_safety",2
+"non_monetary_value","economic","depends on the possibility to go out fishing and to obtain satisfying catches, while staying safe","Low, Medium, High","health, satisfaction, go_out",2
+"societal_risk","risk","aspects related to the well-being of communities","Low, Medium, High, not_relevant","societal_importance, non_monetary_value, strategy",2
+"professional","economic","Distinction between full-time professional; side job and recreational","No, Yes","fishing_style",2
+"economic_importance","economic","Summarizes the importance of the human community dimensions (economic, societal, individual) to different fisherman","Not_important, Somehow_important, Very_important","job_mobility, professional, innovative_capacity",2
+"economic_risk","risk","economic aspects related to fishing practices","Low, Medium, High, not_relevant","economic_importance, cost, strategy",2
+"home","individual","The degree to which fishing contributes to build a sense of place/home to a specific location","Not_important, Somehow_important, Very_important","fishing_style",2
+"individual_importance","individual","Summarizes the importance of the human community dimensions (economic, societal, individual) to different fisherman","Not_important, Somehow_important, Very_important","outdoor_benefit, identity, home",2
+"individual_risk","risk","aspects related to the individual well-being and satisfaction","Low, Medium, High, not_relevant","individual_importance, non_monetary_value, strategy",2

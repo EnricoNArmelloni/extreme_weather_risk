@@ -75,11 +75,6 @@
 			<state id="ici" />
 			<probabilities>0.5 0.5 0 0 0 0 0</probabilities>
 		</cpt>
-		<cpt id="management">
-			<state id="BAU" />
-			<state id="FLEX" />
-			<probabilities>0.5 0.5</probabilities>
-		</cpt>
 		<cpt id="infrastructure">
 			<state id="no" />
 			<state id="some" />
@@ -87,20 +82,13 @@
 			<parents>fishing_style</parents>
 			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.3333333333333333</probabilities>
 		</cpt>
-		<cpt id="flexibility">
-			<state id="rigid" />
-			<state id="status_quo" />
-			<state id="flexible" />
-			<parents>management infrastructure</parents>
-			<probabilities>0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0</probabilities>
-		</cpt>
 		<cpt id="strategy">
 			<state id="cope" />
 			<state id="react" />
 			<state id="adapt" />
 			<state id="not_relevant" />
-			<parents>fishing_style event flexibility</parents>
-			<probabilities>0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0 1 0 0 0 1 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25 0 0.5 0.5 0 0 0.5 0.5 0 0.25 0.25 0.25 0.25</probabilities>
+			<parents>fishing_style event</parents>
+			<probabilities>0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0</probabilities>
 		</cpt>
 		<cpt id="gear">
 			<state id="otm" />
@@ -539,22 +527,6 @@
 				<position>3541 2796 3658 2867</position>
 				<barchart active="true" width="278" height="236" />
 			</node>
-			<node id="flexibility">
-				<name>Flexibility</name>
-				<interior color="ffffff" />
-				<outline color="000080" />
-				<font color="000000" name="Arial" size="36" />
-				<position>1285 2143 1407 2216</position>
-				<barchart active="true" width="214" height="236" />
-			</node>
-			<node id="management">
-				<name>Management</name>
-				<interior color="ccffff" />
-				<outline color="000080" />
-				<font color="000000" name="Arial" size="36" />
-				<position>1286 792 1329 818</position>
-				<barchart active="true" width="354" height="253" />
-			</node>
 			<node id="target">
 				<name>Target</name>
 				<interior color="ffff99" />
@@ -568,7 +540,7 @@
 				<interior color="99cc00" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="36" />
-				<position>647 1411 690 1437</position>
+				<position>4601 399 4644 425</position>
 				<barchart active="true" width="394" height="236" />
 			</node>
 			<node id="catch_condition">

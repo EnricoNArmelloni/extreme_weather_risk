@@ -110,7 +110,7 @@ for(j in 1:length(int.i)){
   cod.unc=rbind(cod.unc, j.cod)
 }
 
-## fix missing uncertainty: i borrowed fishing guide unc 2_7 from 9_13 and 15_19; borrowed archiplegao uncertainty on personal values from avg of all coastal and recreational
+## fix missing uncertainty: i borrowed fishing guide unc 2_7 from 9_13 and 15_19; borrowed archiplego uncertainty on personal values from avg of all coastal and recreational
 
 ## lowest uncertainty means that the answer is 100% pertaining to the declared rank. On the opposite, highest uncertainty let the rank to go all over the place. Then it should be a gradient of betweens
 # when answer is 1 to 5, min = 0.25 and max = 1.5 looks reasonable

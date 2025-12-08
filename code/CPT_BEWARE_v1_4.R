@@ -53,7 +53,7 @@ evt.relevance$style=ifelse(evt.relevance$style=='fishing guide','guide',
                                   ifelse(evt.relevance$style=='subsistence', 'archipelago',
                                          evt.relevance$style)))
 # DAG
-net=read.net('data/networks/BEWARE_v1_3.net', debug = T)
+net=read.net('data/networks/BEWARE_v1_4.net', debug = T)
 graphviz.plot(net, layout = "dot", fontsize = 18)
 graphviz.chart(net)
 
@@ -86,11 +86,6 @@ xdim=dim(array.var)
 array.var[1:xdim]=rep(1/xdim, xdim)
 net[['fishing_style']]=array.var
 
-# management
-array.var=net[['management']]$prob
-xdim=dim(array.var)
-array.var[1:xdim]=rep(1/xdim, xdim)
-net[['management']]=array.var
 
 # stock status
 array.var=net[['stock_status']]$prob
@@ -136,35 +131,6 @@ net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 df.var%>%
   ggplot()+
   geom_col(aes(x=fishing_style, y=Freq, fill=infrastructure))
-
-## flexibility ####
-i.node='flexibility'
-array.var=net[[i.node]]$prob
-xdim=dim(array.var)
-xnam=dimnames(array.var)
-df.var=as.data.frame(array.var)
-x.lev=levels(df.var[,i.node])
-target.dims=names(df.var)
-target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
-
-supp.data=data.frame(node=c('infrastructure',  'management', 'flexibility'), 
-                     link.w=c(1.5,1, 0),
-                     states=c(3,2,3),
-                     type=c('parent','parent','child'),
-                     direction=c('pos','pos', 'pos'),
-                     id=1:3)
-x.cpt=rank.cpt(nodes.df = supp.data, uncertainty = 0.2, algorithm = 'min', xnam=xnam[1:3]);x.cpt
-z.cpt=x.cpt[[1]]%>%
-  pivot_longer(cols=c('rigid', 'status_quo' ,'flexible'), names_to = 'flexibility')%>%
-  arrange((infrastructure))
-df.var$Freq=z.cpt$value
-df.var[df.var$management=='BAU',]$Freq=c(0,1,0)
-
-df.var%>%
-  ggplot()+
-  geom_col(aes(x=management, y=Freq, fill=flexibility))+
-  facet_wrap(~ infrastructure)
-net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 
 ## strategy ####
@@ -348,46 +314,14 @@ for(z in 1:length(styles$f.style)){
 }
 
 
-for(z in 1:length(styles$f.style)){
-  
-  z.style=styles[z,]
-  i.fisher=style.dataset[style.dataset$style==z.style$f.style.2,]
-  i.fisher=unique(i.fisher$id)
-  i.relevance=evt.relevance[evt.relevance$style==z.style$f.style.2, ]
-  # strategy
-  i.evts=unique(df.var$event)
-  for(j in 1:length(i.evts)){
-    j.event=i.evts[j]
-    if(j.event %in% i.relevance$event_code){
-      
-      df.var[df.var$flexibility=='flexible' &
-               df.var$event==j.event  & 
-               df.var$fishing_style==styles[z,]$f.style,]$Freq=c(0,0.5,0.5,0)
-      
-      df.var[df.var$flexibility=='rigid'&
-               df.var$event==j.event  & 
-               df.var$fishing_style==styles[z,]$f.style,]$Freq=c(1,0,0,0)
-      
-    }else{
-      
-      df.var[df.var$flexibility=='flexible' &
-               df.var$event==j.event  & 
-               df.var$fishing_style==styles[z,]$f.style,]$Freq=c(0,0,0,1)
-      
-      df.var[df.var$flexibility=='rigid'&
-               df.var$event==j.event  & 
-               df.var$fishing_style==styles[z,]$f.style,]$Freq=c(0,0,0,1)
-  
-    }
-  }
-}
+
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 pl=df.var%>%
   ggplot(aes(x=event, y=Freq, fill=strategy))+
   geom_col()+
-  facet_grid(cols=vars(fishing_style), rows=vars(flexibility));pl
+  facet_grid(cols=vars(fishing_style));pl
 
 ggsave(plot=pl, 'results/images/strategy.jpeg', width = 18, height = 8, units='cm', dpi=150)
 

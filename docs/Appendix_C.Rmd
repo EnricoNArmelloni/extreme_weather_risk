@@ -1,0 +1,580 @@
+---
+title: "Appendix A3: literature data treatment."
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+bibliography: references.bib
+---
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{C.\arabic{table}}
+\renewcommand{\thefigure}{C.\arabic{figure}}
+
+
+# Economic data
+
+```{r  setup, echo=FALSE,message = FALSE, warning=FALSE}
+remove(list=ls())
+options(scipen=999)
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+#setwd(file.path(scriptDir, '..')) 
+library(tidyverse)
+library(bnlearn)
+library(readxl)
+library(kableExtra)
+library(truncnorm)
+theme_set(theme_bw())
+int.dat=read_csv(file.path(scriptDir, '..',"data/read_only/coding_report_unc.csv"),  locale = locale(encoding = "ASCII"))
+aer.dat=read_csv(file.path(scriptDir, '..',"data/AER_SE.csv"))
+recf.numb=read_excel(file.path(scriptDir, '..',"data/recf_catch.xlsx"),sheet = "tab4")
+recf.exp=read_excel(file.path(scriptDir, '..',"data/recf_catch.xlsx"), sheet = "tab3")
+store.cpt=NULL
+```
+
+Economic information was derived from literature and from interviews. Values from literature were preferred in the case of reference values, such as mean annual expenses and fuel costs. Reference values were obtained from the interview only when no information was available in literature. Indications for expenses linked to extreme weather events were obtained from the interviews. Sources used were AER and Friskeverket.
+
+## Methods
+
+The cost node reflects the economic impact of one single extreme weather event compared to annual average expenses. Cost categories to be used in the conditional probability table are negligible (cost \< 0.05%); low (0.05% \< cost \< 2.5%); medium (2.5% \< cost \< 5%); high (\> 5%). 
+
+The conditional probability tables are estimated through the function `cost.cpt`, here below reported. The input needed are:
+
+ - expenses (mu and sd): annual total expenses, including maintenance, fuel, personnel. This value is anchored in literature, when available;
+ 
+ - fuel.cost (mu and sd): average cost for single fishing trip. This value is anchored in literature, when available;
+ 
+ - damage.small (lo and hi): self declared cost for repairing a minor damage;
+
+ - damage.large (lo and hi): self declared cost for repairing a large damage;
+ 
+ - damage.unc: self declared uncertainty on the cost for repairing damages;
+ 
+ - fuel.avg (lo and hi): self declared fuel consumption for single average fishing trip;
+ 
+ - fuel.large (lo and hi): self declared fuel consumption for single longer-than-average fishing trip;
+ 
+ - economic.unc: self declared uncertainty associated with answer regarding expenses;
+ 
+ - fishing style: label describing the fishing style.
+ 
+
+```{r, include=T, echo=T,results='hide', message=FALSE, warning=FALSE}
+
+cost.cpt=function(expenses.mu, expenses.sd, 
+                  fuel.cost.mu,fuel.cost.sd,
+         damage.small.lo, damage.small.hi,damage.large.lo, damage.large.hi, 
+         damage.unc,
+         fuel.avg.lo, fuel.avg.hi, 
+         fuel.large.lo, fuel.large.hi,
+         economic.unc,
+         f.style){
+  
+  # creating distributions 
+  ## distribution for annual expenses
+  cost.annual=rtruncnorm(a=0, b=Inf, 
+                     mean=expenses.mu, 
+                     sd=expenses.sd, n=1000) 
+  
+  ## distribution for minor damage
+  cost.lo=rtruncnorm(a=damage.small.lo, b=damage.small.hi, 
+                     mean=(damage.small.hi-damage.small.lo)/2, 
+                     sd=damage.small.hi*damage.unc, n=1000) 
+  
+  ## distribution for major damage
+  cost.hi=rtruncnorm(a=damage.large.lo, b=damage.large.hi, 
+                     mean=(damage.large.hi-damage.large.lo)/2, 
+                     sd=damage.large.hi*damage.unc, n=1000) 
+  
+  ## distribution for avg fuel
+  fuel.lo=rtruncnorm(a=fuel.avg.lo, b=fuel.avg.hi, 
+                     mean=(fuel.avg.hi-fuel.avg.lo)/2, 
+                     sd=fuel.avg.hi*economic.unc, n=1000)
+  
+  ## distribution for large travel
+  fuel.hi=rtruncnorm(a=fuel.large.lo, b=fuel.large.hi, 
+                     mean=(fuel.large.hi-fuel.large.lo)/2, 
+                     sd=fuel.large.hi*economic.unc, n=1000)
+  
+  # cost for fuel in extra travel 
+  extra.fuel.cost=(fuel.hi/fuel.lo)*rtruncnorm(a=0, b=Inf, 
+                     mean=fuel.cost.mu, 
+                     sd=fuel.cost.sd, n=1000) 
+  
+  # create data frame
+  cost.df=data.frame(minor.no=cost.lo, major.no=cost.hi, no.travel=extra.fuel.cost)
+  cost.df$minor.travel=cost.df$minor.no+cost.df$no.travel
+  cost.df$major.travel=cost.df$major.no+cost.df$no.travel
+  
+  cost.df[,]=apply(cost.df[,],2,function(x) x/cost.annual)
+  cost.df.disc=cost.df
+  cost.df.disc[,]=apply(cost.df.disc[,],2,
+                        function(x) cut(x, c(-Inf, 0.005,0.025,0.05,Inf), 
+                                        labels=c('negligible','low','medium','high')))
+  
+  cost.df.disc$fishing_style=f.style
+  cost.cpt=cost.df.disc%>%
+  pivot_longer(-fishing_style, names_to = 'parent', values_to = 'state')%>%
+  dplyr::group_by(fishing_style,parent, state)%>%
+  tally()%>%
+  dplyr::mutate(prob=n/sum(n))
+  
+  return(cost.cpt)
+}
+
+error.propagation=function(x.mu, x.er, y.mu, y.er){
+  z.mu=x.mu/y.mu
+  z.er=sqrt(((x.er/x.mu)^2)+((y.er/y.mu)^2))*z.mu
+  return(data.frame(mu=z.mu, sd=z.er))
+}
+
+```
+
+\newpage
+
+### Coastal fisherman
+
+Coastal fisherman economic information is explicitly available in the STECF_AER data source [@stecf2024]. STECF_AER data are filtered for vessel length categories VL0010 and VL0812 and on fishing technologies FPO and DFN. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. Other values are provided in the interviews.
+
+```{r, include=T, echo=F,message=FALSE, results = 'asis', fig.width = 6, fig.height=3, warning=FALSE, fig.cap='CPT estimated for coastal fisherman'}
+
+## economic data from the AER
+sek.eur=0.091
+x.dat.aer=aer.dat[aer.dat$vessel_length %in% c('VL0010', 'VL0812') 
+                & aer.dat$fishing_tech %in% c('FPO','DFN'),]
+
+cost.pt1=x.dat.aer[x.dat.aer$variable_name %in%c('Number of vessels', "Number of fishing trips", 'Energy costs'), 
+          c('year', 'vessel_length' ,'fishing_tech', 'variable_name' , 'value')]%>%
+  na.omit()%>%
+  dplyr::mutate(variable_name=str_remove_all(variable_name, ' '))%>%
+  dplyr::filter(year>=2018)%>%
+  pivot_wider(names_from = variable_name, values_from = value)%>%
+  na.omit()
+
+cost.pt2=x.dat.aer[x.dat.aer$variable_group=='Expenditure',]
+cost.pt2=cost.pt2%>%
+  dplyr::group_by(vessel_length, fishing_tech,year)%>%
+  dplyr::summarise(totaal_exp=sum(value))%>%
+  na.omit()%>%
+  dplyr::filter(year>=2018)
+
+monetary=left_join(cost.pt1, cost.pt2)
+trip.fuel=monetary$Energycosts/monetary$Numberoffishingtrips
+annual.spending=monetary$totaal_exp/monetary$Numberofvessels
+
+## economic data from interviews
+x.dat=int.dat[int.dat$fishing_style=='coastal',]
+x.dat$range.lwr=as.numeric(x.dat$range.lwr)
+x.dat$range.upr=as.numeric(x.dat$range.upr)
+damage.unc=mean(x.dat[x.dat$id_q==11,]$uncertainty)
+econ.unc=mean(x.dat[x.dat$id_q==39,]$uncertainty)
+
+# cost of damages are already on the same unit we can use them as they are
+interview.cost=x.dat[x.dat$short_description%in%c( 'minor_damage_cost', 'major_damage_cost','fuel_trip', 'extra_fuel'),
+      c('id_I','short_description', 'range.lwr','range.upr','unit_range')]%>%
+  arrange(desc(short_description), id_I)%>%na.omit()
+
+kable.obj=kableExtra::kable((interview.cost), booktabs = TRUE, caption='Variables from interviews') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(interview.cost)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+            column_spec(4, width = "2cm")
+print(kable.obj)
+
+other.values=data.frame(variable=c('Annual expenses', 'Fuel cost'), 
+           value_mean=c(round(mean(annual.spending/sek.eur)/1000), round(mean(trip.fuel/sek.eur))), 
+           value_sd=c(round(sd(annual.spending/sek.eur)/1000), round(sd(trip.fuel/sek.eur))), 
+           unit=c('thousand SEK','SEK'),
+           source=c('STECF_AER', 'STECF_AER'))
+
+kable.obj=kableExtra::kable((other.values), booktabs = TRUE, caption='Variables from literature') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(other.values)-1),hline_after=T)%>%
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "1.5cm")
+print(kable.obj)
+
+##
+x.cost=cost.cpt(expenses.mu= mean(annual.spending/sek.eur), expenses.sd =sd(annual.spending/sek.eur), 
+         fuel.cost.mu = mean(trip.fuel/sek.eur),fuel.cost.sd = sd(trip.fuel/sek.eur),
+         damage.small.lo=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.lwr), 
+         damage.small.hi=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.upr),
+         damage.large.lo= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.lwr), 
+         damage.large.hi= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.upr), 
+         damage.unc=damage.unc,
+         fuel.avg.lo=5, 
+         fuel.avg.hi=50, 
+         fuel.large.lo=50, 
+         fuel.large.hi=100,
+         economic.unc=econ.unc,
+         f.style = 'coastal')
+
+x.cost%>%
+  ggplot(aes(x=parent, y=prob, fill=state))+
+  geom_col()+
+  theme(legend.position = 'bottom')
+store.cpt=rbind(store.cpt, x.cost)
+```
+
+\newpage
+
+### Pelagic trawlers
+
+Pelagic economic information is derived from the STECF_AER data source [@stecf2024]. STECF_AER data are filtered for vessel length categories VL2440, including all fishing technologies. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. The cost of longer travel was not available, and it is based on the assumption that an average travel costs between 80% and 120% of the average fuel cost, while a longer travel is between 100% and 150% of average fuel cost. Other values are provided in the interviews.
+
+```{r, include=T, echo=F, results = 'asis', message=FALSE, fig.width = 8, fig.height=4, warning=FALSE, fig.cap='CPT estimated for pelagic trawlers'}
+
+## economic data from the AER
+sek.eur=0.091
+
+x.dat.aer=aer.dat[aer.dat$vessel_length %in% c('VL2440'),]
+
+cost.pt1=x.dat.aer[x.dat.aer$variable_name %in%c('Number of vessels', "Number of fishing trips", 'Energy costs'), 
+          c('year', 'vessel_length' ,'fishing_tech', 'variable_name' , 'value')]%>%
+  na.omit()%>%
+  dplyr::mutate(variable_name=str_remove_all(variable_name, ' '))%>%
+  dplyr::filter(year>=2018)%>%
+  pivot_wider(names_from = variable_name, values_from = value)%>%
+  na.omit()
+
+cost.pt2=x.dat.aer[x.dat.aer$variable_group=='Expenditure',]
+cost.pt2=cost.pt2%>%
+  dplyr::group_by(vessel_length, fishing_tech,year)%>%
+  dplyr::summarise(totaal_exp=sum(value))%>%
+  na.omit()%>%
+  dplyr::filter(year>=2018)
+
+monetary=left_join(cost.pt1, cost.pt2)
+trip.fuel=monetary$Energycosts/monetary$Numberoffishingtrips
+annual.spending=monetary$totaal_exp/monetary$Numberofvessels
+
+## economic data from interviews
+x.dat=int.dat[int.dat$fishing_style=='pelagic_trawler',]
+x.dat$range.lwr=as.numeric(x.dat$range.lwr)
+x.dat$range.upr=as.numeric(x.dat$range.upr)
+damage.unc=mean(x.dat[x.dat$id_q==11,]$uncertainty)
+econ.unc=mean(x.dat[x.dat$id_q==39,]$uncertainty)
+
+# cost of damages are already on the same unit we can use them as they are
+interview.cost=x.dat[x.dat$short_description%in%c( 'minor_damage_cost', 'major_damage_cost','fuel_trip', 'extra_fuel'),
+      c('id_I','short_description', 'range.lwr','range.upr','unit_range')]%>%
+  arrange(desc(short_description), id_I)
+
+kable.obj=kableExtra::kable((interview.cost), booktabs = TRUE, caption='Variables from interviews') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(interview.cost)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+            column_spec(4, width = "2cm")
+print(kable.obj)
+
+other.values=data.frame(variable=c('Annual expenses', 'Fuel cost'), 
+           value_mean=c(round(mean(annual.spending/sek.eur)/1000), round(mean(trip.fuel/sek.eur))), 
+           value_sd=c(round(sd(annual.spending/sek.eur)/1000), round(sd(trip.fuel/sek.eur))), 
+           unit=c('thousand SEK','SEK'),
+           source=c('STECF_AER', 'STECF_AER'))
+
+kable.obj=kableExtra::kable((other.values), booktabs = TRUE, caption='Variables from literature') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(other.values)-1),hline_after=T)%>%
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "1.5cm")
+print(kable.obj)
+
+
+
+##
+x.cost=cost.cpt(expenses.mu= mean(annual.spending/sek.eur), expenses.sd =sd(annual.spending/sek.eur), 
+         fuel.cost.mu = mean(trip.fuel/sek.eur),fuel.cost.sd = sd(trip.fuel/sek.eur),
+         damage.small.lo=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.lwr), 
+         damage.small.hi=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.upr),
+         damage.large.lo= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.lwr), 
+         damage.large.hi= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.upr), 
+         damage.unc=damage.unc,
+         fuel.avg.lo=0.8, 
+         fuel.avg.hi=1.2, 
+         fuel.large.lo=1, 
+         fuel.large.hi=1.5,
+         economic.unc=econ.unc,
+         f.style = 'trawler')
+
+x.cost%>%
+  ggplot(aes(x=parent, y=prob, fill=state))+
+  geom_col()+
+  theme(legend.position = 'bottom')
+store.cpt=rbind(store.cpt, x.cost)
+```
+
+\newpage
+
+### Recreational
+
+Pelagic economic information is derived from the recreational fisheries statistical report of the Swedish Department for Economic and Statistic Analysis (SWAM) data source [@swam2024]. SWAM economic data represent the totality of recreational fisherman in Sweden, with no distinction between region or inland vs coastal fishing. Cost of fuel per trip is separately calculated for travel and for boat fuel. These two costs are then averaged. All the uncertainties provided in SWAM (on costs and on number of practitioners) are accounted for by propagating errors (REF). Annual spending is estimated by dividing total annual expenses by number of practitioners. Other values are provided in the interviews.
+
+```{r, include=T, echo=F, results = 'asis',message=FALSE, warning=FALSE, fig.width = 8, fig.height=4, warning=FALSE, fig.cap='CPT estimated for recreational fisherman'}
+## economic data from Friskitverkeretet
+# annual values per person
+sek_person=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
+                             y.mu=recf.numb[1,]$mean_value/1000, y.er=recf.numb[1,]$error/1000)
+sek_person$category=recf.exp$category
+
+sek_day=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
+                  y.mu=recf.numb[2,]$mean_value/1000, y.er=recf.numb[2,]$error/1000)
+sek_day$category=recf.exp$category
+
+sek_boat=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
+                           y.mu=recf.numb[3,]$mean_value/1000, y.er=recf.numb[3,]$error/1000)
+sek_boat$category=recf.exp$category
+
+## get mean cost for trips
+mean.rf.travel=mean(c(sek_day[sek_day$category %in% c('Expenses for travel'),]$mu,
+                      sek_boat[sek_boat$category %in% c('Expenses for boat fuel'),]$mu ))
+sd.rf.travel=sqrt(sek_day[sek_day$category %in% c('Expenses for travel'),]$sd^2+sek_boat[sek_boat$category %in% c('Expenses for boat fuel'),]$sd^2)/2
+
+
+## economic data from interviews
+x.dat=int.dat[int.dat$fishing_style=='recreational',]
+x.dat$range.lwr=as.numeric(str_remove(x.dat$range.lwr, 'B '))
+x.dat$range.upr=as.numeric(str_remove(x.dat$range.upr, 'B '))
+damage.unc=mean(x.dat[x.dat$id_q==11,]$uncertainty)
+econ.unc=mean(x.dat[x.dat$id_q==39,]$uncertainty)
+
+# cost of damages are already on the same unit we can use them as they are
+interview.cost=x.dat[x.dat$short_description%in%c( 'minor_damage_cost', 'major_damage_cost','fuel_trip', 'extra_fuel'),
+      c('id_I','short_description', 'range.lwr','range.upr','unit_range')]%>%
+  arrange(desc(short_description), id_I)
+
+kable.obj=kableExtra::kable((interview.cost), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(interview.cost)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+            column_spec(4, width = "2cm")
+print(kable.obj)
+
+other.values=data.frame(variable=c('Annual expenses', 'Fuel cost'), 
+           value_mean=c(round(sek_person[sek_person$category=='Totalt',]$mu), round(mean.rf.travel)), 
+           value_sd=c(round(sek_person[sek_person$category=='Totalt',]$sd), round(sd.rf.travel)), 
+           unit=c('SEK','SEK'),
+           source=c('SWAM', 'SWAM'))
+
+kable.obj=kableExtra::kable((other.values), booktabs = TRUE, caption='Variables from literature') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(other.values)-1),hline_after=T)%>%
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "1.5cm")
+print(kable.obj)
+
+
+
+##
+x.cost=cost.cpt(expenses.mu= sek_person[sek_person$category=='Totalt',]$mu, 
+                expenses.sd =sek_person[sek_person$category=='Totalt',]$sd, 
+                fuel.cost.mu = mean.rf.travel,fuel.cost.sd = sd.rf.travel,
+                damage.small.lo=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.lwr), 
+                damage.small.hi=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.upr),
+                damage.large.lo= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.lwr), 
+                damage.large.hi= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.upr), 
+                damage.unc=damage.unc,
+                fuel.avg.lo= x.dat[x.dat$short_description=='fuel_trip',]$range.lwr, 
+                fuel.avg.hi=x.dat[x.dat$short_description=='fuel_trip',]$range.upr,  
+                fuel.large.lo=x.dat[x.dat$short_description=='extra_fuel',]$range.lwr+x.dat[x.dat$short_description=='fuel_trip',]$range.upr, 
+                fuel.large.hi=x.dat[x.dat$short_description=='extra_fuel',]$range.upr+x.dat[x.dat$short_description=='fuel_trip',]$range.upr, 
+                economic.unc=econ.unc,
+                f.style = 'recreational')
+
+x.cost%>%
+  ggplot(aes(x=parent, y=prob, fill=state))+
+  geom_col()+
+  theme(legend.position = 'bottom')
+store.cpt=rbind(store.cpt, x.cost)
+```
+
+\newpage
+
+### Fishing guide
+
+No updated public information is available for fishing guide economic aspects in Sweden. All estimations base on interview results and our assumptions. Seasonal expenses are estimated by summing the declared maintenance costs and an estimation of fuel costs.
+
+```{r, include=T, echo=F, results = 'asis',message=FALSE, warning=FALSE, fig.width = 8, fig.height=4, warning=FALSE, fig.cap='CPT estimated for fishing guide'}
+## economic data from Friskitverkeretet
+## economic data from interviews
+x.dat=int.dat[int.dat$fishing_style=='fishing guide',]
+x.dat$range.lwr=as.numeric(str_remove(x.dat$range.lwr, 'B '))
+x.dat$range.upr=as.numeric(str_remove(x.dat$range.upr, 'B '))
+damage.unc=mean(x.dat[x.dat$id_q==11,]$uncertainty)
+econ.unc=mean(x.dat[x.dat$id_q==39,]$uncertainty)
+
+# cost of damages are already on the same unit we can use them as they are
+interview.cost=x.dat[x.dat$short_description%in%c( 'minor_damage_cost', 'major_damage_cost',
+                                                   'fuel_trip', 'extra_fuel', 'season_maint'),
+      c('id_I','short_description', 'range.lwr','range.upr','unit_range')]%>%
+  arrange(desc(short_description), id_I)
+
+kable.obj=kableExtra::kable((interview.cost), booktabs = TRUE) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(interview.cost)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(2, width = "3cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+            column_spec(4, width = "2cm")
+print(kable.obj)
+
+# seasonal expenses for this guy is the sum of his own estimation + fuel cost
+range.exp.lo=x.dat[x.dat$short_description=='season_maint',]$range.lwr+x.dat[x.dat$short_description=='fdays',]$value*x.dat[x.dat$short_description=='fuel_trip',]$range.lwr
+range.exp.hi=(x.dat[x.dat$short_description=='season_maint',]$range.upr*10)+x.dat[x.dat$short_description=='fdays',]$value*x.dat[x.dat$short_description=='fuel_trip',]$range.lwr
+expenses=rtruncnorm(a=range.exp.lo, b=range.exp.hi, 
+           mean=(range.exp.hi-range.exp.lo)/2, 
+           sd=range.exp.hi*econ.unc, n=1000) 
+
+other.values=data.frame(variable=c('Annual expenses'), 
+           value_mean=c(round(mean(expenses))), 
+           value_sd=c(round(sd(expenses))), 
+           unit=c('SEK'),
+           source=c('Our estimation based on interviews'))
+
+kable.obj=kableExtra::kable((other.values), booktabs = TRUE, caption='Variables from literature') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            #row_spec(1:(nrow(other.values)-1),hline_after=T)%>%
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "1.5cm")
+print(kable.obj)
+
+
+##
+x.cost=cost.cpt(expenses.mu= mean(expenses), 
+                expenses.sd =sd(expenses), 
+                fuel.cost.mu = x.dat[x.dat$short_description=='fuel_trip',]$range.lwr,
+                fuel.cost.sd = x.dat[x.dat$short_description=='fuel_trip',]$range.lwr*0.1,
+                damage.small.lo=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.lwr), 
+                damage.small.hi=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.upr),
+                damage.large.lo= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.lwr), 
+                damage.large.hi= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.upr), 
+                damage.unc=damage.unc,
+                fuel.avg.lo= x.dat[x.dat$short_description=='fuel_trip',]$range.lwr*0.8, 
+                fuel.avg.hi=x.dat[x.dat$short_description=='fuel_trip',]$range.upr,  
+                fuel.large.lo=x.dat[x.dat$short_description=='extra_fuel',]$range.lwr+x.dat[x.dat$short_description=='fuel_trip',]$range.lwr*0.8, 
+                fuel.large.hi=x.dat[x.dat$short_description=='extra_fuel',]$range.upr+x.dat[x.dat$short_description=='fuel_trip',]$range.upr, 
+                economic.unc=econ.unc,
+                f.style = 'guide')
+
+x.cost%>%
+  ggplot(aes(x=parent, y=prob, fill=state))+
+  geom_col()+
+  theme(legend.position = 'bottom')
+store.cpt=rbind(store.cpt, x.cost)
+```
+
+\newpage
+
+### Archipelago
+
+No updated public information is available for archipelago fishers economic aspects in Sweden. All estimations base on interview results and our assumptions. Seasonal expenses are estimated by summing the declared maintenance costs and an estimation of fuel costs.
+
+```{r, include=T, echo=F, results = 'asis',message=FALSE, warning=FALSE}
+x.dat=int.dat[int.dat$fishing_style=='subsistence',]
+x.dat$range.lwr=as.numeric(str_remove(x.dat$range.lwr, 'B '))
+x.dat$range.upr=as.numeric(str_remove(x.dat$range.upr, 'B '))
+damage.unc=mean(x.dat[x.dat$id_q==11,]$uncertainty)
+econ.unc=mean(x.dat[x.dat$id_q==39,]$uncertainty)
+
+# cost of damages are already on the same unit we can use them as they are
+interview.cost=x.dat[x.dat$short_description%in%c( 'minor_damage_cost', 'major_damage_cost',
+                                                   'fuel_trip', 'extra_fuel', 'season_maint'),
+                     c('id_I','short_description', 'range.lwr','range.upr','unit_range')]%>%
+  arrange(desc(short_description), id_I)
+
+kable.obj=kableExtra::kable((interview.cost), booktabs = TRUE) %>%
+  kable_styling(font_size = 8)%>% 
+  row_spec(0,   bold = TRUE)%>%
+  row_spec(1:(nrow(interview.cost)-1),hline_after=T)%>%
+  column_spec(1, width = "0.5cm")%>%
+  column_spec(2, width = "3cm")%>%
+  column_spec(3, width = "1.5cm")%>%
+  column_spec(4, width = "1.5cm")%>%
+  column_spec(4, width = "2cm")
+print(kable.obj)
+
+# seasonal expenses for this guy is the sum of his own estimation + fuel cost
+range.exp.lo=x.dat[x.dat$short_description=='season_maint',]$range.upr+x.dat[x.dat$short_description=='fuel_trip',]$range.lwr
+range.exp.hi=x.dat[x.dat$short_description=='season_maint',]$range.upr+x.dat[x.dat$short_description=='fuel_trip',]$range.upr
+
+fuel.lo=x.dat[x.dat$short_description=='fuel_trip',]$range.lwr/x.dat[x.dat$short_description=='fdays',]$range.lwr
+fuel.hi=x.dat[x.dat$short_description=='fuel_trip',]$range.upr/x.dat[x.dat$short_description=='fdays',]$range.lwr
+
+expenses=rtruncnorm(a=range.exp.lo, b=range.exp.hi, 
+                    mean=(range.exp.hi-range.exp.lo)/2, 
+                    sd=range.exp.hi*econ.unc, n=1000) 
+
+other.values=data.frame(variable=c('Annual expenses'), 
+           value_mean=c(round(mean(expenses))), 
+           value_sd=c(round(sd(expenses))), 
+           unit=c('SEK'),
+           source=c('Our estimation based on interviews'))
+
+kable.obj=kableExtra::kable((other.values), booktabs = TRUE, caption='Variables from literature') %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            #row_spec(1:(nrow(other.values)-1),hline_after=T)%>%
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")%>%
+            column_spec(3, width = "1.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "1.5cm")
+print(kable.obj)
+
+
+##
+x.cost=cost.cpt(expenses.mu= mean(expenses), 
+                expenses.sd =sd(expenses), 
+                fuel.cost.mu = mean(c(fuel.lo,fuel.hi)),
+                fuel.cost.sd = sd(c(fuel.lo,fuel.hi)),
+                damage.small.lo=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.lwr), 
+                damage.small.hi=mean(x.dat[x.dat$short_description=='minor_damage_cost',]$range.upr),
+                damage.large.lo= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.lwr), 
+                damage.large.hi= mean(x.dat[x.dat$short_description=='major_damage_cost',]$range.upr), 
+                damage.unc=damage.unc,
+                fuel.avg.lo= fuel.lo*0.8, 
+                fuel.avg.hi=fuel.lo, 
+                fuel.large.lo=fuel.hi*0.8, 
+                fuel.large.hi=fuel.hi, 
+                economic.unc=econ.unc,
+                f.style = 'archipelago')
+
+x.cost%>%
+  ggplot(aes(x=parent, y=prob, fill=state))+
+  geom_col()+
+  theme(legend.position = 'bottom')
+store.cpt=rbind(store.cpt, x.cost)
+
+write.csv(store.cpt, file.path(scriptDir, '..',"data/read_only/cost_df.csv"), row.names = F)
+```

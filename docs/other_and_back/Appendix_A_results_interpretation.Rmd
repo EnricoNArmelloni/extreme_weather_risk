@@ -1,0 +1,216 @@
+---
+title: "Summary of the interviews"
+output: pdf_document
+date: "2025-04-08"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+```{r  , echo=FALSE,message = FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+coding=read_csv(file.path(scriptDir, '..', 'data/read_only', 'coding_report.csv'))
+names(coding)[5]='id_sub'
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "events")
+names(evts)[2]='desc'
+f.style=coding[coding$id_q==0,c('id_I','value')]
+names(f.style)[2]='style'
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+    sheet = "questions")
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'values.xlsx'), 
+                        sheet = "responses")
+#resp$id_I=as.character(resp$id_I)
+
+```
+
+# Results
+
+## Scoring - overview
+
+The questionnaires originated more than 500 scores. About half of the responses (266) were including a clear and unequivocal quantitative score. A large number (123) were not considered relevant by interviewee. Answers that were considered relevant but did not provide a clear score were 150, among which the large majority (105) contained enough information to attempt an interpretation.
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+evt.resp=coding[!is.na(coding$id_sub) & !is.na(coding$value),]%>%
+  left_join(resp, by=c('id_I', 'id_q','id_sub'))
+evt.resp[is.na(evt.resp$score_obs),]$score_obs='900'
+evt.resp$fin.score=evt.resp$value
+evt.resp$fin.score=ifelse(evt.resp$fin.score==evt.resp$score_obs,evt.resp$fin.score,
+                          ifelse(evt.resp$score_obs=='900', ifelse(as.numeric(evt.resp$fin.score)<0,evt.resp$fin.score,'999' ), evt.resp$fin.score))
+evt.resp[as.numeric(evt.resp$fin.score)>=0 &as.numeric(evt.resp$fin.score)<=5,]$fin.score='x'
+
+obs=data.frame(table(evt.resp$fin.score))
+names(obs)=c('Score','Frequency')
+
+kableExtra::kable(obs%>%arrange(desc(Frequency)), caption='number of answers by interpretation category')%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")
+```
+
+### Scoring - does not apply (-999)
+
+For each interviewee and event we computed the proportion of the answers scored as -999. These events with more than 50% of answers
+scored as -999 were excluded. 
+The combination of events/styles excluded are the reported in the table. The image reports the proportion of answers indicating that the event is relevant.
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+evt.resp=coding[!is.na(coding$id_sub) & coding$id_q!=21  & !is.na(coding$value),]
+evt.resp$type=ifelse(evt.resp$value=='-999' , 'NO' ,'YES')
+tab1=evt.resp%>%
+  dplyr::group_by(id_I, id_sub, type)%>%
+  tally()%>%
+  dplyr::group_by(id_I, id_sub)%>%
+  dplyr::mutate(prop=n/sum(n))%>%
+  #slice_max(prop)%>%
+  dplyr::select(id_I, id_sub,type, prop)%>%
+  left_join(evts)%>%
+  left_join(f.style)
+p=ggplot(data = tab1[tab1$type=='YES',])+
+  geom_tile(aes(x=desc, y=paste(id_I, style), fill=prop))+
+  scale_fill_gradient2(low='red', high = 'blue', midpoint = 0.5)+
+  ylab('Interviewee')+
+  theme(axis.text.x = element_text(angle=45))
+evts.style=evt.resp%>%
+  dplyr::group_by(id_I, id_sub, type)%>%
+  tally()%>%
+  dplyr::group_by(id_I, id_sub)%>%
+  dplyr::mutate(prop=n/sum(n))%>%
+  slice_max(prop)%>%
+  dplyr::filter(type=='NO') # choose which events applies to each style
+
+kableExtra::kable(tab1[tab1$type=='NO' & tab1$prop>0.5, c('desc','style')]%>%replace(is.na(.),0), caption = 'table of the correspondence between fishing styles and relevant extreme weather event')%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "3cm")%>%
+            column_spec(2, width = "1.5cm")
+```
+
+```{r , echo=FALSE,message = FALSE,fig.cap='Proportion of responses that were considered relevant by interviewee and event', fig.width=15, fig.height=8}
+p
+```
+
+\newpage
+
+
+## Interpretation - Expert scoring
+
+Expert scoring of keywords produced the following results, which were used to assign scores to 87 answers:
+
+```{r , echo=FALSE,message = FALSE,results = 'asis'}
+
+exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/coding_revision_ALL.xlsx")
+names(exp.scoring)[6:10]=c('Exp1','Exp2','Exp3','mean','sd')
+
+kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE, caption = 'scores assigned by experts to answers not providing an explicit scoring') %>%
+            kable_styling(font_size = 7)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(exp.scoring)-1),hline_after=T)%>%
+            column_spec(1, width = "2cm")%>%
+            column_spec(2, width = "2.5cm")%>%
+            column_spec(3, width = "2cm")%>%
+            column_spec(4, width = "1.5cm")%>%
+   column_spec(5, width = "0.5cm")%>%
+   column_spec(6, width = "0.5cm")%>%
+   column_spec(7, width = "0.5cm")
+        print(kable.obj)
+```
+\newpage
+
+## Interpretation - AI scoring
+
+This option was applied to a limited number of responses.
+
+**Q1**
+
+*Question*: How much do you think the vary among the group of people you represent? Possible answers: [1–5; from 1 – not at all, to 5 – very
+much]
+
+*Observed Answer*: it is so personal, some do not care at all, they just
+drink beer all day; we discuss things like this all the time, most are
+probably quite stressed by such situations
+
+*Score*: 4
+
+*Why*: The reply indicates clear heterogeneity — a minority who “do not
+care at all” vs a majority who are “quite stressed.” That is meaningful
+variation but phrased so that most are similar (stressed) with a
+minority different. In your training examples, minority exceptions vs
+majority agreement tended to map to a high-but-not-maximum value.
+Confidence: medium–high.
+
+**Q2**
+
+*Question*: How much do you think the vary among the group of people you
+represent? Possible answers: [1–5; from 1 – not at all, to 5 – very
+much]
+
+*Observed Answer*: There are some who have rights but don’t practice at
+all, and then some who practice like I do, just now and then. Then there
+are those who have leased out their permits, and in those cases, there
+is somebody who practices quite intensively 
+
+*Score*: 5 
+
+*Why*: The answer describes the full spectrum (no practice → occasional → very intensive).
+That explicit broad distribution matches your examples that consistently
+received top-end variability scores. Confidence: high. Q2 Question: How
+likely is it that you explore new techniques or strategies? Possible
+answers: [1–5; from 1 – very unlikely, to 5 – very likely] Observed
+Answer: Would probably try to find solutions; activity would certainly
+change, and then people would follow that change; there is probably some
+variation among people depending on what one is specialized in Score: 4
+Why: The speaker says they “would probably try” and expects change and
+follow-up by others — language that in your dataset equates to a
+positive likelihood but not the absolute “definitely” (which you
+typically scored a 5). The note about variation reduces absolute
+certainty slightly. Confidence: medium–high. 
+
+**Q3** 
+
+*Question*: If your income
+from activity A decreases, can you complement or replace it? Possible
+answers: [1–5; from 1 – very unlikely, to 5 – very likely] 
+
+*Observed Answer*: It would be very hard to replace activity A it with other
+income. Most have other jobs in winter, but A is such a significant part
+of income 
+
+*Score*: 1 
+
+*Why*: The phrase “very hard to replace” and “A is such
+a significant part” matches wording in your dataset that mapped to the
+low end (very unlikely) — even though there are seasonal other jobs, the
+respondent explicitly indicates replacement is essentially not feasible.
+Confidence: high.
+
+**Q4** 
+
+*Question*: How easy is it to avoid an extreme weather event by going
+to another location?\
+Possible answers: [1–5; from 1 – very difficult to avoid, to 5 – very
+easy to avoid] 
+*Observed Answer*: I Stop my activity Score: 1 Why: The
+respondent says they stop the activity instead of relocating to avoid
+the event — that implies relocation is not used/feasible. In your
+training set, answers that indicate “we don’t/stop” were scored at the
+difficult end (1). Confidence: medium — short reply is slightly
+ambiguous about whether “stop” means temporarily pause or that
+relocation is impossible, but both interpretations point to very low
+ease of avoiding by moving. 
+
+**Q5**
+*Question*: If the following type of extreme event occurs, how likely is it that you go out and do the
+activity? Possible answers: [1–5; from 1 – very unlikely, to 5 – very likely]
+*Observed Answer*: we wait because the product can spoil 
+*Score*: 1 
+*Why*: “We
+wait” because of spoilage risk indicates they do not go out during the
+event — i.e., very unlikely. In your dataset, similar phrasing (“we wait
+/ won’t go because…”) mapped to the lowest likelihood. Confidence: high.
+

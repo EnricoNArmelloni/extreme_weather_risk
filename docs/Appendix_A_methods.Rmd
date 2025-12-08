@@ -41,22 +41,4 @@ A structured coding approach was applied to those answers scored as 999 using bo
 
 -   Answers without keywords that were needed to support narrative (i.e.: management) were left unscored.
 
-## Reconstruction
 
-The questions tagged as -998 (The “I don’t know”) were revised to understand if it is possible to borrow numbers from other interviewee. In many cases people did not attempt answer questions regarding scenarios where they have never been into (i.e.: if during a storm you never go out, you might don’t know about how catchability changes).
-
-Answers are pooled, with supervision, based on the domain of the answer: human, metier, fish, descriptive. The human domain regards aspects that depend on the specific person and can be pooled only across the same fishing style or closely related. The metier category regards fishing operations and can be pooled for similar gears and seasons. The fish category regards ecological aspects of the fish and can be grouped by fish type and season.
-
-## Following tasks: revise the narrative
-
--   Multi gear/multiarea: some fisherman switch gear during the season and/or because of the event, and the alternative gear has different implications in terms of target species and risks. This thing of the switching gear/species is particularly relevant for sport fisherman and it can be coupled in case study 2. I am working on the DAG.
-
--   In terms of species we might limit to the most important and shared, which are perch, pike, herring, whitefish, sea trout, salmon. Some people mention other species. Like zander, vendace, eel, bream.
-
--   Interactions: the only relevant interactions mentioned were wind with rain (summer) or ice (winter). It was not mentioned often a quantitative answer for this interaction but in general people says that became more dangerous and less likely to go fishing.
-
--   The wind direction: they mention it so much that it might be worth. I am trying to think about this.
-
--   Lag effect. The main lag effect mentioned is what happen after a storm. Depending on the wind direction the catchability can improve or not the days after the event.
-
--   Create a price list if possible, and consider personal time as a variable: the prices (so far) has been quite detailed reported. This can help us in doing better. When you get the numbers, see if possible to talk with edconomists. This can also maybe include the cost per work per hour. Is this too much? Or we can ghather this as a extra variable (personal time?). Question on gear cleaning always unclear. On the extra fuel: in some case is just the extra, in other is the total for the long travel. Double check and harminise this o Extra consequences: They also keep mentioning that wind can blow things away, this was not really initially considered. Many mention the positive effect of wind when it blows from certain directions. This is kind of a long term effect

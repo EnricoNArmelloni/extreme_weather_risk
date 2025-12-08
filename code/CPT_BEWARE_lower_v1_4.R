@@ -2,7 +2,7 @@ remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
 setwd(file.path(scriptDir, '..')) 
-source('code/CPT_BEWARE_v1_3.R')
+#source('code/CPT_BEWARE_v1_4.R')
 remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
