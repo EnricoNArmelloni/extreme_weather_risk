@@ -13,12 +13,14 @@ library(truncnorm)
 #  return(prob.tab)
 #}
 
-answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H'), unc=0.05, k.thr=3){
+answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H'), unc=0.05, k.thr=2, x.breaks=NULL){
   # this is tested and working to import interviewee answers in CPT which configuration is defined in GeNie
   dim.list <- list(dim.labs)
   names(dim.list) <- dim.name
   base.dist=rtruncnorm(a=x.range[1],b=x.range[2],n=100, mean=x.ans, sd=unc)
-  x.breaks=seq(x.range[1],x.range[2],(x.range[2]-x.range[1])/length(dim.labs))
+  if(is.null(x.breaks)){
+   x.breaks=seq(x.range[1],x.range[2],(x.range[2]-x.range[1])/length(dim.labs)) 
+  }
   x.breaks[1]=-Inf
   x.breaks[length(x.breaks)]=Inf
   if(length(dim.labs)==2 & x.range[2]-x.range[1] >1){
@@ -28,7 +30,7 @@ answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H')
     base.dist=cut(base.dist, breaks=x.breaks, labels=dim.labs)
     prob.tab=array(table(base.dist)/100, dim = length(dim.labs), dimnames = dim.list) 
   }
-  mean(base.dist)
+  #mean(base.dist)
   
   return(prob.tab)
 }

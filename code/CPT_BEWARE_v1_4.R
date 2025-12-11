@@ -143,7 +143,7 @@ x.lev=levels(df.var[,i.node])
 target.dims=names(df.var)
 target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
 
-z=5
+z=2
 for(z in 1:length(styles$f.style)){
   
   z.style=styles[z,]
@@ -167,6 +167,7 @@ for(z in 1:length(styles$f.style)){
   nodes.selection=nodes.selection[,c('id_I', 'id_q', 'event_code', 'strategy')]
   x.answ=left_join(nodes.selection, dat)
   i.evts=unique(df.var$event)
+  j=3
   for(j in 1:length(i.evts)){
     
     j.event=i.evts[j]
@@ -204,17 +205,18 @@ for(z in 1:length(styles$f.style)){
     if(length(j.strategy.unique)>1){
       if('A' %in% j.strategy.unique){
         j.adapt=j.answ[j.answ$strategy=='A',]
-      if(nrow(j.adapt)>1){
-        # this implies there is just one respondent
-        if(unique(j.adapt$id_q) %in% 1:2){
-          j.adapt=j.adapt[sort(j.adapt$value),]
+        
+       if(nrow(j.adapt)>1){
+         j.adapt=j.adapt%>%
+           dplyr::group_by(gear,area,target)%>%
+           dplyr::summarise(uncertainty=sd(value), value=mean(value), weight=n(), .groups = "keep") # is this uncertainty correct?
+         j.adapt$uncertainty=ifelse(is.na(j.adapt$uncertainty),0,j.adapt$uncertainty) 
+        if(nrow(j.adapt)>1){
+          # if there are still multiple rows then means multiple target species. Let's pick the most probable one.
+          j.adapt=j.adapt%>%
+            arrange(desc(value))
           j.adapt=j.adapt[1,]  
           j.adapt$weight=1
-        }else{
-          j.adapt=j.adapt%>%
-            dplyr::group_by(gear,area,target)%>%
-            dplyr::summarise(uncertainty=sd(value), value=mean(value), weight=n(), .groups = "keep") # adjust the uncertainty
-          j.adapt$uncertainty=ifelse(is.na(j.adapt$uncertainty),0,j.adapt$uncertainty) 
         }
       }else{
         j.adapt$weight=1
@@ -275,14 +277,21 @@ for(z in 1:length(styles$f.style)){
     }
     
     if(nrow(j.answ)>1){
-      if(z %in% c(1,2,5)){
-           j.answ=j.answ[sort(j.answ$value),]
-      j.answ=j.answ[1,]   
-      }else{
-        j.answ=j.answ%>%
+      unc.bkc=unique(j.answ$uncertainty)
+      j.answ=j.answ%>%
         dplyr::group_by(gear,area,target)%>%
         dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
       j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty) 
+      if(length(unc.bkc)==1){
+        j.answ$uncertainty=unc.bkc
+      }
+      
+      if(nrow(j.answ)>1){
+        # if there are still multiple rows then means multiple target species. Let's pick the most probable one.
+        j.answ=j.answ%>%
+          arrange(desc(value))
+        j.answ=j.answ[1,]  
+        j.answ$weight=1
       }
     }
     
@@ -354,10 +363,14 @@ for(z in 1:length(styles$f.style)){
   j.event=i.evts[j]
   j.answ=x.answ[x.answ$event_code==j.event,]  
   j.answ=j.answ[abs(j.answ$value)<=5 & !is.na(j.answ$value),]
+  if(z.style$f.style=='trawler'){
+   j.answ=j.answ[j.answ$area!='NorthSea',] 
+  }
   if(nrow(j.answ)==0){
     df.var[df.var$event==j.event & df.var$fishing_style==styles[z,]$f.style & df.var$strategy=='cope',]$Freq=c(1,0)
     next
   }
+  
   
   if(nrow(j.answ)>1){
     j.answ=j.answ%>%
@@ -483,7 +496,7 @@ df.var[df.var$strategy=='adapt' &
 
 df.var[df.var$strategy=='adapt' & 
          df.var$fishing_style=='coastal'&
-         df.var$event=='hws',]$Freq=c(0,0.65,0,0.35,0,0,0) # less herring, more perch and salmon
+         df.var$event=='hws',]$Freq=c(0,0.1,0.55,0.35,0,0,0) # less herring, more perch and salmon
 
 ## winter
 df.var[df.var$strategy!='not_relevant' & 
@@ -520,17 +533,18 @@ df.var$Freq=c(rep(0,6),1) # the baseline is not better specified for all
 # species are  herring,perch, pike,  salmon, seatrout, whitefish, not specified
 df.var[df.var$strategy!='not_relevant' & df.var$gear=='otm',]$Freq=c(1,0,0,0,0,0,0)
 df.var[df.var$strategy!='not_relevant' & df.var$gear=='icefishing',]$Freq=c(0,0.5,0.5,0,0,0,0)
-
 df.var[df.var$strategy!='not_relevant' & df.var$gear=='gns_spf',]$Freq=c(1,0,0,0,0,0,0) # only herring
 
 round(coast.catch[coast.catch$metier=='GNS_FWS',]$prop, digits=2)
 sum(round(coast.catch[coast.catch$metier=='GNS_FWS',]$prop, digits=2))
+0.33+0.09# whitefish
 df.var[df.var$strategy!='not_relevant' & df.var$gear=='gns_fws',]$Freq=c(0,0.45,0,0,0,0.42,0.13)
 
 round(coast.catch[coast.catch$metier=='FPN_ANA',]$prop, digits=2)
 sum(round(coast.catch[coast.catch$metier=='FPN_ANA',]$prop, digits=2))
 df.var[df.var$strategy!='not_relevant' & df.var$gear=='fpn_ana',]$Freq=c(0,0,0,0.66,0.06,0.23,0.05)
 
+rec.catch
 df.var[df.var$strategy!='not_relevant' & df.var$gear=='rod',]$Freq=c(0.07,0.29,0.18,0.05,0.13,0.03,0.25)
 
 pl=df.var%>%
@@ -544,7 +558,6 @@ pl=df.var%>%
 df.var[df.var$strategy=='adapt' & 
          df.var$gear=='rod' &
          df.var$event=='hws',]$Freq=c(0.04,0.5,0.1,0.05,0.05,0.01,0.25) # goes more for perch
-
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
@@ -563,6 +576,7 @@ array.var=net[[i.node]]$prob
 xdim=dim(array.var)
 xnam=dimnames(array.var)
 df.var=as.data.frame(array.var)
+df.var[,]$Freq=c(0.33,0.33,0.33)
 x.lev=levels(df.var[,i.node])
 i.gear=levels(df.var$gear)
   
@@ -573,6 +587,9 @@ for(i in 1:length(i.gear)){
     dat=int.dat[int.dat$id_I%in%i.fisher,]
     x.answ=dat[grep(i.node, dat$short_description),]
     x.answ=x.answ[is.na(x.answ$unit_range),]
+    if(i.gear[i]=='otm'){
+      x.answ$uncertainty=0.2
+    }
     
     # revise the following and make sure to exclude any gear that is different
     x.answ$target=ifelse(is.na(x.answ$target), 'not_specified', x.answ$target)
@@ -594,16 +611,16 @@ for(i in 1:length(i.gear)){
           dplyr::group_by(gear,area,target)%>%
           dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
         j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty)
-        j.answ$uncertainty=ifelse(j.answ$uncertainty==0,0.1,x.answ$uncertainty)
+        j.answ$uncertainty=ifelse(j.answ$uncertainty==0,0.2,x.answ$uncertainty)
       }
       # single option
       if(nrow(j.answ)==1){
-        i.cpt=answer.to.cpt(x.ans=j.answ$value+adj.factor, 
+        i.cpt=answer.to.cpt(x.ans=j.answ$value, 
                                unc=j.answ$uncertainty,
                                dim.name = i.node,
                                x.range=c(answ.range$min, answ.range$max),
                                dim.labs = x.lev)
-        df.var[df.var$event==j.event & df.var$gear== i.gear[i] & df.var$additional_mitigation!='travel_further',]$Freq=i.cpt  
+        df.var[df.var$event==j.event & df.var$gear== i.gear[i],]$Freq=i.cpt  
       }
       # multiple options
       if(nrow(j.answ)>1){
@@ -623,13 +640,12 @@ for(i in 1:length(i.gear)){
             k.feature=names(k.opt)
             if(k.opt %in% df.var[[k.feature]]==F){next}
             k.answ=j.answ[k,]
-            i.cpt=answer.to.cpt(x.ans=k.answ$value+adj.factor, 
+            i.cpt=answer.to.cpt(x.ans=k.answ$value, 
                                    unc=k.answ$uncertainty,
                                    dim.name = i.node,
                                    x.range=c(answ.range$min, answ.range$max), # this is not always 3!
                                    dim.labs = x.lev)
-            df.var[df.var$event==j.event & df.var$gear== i.gear[i] & 
-                     df.var$additional_mitigation!='travel_further'
+            df.var[df.var$event==j.event & df.var$gear== i.gear[i]
                    & tolower(df.var[[k.feature]])==k.opt[[1]],]$Freq=i.cpt
           }
         }
@@ -638,19 +654,19 @@ for(i in 1:length(i.gear)){
   }
   
   # mitigations for safety are to travel further. Also, inland and not relevant equal no safety concerns
-  df.var[df.var$gear %in% c('not_relevant', 'inland'),]$Freq=c(1,0,0)
-  
-  df.var[df.var$event %in% c('sto','gal', 'hww') & 
+df.var[df.var$gear %in% c('not_relevant', 'inland'),]$Freq=c(1,0,0)
+df.var[df.var$gear %in% c('rod') & df.var$event=='hww',]$Freq=c(1,0,0)
+df.var[df.var$event %in% c('sto','gal', 'hww') & 
            df.var$additional_mitigation=='travel_further',]$Freq=c(1,0,0)
   
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 
 pl=df.var%>%
-  dplyr::filter(additional_mitigation=='no')%>%
+  #dplyr::filter(additional_mitigation=='no')%>%
   ggplot(aes(x=event, y=Freq, fill=personal_safety))+
   geom_col()+
-  facet_wrap(~gear);pl
+  facet_grid(rows=vars(additional_mitigation), cols=vars(gear));pl
 
 ggsave(plot=pl, 'results/images/safety.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
@@ -672,7 +688,9 @@ for(i in 1:length(i.gear)){
   dat=int.dat[int.dat$id_I%in%i.fisher,]
   x.answ=dat[grep(i.node, dat$short_description),]
   x.answ=x.answ[is.na(x.answ$unit_range),]
-  
+  if(i.gear[i]=='otm'){
+    x.answ$uncertainty=0.2
+  }
   # revise the following and make sure to exclude any gear that is different
   x.answ$target=ifelse(is.na(x.answ$target), 'not_specified', x.answ$target)
   x.answ$area=ifelse(is.na(x.answ$area), 'not_specified', x.answ$area)
@@ -692,7 +710,7 @@ for(i in 1:length(i.gear)){
         dplyr::group_by(gear,area,target)%>%
         dplyr::summarise(uncertainty=sd(value), value=mean(value), .groups = "keep") # adjust the uncertainty
       j.answ$uncertainty=ifelse(is.na(j.answ$uncertainty),0,j.answ$uncertainty)
-      j.answ$uncertainty=ifelse(j.answ$uncertainty==0,0.1,x.answ$uncertainty)
+      j.answ$uncertainty=ifelse(j.answ$uncertainty==0,0.2,x.answ$uncertainty)
     }
     # single option
     if(nrow(j.answ)==1){
@@ -721,7 +739,7 @@ for(i in 1:length(i.gear)){
           k.feature=names(k.opt)
           if(k.opt %in% df.var[[k.feature]]==F){next}
           k.answ=j.answ[k,]
-          i.cpt=answer.to.cpt(x.ans=k.answ$value+adj.factor, 
+          i.cpt=answer.to.cpt(x.ans=k.answ$value, 
                                  unc=k.answ$uncertainty,
                                  dim.name = i.node,
                                  x.range=c(answ.range$min, answ.range$max), # this is not always 3!

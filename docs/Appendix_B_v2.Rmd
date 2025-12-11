@@ -54,6 +54,15 @@ create.plots=function(target.nodes, net){
                                                            ifelse(fishing_style=='archipelago' ,'arc',
                                                                   ifelse(fishing_style=='trawler' ,'trw','fgu'))))))
   }
+    if('target' %in% names(df.var)){
+    df.var=df.var%>%
+      dplyr::mutate(target=ifelse(target=='herring',
+                                     'HER', ifelse(target=='perch', 'FPE',
+                                                   ifelse(target=='pike' , 'FPI' ,
+                                                           ifelse(target=='salmon' ,'SAL',
+                                                                  ifelse(target=='sea_trout' ,'TRS',
+                                                                         ifelse(target=='whitefish_nei', 'WHF','Other')))))))
+  }
   
   # plotting
   if(length(x.parents)==1){
