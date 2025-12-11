@@ -35,12 +35,12 @@ coast.fdays=read_csv("data/read_only/coastal_fdays.csv")
 coast.fdays=coast.fdays[1:3,]
 coast.fdays$cpt=coast.fdays$fdays/sum(coast.fdays$fdays)
 coast.catch=read_csv("data/read_only/coastal_catch.csv")
-rec.catch=read_excel("data/recf_catch.xlsx", 
+rec.catch=read_excel("data/read_only/recf_catch.xlsx", 
                      sheet = "tab2")
 
 rec.catch=rec.catch[rec.catch$name %in% c('Perch', 'Pike', 'Salmon', 'Zander', 'Whitefish', 'Trout', 'Herring','Cod',
                                 'Not specified'),]
-rec.practics=read_excel("data/recf_catch.xlsx", 
+rec.practics=read_excel("data/read_only/recf_catch.xlsx", 
            sheet = "tab1")
 rec.catch=left_join(rec.catch, rec.practics)
 rec.catch$prop=rec.catch$practitioners/sum(rec.catch$practitioners)
@@ -143,7 +143,7 @@ x.lev=levels(df.var[,i.node])
 target.dims=names(df.var)
 target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
 
-
+z=5
 for(z in 1:length(styles$f.style)){
   
   z.style=styles[z,]
@@ -319,9 +319,9 @@ for(z in 1:length(styles$f.style)){
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 pl=df.var%>%
-  ggplot(aes(x=event, y=Freq, fill=strategy))+
+  ggplot(aes(x=fishing_style, y=Freq, fill=strategy))+
   geom_col()+
-  facet_grid(cols=vars(fishing_style));pl
+  facet_grid(cols=vars(event));pl
 
 ggsave(plot=pl, 'results/images/strategy.jpeg', width = 18, height = 8, units='cm', dpi=150)
 

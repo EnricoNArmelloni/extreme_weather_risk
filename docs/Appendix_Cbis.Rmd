@@ -1,0 +1,254 @@
+---
+title: "Appendix A3: literature data treatment."
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+bibliography: references.bib
+---
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{C.\arabic{table}}
+\renewcommand{\thefigure}{C.\arabic{figure}}
+
+
+# Fishing gear
+
+## Coastal fishers
+
+Professional fisherman fishing effort is available at detailed level in in the Fishery Dependent Information (FDI) data from the STECF [@stecf2024]. FDI data are filtered on the Swedish Bothnian Sea by filtering on sub region (27.30.D.30) and country code (SWE). Data are further filtered on the vessel length categories < 8m and 8-12m length overall.
+
+Coastal fishers adopt a large variety of fishing technique. We selected the three most important in number of fishing days, which also accounts for more than 85%: 
+
+```{r, include=T, echo=F,message=FALSE, results = 'asis', fig.width = 6, fig.height=3, warning=FALSE, fig.cap='The 8 combination of gear and target species having the most fishing days over the period 2013-2023.'}
+library(tidyverse)
+x.eff=read_csv("~/ARMELLONI_SLU/miscellaneous_datasets/2024_fdi_effort/Effort/FDI Effort by country.csv")
+names(x.eff)=str_replace(names(x.eff), ' ', '_')
+names(x.eff)=str_replace(names(x.eff), ' ', '_')
+names(x.eff)=str_replace(names(x.eff), '-', '_')
+names(x.eff)=tolower(names(x.eff))
+
+eff.30=x.eff[x.eff$sub_region=='27.3.D.30' &x.eff$country=='Sweden',]
+coastal.eff=eff.30[eff.30$vessel_length_category %in% c('VL0812', 'VL0008'),]
+
+## Decision
+coastal_fdays=coastal.eff%>%
+  dplyr::mutate(total_fishing_days=as.numeric(total_fishing_days))%>%
+  dplyr::group_by(fishing_technique,gear_type,target_assemblage,year)%>%
+  dplyr::summarise(fdays=sum(total_fishing_days))%>%
+  dplyr::group_by(fishing_technique,gear_type, target_assemblage)%>%
+  dplyr::summarise(fdays=mean(fdays))%>%
+  dplyr::group_by(gear_type, target_assemblage)%>%
+  dplyr::summarise(fdays=sum(fdays))%>%
+  arrange(desc(fdays))%>%
+  ungroup()%>%
+  dplyr::mutate(cum_val=cumsum(fdays)/sum(fdays), prop=fdays/sum(fdays)) ## CPT for fishing_style -> gear
+
+coastal_fdays$metier=paste(coastal_fdays$gear_type, coastal_fdays$target_assemblage, sep='_')
+#write.csv(coastal_fdays, "C:/github/extreme_weather_risk/data/read_only/coastal_fdays.csv", row.names = F)
+
+coastal_fdays[1:8,]%>%
+  ggplot(aes(x=reorder(metier, desc(fdays)), y=fdays))+
+  geom_col()+
+  xlab('Gear & Target assemblage')
+
+```
+
+
+\newpage
+
+# Target species
+
+Professional fisherman catchyes by gear is available at detailed level in in the Fishery Dependent Information (FDI) data from the STECF [@stecf2024]. FDI data are filtered on the Swedish Bothnian Sea by filtering on sub region (27.30.D.30) and country code (SWE).
+
+Recreational fishers statistics are available in the recreational fisheries statistical report of the Swedish Department for Economic and Statistic Analysis (SWAM) data source [@swam2024]. SWAM target species data are available for coastal vs inland fishing, however they represent the totality of recreational fisherman in Sweden, with no distinction between region.
+
+
+## Coastal fishers
+
+FDI data are further filtered on the vessel length categories < 8m and 8-12m length overall, and on the three combination of fishing gear and target assemblage selected above (hereby referred as metier).
+
+We calculated for each metier the species assemblage making up to the 95% of the average cumulative distribution in the period 2013-2023: 
+
+```{r, include=T, echo=F, results = 'asis', message=FALSE, fig.width = 8, fig.height=4, warning=FALSE, fig.cap='CPT estimated for pelagic trawlers'}
+asfis= read_csv("~/ARMELLONI_SLU/miscellaneous_datasets/ASFIS_2020.csv")
+names(asfis)[3]='species'
+asfis=asfis[,3:5]
+fdi.folder='~/ARMELLONI_SLU/miscellaneous_datasets/2024_fdi_catches/Catches'
+fdi.dats=list.files(fdi.folder)
+fdi.dats=fdi.dats[nchar(fdi.dats)<40]
+fdi.yrs=length(fdi.dats)
+
+fdi.store=NULL
+for(i in 1:fdi.yrs){
+  fdi=read_csv(file.path(fdi.folder, fdi.dats[i]))
+  fdi.30=fdi[fdi$sub_region=='27.3.D.30' &fdi$country=='Sweden' & fdi$vessel_length %in% c('VL0812', 'VL0008'),]
+  fdi.store=rbind(fdi.store, fdi.30)
+}
+
+fdi.30=fdi.store%>%
+  dplyr::mutate(tons=as.numeric(total_live_weight_landed))%>%
+  dplyr::filter(!is.na(tons))%>%
+  dplyr::group_by(fishing_tech, gear_type, target_assemblage, species, year)%>%
+  dplyr::summarise(ton=sum(tons))%>%
+  dplyr::group_by(fishing_tech, gear_type, target_assemblage, species)%>%
+  dplyr::summarise(ton=mean(ton))
+fdi.30$metier=paste(fdi.30$gear_type, fdi.30$target_assemblage, sep='_')
+
+coastal.catch=fdi.30[fdi.30$metier %in% coastal_fdays[1:3,]$metier ,]%>%
+  dplyr::group_by(metier, species)%>%
+  dplyr::summarise(ton=sum(ton))%>%
+  dplyr::arrange(metier, desc(ton))%>%
+  dplyr::mutate(cum_val=round(cumsum(ton)/sum(ton), digits=2), prop=ton/sum(ton))
+
+coastal.catch$keep=1
+for(i in 2:(nrow(coastal.catch))){
+   if(coastal.catch[i,]$metier==coastal.catch[i-1,]$metier){
+     if(coastal.catch[i,]$cum_val<=0.95){
+       next
+     }else{
+       coastal.catch[i,]$keep=0
+     }
+   }else{
+     coastal.catch[i,]$keep=1
+   }
+}
+coastal.catch=coastal.catch%>%
+  dplyr::filter(keep==1)%>%
+  left_join(asfis)
+
+coastal.catch%>%
+  ggplot(aes(x=English_name, y=ton))+
+  geom_col()+
+  facet_wrap(~metier, scales='free')+
+  xlab('Species name')
+
+#write.csv(coastal.catch, "C:/github/extreme_weather_risk/data/read_only/coastal_catch.csv", row.names = F)
+```
+
+## Pelagic trawlers
+
+FDI data are further filtered on the vessel length categories 24-40m and >40m length overall, and on the fishing gear and target assemblage combination OTM_SPF.
+
+We calculated the species assemblage making up to the 99% of the average cumulative distribution in the period 2013-2023: 
+
+```{r, include=T, echo=F, results = 'asis', message=FALSE, fig.width = 8, fig.height=4, warning=FALSE, fig.cap='CPT estimated for pelagic trawlers'}
+asfis= read_csv("~/ARMELLONI_SLU/miscellaneous_datasets/ASFIS_2020.csv")
+names(asfis)[3]='species'
+asfis=asfis[,3:5]
+fdi.folder='~/ARMELLONI_SLU/miscellaneous_datasets/2024_fdi_catches/Catches'
+fdi.dats=list.files(fdi.folder)
+fdi.dats=fdi.dats[nchar(fdi.dats)<40]
+fdi.yrs=length(fdi.dats)
+
+fdi.store=NULL
+for(i in 1:fdi.yrs){
+  fdi=read_csv(file.path(fdi.folder, fdi.dats[i]))
+  fdi.30=fdi[fdi$sub_region=='27.3.D.30' &fdi$country=='Sweden' & fdi$vessel_length %in% c('VL2440', 'VL40XX'),]
+  fdi.store=rbind(fdi.store, fdi.30)
+}
+
+fdi.30=fdi.store%>%
+  dplyr::mutate(tons=as.numeric(total_live_weight_landed))%>%
+  dplyr::filter(!is.na(tons))%>%
+  dplyr::group_by(fishing_tech, gear_type, target_assemblage, species, year)%>%
+  dplyr::summarise(ton=sum(tons))%>%
+  dplyr::group_by(fishing_tech, gear_type, target_assemblage, species)%>%
+  dplyr::summarise(ton=mean(ton))
+fdi.30$metier=paste(fdi.30$gear_type, fdi.30$target_assemblage, sep='_')
+
+coastal.catch=fdi.30[fdi.30$metier =='OTM_SPF' ,]%>%
+  dplyr::group_by(metier, species)%>%
+  dplyr::summarise(ton=sum(ton))%>%
+  dplyr::arrange(metier, desc(ton))%>%
+  dplyr::mutate(cum_val=round(cumsum(ton)/sum(ton), digits=2), prop=ton/sum(ton))
+
+coastal.catch$keep=1
+for(i in 2:(nrow(coastal.catch))){
+   if(coastal.catch[i,]$metier==coastal.catch[i-1,]$metier){
+     if(coastal.catch[i,]$cum_val<=0.99){
+       next
+     }else{
+       coastal.catch[i,]$keep=0
+     }
+   }else{
+     coastal.catch[i,]$keep=1
+   }
+}
+coastal.catch=coastal.catch%>%
+  dplyr::filter(keep==1)%>%
+  left_join(asfis)
+
+coastal.catch%>%
+  ggplot(aes(x=English_name, y=ton))+
+  geom_col()+
+  facet_wrap(~metier, scales='free_x')+
+  xlab('Species name')
+
+#write.csv(coastal.catch, "C:/github/extreme_weather_risk/data/read_only/coastal_catch.csv", row.names = F)
+```
+
+
+## Recreational fishers
+
+FDI data are further filtered on the vessel length categories 24-40m and >40m length overall, and on the fishing gear and target assemblage combination OTM_SPF.
+
+We calculated the species assemblage making up to the 99% of the average cumulative distribution in the period 2013-2023: 
+
+```{r, include=T, echo=F, results = 'asis', message=FALSE, fig.width = 8, fig.height=4, warning=FALSE, fig.cap='CPT estimated for pelagic trawlers'}
+asfis= read_csv("~/ARMELLONI_SLU/miscellaneous_datasets/ASFIS_2020.csv")
+names(asfis)[3]='species'
+asfis=asfis[,3:5]
+fdi.folder='~/ARMELLONI_SLU/miscellaneous_datasets/2024_fdi_catches/Catches'
+fdi.dats=list.files(fdi.folder)
+fdi.dats=fdi.dats[nchar(fdi.dats)<40]
+fdi.yrs=length(fdi.dats)
+
+fdi.store=NULL
+for(i in 1:fdi.yrs){
+  fdi=read_csv(file.path(fdi.folder, fdi.dats[i]))
+  fdi.30=fdi[fdi$sub_region=='27.3.D.30' &fdi$country=='Sweden' & fdi$vessel_length %in% c('VL2440', 'VL40XX'),]
+  fdi.store=rbind(fdi.store, fdi.30)
+}
+
+fdi.30=fdi.store%>%
+  dplyr::mutate(tons=as.numeric(total_live_weight_landed))%>%
+  dplyr::filter(!is.na(tons))%>%
+  dplyr::group_by(fishing_tech, gear_type, target_assemblage, species, year)%>%
+  dplyr::summarise(ton=sum(tons))%>%
+  dplyr::group_by(fishing_tech, gear_type, target_assemblage, species)%>%
+  dplyr::summarise(ton=mean(ton))
+fdi.30$metier=paste(fdi.30$gear_type, fdi.30$target_assemblage, sep='_')
+
+coastal.catch=fdi.30[fdi.30$metier =='OTM_SPF' ,]%>%
+  dplyr::group_by(metier, species)%>%
+  dplyr::summarise(ton=sum(ton))%>%
+  dplyr::arrange(metier, desc(ton))%>%
+  dplyr::mutate(cum_val=round(cumsum(ton)/sum(ton), digits=2), prop=ton/sum(ton))
+
+coastal.catch$keep=1
+for(i in 2:(nrow(coastal.catch))){
+   if(coastal.catch[i,]$metier==coastal.catch[i-1,]$metier){
+     if(coastal.catch[i,]$cum_val<=0.99){
+       next
+     }else{
+       coastal.catch[i,]$keep=0
+     }
+   }else{
+     coastal.catch[i,]$keep=1
+   }
+}
+coastal.catch=coastal.catch%>%
+  dplyr::filter(keep==1)%>%
+  left_join(asfis)
+
+coastal.catch%>%
+  ggplot(aes(x=English_name, y=ton))+
+  geom_col()+
+  facet_wrap(~metier, scales='free_x')+
+  xlab('Species name')
+
+#write.csv(coastal.catch, "C:/github/extreme_weather_risk/data/read_only/coastal_catch.csv", row.names = F)
+```
+
+

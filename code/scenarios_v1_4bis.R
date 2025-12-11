@@ -84,19 +84,15 @@ p.f1=ev.store%>%
   ylab('Frequency')+
   xlab('MEW');p.f1
 
-
-
 #ggsave(plot=p.f1, 'results/scenarios/event.png', width = 18, height = 8, units='cm', dpi=300)
-
-
 ## S2 ####
 array.var=net.s1[['fishing_style']]$prob
 fi.list=names(array.var[array.var>0])
 ev.store=NULL
 for(i in 1:length(fi.list)){
   i.res=cpdist(net.s1, nodes = c('economic_risk', 'societal_risk','individual_risk'), 
-               evidence = (fishing_style == fi.list[i])& stock_status=='status_quo')
-  i.res$fishing_style=fi.list[i]
+               evidence = list(fishing_style = fi.list[i]), stock_status='status_quo', n=10^5, method='lw')
+    i.res$fishing_style=fi.list[i]
   i.res=i.res%>%
     pivot_longer(-fishing_style, names_to = 'node', values_to = 'est')%>%
     dplyr::group_by(fishing_style, node,est)%>%
@@ -166,11 +162,9 @@ excl=ev.store[ev.store$est =='not_relevant',]%>%
   ungroup()%>%
   distinct(fishing_style, event)
 plot.event=ev.store[ev.store$est!='not_relevant',]
-
 plot.event=plot.event%>%
   dplyr::group_by(event, fishing_style, stock_status, node)%>%
   dplyr::mutate(prob=prob/sum(prob))
-
 
 base.grid=expand.grid(fishing_style=unique(plot.event$fishing_style), 
                       event=unique(plot.event$event), 
@@ -187,17 +181,42 @@ plot.event[which(paste0(plot.event$fishing_style, plot.event$event) %in% paste0(
 plot.event[plot.event$prob<0,]$prob=NA
 ev.val=mean(plot.event[!is.na(plot.event$prob),]$prob)
 
-unique(plot.event$stock_status)
 
-p.f4=plot.event%>%
+
+x.diff=plot.event%>%
+  dplyr::select(-n)%>%
+  pivot_wider(names_from = stock_status, values_from = prob)%>%
+  dplyr::mutate(worst=worst-status_quo, 
+                better=better-status_quo)%>%
+  pivot_longer(cols = c(worst, better), values_to = 'prob', names_to = 'stock_status')%>%
+  na.omit()%>%
+  dplyr::filter(stock_status!='status_quo')
+
+# extracting some numbers for results
+mean(x.diff[x.diff$stock_status=='worst' & x.diff$node != 'economic_risk',]$prob)
+mean(x.diff[x.diff$stock_status=='better'& x.diff$node != 'economic_risk',]$prob)
+
+x.diff[x.diff$node != 'economic_risk',]%>%
+  dplyr::group_by(fishing_style, node)%>%
+  dplyr::summarise(max(prob)*100,min(prob)*100)
+
+
+
+
+
+## format for plotting
+plot.event=plot.event%>%
   dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
                                      'rcf', ifelse(fishing_style=='coastal', 'ssf',
                                                    ifelse(fishing_style=='coastal_salmon' , 'sal' ,
                                                           ifelse(fishing_style=='archipelago' ,'arc',
                                                                  ifelse(fishing_style=='trawler' ,'trw','fgu'))))))%>%
-  #dplyr::mutate(management=ifelse(management=='status_quo', 'BAU', 'FLEX'))%>%
   dplyr::mutate(stock_status=paste('Stock status:', stock_status))%>%
-  dplyr::mutate(stock_status=factor(stock_status, levels=paste('Stock status:',c('worst', 'status_quo','better'))))%>%
+  dplyr::mutate(stock_status=factor(stock_status, levels=paste('Stock status:',c('worst', 'status_quo','better'))))
+
+
+p.f4=plot.event%>%
+  #dplyr::mutate(management=ifelse(management=='status_quo', 'BAU', 'FLEX'))%%>%
   ggplot(aes(x=fishing_style, y=event, fill=prob))+
   geom_tile(color='black')+
   facet_grid(cols=vars(node), rows=vars(stock_status))+
@@ -206,8 +225,6 @@ p.f4=plot.event%>%
   labs(fill='Probability of High Risk')+
   ylab('MEW')+
   xlab('Fishing Style');p.f4
-
-
 ggsave(plot=p.f4, 'results/scenarios/s3_viz1.png', width = 18, height = 12, units='cm', dpi=300)
 
 
@@ -218,14 +235,6 @@ pl.2=plot.event%>%
                 better=better-status_quo)%>%
   pivot_longer(cols = c(worst, status_quo, better), values_to = 'prob', names_to = 'stock_status')%>%
   dplyr::filter(stock_status!='status_quo')%>%
-  dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
-                                     'rcf', ifelse(fishing_style=='coastal', 'ssf',
-                                                   ifelse(fishing_style=='coastal_salmon' , 'sal' ,
-                                                          ifelse(fishing_style=='archipelago' ,'arc',
-                                                                 ifelse(fishing_style=='trawler' ,'trw','fgu'))))))%>%
-  #dplyr::mutate(management=ifelse(management=='status_quo', 'BAU', 'FLEX'))%>%
-  dplyr::mutate(stock_status=paste('Stock status:', stock_status))%>%
-  dplyr::mutate(stock_status=factor(stock_status, levels=paste('Stock status:',c('worst', 'status_quo','better'))))%>%
   #dplyr::filter(abs(prob)>0.05)%>%
   ggplot(aes(x=fishing_style, y=event, fill=prob))+
   geom_tile(color='black')+
@@ -236,73 +245,6 @@ pl.2=plot.event%>%
   ylab('MEW')+
   xlab('Fishing Style')
 
-
-x.diff=plot.event%>%
-  dplyr::select(-n)%>%
-  pivot_wider(names_from = stock_status, values_from = prob)%>%
-  dplyr::mutate(worst=worst-status_quo, 
-                better=better-status_quo)%>%
-  pivot_longer(cols = c(worst, status_quo, better), values_to = 'prob', names_to = 'stock_status')%>%
-  na.omit()%>%
-  dplyr::filter(stock_status!='status_quo')
-
-# extracting some numbers for results
-mean(x.diff[x.diff$stock_status=='worst' & x.diff$node != 'economic_risk',]$prob)
-mean(x.diff[x.diff$stock_status=='better'& x.diff$node != 'economic_risk',]$prob)
-
-mean(x.diff[x.diff$stock_status=='better'& x.diff$node != 'economic_risk',]$prob)
-mean(x.diff[x.diff$stock_status=='better'& x.diff$node != 'economic_risk',]$prob)
-mean(x.diff[x.diff$stock_status=='better'& x.diff$node != 'economic_risk',]$prob)
-x.diff[x.diff$node != 'economic_risk',]%>%
-  dplyr::group_by(fishing_style, node)%>%
-  dplyr::summarise(max(prob)*100,min(prob)*100)
-
-
-
-
-
-
-plot.event%>%plot.event%>%plot.event%>%
-  dplyr::select(-n)%>%
-  pivot_wider(names_from = stock_status, values_from = prob)%>%
-  dplyr::mutate(worst=worst-status_quo, 
-                better=better-status_quo)%>%
-  pivot_longer(cols = c(worst, better), values_to = 'prob', names_to = 'stock_status')%>%
-  dplyr::filter(stock_status!='status_quo')%>%
-  dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
-                                     'rcf', ifelse(fishing_style=='coastal', 'ssf',
-                                                   ifelse(fishing_style=='coastal_salmon' , 'sal' ,
-                                                          ifelse(fishing_style=='archipelago' ,'arc',
-                                                                 ifelse(fishing_style=='trawler' ,'trw','fgu'))))))%>%
-  #dplyr::mutate(management=ifelse(management=='status_quo', 'BAU', 'FLEX'))%>%
-  dplyr::mutate(stock_status=paste('Stock status:', stock_status))%>%
-  dplyr::mutate(stock_status=factor(stock_status, levels=paste('Stock status:',c('worst', 'status_quo','better'))))
-
-
-
-plot.event%>%
-  dplyr::select(-n)%>%
-  pivot_wider(names_from = stock_status, values_from = prob)%>%
-  dplyr::mutate(worst=worst-status_quo, 
-                better=better-status_quo)%>%
-  pivot_longer(cols = c(worst, better), values_to = 'prob', names_to = 'stock_status')%>%
-  ggplot(aes(x=status_quo, y=prob, color=event))+
-  geom_point()+
-  facet_wrap(~fishing_style)
-
-
-
-
-
-
-
-
-
-
-
-
-
-## other plotting option
 pl.1=plot.event%>%
   dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
                                      'rcf', ifelse(fishing_style=='coastal', 'ssf',

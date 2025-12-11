@@ -139,28 +139,28 @@ How have perch and pike been doing this summer?
 It was a bit weak when it was hot, but now they have started again. Probably quite a normal year. One adapts to the new. Sour that one cannot fish in the outer archipelago. It is an enormous difference from how it was when I was little, we would need supportive stocking of the pike stocks.
 First year with protection. I have not seen so much herring in 15 years! We have had incredibly little fish coming in to spawn earlier; when they last did test fishing at Mörkö, there was an 84 86% decline in spawning herring.
 Out last week, then there was herring in Furusundsleden, a lot of herring, proper schools. Summer herring. Don’t know when I last saw that. Very positive! Will have great impact on the predatory fish stocks. Hope that the seals can move out again, so they don’t have to hang around at Slussen.",NA,NA,NA,"fishing guide",NA
-NA,NA,NA,2,"a",-999,NA,NA,NA,2,"go_out","Extremely warm winter   we ice fish so little, therefore it is a bit difficult to answer. (2)","2","Heatwave in the winter season","hww","coastal",0.30000300003
+NA,NA,NA,2,"a",2,NA,NA,NA,2,"go_out","Extremely warm winter   we ice fish so little, therefore it is a bit difficult to answer. (2)","2","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,2,"b",3,NA,NA,NA,2,"go_out","(3) Depends a little on what we are fishing","3","Heatwave in the summer season","hws","coastal",0.30000300003
-NA,NA,NA,2,"c",1,NA,NA,NA,2,"go_out","1","1","Severe icing (in the winter season)","ici","coastal",0.30000300003
+NA,NA,NA,2,"c",2,NA,NA,NA,2,"go_out","1","1","Severe icing (in the winter season)","ici","coastal",0.30000300003
 NA,NA,NA,2,"d",4,NA,NA,NA,2,"go_out","Doesn’t affect us much up here; locally there may be algal bloom in a bay. (4) ","4","Algal bloom (in the summer season)","abl","coastal",0.30000300003
 NA,NA,NA,2,"e",3,NA,NA,NA,2,"go_out","3","3","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
 NA,NA,NA,2,"f",1,NA,NA,NA,2,"go_out","1, not me at least with my small boat","1","Gale","gal","coastal",0.30000300003
 NA,NA,NA,2,"g",1,NA,NA,NA,2,"go_out","1","1","Storm","sto","coastal",0.30000300003
-NA,NA,NA,3,"a",-999,NA,NA,NA,2,"catchability","3","3","Heatwave in the winter season","hww","coastal",0.30000300003
+NA,NA,NA,3,"a",3,NA,NA,NA,2,"catchability","3","3","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,3,"b",2,NA,NA,NA,2,"catchability","2, Becomes worse, maybe not for all species, but they move to other areas, so you have to search elsewhere","2","Heatwave in the summer season","hws","coastal",0.30000300003
 NA,NA,NA,3,"c",-998,NA,NA,NA,2,"catchability","Hypothetical question, since we always have ice in winter; icing can happen in autumn, but we rarely fish then, so can’t answer that ",NA,"Severe icing (in the winter season)","ici","coastal",0.30000300003
 NA,NA,NA,3,"d",-998,NA,NA,NA,2,"catchability","Hard to answer, doesn’t occur very often ",NA,"Algal bloom (in the summer season)","abl","coastal",0.30000300003
 NA,NA,NA,3,"e",3,NA,NA,NA,2,"catchability","3","3","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
 NA,NA,NA,3,"f",2,NA,NA,NA,2,"catchability","It becomes harder to fish, but does not affect the actual catch; (2). Can affect a little since it’s harder to fish","2","Gale","gal","coastal",0.30000300003
 NA,NA,NA,3,"g",1,NA,NA,NA,2,"catchability","In a storm you can’t fish, so catchability is zero",NA,"Storm","sto","coastal",0.30000300003
-NA,NA,NA,4,"a",-999,NA,NA,NA,2,"catch_assemblage","1","1","Heatwave in the winter season","hww","coastal",0.30000300003
+NA,NA,NA,4,"a",1,NA,NA,NA,2,"catch_assemblage","1","1","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,4,"b",4,NA,NA,NA,2,"catch_assemblage","Somewhat different species if we fish in the same place   e.g., a lot of bream; somewhat different (4).","4","Heatwave in the summer season","hws","coastal",0.30000300003
 NA,NA,NA,4,"c",-998,NA,NA,NA,2,"catch_assemblage",NA,NA,"Severe icing (in the winter season)","ici","coastal",0.30000300003
 NA,NA,NA,4,"d",-998,NA,NA,NA,2,"catch_assemblage",NA,NA,"Algal bloom (in the summer season)","abl","coastal",0.30000300003
 NA,NA,NA,4,"e",1,NA,NA,NA,2,"catch_assemblage","1","1","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
 NA,NA,NA,4,"f",1,NA,NA,NA,2,"catch_assemblage","1","1","Gale","gal","coastal",0.30000300003
 NA,NA,NA,4,"g",-998,NA,NA,NA,2,"catch_assemblage",NA,NA,"Storm","sto","coastal",0.30000300003
-NA,NA,"not_specified",5,"a",-999,NA,NA,NA,2,"catch_condition","3","3","Heatwave in the winter season","hww","coastal",0.30000300003
+NA,NA,"not_specified",5,"a",3,NA,NA,NA,2,"catch_condition","3","3","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,"perch",5,"a",NA,NA,NA,NA,2,"catch_condition","3","3","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,"salmon",5,"a",NA,NA,NA,NA,2,"catch_condition","3","3","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,"not_specified",5,"b",NA,NA,NA,NA,2,"catch_condition","1   Yes, then it gets quite a lot worse. Perch cannot tolerate lying in nets; they die almost immediately. Salmon in traps is a short fishing period and in deep water, so it doesn’t get warm enough to affect them","M","Heatwave in the summer season","hws","coastal",0.30000300003
@@ -202,13 +202,13 @@ NA,NA,NA,9,"d",0,NA,NA,NA,2,"personal_safety","0","0","Algal bloom (in the summe
 NA,NA,NA,9,"e",0,NA,NA,NA,2,"personal_safety","0","0","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
 NA,NA,NA,9,"f",0,NA,NA,NA,2,"personal_safety","0   no major concern","0","Gale","gal","coastal",0.30000300003
 NA,NA,NA,9,"g",2,NA,NA,NA,2,"personal_safety","2","2","Storm","sto","coastal",0.30000300003
-NA,NA,NA,10,"a",-999,NA,NA,NA,2,"damage","0)   No boat used, the snowmobile can get stuck, but no damage, only extra work","0","Heatwave in the winter season","hww","coastal",0.30000300003
+NA,NA,NA,10,"a",0,NA,NA,NA,2,"damage","0)   No boat used, the snowmobile can get stuck, but no damage, only extra work","0","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,10,"b",1,NA,NA,NA,2,"damage","More work cleaning gear from fouling, (1)   if that can even be called damage.","1","Heatwave in the summer season","hws","coastal",0.30000300003
 NA,NA,NA,10,"c",1,NA,NA,NA,2,"damage","1","1","Severe icing (in the winter season)","ici","coastal",0.30000300003
 NA,NA,NA,10,"d",0,NA,NA,NA,2,"damage","0","0","Algal bloom (in the summer season)","abl","coastal",0.30000300003
 NA,NA,NA,10,"e",1,NA,NA,NA,2,"damage","(1)   If the boat sinks or the engine ends up under water (that’s enough for one summer).","1","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
 NA,NA,NA,10,"f",1,NA,NA,NA,2,"damage","1","1","Gale","gal","coastal",0.30000300003
-NA,NA,NA,10,"g",2,NA,NA,NA,2,"damage","(2)   Mostly to gear. It very rarely happens that we lose gear completely, but a small risk exists ","2","Storm","sto","coastal",0.30000300003
+NA,NA,NA,10,"g",1.5,NA,NA,NA,2,"damage","(2)   Mostly to gear. It very rarely happens that we lose gear completely, but a small risk exists ","2","Storm","sto","coastal",0.30000300003
 NA,NA,NA,13,"a",1,NA,NA,NA,2,"change_practices","(1)   We might choose areas where travel on ice is easier.","1","Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,13,"b",1,NA,NA,NA,2,"change_practices","(1)   Might change areas a little bit","1","Heatwave in the summer season","hws","coastal",0.30000300003
 NA,NA,NA,13,"c",-999,NA,NA,NA,2,"change_practices","We fish so little during that season that it’s hard to say",NA,"Severe icing (in the winter season)","ici","coastal",0.30000300003
@@ -282,12 +282,12 @@ NA,NA,"herring",3,"e",NA,NA,NA,NA,3,"catchability","Doesn’t affect catchabilit
 NA,NA,"salmon",3,"e",NA,NA,NA,NA,3,"catchability","Doesn’t affect catchability (only whether we go out). =3.","3","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
 NA,NA,"not_specified",3,"f",NA,NA,NA,NA,3,"catchability","Yes – after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead. ","M","Gale","gal","coastal",0.30000300003
 NA,NA,"perch",3,"f",NA,NA,NA,NA,3,"catchability","Yes – after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead. ","M","Gale","gal","coastal",0.30000300003
-NA,NA,"herring",3,"f",999,NA,NA,NA,3,"catchability","Yes – after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead. ","M","Gale","gal","coastal",0.30000300003
-NA,NA,"salmon",3,"f",999,NA,NA,NA,3,"catchability","Yes – after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead. ","M","Gale","gal","coastal",0.30000300003
+NA,NA,"herring",3,"f",4,NA,NA,NA,3,"catchability","Yes – after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead. ","M","Gale","gal","coastal",0.30000300003
+NA,NA,"salmon",3,"f",4,NA,NA,NA,3,"catchability","Yes – after a gale from the right direction, herring can blow in, salmon may swim more too (E, NE in summer). =4. From W & NW it gets worse instead. ","M","Gale","gal","coastal",0.30000300003
 NA,NA,"not_specified",3,"g",NA,NA,NA,NA,3,"catchability","Same, just stronger wind.",NA,"Storm","sto","coastal",0.30000300003
 NA,NA,"perch",3,"g",NA,NA,NA,NA,3,"catchability","Same, just stronger wind.",NA,"Storm","sto","coastal",0.30000300003
-NA,NA,"herring",3,"g",999,NA,NA,NA,3,"catchability","Same, just stronger wind.",NA,"Storm","sto","coastal",0.30000300003
-NA,NA,"salmon",3,"g",999,NA,NA,NA,3,"catchability","Same, just stronger wind.",NA,"Storm","sto","coastal",0.30000300003
+NA,NA,"herring",3,"g",4,NA,NA,NA,3,"catchability","Same, just stronger wind.",NA,"Storm","sto","coastal",0.30000300003
+NA,NA,"salmon",3,"g",4,NA,NA,NA,3,"catchability","Same, just stronger wind.",NA,"Storm","sto","coastal",0.30000300003
 NA,NA,NA,4,"a",-999,NA,NA,NA,3,"catch_assemblage","Not relevant.",NA,"Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,4,"b",1,NA,NA,NA,3,"catch_assemblage","very similar (1)","1","Heatwave in the summer season","hws","coastal",0.30000300003
 NA,NA,NA,4,"c",-999,NA,NA,NA,3,"catch_assemblage","not relevant",NA,"Severe icing (in the winter season)","ici","coastal",0.30000300003
@@ -328,8 +328,8 @@ NA,NA,NA,10,"b",0,NA,NA,NA,3,"damage",NA,NA,"Heatwave in the summer season","hws
 NA,NA,NA,10,"c",-999,NA,NA,NA,3,"damage",NA,NA,"Severe icing (in the winter season)","ici","coastal",0.30000300003
 NA,NA,NA,10,"d",0,NA,NA,NA,3,"damage","0, though nets can get dirty.","0","Algal bloom (in the summer season)","abl","coastal",0.30000300003
 NA,NA,NA,10,"e",0,NA,NA,NA,3,"damage","0","0","Extreme cloudburst (in the summer season)","erf","coastal",0.30000300003
-NA,NA,NA,10,"f",999,NA,NA,NA,3,"damage","Could damage or destroy gear/boat, or cause minor damage",NA,"Gale","gal","coastal",0.30000300003
-NA,NA,NA,10,"g",999,NA,NA,NA,3,"damage","Could damage or destroy gear/boat, or cause minor damage",NA,"Storm","sto","coastal",0.30000300003
+NA,NA,NA,10,"f",2,NA,NA,NA,3,"damage","Could damage or destroy gear/boat, or cause minor damage",NA,"Gale","gal","coastal",0.30000300003
+NA,NA,NA,10,"g",2,NA,NA,NA,3,"damage","Could damage or destroy gear/boat, or cause minor damage",NA,"Storm","sto","coastal",0.30000300003
 NA,NA,NA,13,"a",-999,NA,NA,NA,3,"change_practices","NA",NA,"Heatwave in the winter season","hww","coastal",0.30000300003
 NA,NA,NA,13,"b",2,NA,NA,NA,3,"change_practices","Yes, set in other places, change a lot. =2. Salmon gear is fixed at paid spots all summer, so they stay.","2","Heatwave in the summer season","hws","coastal",0.30000300003
 NA,NA,NA,13,"c",-999,NA,NA,NA,3,"change_practices","NA",NA,"Severe icing (in the winter season)","ici","coastal",0.30000300003
@@ -380,17 +380,24 @@ NA,NA,NA,2,"d",1,NA,NA,NA,4,"go_out","1","1","Algal bloom (in the summer season)
 NA,NA,NA,2,"e",1,NA,NA,NA,4,"go_out","We can get to the boathouse, but from there out onto the lake it’s more difficult; 1, if we don’t have gear in the water. But we check the weather forecast very carefully before putting in the gear.","1","Extreme cloudburst (in the summer season)","erf","subsistence",0.600006000060001
 NA,NA,NA,2,"f",1,NA,NA,NA,4,"go_out","1","1","Gale","gal","subsistence",0.600006000060001
 NA,NA,NA,2,"g",1,NA,NA,NA,4,"go_out","1","1","Storm","sto","subsistence",0.600006000060001
-NA,NA,NA,3,"a",2,NA,NA,NA,4,"catchability",NA,NA,"Heatwave in the winter season","hww","subsistence",0.600006000060001
-NA,NA,NA,3,"b",3,NA,NA,NA,4,"catchability","Yes, in the past when perch existed, they liked warmth, but now there are no perch, so the effect is not so big on the species we fish for ",NA,"Heatwave in the summer season","hws","subsistence",0.600006000060001
-NA,NA,NA,3,"c",-999,NA,NA,NA,4,"catchability",NA,NA,"Severe icing (in the winter season)","ici","subsistence",0.600006000060001
-NA,NA,NA,3,"d",1,NA,NA,NA,4,"catchability","It’s devastating, depressing to live around this algal soup, grandchildren can’t swim, it’s an imbalance in the Baltic Sea ecosystem, a sad new phenomenon. We try to deal with it when it drifts ashore. It becomes a white coating on the bottom when it sinks. We’re worried about algal toxins (cows can break them down somewhat, but single-stomached animals can’t; affects the liver). 1.","1","Algal bloom (in the summer season)","abl","subsistence",0.600006000060001
-NA,NA,NA,3,"e",3,NA,NA,NA,4,"catchability","No, 3","3","Extreme cloudburst (in the summer season)","erf","subsistence",0.600006000060001
-NA,NA,NA,3,"f",2,NA,NA,NA,4,"catchability","A little worried about strong winds since we don’t have big boats.",NA,"Gale","gal","subsistence",0.600006000060001
-NA,NA,NA,3,"g",2,NA,NA,NA,4,"catchability","Same with storms. ",NA,"Storm","sto","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"a",2,NA,NA,NA,4,"catchability",NA,NA,"Heatwave in the winter season","hww","subsistence",0.600006000060001
+NA,NA,"perch",3,"a",NA,NA,NA,NA,4,"catchability",NA,NA,"Heatwave in the winter season","hww","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"b",3,NA,NA,NA,4,"catchability","Yes, in the past when perch existed, they liked warmth, but now there are no perch, so the effect is not so big on the species we fish for ",NA,"Heatwave in the summer season","hws","subsistence",0.600006000060001
+NA,NA,"perch",3,"b",4,NA,NA,NA,4,"catchability","Yes, in the past when perch existed, they liked warmth, but now there are no perch, so the effect is not so big on the species we fish for ",NA,"Heatwave in the summer season","hws","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"c",-999,NA,NA,NA,4,"catchability",NA,NA,"Severe icing (in the winter season)","ici","subsistence",0.600006000060001
+NA,NA,"perch",3,"c",NA,NA,NA,NA,4,"catchability",NA,NA,"Severe icing (in the winter season)","ici","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"d",1,NA,NA,NA,4,"catchability","It’s devastating, depressing to live around this algal soup, grandchildren can’t swim, it’s an imbalance in the Baltic Sea ecosystem, a sad new phenomenon. We try to deal with it when it drifts ashore. It becomes a white coating on the bottom when it sinks. We’re worried about algal toxins (cows can break them down somewhat, but single-stomached animals can’t; affects the liver). 1.","1","Algal bloom (in the summer season)","abl","subsistence",0.600006000060001
+NA,NA,"perch",3,"d",NA,NA,NA,NA,4,"catchability","It’s devastating, depressing to live around this algal soup, grandchildren can’t swim, it’s an imbalance in the Baltic Sea ecosystem, a sad new phenomenon. We try to deal with it when it drifts ashore. It becomes a white coating on the bottom when it sinks. We’re worried about algal toxins (cows can break them down somewhat, but single-stomached animals can’t; affects the liver). 1.","1","Algal bloom (in the summer season)","abl","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"e",3,NA,NA,NA,4,"catchability","No, 3","3","Extreme cloudburst (in the summer season)","erf","subsistence",0.600006000060001
+NA,NA,"perch",3,"e",NA,NA,NA,NA,4,"catchability","No, 3","3","Extreme cloudburst (in the summer season)","erf","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"f",2,NA,NA,NA,4,"catchability","A little worried about strong winds since we don’t have big boats.",NA,"Gale","gal","subsistence",0.600006000060001
+NA,NA,"perch",3,"f",NA,NA,NA,NA,4,"catchability","A little worried about strong winds since we don’t have big boats.",NA,"Gale","gal","subsistence",0.600006000060001
+NA,NA,"not_specified",3,"g",2,NA,NA,NA,4,"catchability","Same with storms. ",NA,"Storm","sto","subsistence",0.600006000060001
+NA,NA,"perch",3,"g",NA,NA,NA,NA,4,"catchability","Same with storms. ",NA,"Storm","sto","subsistence",0.600006000060001
 NA,NA,NA,4,"a",-998,NA,NA,NA,4,"catch_assemblage","Can’t answer.",NA,"Heatwave in the winter season","hww","subsistence",0.600006000060001
 NA,NA,NA,4,"b",-998,NA,NA,NA,4,"catch_assemblage","Can’t answer.",NA,"Heatwave in the summer season","hws","subsistence",0.600006000060001
 NA,NA,NA,4,"c",-999,NA,NA,NA,4,"catch_assemblage",NA,NA,"Severe icing (in the winter season)","ici","subsistence",0.600006000060001
-NA,NA,NA,4,"d",5,NA,NA,NA,4,"catch_assemblage","We don’t really fish much then; would guess the fish flee from the algal bloom, 5 ","5","Algal bloom (in the summer season)","abl","subsistence",0.600006000060001
+NA,NA,NA,4,"d",-998,NA,NA,NA,4,"catch_assemblage","We don’t really fish much then; would guess the fish flee from the algal bloom, 5 ","5","Algal bloom (in the summer season)","abl","subsistence",0.600006000060001
 NA,NA,NA,4,"e",-998,NA,NA,NA,4,"catch_assemblage","Can’t answer",NA,"Extreme cloudburst (in the summer season)","erf","subsistence",0.600006000060001
 NA,NA,NA,4,"f",-998,NA,NA,NA,4,"catch_assemblage","Hard to say, we don’t fish much then",NA,"Gale","gal","subsistence",0.600006000060001
 NA,NA,NA,4,"g",-998,NA,NA,NA,4,"catch_assemblage","Hard to say, we don’t fish much then",NA,"Storm","sto","subsistence",0.600006000060001
@@ -728,14 +735,14 @@ NA,NA,NA,7,"d",-999,NA,NA,NA,6,"lag_effect",NA,NA,"Algal bloom (in the summer se
 NA,NA,NA,7,"e",-999,NA,NA,NA,6,"lag_effect",NA,NA,"Extreme cloudburst (in the summer season)","erf","pelagic_trawler",0.900009000090001
 NA,NA,NA,7,"f",-999,NA,NA,NA,6,"lag_effect",NA,NA,"Gale","gal","pelagic_trawler",0.900009000090001
 NA,NA,NA,7,"g",-999,NA,NA,NA,6,"lag_effect",NA,NA,"Storm","sto","pelagic_trawler",0.900009000090001
-NA,NA,NA,9,"a",1,NA,NA,NA,6,"personal_safety","1 if the heat causes high winds","1","Heatwave in the winter season","hww","pelagic_trawler",1.20001200012
+NA,NA,NA,9,"a",0,NA,NA,NA,6,"personal_safety","1 if the heat causes high winds","1","Heatwave in the winter season","hww","pelagic_trawler",1.20001200012
 NA,NA,NA,9,"b",0,NA,NA,NA,6,"personal_safety","no concern, usually calm weather",NA,"Heatwave in the summer season","hws","pelagic_trawler",1.20001200012
 NA,NA,NA,9,"c",2,NA,NA,NA,6,"personal_safety","2 as the boat may capsize and sink","2","Severe icing (in the winter season)","ici","pelagic_trawler",1.20001200012
 NA,NA,NA,9,"d",0,NA,NA,NA,6,"personal_safety","0","0","Algal bloom (in the summer season)","abl","pelagic_trawler",1.20001200012
 NA,NA,NA,9,"e",1,NA,NA,NA,6,"personal_safety","1","1","Extreme cloudburst (in the summer season)","erf","pelagic_trawler",1.20001200012
 NA,NA,NA,9,"f",1,NA,NA,NA,6,"personal_safety","1","1","Gale","gal","pelagic_trawler",1.20001200012
 NA,NA,NA,9,"g",2.5,NA,NA,NA,6,"personal_safety","2, perhaps even 3","2.5","Storm","sto","pelagic_trawler",1.20001200012
-NA,NA,NA,10,"a",3,NA,NA,NA,6,"damage","3, [heat wave in winter, often accompanied by storms]","3","Heatwave in the winter season","hww","pelagic_trawler",1.20001200012
+NA,NA,NA,10,"a",0,NA,NA,NA,6,"damage","3, [heat wave in winter, often accompanied by storms]","3","Heatwave in the winter season","hww","pelagic_trawler",1.20001200012
 NA,NA,NA,10,"b",0,NA,NA,NA,6,"damage","0","0","Heatwave in the summer season","hws","pelagic_trawler",1.20001200012
 NA,NA,NA,10,"c",3,NA,NA,NA,6,"damage","3 (but preferably without the trawl in, then we can get ashore)","3","Severe icing (in the winter season)","ici","pelagic_trawler",1.20001200012
 NA,NA,NA,10,"d",0,NA,NA,NA,6,"damage","0","0","Algal bloom (in the summer season)","abl","pelagic_trawler",1.20001200012
@@ -796,7 +803,7 @@ NA,NA,"perch",2,"b",2,NA,NA,NA,7,"go_out","I don't go because the fish won't kee
 NA,NA,"not_specified",2,"c",-999,NA,NA,NA,7,"go_out","I am not on the lake at that time of year when there is a risk of icing (because the ice forms so early",NA,"Severe icing (in the winter season)","ici","coastal",0.600006000060001
 NA,NA,"herring",2,"c",NA,NA,NA,NA,7,"go_out","I am not on the lake at that time of year when there is a risk of icing (because the ice forms so early",NA,"Severe icing (in the winter season)","ici","coastal",0.600006000060001
 NA,NA,"perch",2,"c",NA,NA,NA,NA,7,"go_out","I am not on the lake at that time of year when there is a risk of icing (because the ice forms so early",NA,"Severe icing (in the winter season)","ici","coastal",0.600006000060001
-NA,NA,"not_specified",2,"d",1,NA,NA,NA,7,"go_out","I have not experienced it, but it probably has an impact, so then I don't fish",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
+NA,NA,"not_specified",2,"d",-998,NA,NA,NA,7,"go_out","I have not experienced it, but it probably has an impact, so then I don't fish",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
 NA,NA,"herring",2,"d",NA,NA,NA,NA,7,"go_out","I have not experienced it, but it probably has an impact, so then I don't fish",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
 NA,NA,"perch",2,"d",NA,NA,NA,NA,7,"go_out","I have not experienced it, but it probably has an impact, so then I don't fish",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
 NA,NA,"not_specified",2,"e",4,NA,NA,NA,7,"go_out","then I fish anyway ",NA,"Extreme cloudburst (in the summer season)","erf","coastal",0.600006000060001
@@ -817,7 +824,7 @@ NA,NA,"perch",3,"b",3,NA,NA,NA,7,"catchability","not when it comes to perch, but
 NA,NA,"not_specified",3,"c",-999,NA,NA,NA,7,"catchability","We don't ask about that",NA,"Severe icing (in the winter season)","ici","coastal",0.600006000060001
 NA,NA,"herring",3,"c",NA,NA,NA,NA,7,"catchability","We don't ask about that",NA,"Severe icing (in the winter season)","ici","coastal",0.600006000060001
 NA,NA,"perch",3,"c",NA,NA,NA,NA,7,"catchability","We don't ask about that",NA,"Severe icing (in the winter season)","ici","coastal",0.600006000060001
-NA,NA,"not_specified",3,"d",2,NA,NA,NA,7,"catchability","No, I've only heard that fishing gets worse; I've seen some green filamentous algae on the surface this year (I've seen a little in previous years; it never stays on the surface)",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
+NA,NA,"not_specified",3,"d",-998,NA,NA,NA,7,"catchability","No, I've only heard that fishing gets worse; I've seen some green filamentous algae on the surface this year (I've seen a little in previous years; it never stays on the surface)",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
 NA,NA,"herring",3,"d",NA,NA,NA,NA,7,"catchability","No, I've only heard that fishing gets worse; I've seen some green filamentous algae on the surface this year (I've seen a little in previous years; it never stays on the surface)",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
 NA,NA,"perch",3,"d",NA,NA,NA,NA,7,"catchability","No, I've only heard that fishing gets worse; I've seen some green filamentous algae on the surface this year (I've seen a little in previous years; it never stays on the surface)",NA,"Algal bloom (in the summer season)","abl","coastal",0.600006000060001
 NA,NA,"not_specified",3,"e",3,NA,NA,NA,7,"catchability","3","3","Extreme cloudburst (in the summer season)","erf","coastal",0.600006000060001

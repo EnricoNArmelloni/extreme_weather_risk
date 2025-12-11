@@ -1,6 +1,19 @@
 library(truncnorm)
 
-answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H'), unc=0.05){
+#answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H'), unc=0.05){
+#  # this is tested and working to import interviewee answers in CPT which configuration is defined in GeNie
+#  dim.list <- list(dim.labs)
+#  names(dim.list) <- dim.name
+#  base.dist=rtruncnorm(a=x.range[1],b=x.range[2],n=100, mean=x.ans, sd=unc)
+#  x.breaks=seq(x.range[1],x.range[2],(x.range[2]-x.range[1])/length(dim.labs))
+#  x.breaks[1]=-Inf
+#  x.breaks[length(x.breaks)]=Inf
+#  base.dist=cut(base.dist, breaks=x.breaks, labels=dim.labs)
+#  prob.tab=array(table(base.dist)/100, dim = length(dim.labs), dimnames = dim.list)
+#  return(prob.tab)
+#}
+
+answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H'), unc=0.05, k.thr=3){
   # this is tested and working to import interviewee answers in CPT which configuration is defined in GeNie
   dim.list <- list(dim.labs)
   names(dim.list) <- dim.name
@@ -8,9 +21,20 @@ answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H')
   x.breaks=seq(x.range[1],x.range[2],(x.range[2]-x.range[1])/length(dim.labs))
   x.breaks[1]=-Inf
   x.breaks[length(x.breaks)]=Inf
-  base.dist=cut(base.dist, breaks=x.breaks, labels=dim.labs)
-  prob.tab=array(table(base.dist)/100, dim = length(dim.labs), dimnames = dim.list)
+  if(length(dim.labs)==2 & x.range[2]-x.range[1] >1){
+    base.dist=log.reg(l=1,k=k.thr, x=base.dist, x0=(x.range[2]+x.range[1])/2) 
+    prob.tab=array(c(1-mean(base.dist),mean(base.dist)), dim = length(dim.labs), dimnames = dim.list) 
+  }else{
+    base.dist=cut(base.dist, breaks=x.breaks, labels=dim.labs)
+    prob.tab=array(table(base.dist)/100, dim = length(dim.labs), dimnames = dim.list) 
+  }
+  mean(base.dist)
+  
   return(prob.tab)
+}
+
+log.reg=function(l,k,x0=0,x){
+  l/(1+exp(-k*(x-x0)))
 }
 
 

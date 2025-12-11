@@ -2,7 +2,7 @@ remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
 setwd(file.path(scriptDir, '..')) 
-#source('code/CPT_BEWARE_v1_4.R')
+source('code/CPT_BEWARE_v1_4.R')
 remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
@@ -102,8 +102,9 @@ df.var=as.data.frame(array.var)
 df.var%>%
   ggplot()+
   geom_col(aes(x=fishing_style, y=Freq, fill=professional)) 
-  # Importance ####
-  ## Comments/to do: also here the order of states matters a lot: negative goes first!!! this has to be check
+
+# Importance ####
+## Comments/to do: also here the order of states matters a lot: negative goes first!!! this has to be check
 
 imp.vars=c('societal_importance', 'individual_importance' ,'innovative_capacity' )
 for(i in 1:length(imp.vars)){

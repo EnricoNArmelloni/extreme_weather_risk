@@ -192,7 +192,12 @@ for( i in 1:length(target.nodes)){
   # print description text
   i.text=node.text[node.text$node==i.node,]
   cat("\n")
-  cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
+  cat(sprintf('**Description**: %s  \n', paste0(i.text$text ,'.')))
+  
+  # print method text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Method_: %s  \n', paste0(i.text$method_text ,'.')))
   
   # plotting
   cat('\n\n') 
@@ -303,6 +308,11 @@ for( i in 1:length(target.nodes)){
   i.text=node.text[node.text$node==i.node,]
   cat("\n")
   cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
+  
+  # print method text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Method_: %s  \n', paste0(i.text$method_text ,'.')))
   
   # plotting
   cat('\n\n') 
@@ -415,6 +425,11 @@ for( i in 1:length(target.nodes)){
   cat("\n")
   cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
   
+  # print method text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Method_: %s  \n', paste0(i.text$method_text ,'.')))
+  
   # plotting
   cat('\n\n') 
   chunk_text <- paste0(
@@ -524,6 +539,11 @@ for( i in 1:length(target.nodes)){
   i.text=node.text[node.text$node==i.node,]
   cat("\n")
   cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
+  
+  # print method text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Method_: %s  \n', paste0(i.text$method_text ,'.')))
   
   # plotting
   cat('\n\n') 
@@ -636,6 +656,11 @@ for( i in 1:length(target.nodes)){
   cat("\n")
   cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
   
+  # print method text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Method_: %s  \n', paste0(i.text$method_text ,'.')))
+  
   # plotting
   cat('\n\n') 
   chunk_text <- paste0(
@@ -746,6 +771,11 @@ for( i in 1:length(target.nodes)){
   i.text=node.text[node.text$node==i.node,]
   cat("\n")
   cat(sprintf('_Description_: %s  \n', paste0(i.text$text ,'.')))
+  
+  # print method text
+  i.text=node.text[node.text$node==i.node,]
+  cat("\n")
+  cat(sprintf('_Method_: %s  \n', paste0(i.text$method_text ,'.')))
   
   # plotting
   cat('\n\n') 
