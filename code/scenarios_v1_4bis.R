@@ -246,25 +246,65 @@ pl.2=x.diff%>%
   theme(legend.position = 'bottom')+
   labs(fill='Change in High Risk')+
   ylab('MEW')+
+  xlab('Fishing Style');pl.2
+
+
+pl.diff=x.diff%>%
+  dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
+                                     'rcf', ifelse(fishing_style=='coastal', 'ssf',
+                                                   ifelse(fishing_style=='coastal_salmon' , 'sal' ,
+                                                          ifelse(fishing_style=='archipelago' ,'arc',
+                                                                 ifelse(fishing_style=='trawler' ,'trw','fgu'))))))%>%
+  dplyr::mutate(stock_status=paste('Stock status:', stock_status))%>%
+  dplyr::mutate(stock_status=factor(stock_status, levels=paste('Stock status:',c('worst', 'status_quo','better'))))
+
+pl.diff%>%
+  #dplyr::filter(abs(prob)>0.05)%>%
+  dplyr::filter(node!='economic_risk')%>%
+  ggplot(aes(x=fishing_style, y=event, fill=prob))+
+  geom_tile(color='black')+
+  facet_grid(cols=vars(node), rows=vars(stock_status))+
+  scale_fill_gradient2(midpoint=0, low='lightgreen', high='red', mid='white',na.value = "grey98")+
+  theme(legend.position = 'bottom')+
+  labs(fill='Change in High Risk')+
+  ylab('MEW')+
   xlab('Fishing Style')
+
+
+pl.f3=pl.diff%>%
+  #dplyr::filter(abs(prob)>0.05)%>%
+  dplyr::filter(node!='economic_risk')%>%
+  ggplot(aes(x=event, y=prob, fill=prob))+
+  geom_col(color='black', position = 'dodge', linewidth=0.1)+
+  facet_grid(cols=vars(fishing_style), rows=vars(node))+
+  #scale_fill_viridis_d()+
+  scale_fill_gradient2(midpoint=0, low='lightgreen', high='red', mid='white',na.value = "grey98")+
+  scale_x_discrete(guide = guide_axis(n.dodge = 2))+
+  theme(legend.position = 'bottom')+
+  labs(fill='Change in High Risk')+
+  ylab('MEW')+
+  xlab('Fishing Style')+
+  ylim(c(-0.2,0.2))+
+  geom_hline(yintercept = 0, linetype=2)
 
 pl.1=plot.event%>%
   dplyr::filter(stock_status=='Stock status: status_quo')%>%
   ggplot(aes(x=fishing_style, y=event, fill=prob))+
   geom_tile(color='black')+
-  facet_grid(cols=vars(node), rows=vars(stock_status))+
+  facet_grid(cols=vars(node))+
   scale_fill_gradient2(midpoint=0.5, low='lightgreen', high='red', mid='yellow',na.value = "grey98")+
   theme(legend.position = 'bottom')+
   labs(fill='Probability of High Risk')+
   ylab('MEW')+
-  xlab('Fishing Style')
+  xlab('Fishing Style');pl.1
+
+##
+p.f5=ggpubr::ggarrange(p.f1, p.f2, pl.1, nrow=3,  labels = c('a)', 'b)', 'c)'))
+ggsave(plot=p.f5, 'results/scenarios/scen1_2.png', width = 18, height = 21, units='cm', dpi=500)
+ggsave(plot=pl.f3, 'results/scenarios/scen3.png', width = 24, height = 12, units='cm', dpi=500)
 
 
 
-
-p.f5=ggpubr::ggarrange(pl.1, pl.2, nrow=2, heights = c(1,1.2), labels = c('a)', 'b)'))
-
-ggsave(plot=p.f5, 'results/scenarios/scen3.png', width = 18, height = 21, units='cm', dpi=500)
 
 
 
