@@ -16,8 +16,14 @@ library(bnlearn)
 library(readxl)
 library(gRain)
 theme_set(theme_bw())
-net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_learn_pt2.net'), debug = F)
+net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_v3_learn_pt2.net'), debug = F)
+net.node=nodes(net)
 node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
+node.text=node.text[node.text$node %in% nodes(net), ]
+
+#node.text[-which(node.text$node %in% nodes(net)), ]
+#net.node[-which(net.node %in% node.text$node)]
+
 #knitr::opts_chunk$set(fig.width=10, fig.height=5) 
 firstup <- function(x) {
   substr(x, 1, 1) <- toupper(substr(x, 1, 1))
@@ -44,7 +50,9 @@ create.plots=function(target.nodes, net){
   x.parents=names(xnam)
   x.parents=x.parents[x.parents!=i.node]
   x.levs=xnam[[i.node]]
-  
+  if("aware" %in% names(df.var)){
+    df.var=df.var[df.var$aware=='yes',]
+  }
   # format
   if('fishing_style' %in% names(df.var)){
     df.var=df.var%>%
@@ -151,12 +159,44 @@ knit.fun=function(target.nodes, net){
 
 ```
 
+\newpage
+
+```{r, include=T, echo=FALSE}
+## compute importance - this adds later
+array.var=net[['fishing_style']]$prob
+xdim=dim(array.var)
+array.var[1:xdim]=rep(1/(xdim), xdim)
+#array.var[c(1,7)]=0
+net[['fishing_style']]=array.var
+fi.list=names(array.var[array.var>0])
+scen.grid2=expand.grid(fishing_style=fi.list)
+ev.store=NULL
+for(i in 1:nrow(scen.grid2)){
+    i.res=cpdist(net, nodes = c('societal_importance', 'individual_importance','economic_buffers'), 
+               evidence = list(fishing_style = as.character(scen.grid2[i,])), 
+               n=10^5, method='lw')
+  
+  i.res$fishing_style=as.character(scen.grid2[i,])
+  i.res=i.res%>%
+    pivot_longer(-c(fishing_style), names_to = 'node', values_to = 'est')%>%
+    dplyr::group_by(fishing_style, node,est)%>%
+    tally()%>%
+    dplyr::group_by(fishing_style,  node)%>%
+    dplyr::mutate(prob=n/sum(n))
+  ev.store=rbind(ev.store, i.res)
+}
+```
+
 
 \setcounter{table}{0}
 \renewcommand{\thetable}{B.\arabic{table}}
 \renewcommand{\thefigure}{B.\arabic{figure}}
 
+\newpage
+
 # Network structure
+
+![complete representation of the Bayesian Network, showing conditional probabilties distributions. Colors are associated to node types. Yellow: decision nodes; THIS to be improved: open to suggestions. the categories of nodes that are used in this document are too many to be associated to colors](images/BN_outline.jpg){width="10cm"}
 
 \newpage
 
@@ -200,7 +240,6 @@ The node *Fishing style* is used to wrap all the fishing styles and seasons.
 
 -   **Archipelago fishers** (arc), which is similar to an artisanal fishers but is by law prevented from selling their catches.
 
-
 ## Stock status
 
 it controls how much fishing regulations allows fishers to implement adaptation strategies (e.g.: changing target species and gear).
@@ -209,14 +248,24 @@ it controls how much fishing regulations allows fishers to implement adaptation 
 
 -   **status quo** (SQ): each fishing style adopts strategies and behaviour according to interviews results
 
--    **improved stock status** (FLEX). Fishing style is allowed for more flexibility.
+-   **improved stock status** (FLEX). Fishing style is allowed for more flexibility.
 
 -   **worsened stock status**
+
+## Aware
+
+The node *aware* controls the fisherman awareness the event occurrence. In the case when fisher is not aware, he always goes out fishing. The fisher can still adopt react or adapt strategies.
+
+*Levels (and acronyms)*
+
+-   **yes**: the fisher is aware of the extreme event. Decisions wheter to go out fishing or not are taken according to interviews
+
+-   **no**: the fisher is not aware of the extreme event. The probability of going out fishing are 100%
+
 
 \newpage
 
 # Chance nodes - Operational
-
 
 ```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
 knit.fun(target.nodes = unique(node.text[node.text$group=='operational',]$node), net=net)
@@ -226,11 +275,9 @@ knit.fun(target.nodes = unique(node.text[node.text$group=='operational',]$node),
 
 # Chance nodes - User
 
-
 ```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
 knit.fun(target.nodes = unique(node.text[node.text$group=='user',]$node), net=net)
 ```
-
 
 \newpage
 
@@ -240,38 +287,67 @@ knit.fun(target.nodes = unique(node.text[node.text$group=='user',]$node), net=ne
 knit.fun(target.nodes = unique(node.text[node.text$group=='economic',]$node), net=net)
 ```
 
+Next figure represent the conditional probability distribution of the node economic buffers by fishing style
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, fig.cap='conditional probability distribution of the node individual importance by fishing style'}
+p=ggplot(data=ev.store[ev.store$node=='economic_buffers',])+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)+
+  theme(legend.position = 'bottom')+
+  labs(fill='economic_buffers')
+print(p)
+
+```
+
+
 \newpage
 
 # Chance nodes - Individual
-
 
 ```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
 knit.fun(target.nodes = unique(node.text[node.text$group=='individual',]$node), net=net)
 ```
 
+Next figure represent the conditional probability distribution of the node individual importance by fishing style
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, fig.cap='conditional probability distribution of the node individual importance by fishing style'}
+p=ggplot(data=ev.store[ev.store$node=='individual_importance',])+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)+
+  theme(legend.position = 'bottom')+
+  labs(fill='individual_importance')
+print(p)
+
+```
 
 
 \newpage
 
-# Chance nodes -  Societal
-
+# Chance nodes - Societal
 
 ```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
 knit.fun(target.nodes = unique(node.text[node.text$group=='societal',]$node), net=net)
 ```
 
+Next figure represent the conditional probability distribution of the node societal importance by fishing style
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, fig.cap='conditional probability distribution of the node individual importance by fishing style'}
+p=ggplot(data=ev.store[ev.store$node=='societal_importance',])+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)+
+  theme(legend.position = 'bottom')+
+  labs(fill='societal_importance')
+print(p)
+
+```
+
 
 # Utilities - Risk
 
-Shape how different fisheries will perceive risk. To each of these variables, the effect of the human community variables is to be interpreted as “how much this variable is important”? The CPT table combine the concepts of ranked nodes and the classic definition of Risk = Hazard * Vulnerability. In the case of individual and societal importance, Risk is exactly calculated as Hazard * Vulnerability. Parent categories (Low, medium and high; as well as not importand, somehow important and very important) are mapped to 0, 0.5 and 1 values. The parent value are multiplied.
-
+Shape how different fisheries will perceive risk. To each of these variables, the effect of the human community variables is to be interpreted as “how much this variable is important”? The CPT table combine the concepts of ranked nodes and the classic definition of Risk = Hazard \* Vulnerability. In the case of individual and societal importance, Risk is exactly calculated as Hazard \* Vulnerability. Parent categories (Low, medium and high; as well as not importand, somehow important and very important) are mapped to 0, 0.5 and 1 values. The parent value are multiplied.
 
 \newpage
-
 
 ```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
 knit.fun(target.nodes = unique(node.text[node.text$group=='risk',]$node), net=net)
 ```
-
-
-

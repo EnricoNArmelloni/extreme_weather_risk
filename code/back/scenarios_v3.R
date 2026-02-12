@@ -8,7 +8,7 @@ library(bnlearn)
 theme_set(theme_bw())
 
 # load ####
-net=read.net('data/networks/BEWARE_v2_learn_pt2.net', debug = T)
+net=read.net('data/networks/BEWARE_v3_learn_pt2.net', debug = T)
 
 cpdist(net, nodes = c('go_out', 'economic_risk', 'societal_risk','individual_risk'), 
        evidence = (event == 'hws'))

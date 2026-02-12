@@ -8,17 +8,11 @@ library(bnlearn)
 theme_set(theme_bw())
 
 # load ####
-net=read.net('data/networks/BEWARE_v2_learn_pt2.net', debug = T)
+net=read.net('data/networks/BEWARE_v5_learn_pt2.net', debug = T)
 
 cpdist(net, nodes = c('go_out', 'economic_risk', 'societal_risk','individual_risk'), 
        evidence = (event == 'hws'))
 
-## awareness
-array.var=net[['aware']]$prob
-xdim=dim(array.var)
-array.var[1:xdim]=c(1,0)
-#array.var[c(1,7)]=0
-net[['aware']]=array.var
 
 
 ### scenario settings

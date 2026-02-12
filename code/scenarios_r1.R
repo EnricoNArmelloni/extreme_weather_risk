@@ -8,7 +8,7 @@ library(bnlearn)
 theme_set(theme_bw())
 
 # load ####
-net=read.net('data/networks/BEWARE_v2_learn_pt2.net', debug = T)
+net=read.net('data/networks/BEWARE_v3_learn_pt2.net', debug = T)
 
 cpdist(net, nodes = c('go_out', 'economic_risk', 'societal_risk','individual_risk'), 
        evidence = (event == 'hws'))
@@ -63,7 +63,6 @@ for(i in 1:length(ev.list)){
   ev.store=rbind(ev.store, i.res)
   
 }
-
 
 x.rel=ev.store%>%
   dplyr::filter(est=='not_relevant')%>%
@@ -306,6 +305,34 @@ pl.1=plot.event%>%
 p.f5=ggpubr::ggarrange(p.f1, p.f2, pl.1, nrow=3,  labels = c('a)', 'b)', 'c)'))
 ggsave(plot=p.f5, 'results/scenarios/scen1_2.png', width = 18, height = 21, units='cm', dpi=500)
 ggsave(plot=pl.f3, 'results/scenarios/scen3.png', width = 24, height = 12, units='cm', dpi=500)
+
+
+###3 inspecting something else: eco by fisher
+scen.grid2=expand.grid(fishing_style=fi.list)
+ev.store=NULL
+i=1
+for(i in 1:nrow(scen.grid2)){
+  
+  i.res=cpdist(net.s2, nodes = c('societal_importance', 'individual_importance','economic_buffers'), 
+               evidence = list(fishing_style = as.character(scen.grid2[i,])), 
+               n=10^5, method='lw')
+  
+  i.res$fishing_style=as.character(scen.grid2[i,])
+  i.res=i.res%>%
+    pivot_longer(-c(fishing_style), names_to = 'node', values_to = 'est')%>%
+    dplyr::group_by(fishing_style, node,est)%>%
+    tally()%>%
+    dplyr::group_by(fishing_style,  node)%>%
+    dplyr::mutate(prob=n/sum(n))
+  ev.store=rbind(ev.store, i.res)
+}
+
+ggplot(data=ev.store)+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)
+
+
+### including further inspections
 
 
 
