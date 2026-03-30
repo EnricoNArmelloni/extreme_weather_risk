@@ -13,7 +13,7 @@ library(truncnorm)
 #  return(prob.tab)
 #}
 
-answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H'), unc=0.05, k.thr=2, x.breaks=NULL){
+answer.to.cpt=function(x.ans, x.range=c(0,1),dim.name, dim.labs = c('L','M','H'), unc=0.05, k.thr=2, x.breaks=NULL, priors=NULL){
   # this is tested and working to import interviewee answers in CPT which configuration is defined in GeNie
   dim.list <- list(dim.labs)
   names(dim.list) <- dim.name
@@ -23,22 +23,130 @@ answer.to.cpt=function(x.ans, x.range=c(1,5),dim.name, dim.labs = c('L','M','H')
   }
   x.breaks[1]=-Inf
   x.breaks[length(x.breaks)]=Inf
-  if(length(dim.labs)==2 & x.range[2]-x.range[1] >1){
-    base.dist=log.reg(l=1,k=k.thr, x=base.dist, x0=(x.range[2]+x.range[1])/2) 
-    prob.tab=array(c(1-mean(base.dist),mean(base.dist)), dim = length(dim.labs), dimnames = dim.list) 
-  }else{
+  if(length(dim.labs)==2){
+    #base.dist=log.reg(l=1,k=k.thr, x=base.dist, x0=(x.range[2]+x.range[1])/2) 
+    #prob.tab=array(c(1-mean(base.dist),mean(base.dist)), dim = length(dim.labs), dimnames = dim.list) 
+    #p = (sample(base.dist,10) - x.range[1]) / (x.range[2] - x.range[1])
+    #prob.tab = array(c(1-mean(p), mean(p)), dim=2, dimnames=dim.list)
+    #base.dist=rtruncnorm(a=0,b=1,n=100, mean=0.75, sd=0.1)
+    base.dist=cut(base.dist, breaks=c(-Inf,0.33,0.66,Inf), labels=c('L','M','H'))
+    prob.tab=array(table(base.dist)/100, dim = 3, dimnames = list(c('L','M','H'))) 
+    prob.tab=array(c(prob.tab[1]+(prob.tab[2]/2), prob.tab[3]+(prob.tab[2]/2)), dim=2, dimnames=dim.list)
+    
+    if(!is.null(priors)){
+      prior.dist=cut(priors, breaks=c(-Inf,0.33,0.66,Inf), labels=c('L','M','H'))
+      prior.tab=array(table(prior.dist)/100, dim = 3, dimnames = list(c('L','M','H'))) 
+      prior.tab=array(c(prior.tab[1]+(prior.tab[2]+0.001/2), prior.tab[3]+(prior.tab[2]+0.001/2)), dim=2, dimnames=dim.list)
+      post=(2*prob.tab)*(prior.tab+0.001)
+      prob.tab= post / sum(post)
+    }
+    
+    }else{
+    
     base.dist=cut(base.dist, breaks=x.breaks, labels=dim.labs)
     prob.tab=array(table(base.dist)/100, dim = length(dim.labs), dimnames = dim.list) 
+    
+    if(!is.null(priors)){
+      prior.dist=cut(priors, breaks=x.breaks, labels=dim.labs)
+      prior.tab=array(table(prior.dist)/length(priors), dim = length(dim.labs), dimnames = dim.list) 
+      post=(2*prob.tab)*(prior.tab+0.001)
+      prob.tab= post / sum(post)
+    }
   }
   #mean(base.dist)
+
   
   return(prob.tab)
+}
+
+dir.draws=function(kappa=20, p, n=1){
+  alpha = as.numeric(p) * kappa
+  gtools::rdirichlet(n, alpha)
+}
+
+f.norm=function(x){
+  (x-min(x))/(max(x)-min(x))  
 }
 
 log.reg=function(l,k,x0=0,x){
   l/(1+exp(-k*(x-x0)))
 }
 
+answ.cpt.det = function(x.norm, categories){
+  
+  # normalizzazione
+  #x_norm = (x - min_val) / (max_val - min_val)
+  x.norm = max(0, min(1, x.norm))
+  k = length(categories)
+  # posizioni equidistanti delle categorie
+  pos = seq(0, 1, length.out = k)
+  probs = rep(0, k)
+  # casi estremi
+  if(x.norm <= pos[1]){
+    probs[1] = 1
+  } else if(x.norm >= pos[k]){
+    probs[k] = 1
+  } else {
+    j = max(which(pos <= x.norm))
+    w = (x.norm - pos[j]) / (pos[j+1] - pos[j])
+    probs[j]   = 1 - w
+    probs[j+1] = w
+  }
+  names(probs) = categories
+  return(probs)
+}
+
+uncertainty.function=function(unc.dat){
+  
+  unc.dat=unc.dat%>%
+    dplyr::group_by(gear,area,target,short_description)%>%
+    dplyr::summarise(uncertainty.obs=sd(value.norm), 
+                     uncertainty.decl=mean(unc.norm), 
+                     value=mean(value.norm), 
+                     weight=n(), .groups = "keep") # adjust the uncertainty
+  unc.dat$unc.norm=NA
+  
+  for(uu in 1:nrow(unc.dat)){
+    if(is.na(unc.dat[uu,]$uncertainty.obs)){
+      i.unc=0.01
+    }else{
+      if(unc.dat[uu,]$uncertainty.obs > unc.dat[uu,]$uncertainty.decl){
+        i.unc=min(c(1,unc.dat[uu,]$uncertainty.obs))
+      }
+      if(unc.dat[uu,]$uncertainty.obs < unc.dat[uu,]$uncertainty.decl){
+        i.unc=unc.dat[uu,]$uncertainty.decl
+      }
+    }
+    unc.dat[uu,]$unc.norm=i.unc
+    
+  }
+  unc.dat$value.norm=unc.dat$value
+  return(unc.dat)
+}      
+
+uncertainty.function.2=function(unc.dat, col.selection){
+  
+  unc.dat=unc.dat%>%
+    dplyr::group_by_at(col.selection)%>%
+    dplyr::summarise(uncertainty.obs=sd(value.norm), 
+                     uncertainty.decl=mean(unc.norm), 
+                     value.norm=mean(value.norm), 
+                     weight=n(), .groups = "keep") # adjust the uncertainty
+  unc.dat$unc.norm=NA
+  unc.dat$uncertainty.obs=ifelse(is.na(unc.dat$uncertainty.obs), 0.01, unc.dat$uncertainty.obs)
+  unc.dat$unc.norm=apply(unc.dat[,c('uncertainty.obs', 'uncertainty.decl')], 1, max)
+  unc.dat$unc.norm=ifelse(unc.dat$unc.norm>1,1,unc.dat$unc.norm)
+  return(unc.dat)
+}  
+
+re.format.cpt=function(df.cpt, df.ref){
+  df.cpt=df.cpt[, names(df.ref)]
+  cols <- setdiff(names(df.ref), "Freq")
+  key1 <- do.call(paste, c(df.ref[cols], sep = "\r"))
+  key2 <- do.call(paste, c(df.cpt[cols], sep = "\r"))
+  df.cpt <- df.cpt[match(key1, key2), ]
+  return(df.cpt)
+}
 
 rank.cpt=function(nodes.df, uncertainty, algorithm = 'equal', meaning='abs', xnam){
   

@@ -6,8 +6,8 @@ net
 node fishing_style
 {
     label = "fishing_style";
-    position = (2392 3280);
-    states = ("recreational"  "coastal"  "archipelago"  "trawler" 
+    position = (2338 3273);
+    states = ("recreational"  "small_scale"  "household"  "trawler" 
      "guide");
 }
 
@@ -80,7 +80,7 @@ node target
     label = "target";
     position = (2442 2303);
     states = ("herring"  "perch"  "pike"  "salmon"  "sea_trout" 
-     "whitefish_nei"  "not_specified");
+     "whitefish"  "not_specified");
 }
 
 node catchability
@@ -219,21 +219,21 @@ node societal_risk
 node economic_buffers
 {
     label = "economic_buffers";
-    position = (3779 466);
+    position = (3772 466);
     states = ("low"  "medium"  "high");
 }
 
 node monetary_loss
 {
     label = "monetary_loss";
-    position = (3495 1175);
+    position = (3502 1155);
     states = ("no"  "low"  "medium"  "high");
 }
 
 node economic_risk
 {
     label = "economic_risk";
-    position = (3673 818);
+    position = (3753 802);
     states = ("low"  "medium"  "high"  "not_relevant");
 }
 

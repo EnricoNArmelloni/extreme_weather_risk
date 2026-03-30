@@ -1,9 +1,10 @@
 ---
-title: "Appendix A2: conditional probability tables."
+title: "Appendix B: conditional probability tables."
 output:
   pdf_document:
     toc: true
     toc_depth: 3
+bibliography: references.bib
 ---
 
 ```{r  setup, echo=FALSE,message = FALSE, warning=FALSE}
@@ -16,7 +17,7 @@ library(bnlearn)
 library(readxl)
 library(gRain)
 theme_set(theme_bw())
-net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_v3_learn_pt2.net'), debug = F)
+net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_r1_learn_pt2.net'), debug = F)
 net.node=nodes(net)
 node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
 node.text=node.text[node.text$node %in% nodes(net), ]
@@ -57,9 +58,9 @@ create.plots=function(target.nodes, net){
   if('fishing_style' %in% names(df.var)){
     df.var=df.var%>%
       dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
-                                     'rcf', ifelse(fishing_style=='coastal', 'ssf',
+                                     'rcf', ifelse(fishing_style=='small_scale', 'ssf',
                                                    ifelse(fishing_style=='coastal_salmon' , 'sal' ,
-                                                           ifelse(fishing_style=='archipelago' ,'arc',
+                                                           ifelse(fishing_style=='household' ,'hou',
                                                                   ifelse(fishing_style=='trawler' ,'trw','fgu'))))))
   }
     if('target' %in% names(df.var)){
@@ -69,7 +70,7 @@ create.plots=function(target.nodes, net){
                                                    ifelse(target=='pike' , 'FPI' ,
                                                            ifelse(target=='salmon' ,'SAL',
                                                                   ifelse(target=='sea_trout' ,'TRS',
-                                                                         ifelse(target=='whitefish_nei', 'WHF','Other')))))))
+                                                                         ifelse(target=='whitefish', 'WHF','Other')))))))
   }
   
   # plotting
@@ -187,7 +188,6 @@ for(i in 1:nrow(scen.grid2)){
 }
 ```
 
-
 \setcounter{table}{0}
 \renewcommand{\thetable}{B.\arabic{table}}
 \renewcommand{\thefigure}{B.\arabic{figure}}
@@ -197,6 +197,18 @@ for(i in 1:nrow(scen.grid2)){
 # Network structure
 
 ![complete representation of the Bayesian Network, showing conditional probabilties distributions. Colors are associated to node types. Yellow: decision nodes; THIS to be improved: open to suggestions. the categories of nodes that are used in this document are too many to be associated to colors](images/BN_outline.jpg){width="10cm"}
+
+\newpage
+
+# Algebric methods for Ranked nodes
+
+Ranked nodes have order-preserving meaning states (e.g.: low/medium/high) that can be mapped to a continuous numerical scale bounded to [0,1], assuming equal intervals [@fenton2019]. For instance, in a node having three states (low, medium, high), the “low” state takes the interval [0-0.33). The probability distribution of a ranked node in the numerical scale is described as *TNormal*( $\mu$ ,$\sigma^2$,0,1). The use of a numerical scale allow to use linear algebra to perform operations among variables, a technique that is particularly useful to build a CPT from a reduced number of questions [@fenton2007]. When a child has multiple parents with multiple states (binary or more), the distribution of a child node can be calculated by implementing algorithms based on the state, direction (positive or negative) and weight of their parents. The algorithms most commonly applied to ranked nodes gives equal (Eq. B1) or unequal contribution to states. Weighted max (Eq. B2) assigns more contribution to large states, while Weighted min (Eq. B3) assigns more contribution to small states.
+
+$$\mu = \frac{\sum_{i=1}^n{w_iX_i}}{\sum_{i=1}^n{w_i}}$$ [Eq.B1]
+
+$$\mu = min[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.B2]
+
+$$\mu = max[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.B3]
 
 \newpage
 
@@ -262,7 +274,6 @@ The node *aware* controls the fisherman awareness the event occurrence. In the c
 
 -   **no**: the fisher is not aware of the extreme event. The probability of going out fishing are 100%
 
-
 \newpage
 
 # Chance nodes - Operational
@@ -299,7 +310,6 @@ print(p)
 
 ```
 
-
 \newpage
 
 # Chance nodes - Individual
@@ -320,7 +330,6 @@ print(p)
 
 ```
 
-
 \newpage
 
 # Chance nodes - Societal
@@ -340,7 +349,6 @@ p=ggplot(data=ev.store[ev.store$node=='societal_importance',])+
 print(p)
 
 ```
-
 
 # Utilities - Risk
 

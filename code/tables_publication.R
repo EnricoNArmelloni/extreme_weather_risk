@@ -11,6 +11,48 @@ library(bnlearn)
 library(gRain)
 source('code/supporting_r1.R')
 
+## economic values mat & method
+aer.se=read_csv("data/fisheries_statistics/AER_SWE.csv")
+aer.se=aer.2[aer.2$country_code=='SWE',]
+
+aer.ssf=aer.se[aer.se$vessel_length %in% c('VL0010', 'VL0812') 
+        & aer.se$fishing_tech %in% c('FPO','DFN'),]
+ch=aer.ssf[aer.ssf$variable_name=="Number of vessels",]
+ssf.vess=ch%>%
+  dplyr::group_by(year)%>%
+  dplyr::summarise(nvess=sum(value))
+mean(tail(ssf.vess$nvess,5))
+
+aer.ssf=aer.ssf[aer.ssf$variable_group=='Income',]
+
+ssf.mln=aer.ssf%>%
+  dplyr::filter(!is.na(value))%>%
+  dplyr::group_by(year)%>%
+  dplyr::summarise(mln.eur=sum(value)/1000)
+
+mean(tail(ssf.mln$mln.eur,5))/300
+
+
+unique(aer.ssf$variable_name)
+unique(aer.ssf$variable_group)
+
+
+aer.se[ aer.se$fishing_tech %in% c('TM'),]
+
+aer.trw=aer.se[aer.se$vessel_length %in% c('VL2440'),]
+ch=aer.trw[aer.trw$variable_name=="Number of vessels",]
+
+
+aer.trw=aer.trw[aer.trw$variable_group=='Income',]
+trw.mln=aer.trw%>%
+  dplyr::filter(!is.na(value))%>%
+  dplyr::group_by(year)%>%
+  dplyr::summarise(mln.eur=sum(value)/1000000)
+mean(tail(trw.mln$mln.eur,5))
+
+
+unique(aer.trw$variable_name)
+
 ## Table 4
 node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
 net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_learn_pt2.net'), debug = T)
@@ -43,33 +85,6 @@ for(i in 1:length(x.nodes)){
 }
 
 write.csv(table.format, file.path(scriptDir, '..','results/tables/tab4_cpt_description.csv'), row.names = F)
-
-
-
-
-
-
-
-
-
-
-
-nnodes(net)
-narcs(net)
-cpdag(net)
-total_probs <- sum(sapply(net, function(node) {
-  length(node$prob)
-}))
-
-
-
-
-
-
-
-
-
-
 
 
 

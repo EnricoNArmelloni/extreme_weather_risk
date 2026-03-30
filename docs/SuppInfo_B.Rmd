@@ -1,0 +1,60 @@
+---
+title: "Supplementary Information B: treatment of fishing statistics data"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+bibliography: references.bib
+---
+
+\setcounter{table}{0} \renewcommand{\thetable}{A.\arabic{table}} \renewcommand{\thefigure}{A.\arabic{figure}}
+
+# Data sources by fishing style
+
+## Commercial fishers
+
+Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Franmework, which most recent update at the time of writing includes data until 2024. The dataset relevant for this study includes:
+
+-   *Fishery dependent information (FDI) for EU Fleets* [@jrc]: provides fishing effort (dataset D1; fishing days) and catch (dataset D2; weight and value) data by country, area, fleet segment and target species
+
+-   *Annual Economic report on EU fishing fleet* [@jrc2025]: provides economic overview (dataset D3; number of vessels, income, expenses) of european fishing fleets by country and fleet segment
+
+The FDI data resolution allow to obtain information for the study area (Bothnian Sea - ICES area 27.3.D.30), while the AER is only available at country (Sweden) level. Different aggregation of the data requires to implement some simplifications or assumptions, hereby explained.
+
+### Small scale fishers
+
+Small scale fishers catch and effort data correspond to vessels of size \< 12m, deploying passive gears and operating in the sub-region 27.3.D.30. This region includes the majority of small scale coastal fishers deploying gillnets in Sweden, especially for those targeting Herring (more than 50% of total fishers with GNS-SPF metier are registered in the study area). Economic data for the fleet segments, although refers to values at country level, are considered to be representative of the study area.
+
+### Pelagic trawlers
+
+Pelagic correspond to vessels of size \> 24m operating pelagic nets (gear code: Trawl Midwater - TM) in the sub-region 27.3.D.30. Pelagic trawlers move between Swedish areas, and the same fleet can report catches in several divisions. Economic data at country level are therefore an appropriate aggregation. However, given the very small number of active vessels, Sweden does not provide economic data at fleet segment level for confidentiality reasons [@jrc2025]. Economic data are provided for the aggregated Large Scale fleet, which includes vessels \> 24m operating demersal tralwers, pelagic trawlers and purse seiners. On average, over the period 2020-2025 40 % of landed value.
+
+## Recreational fishers
+
+Dataset for recreational fishers is available through Sweden statistic reports [@swam2024], which most recent update at the time of writing includes data until 2024. The dataset relevant for this study are the following tables (table number ios reported as it appears in Swam):
+
+-   Table 5: target species in the sea in 2024
+
+-   Table 6: primary and secondary gear used in recreational fishing in 2024
+
+-   Table 8: Catches in recreational fishing in the sea in 2024
+
+-   Table 9: Expenditures in recreational fishing in 2024, million SEK
+
+| Dataset ID | Dataset_name | Description |
+|----------------|-------------------------|-------------------------------|
+| D1 | fdi_effort_SWE.csv | Fishing effort for commercial fisheries from FDI data call [@jrc] |
+| D2 | fdi_catch_SWE.csv | Catches for commercial fisheries from FDI data call [@jrc] |
+| D3 | fdi_SWE.csv | Economic overview (number of vessels, income, expenses) of european fishing fleets [@jrc2025] |
+| D3 | recf_catch.xlsx; tab6 | Thousand of practitioners reported for recreational fishing technique in Sweden |
+| D4 | recf_catch.xlsx; tab2 | Thousand of practitioners reported for target species in Sweden |
+
+\newpage
+
+```{r child = 'SuppInfo_B_child1_gears.Rmd'}
+```
+
+\newpage
+
+```{r child = 'SuppInfo_B_child2_economics.Rmd'}
+```

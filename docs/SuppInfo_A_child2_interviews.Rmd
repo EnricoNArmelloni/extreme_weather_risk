@@ -1,0 +1,244 @@
+---
+title: "Summary of the interviews"
+output: pdf_document
+date: "2025-04-08"
+---
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+
+# Interviews - integral text (English)
+
+Legend:
+
+```{r , echo=FALSE,message = FALSE,results = 'asis', message=F}
+library(tidyverse)
+library(kableExtra)
+scoring.system=data.frame(Score=c('x', 999, -999, -998, -997), Type=paste('C', 1:5), Description = c('Number (x) available', 'To be interpreted','Does not apply', 'Cant answer', 'Garbled'))
+
+kableExtra::kable(scoring.system)%>%
+  kable_styling(font_size = 8)%>% 
+            column_spec(1, width = "1cm")%>%
+            column_spec(2, width = "1cm")%>%
+            column_spec(2, width = "3cm")
+```
+
+
+
+```{r data , echo=FALSE,message = FALSE}
+library(kableExtra)
+library(tidyverse)
+rm(list = ls())
+## load data
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+    sheet = "responses")
+
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+    sheet = "questions")
+
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+    sheet = "events")
+
+fisher=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+    sheet = "fishers")
+
+coding= read_csv("C:/github/extreme_weather_risk/data/read_only/coding_report.csv")
+
+## groupings
+u.resp=unique(resp$id_I)
+
+## formats
+head_resp='##'
+head_quest='###'
+```
+
+
+
+```{r, include=T, echo=FALSE, fig.width = 1,results = 'asis', fig.pos='H', message=FALSE, warning=FALSE}
+#knitr::include_graphics(file.path(main.dir,x.folder,j.images), dpi = 300)
+#for(i in 1:1){
+for(i in 1:length(u.resp)){
+  cat(sprintf('%s %s\n\n', head_resp, paste('Interviewee: I', u.resp[i])))
+  ##
+  i.style=fisher[fisher$id_I==u.resp[i],]
+  i.resp=resp[resp$id_I==u.resp[i],]
+  i.code=coding[coding$id_I==u.resp[i],]
+  u.quest=unique(i.resp$id_q)  
+  u.quest=u.quest[!is.na(u.quest)]
+  cat(paste(i.style$summary,'\n\n'))
+  
+  for(j in 2:length(u.quest)){
+    
+    j.quest=quest[quest$id_q==u.quest[j],] 
+    j.quest=j.quest[!is.na(j.quest$id_q),]
+    cat(sprintf('%s %s\n\n', head_quest, paste('Q', u.quest[j], '-', j.quest$short_description ))) 
+    cat(paste(j.quest$description, '\n\n'))
+    cat(paste(j.quest$LIKERT, '\n\n'))
+    
+    ## make it a readable table
+    j.resp=i.resp[i.resp$id_q==u.quest[j],]
+    j.coding=i.code[i.code$id_q==u.quest[j],]
+    
+    # answer by events
+    if(nrow(j.resp)>4){
+       if(j.resp[nrow(j.resp),]$id_sub=='extra'){
+         cat(paste(j.resp[nrow(j.resp),]$text, '\n\n'))
+         j.resp=j.resp[1:(nrow(j.resp)-1),]
+       }
+    check.multi=apply(j.coding[,1:3], 2, function(x)unique(is.na(x)))
+    if(length(unique(as.character(check.multi)))==1){
+        j.resp=merge(j.resp, evts, by='id_sub')
+        j.resp=merge(j.resp, j.coding[,c("id_sub", "value")], by='id_sub', all.x=T)
+        j.resp$type=NA
+        j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
+        j.resp=j.resp[,c('id_sub','description','text','value','type')]
+        names(j.resp)=c('','Event', 'Answer', 'Score', 'Method')  
+        kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i],
+                                                                             'Q', u.quest[j]  )) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(j.resp)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(3, width = "8cm")%>%
+            column_spec(2, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "0.5cm")
+        print(kable.obj)
+    }else{
+      multi.target=check.multi[which(check.multi==F)]
+      j.coding=j.coding[!is.na(j.coding$value),]
+      j.coding=j.coding[,c("id_sub", "value", names(multi.target))]
+      target.col=names(multi.target)
+      j.cod.s=j.coding[j.coding[,target.col]=='not_specified',]
+      j.cod.m=j.coding[j.coding[,target.col]!='not_specified',]
+      j.resp=merge(j.resp, evts, by='id_sub')
+      j.resp=merge(j.resp, j.cod.s[,c("id_sub", "value")], by='id_sub', all.x=T)
+      j.resp$type=NA
+      j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
+      j.resp$type=ifelse(j.resp$score_obs=='M','M',j.resp$type)
+      j.resp=j.resp[,c('id_sub','description','text','value','type')]
+      names(j.resp)=c('','Event', 'Answer', 'Score', 'Method')  
+        
+      kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i],
+                                                                           'Q', u.quest[j]  )) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(j.resp)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(3, width = "8cm")%>%
+            column_spec(2, width = "2.5cm")%>%
+            column_spec(4, width = "1cm")%>%
+            column_spec(5, width = "0.5cm")
+      print(kable.obj)
+      
+      cat(paste('Multiple options identified', '\n\n'))
+      
+      j.cod.m=merge(j.cod.m, evts, by='id_sub')
+      j.cod.m=j.cod.m[,c('id_sub','description',target.col ,'value')]
+      names(j.cod.m)=c('','Event', as.character(target.col), 'Score (given)')   
+      kable.obj.M=kableExtra::kable((j.cod.m), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i], 
+                                                                              'Q', u.quest[j]  )) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(j.cod.m)-1),hline_after=T)%>%
+            column_spec(1, width = "0.5cm")%>%
+            column_spec(3, width = "4cm")%>%
+            column_spec(2, width = "4cm")%>%
+            column_spec(4, width = "0.5cm")
+      print(kable.obj.M)
+      
+    }
+
+        
+     }
+    if(nrow(j.resp)==1){
+       j.resp=j.resp[,c('text','score_obs')]
+       
+       if(nrow(j.coding)>1){
+         check.multi=apply(j.coding[,1:3], 2, function(x)unique(is.na(x)))
+         j.coding=j.coding[!is.na(j.coding$value),]
+         j.coding=j.coding[,c(names(multi.target), "value")]
+         j.resp$value=NA
+         names(j.resp)=c('Answer', 'Score (self)', 'Score (given)')
+         kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i],
+                                                                              'Q', u.quest[j]  )) %>%
+              kable_styling(font_size = 8)%>% 
+              row_spec(0,   bold = TRUE)%>%
+              column_spec(1, width = "8cm")%>%
+              column_spec(2, width = "0.5cm") %>%
+              column_spec(3, width = "0.5cm") 
+          print(kable.obj)
+          
+          cat(paste('Multiple options identified', '\n\n'))
+      
+          names(j.coding)=c(as.character(target.col), 'Score (given)')   
+      kable.obj.M=kableExtra::kable((j.coding), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i], 
+                                                                               'Q', u.quest[j]  )) %>%
+            kable_styling(font_size = 8)%>% 
+            row_spec(0,   bold = TRUE)%>%
+            row_spec(1:(nrow(j.cod.m)-1),hline_after=T)%>%
+            column_spec(1, width = "4cm")%>%
+           column_spec(2, width = "0.5cm")
+      print(kable.obj.M)
+      next
+       }
+       
+       if(is.na(j.coding$unit_range)){
+          j.resp$value=j.coding$value
+          j.resp$type=NA
+          j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
+          j.resp=j.resp[,c('text','value','type')]
+          names(j.resp)=c('Answer','Score', 'Method')
+          kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i], 
+                                                                               'Q', u.quest[j]  )) %>%
+              kable_styling(font_size = 8)%>% 
+              row_spec(0,   bold = TRUE)%>%
+              column_spec(1, width = "9cm")%>%
+              column_spec(2, width = "0.5cm") %>%
+              column_spec(3, width = "0.5cm") 
+          print(kable.obj)
+       }else{
+         j.resp=cbind(j.resp, j.coding[,c("range.lwr", "range.upr", "unit_range")])
+         j.resp=j.resp[,c('text',"range.lwr", "range.upr", "unit_range")]
+         names(j.resp)=c('Answer', 'Score - low (given)','Score - up (given)', 'Unit')
+         
+         kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i],
+                                                                              'Q', u.quest[j]  )) %>%
+              kable_styling(font_size = 8)%>% 
+              row_spec(0,   bold = TRUE)%>%
+              column_spec(1, width = "8cm")%>%
+              column_spec(2, width = "1cm") %>%
+              column_spec(3, width = "1cm") %>%
+              column_spec(4, width = "2cm") 
+         print(kable.obj)
+       }
+
+     }
+     if(nrow(j.resp)==3){
+       j.resp$value=j.coding$value
+       j.resp$type=NA
+       j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
+       j.resp$short_description=ifelse(j.resp$id_sub=='a', 'Injuries',
+                                       ifelse(j.resp$id_sub=='b', 'Damages to gear' , 'Fish condition'))
+       j.resp=j.resp[,c('id_sub','short_description','text','value','type')]
+       names(j.resp)=c('','Type','Answer', 'Score', 'Method')
+       kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i], 
+                                                                            'Q', u.quest[j]  )) %>%
+              kable_styling(font_size = 8)%>% 
+              row_spec(0,   bold = TRUE)%>%
+              row_spec(1:(nrow(j.resp)-1),   hline_after=T)%>%
+              column_spec(3, width = "8cm")%>%
+              column_spec(2, width = "3cm")%>%
+              column_spec(1, width = "0.5cm")%>%
+              column_spec(4, width = "0.5cm")
+        print(kable.obj)
+     }
+     
+    }
+}
+```
+
+
