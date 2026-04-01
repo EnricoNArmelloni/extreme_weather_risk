@@ -1,11 +1,38 @@
 ---
-title: "Appendix A: elicitation of parameters from fishers. Interviews plots, results and data treatment"
-output:
-  pdf_document:
-    toc: true
-    toc_depth: 2
-
+title: "Supplementary Information for: How do extreme weather events affect fishing operations? Knowledge engineering a risk analysis with Swedish Baltic Sea fishers"
+subtitle: 'Supp. Inf. A: elicitation of parameters from fishers. Interviews plots, results and data treatment'
+author:
+  - Enrico Nicola Armelloni:
+      email: enrico.e.armelloni@gmail.com
+      institute: [SLU]
+      correspondence: true
+  - name: Jens Olsson
+    institute: SLU
+  - name: Laura Uusitalo
+    institute: LUKE
+  - name: Anna Gårdmark
+    institute: SLU
+institute:
+  - SLU: Department of Aquatic Resources, Swedish University of Agricultural Sciences, Uppsala, Sweden
+  - LUKE: Fisheries and Fish Resources, Natural Resources Institute Finland (Luke), Helsinki, Finland
+output: 
+  pdf_document: 
+    pandoc_args:
+      - '--lua-filter=scholarly-metadata.lua'
+      - '--lua-filter=author-info-blocks.lua'
+    number_sections: false
+    toc: false
+header-includes:
+  - \usepackage{pdfpages}
+  - \usepackage[nottoc, numbib]{tocbibind}
+  - \pagenumbering{gobble}
 ---
+
+```{=latex}
+\setcounter{tocdepth}{2}
+\tableofcontents
+```
+
 \setcounter{table}{0}
 \renewcommand{\thetable}{A.\arabic{table}}
 \renewcommand{\thefigure}{A.\arabic{figure}}

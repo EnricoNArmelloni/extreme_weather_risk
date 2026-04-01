@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.8)  1 APR 2026 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.8)  1 APR 2026 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**SuppInfo_B.tex
-(./SuppInfo_B.tex
+**SuppInfo_B_child2_economics.tex
+(./SuppInfo_B_child2_economics.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -191,71 +191,6 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \fb@frh=\dimen167
 \FrameRule=\dimen168
 \FrameSep=\dimen169
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip55
-\LTright=\skip56
-\LTpre=\skip57
-\LTpost=\skip58
-\LTchunksize=\count301
-\LTcapwidth=\dimen170
-\LT@head=\box56
-\LT@firsthead=\box57
-\LT@foot=\box58
-\LT@lastfoot=\box59
-\LT@gbox=\box60
-\LT@cols=\count302
-\LT@rows=\count303
-\c@LT@tables=\count304
-\c@LT@chunks=\count305
-\LT@p@ftn=\toks26
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen171
-\lightrulewidth=\dimen172
-\cmidrulewidth=\dimen173
-\belowrulesep=\dimen174
-\belowbottomsep=\dimen175
-\aboverulesep=\dimen176
-\abovetopsep=\dimen177
-\cmidrulesep=\dimen178
-\cmidrulekern=\dimen179
-\defaultaddspace=\dimen180
-\@cmidla=\count306
-\@cmidlb=\count307
-\@aboverulesep=\dimen181
-\@belowrulesep=\dimen182
-\@thisruleclass=\count308
-\@lastruleclass=\count309
-\@thisrulewidth=\dimen183
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen184
-\ar@mcellbox=\box61
-\extrarowheight=\dimen185
-\NC@list=\toks27
-\extratabsurround=\skip59
-\backup@length=\skip60
-\ar@cellbox=\box62
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count310
-\calc@Bcount=\count311
-\calc@Adimen=\dimen186
-\calc@Bdimen=\dimen187
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count312
-\calc@Cskip=\skip63
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count313
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
-Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box63
-\fn@width=\dimen188
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -267,65 +202,94 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen189
-\Gin@req@width=\dimen190
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
 )
-\cslhangindent=\skip64
-\csllabelwidth=\skip65
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen191
-\ESO@tempdimb=\dimen192
-)
-\AM@pagewidth=\dimen193
-\AM@pageheight=\dimen194
-\AM@fboxrule=\dimen195
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
-)
-\pdfpages@includegraphics@status=\count314
-\AM@pagebox=\box64
-\AM@global@opts=\toks28
-\AM@pagecnt=\count315
-\AM@toc@title=\toks29
-\AM@lof@heading=\toks30
-\c@AM@survey=\count316
-\AM@templatesizebox=\box65
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tocbibind/tocbibind.sty
-Package: tocbibind 2010/10/13 v1.5k extra ToC listings
-Package tocbibind Info: The document has section divisions on input line 50.
-
-Package tocbibind Note: Using section or other style headings.
-
+\cslhangindent=\skip55
+\csllabelwidth=\skip56
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count301
+\calc@Bcount=\count302
+\calc@Adimen=\dimen172
+\calc@Bdimen=\dimen173
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count303
+\calc@Cskip=\skip59
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen174
+\lightrulewidth=\dimen175
+\cmidrulewidth=\dimen176
+\belowrulesep=\dimen177
+\belowbottomsep=\dimen178
+\aboverulesep=\dimen179
+\abovetopsep=\dimen180
+\cmidrulesep=\dimen181
+\cmidrulekern=\dimen182
+\defaultaddspace=\dimen183
+\@cmidla=\count304
+\@cmidlb=\count305
+\@aboverulesep=\dimen184
+\@belowrulesep=\dimen185
+\@thisruleclass=\count306
+\@lastruleclass=\count307
+\@thisrulewidth=\dimen186
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count308
+\LTcapwidth=\dimen187
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count309
+\LT@rows=\count310
+\c@LT@tables=\count311
+\c@LT@chunks=\count312
+\LT@p@ftn=\toks26
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen188
+\ar@mcellbox=\box61
+\extrarowheight=\dimen189
+\NC@list=\toks27
+\extratabsurround=\skip64
+\backup@length=\skip65
+\ar@cellbox=\box62
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip66
-\multirow@cntb=\count317
+\multirow@cntb=\count313
 \multirow@dima=\skip67
-\bigstrutjot=\dimen196
+\bigstrutjot=\dimen190
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen197
-\WF@size=\dimen198
-\c@WF@wrappedlines=\count318
-\WF@box=\box66
-\WF@everypar=\toks31
+\wrapoverhang=\dimen191
+\WF@size=\dimen192
+\c@WF@wrappedlines=\count314
+\WF@box=\box63
+\WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count319
-\float@exts=\toks32
-\float@box=\box67
-\@float@everytoks=\toks33
-\@floatcapt=\box68
+\c@float@type=\count315
+\float@exts=\toks29
+\float@box=\box64
+\@float@everytoks=\toks30
+\@floatcapt=\box65
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
-\everycr=\toks34
+\everycr=\toks31
 \minrowclearance=\skip68
-\rownum=\count320
+\rownum=\count316
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -338,37 +302,37 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box69
-\sift@deathcycles=\count321
-\@vwid@loff=\dimen199
-\@vwid@roff=\dimen256
+\@vwid@box=\box66
+\sift@deathcycles=\count317
+\@vwid@loff=\dimen193
+\@vwid@roff=\dimen194
 )
 ==> First Aid for varwidth.sty applied!
-\c@taburow=\count322
-\tabu@nbcols=\count323
-\tabu@cnt=\count324
-\tabu@Xcol=\count325
-\tabu@alloc=\count326
-\tabu@nested=\count327
-\tabu@target=\dimen257
-\tabu@spreadtarget=\dimen258
-\tabu@naturalX=\dimen259
-\tabucolX=\dimen260
-\tabu@Xsum=\dimen261
-\extrarowdepth=\dimen262
-\abovetabulinesep=\dimen263
-\belowtabulinesep=\dimen264
-\tabustrutrule=\dimen265
-\tabu@thebody=\toks35
-\tabu@footnotes=\toks36
-\tabu@box=\box70
-\tabu@arstrutbox=\box71
-\tabu@hleads=\box72
-\tabu@vleads=\box73
+\c@taburow=\count318
+\tabu@nbcols=\count319
+\tabu@cnt=\count320
+\tabu@Xcol=\count321
+\tabu@alloc=\count322
+\tabu@nested=\count323
+\tabu@target=\dimen195
+\tabu@spreadtarget=\dimen196
+\tabu@naturalX=\dimen197
+\tabucolX=\dimen198
+\tabu@Xsum=\dimen199
+\extrarowdepth=\dimen256
+\abovetabulinesep=\dimen257
+\belowtabulinesep=\dimen258
+\tabustrutrule=\dimen259
+\tabu@thebody=\toks32
+\tabu@footnotes=\toks33
+\tabu@box=\box67
+\tabu@arstrutbox=\box68
+\tabu@hleads=\box69
+\tabu@vleads=\box70
 \tabu@cellskip=\skip69
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box74
+\@tempboxb=\box71
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
@@ -378,21 +342,21 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip70
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box75
-\UL@hyphenbox=\box76
+\UL@box=\box72
+\UL@hyphenbox=\box73
 \UL@skip=\skip71
-\UL@hook=\toks37
-\UL@height=\dimen266
-\UL@pe=\count328
-\UL@pixel=\dimen267
-\ULC@box=\box77
+\UL@hook=\toks34
+\UL@height=\dimen260
+\UL@pe=\count324
+\UL@pixel=\dimen261
+\ULC@box=\box74
 Package: ulem 2019/11/18
-\ULdepth=\dimen268
+\ULdepth=\dimen262
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen269
-\c@nlinenum=\count329
-\TeXr@lab=\toks38
+\rotheadsize=\dimen263
+\c@nlinenum=\count325
+\TeXr@lab=\toks35
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -424,13 +388,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count330
+\c@section@level=\count326
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count327
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen270
-\Hy@linkcounter=\count331
-\Hy@pagecounter=\count332
+\@linkdim=\dimen264
+\Hy@linkcounter=\count328
+\Hy@pagecounter=\count329
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -438,7 +405,7 @@ Now handling font encoding PD1 ...
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count333
+\Hy@SavedSpaceFactor=\count330
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -452,21 +419,21 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count334
+\c@Hy@tempcnt=\count331
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen271
+\XeTeXLinkMargin=\dimen265
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count335
-\Field@Width=\dimen272
-\Fld@charsize=\dimen273
+\Fld@menulength=\count332
+\Field@Width=\dimen266
+\Fld@charsize=\dimen267
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -474,15 +441,15 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count336
-\c@Item=\count337
-\c@Hfootnote=\count338
+\Hy@abspage=\count333
+\c@Item=\count334
+\c@Hfootnote=\count335
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count339
-\c@bookmark@seq@number=\count340
+\Fld@listcount=\count336
+\c@bookmark@seq@number=\count337
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -493,42 +460,42 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip72
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count341
+\BKM@id=\count338
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 185.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 159.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count342
-) (./SuppInfo_B.aux
+\l__color_backend_stack_int=\count339
+) (./SuppInfo_B_child2_economics.aux
 
-LaTeX Warning: Label `tab:unnamed-chunk-28' multiply defined.
+LaTeX Warning: Label `tab:unnamed-chunk-2' multiply defined.
 
 
-LaTeX Warning: Label `tab:unnamed-chunk-29' multiply defined.
+LaTeX Warning: Label `tab:unnamed-chunk-3' multiply defined.
 
 )
-\openout1 = `SuppInfo_B.aux'.
+\openout1 = `SuppInfo_B_child2_economics.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -569,299 +536,180 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 185.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 187.
+Package hyperref Info: Link coloring OFF on input line 159.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 161.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 187.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 161.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 187.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 161.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 187.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 161.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 187.
+(Font)              <12> on input line 161.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 187.
+(Font)              <8> on input line 161.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 187.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 187.
+(Font)              <6> on input line 161.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 161.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 187.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 161.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./SuppInfo_B_child2_economics.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 2.
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 188.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 188.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 188.
-(./SuppInfo_B.toc)
 \tf@toc=\write4
-\openout4 = `SuppInfo_B.toc'.
+\openout4 = `SuppInfo_B_child2_economics.toc'.
 
-[1
-
-{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 216.
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.304 \end{longtable}
-                      [2{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.306 \newpage
-               [3]
-<SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf, id=68, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 327.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf, id=69, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 347.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf, id=70, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 366.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.369 \end{figure}
-                   [4 <./SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.371 \newpage
-               [5 <./SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>]
-<SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf, id=89, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 400.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf, id=90, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 429.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf, id=91, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 435.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.449 
-       [6 <./SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.449 
-       [7 <./SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf> <./SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf>]
-<SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf, id=117, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 452.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.456 \newpage
-               [8 <./SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 470.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 178.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 182.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 506.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 214.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 517.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 225.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 557.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 265.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.582 \end{Shaded}
-                   [9 <./SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 582
+) [1
+
+{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Underfull \vbox (badness 10000) detected at line 290
  []
 
 
-Underfull \vbox (badness 10000) detected at line 582
+Underfull \vbox (badness 10000) detected at line 290
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.582 \end{Shaded}
-                   [10]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.584 \newpage
-               [11]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 604--604
+[2] [3]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 310--310
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 632--632
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 338--338
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
 
-Overfull \hbox (5.59526pt too wide) in paragraph at lines 634--634
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 340--340
 []|\T1/lmr/m/n/8 thousand 
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 634--635
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 340--341
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 636--637
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 342--343
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf, id=147, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf  used on input line 643.
+<SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-2-1.pdf, id=43, 867.24pt x 289.08pt>
+File: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 349.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.647 \newpage
-               [12 <./SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 667--667
+[4 <./SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-2-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 374--374
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 684--684
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 391--391
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
 
-Overfull \hbox (5.59526pt too wide) in paragraph at lines 686--686
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 393--393
 []|\T1/lmr/m/n/8 thousand 
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 686--687
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 393--394
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 688--689
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 395--396
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf, id=161, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf  used on input line 695.
+<SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-3-1.pdf, id=58, 867.24pt x 289.08pt>
+File: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 402.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.699 \newpage
-               [13 <./SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 716--716
+[5 <./SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-3-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 425--425
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 733--733
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 442--442
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf, id=174, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf  used on input line 744.
+<SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-4-1.pdf, id=71, 867.24pt x 289.08pt>
+File: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-4-1.pdf>
+Package pdftex.def Info: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 453.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.748 \newpage
-               [14 <./SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 761--761
+[6 <./SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-4-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 470--470
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 780--780
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 489--489
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf, id=186, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf  used on input line 789.
+<SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-5-1.pdf, id=84, 867.24pt x 289.08pt>
+File: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 498.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.793 \newpage
-               [15 <./SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 806--806
+[7 <./SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-5-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 515--515
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 825--825
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 534--534
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf, id=198, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf  used on input line 834.
+<SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-6-1.pdf, id=98, 867.24pt x 289.08pt>
+File: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-6-1.pdf  used on input line 543.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.838 \newpage
-               [16 <./SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.875 \end{document}
-                     [17] (./SuppInfo_B.aux)
+[8 <./SuppInfo_B_child2_economics_files/figure-latex/unnamed-chunk-6-1.pdf>] (./SuppInfo_B_child2_economics.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
@@ -871,18 +719,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14507 strings out of 469519
- 231412 string characters out of 5467980
- 657002 words of memory out of 5000000
- 42826 multiletter control sequences out of 15000+600000
- 689063 words of font info for 90 fonts, out of 8000000 for 9000
+ 13524 strings out of 469519
+ 213401 string characters out of 5467980
+ 639861 words of memory out of 5000000
+ 41885 multiletter control sequences out of 15000+600000
+ 686071 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,11n,93p,539b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtko10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on SuppInfo_B.pdf (17 pages, 433040 bytes).
+ 89i,7n,93p,446b,485s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtko10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on SuppInfo_B_child2_economics.pdf (8 pages, 332044 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
 

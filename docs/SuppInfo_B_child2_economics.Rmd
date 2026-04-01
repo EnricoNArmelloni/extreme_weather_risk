@@ -7,10 +7,6 @@ output:
 bibliography: references.bib
 ---
 
-\setcounter{table}{0}
-\renewcommand{\thetable}{C.\arabic{table}}
-\renewcommand{\thefigure}{C.\arabic{figure}}
-
 
 # Economic data
 
@@ -173,9 +169,9 @@ error.propagation=function(x.mu, x.er, y.mu, y.er){
 
 \newpage
 
-## Small scale fisherman
+## Small-scale coastal fishing
 
-Economic information for small scale coastal fishers is available in dataset D3 (Table C.1), are filtered for vessel length categories VL0010 and VL0812 and on fishing technologies FPO and DFN. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. Gross value of catches in a single fishing trip is obtained by dividing total annual value of catches by number of fishing trips. Other values are provided in the interviews.
+Economic information for small scale coastal fishers, available in dataset D3 (Table C.1), filtered for vessel length categories VL0010 and VL0812, fishing technologies FPO and DFN and Swedish country code. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. Gross value of catches in a single fishing trip is obtained by dividing total annual value of catches by number of fishing trips. Other values are provided in the interviews.
 
 ```{r, include=T, echo=F,message=FALSE, results = 'asis', fig.width = 12, fig.height=4, warning=FALSE, fig.cap='CPT estimated for coastal fisherman'}
 
@@ -282,9 +278,9 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Pelagic trawlers
+## Pelagic trawling
 
-Pelagic economic information is derived from the STECF_AER data source [@stecf2024]. STECF_AER data are filtered for vessel length categories VL2440 and VL40XX, including all fishing technologies. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. The cost of longer travel was not available, and it is based on the assumption that an average travel costs between 80% and 120% of the average fuel cost, while a longer travel is between 100% and 300% of average fuel cost. Other values are provided in the interviews.
+Pelagic economic information is derived from dataset D3, filtered for vessel length categories VL2440 and VL40XX, and Sweden country code. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. The cost of longer travel was not available, and it is based on the assumption that an average travel costs between 80% and 120% of the average fuel cost, while a longer travel is between 100% and 300% of average fuel cost. Other values are provided in the interviews.
 
 ```{r, include=T, echo=F, results = 'asis', message=FALSE, fig.width = 12, fig.height=4, warning=FALSE, fig.cap='CPT estimated for pelagic trawlers'}
 
@@ -391,9 +387,9 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Recreational
+## Recreational fishing
 
-Pelagic economic information is derived from the recreational fisheries statistical report of the Swedish Department for Economic and Statistic Analysis (SWAM) data source [@swam2024]. SWAM economic data represent the totality of recreational fisherman in Sweden, with no distinction between region or inland vs coastal fishing. Cost of fuel per trip is separately calculated for travel and for boat fuel. These two costs are then averaged. All the uncertainties provided in SWAM (on costs and on number of practitioners) are accounted for by propagating errors (REF). Annual spending is estimated by dividing total annual expenses by number of practitioners. Other values are provided in the interviews.
+Pelagic economic information is derived from dataset D6, representing the totality of recreational fisherman in Sweden, with no distinction between region or inland vs coastal fishing. Cost of fuel per trip is separately calculated for travel and for boat fuel. These two costs are then averaged. All the uncertainties (on costs and on number of practitioners) are accounted for by propagating errors. Annual spending is estimated by dividing total annual expenses by number of practitioners. Other values are provided in the interviews.
 
 ```{r, include=T, echo=F, results = 'asis',message=FALSE, warning=FALSE, fig.width = 12, fig.height=4, warning=FALSE, fig.cap='CPT estimated for recreational fisherman'}
 ## economic data from Friskitverkeretet
@@ -403,15 +399,15 @@ recf.exp=recf.dat[recf.dat$category=='expenses',]
 # annual values per person
 sek_person=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
                              y.mu=recf.numb[1,]$mean/1000, y.er=recf.numb[1,]$error/1000)
-sek_person$category=recf.exp$category
+sek_person$category=recf.exp$variable
 
 sek_day=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
-                  y.mu=recf.numb[2,]$mean/1000, y.er=recf.numb[2,]$error/1000)
-sek_day$category=recf.exp$category
+                          y.mu=recf.numb[2,]$mean/1000, y.er=recf.numb[2,]$error/1000)
+sek_day$category=recf.exp$variable
 
 sek_boat=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
                            y.mu=recf.numb[3,]$mean/1000, y.er=recf.numb[3,]$error/1000)
-sek_boat$category=recf.exp$category
+sek_boat$category=recf.exp$variable
 
 ## get mean cost for trips
 mean.rf.travel=mean(c(sek_day[sek_day$category %in% c('Expenses for travel'),]$mu,
@@ -489,7 +485,7 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Fishing guide
+## Fishing guides
 
 No updated public information is available for fishing guide economic aspects in Sweden. All estimations base on interview results and our assumptions. Seasonal expenses are estimated by summing the declared maintenance costs and an estimation of fuel costs.
 
@@ -573,7 +569,7 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Household
+## Household fishing
 
 No updated public information is available for archipelago fishers economic aspects in Sweden. All estimations base on interview results and our assumptions. Seasonal expenses are estimated by summing the declared maintenance costs and an estimation of fuel costs.
 

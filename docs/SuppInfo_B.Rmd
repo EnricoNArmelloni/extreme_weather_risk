@@ -1,13 +1,42 @@
 ---
-title: "Supplementary Information B: treatment of fishing statistics data"
-output:
-  pdf_document:
-    toc: true
-    toc_depth: 3
+title: "Supplementary Information for: How do extreme weather events affect fishing operations? Knowledge engineering a risk analysis with Swedish Baltic Sea fishers"
+subtitle: 'Supp. Inf. B: treatment of fisheries statistics available in European and Swedish respositories.'
+author:
+  - Enrico Nicola Armelloni:
+      email: enrico.e.armelloni@gmail.com
+      institute: [SLU]
+      correspondence: true
+  - name: Jens Olsson
+    institute: SLU
+  - name: Laura Uusitalo
+    institute: LUKE
+  - name: Anna Gårdmark
+    institute: SLU
+institute:
+  - SLU: Department of Aquatic Resources, Swedish University of Agricultural Sciences, Uppsala, Sweden
+  - LUKE: Fisheries and Fish Resources, Natural Resources Institute Finland (Luke), Helsinki, Finland
+output: 
+  pdf_document: 
+    pandoc_args:
+      - '--lua-filter=scholarly-metadata.lua'
+      - '--lua-filter=author-info-blocks.lua'
+    number_sections: false
+    toc: false
+header-includes:
+  - \usepackage{pdfpages}
+  - \usepackage[nottoc, numbib]{tocbibind}
+  - \pagenumbering{gobble}
 bibliography: references.bib
 ---
 
-\setcounter{table}{0} \renewcommand{\thetable}{A.\arabic{table}} \renewcommand{\thefigure}{A.\arabic{figure}}
+```{=latex}
+\setcounter{tocdepth}{2}
+\tableofcontents
+```
+
+\setcounter{table}{0} 
+\renewcommand{\thetable}{B.\arabic{table}} 
+\renewcommand{\thefigure}{B.\arabic{figure}}
 
 # Data sources by fishing style
 
@@ -19,7 +48,7 @@ Data for fishery dependent information for professional commercial fishers are a
 
 -   *Annual Economic report on EU fishing fleet* [@jrc2025]: provides economic overview (dataset D3; number of vessels, income, expenses) of european fishing fleets by country and fleet segment
 
-The FDI data resolution allow to obtain information for the study area (Bothnian Sea - ICES area 27.3.D.30), while the AER is only available at country (Sweden) level. Different aggregation of the data requires to implement some simplifications or assumptions, hereby explained.
+The FDI data resolution allow to obtain information for the study area (Bothnian Sea - ICES area 27.3.D.30), while the AER is only available at country (Sweden) level. Different aggregation of the data requires to implement some simplifications or assumptions, hereby explained. Terminology adopted is consistent with definitions in use in the Data collection framework of the European Union [@gear2026].
 
 ### Small scale fishers
 
@@ -42,12 +71,13 @@ Dataset for recreational fishers is available through Sweden statistic reports [
 -   Table 9: Expenditures in recreational fishing in 2024, million SEK
 
 | Dataset ID | Dataset_name | Description |
-|----------------|-------------------------|-------------------------------|
+|------------------|------------------------|------------------------------|
 | D1 | fdi_effort_SWE.csv | Fishing effort for commercial fisheries from FDI data call [@jrc] |
 | D2 | fdi_catch_SWE.csv | Catches for commercial fisheries from FDI data call [@jrc] |
 | D3 | fdi_SWE.csv | Economic overview (number of vessels, income, expenses) of european fishing fleets [@jrc2025] |
-| D3 | recf_catch.xlsx; tab6 | Thousand of practitioners reported for recreational fishing technique in Sweden |
-| D4 | recf_catch.xlsx; tab2 | Thousand of practitioners reported for target species in Sweden |
+| D4 | rec_gears_SWE.csv | Thousand of practitioners reported for recreational fishing technique in Sweden |
+| D5 | rec_catch_SWE.csv | Thousand of practitioners reported for target species in Sweden |
+| D6 | rec_economics_SWE.csv | Economic and fishing effort data |
 
 \newpage
 
@@ -58,3 +88,7 @@ Dataset for recreational fishers is available through Sweden statistic reports [
 
 ```{r child = 'SuppInfo_B_child2_economics.Rmd'}
 ```
+
+\newpage
+
+# References

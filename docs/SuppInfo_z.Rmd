@@ -1,27 +1,46 @@
 ---
 title: "My title"
 author:
-  - Mario Modesto-Mata:
-      email: paleomariomm@gmail.com
-      institute: [astro, med]
+  - Enrico Nicola Armelloni:
+      email: enrico.e.armelloni@gmail.com
+      institute: [SLU]
       correspondence: true
-  - name: Christopher
-    institute: astro
-  - name: Seaghán Mhartain
-    institute: med
-  - name: Rita Yuri Ynoue
-    institute: astro
+  - name: Jens Olsson
+    institute: SLU
+  - name: Laura Uusitalo
+    institute: LUKE
+  - name: Anna Gårdmark
+    institute: SLU
 institute:
-  - astro: Instituto de Astronomía, Geofísica e Ciências Atmosféricas, Universidade de São Paulo
-  - med: Faculdade de Medicina, Universidade de São Paulo
-date: "1 October 2018"
+  - SLU: Department of Aquatic Resources, Swedish University of Agricultural Sciences, Uppsala, Sweden
+  - LUKE: Fisheries and Fish Resources, Natural Resources Institute Finland (Luke), Helsinki, Finland
 output: 
   pdf_document: 
     pandoc_args:
       - '--lua-filter=scholarly-metadata.lua'
       - '--lua-filter=author-info-blocks.lua'
-    number_sections: yes
-    toc: yes
-    toc_depth: 4
+    number_sections: false
+    toc: false
+header-includes:
+  - \usepackage{pdfpages}
+  - \usepackage[nottoc, numbib]{tocbibind}
+  - \pagenumbering{gobble}
 ---
+
+```{=latex}
+\setcounter{tocdepth}{2}
+\tableofcontents
+```
+
+
+\newpage
+
 some text
+
+# some section
+
+loremipsum
+
+## sub section
+
+moreipsum
