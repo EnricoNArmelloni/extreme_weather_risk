@@ -1,4 +1,4 @@
-#remove(list=ls())
+remove(list=ls())
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
 setwd(file.path(scriptDir, '..')) 
@@ -8,17 +8,18 @@ library(bnlearn)
 library(gRain)
 source('code/supporting_r1.R')
 sim.uncertainty=0
+show.plots=0
 
 # Load data ####
 # data from interviews
-questionnaire=read_excel("data/dialogues_raw.xlsx", 
+questionnaire=read_excel("data/editable_files/dialogues_raw.xlsx", 
                          sheet = "questions")
-style.dataset=read_excel("data/dialogues_raw.xlsx", 
+style.dataset=read_excel("data/editable_files/dialogues_raw.xlsx", 
                          sheet = "fishers")
-evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
                         sheet = "events")
 int.dat=read_csv("data/read_only/coding_report_unc.csv")
-strategy.dataset=read.csv("data/adaptive_revised_v2.csv")
+strategy.dataset=read.csv("data/editable_files/adaptive_revised_v2.csv")
 strategy.dataset$gear=ifelse(is.na(strategy.dataset$gear), 'not_specified', strategy.dataset$gear)
 strategy.dataset$target=ifelse(is.na(strategy.dataset$target), 'not_specified', strategy.dataset$target)
 
@@ -30,19 +31,18 @@ coast.fdays=read_csv("data/read_only/coastal_fdays.csv")
 coast.fdays=coast.fdays[1:3,]
 coast.fdays$cpt=coast.fdays$fdays/sum(coast.fdays$fdays)
 coast.catch=read_csv("data/read_only/coastal_catch.csv")
-rec.catch=read_excel("data/fisheries_statistics/recf_catch.xlsx", 
-                     sheet = "tab2")
+rec.catch=read.csv("C:/github/extreme_weather_risk/data/fisheries_statistics/rec_catch_SWE.csv")
 rec.catch=rec.catch[rec.catch$name %in% c('Perch', 'Pike', 'Salmon', 'Zander', 'Whitefish', 'Trout', 'Herring','Cod',
                                           'Not specified'),]
-rec.practics=read_excel("data/fisheries_statistics/recf_catch.xlsx", 
-                        sheet = "tab1")
-rec.catch=left_join(rec.catch, rec.practics)
 rec.catch$prop=rec.catch$practitioners/sum(rec.catch$practitioners)
 
 # DAG
-net=read.net('data/networks/BEWARE_r1_2.net', debug = F)
+net=read.net('data/editable_files/networks/BEWARE_release_v1_0_0.net', debug = F)
 #graphviz.chart(net)
-
+library(profvis)
+ini=Sys.time()
+#profvis({
+  
 # format data ####
 evts=evts[!is.na(evts$event_code),]
 int.dat=left_join(int.dat[,-which(colnames(int.dat)=='event_code')], evts, by='id_sub')
@@ -80,11 +80,6 @@ xdim=dim(array.var)
 array.var[1:xdim]=rep(1/xdim, xdim)
 net[['fishing_style']]=array.var
 
-array.var=net[['stock_status']]$prob
-xdim=dim(array.var)
-array.var[1:xdim]=rep(1/xdim, xdim)
-net[['stock_status']]=array.var
-
 array.var=net[['aware_of_event']]$prob
 xdim=dim(array.var)
 array.var[1:xdim]=rep(1/xdim, xdim)
@@ -109,8 +104,13 @@ df.var[df.var$strategy_to_change!='not_relevant' & df.var$fishing_style=='househ
 # those that changes, set baseline first. 
 df.var[df.var$strategy_to_change!='not_relevant' & 
          df.var$fishing_style=='recreational',]$Freq=c(0,0,0,0,0.42,0,0.58) # tabell 2. FIshing days inland = 5814; Kust = 4303. Kust accounts for 42% of rec fishing
+
 df.var[df.var$strategy_to_change!='not_relevant' & 
-         df.var$fishing_style=='guide',]$Freq=c(0,0,0,0,0.42,0,0.58) # tabell 2. FIshing days inland = 5814; Kust = 4303. Kust accounts for 42% of rec fishing
+         df.var$fishing_style=='recreational',]$Freq=c(0,0,0,0,1,0,0)
+
+
+df.var[df.var$strategy_to_change!='not_relevant' & 
+         df.var$fishing_style=='guide',]$Freq=c(0,0,0,0,1,0,0) # tabell 2. FIshing days inland = 5814; Kust = 4303. Kust accounts for 42% of rec fishing
 
 # small scale from DCF data
 coast.fdays$metier=tolower(coast.fdays$metier)
@@ -173,7 +173,7 @@ df.var[df.var$strategy_to_change!='not_relevant' &
          df.var$extreme_event%in%c('hww'),]$Freq=c(0,0,0,0,0,1,0)
 
 df.var[df.var$strategy_to_change=='adapt' & df.var$fishing_style%in%c('guide', 'recreational')&
-         df.var$extreme_event=='hww',]$Freq=c(0,0,0,0,1,0,0) # rod
+         df.var$extreme_event=='hww',]$Freq=c(0,0,0,0,1,0,0) # lhp
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 pl=df.var%>%
@@ -181,7 +181,7 @@ pl=df.var%>%
   ggplot(aes(x=extreme_event, y=Freq, fill=gear))+
   geom_col()+
   facet_wrap(~fishing_style);pl
-ggsave(plot=pl, 'results/images/gear.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/gear.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 gear.dataset=df.var%>%
   dplyr::filter(Freq >0, strategy_to_change!='not_relevant')%>%
@@ -208,20 +208,52 @@ df.var$Freq=c(rep(0,6),1) # the baseline is not better specified for all
 # baseline target per gear
 # species are  herring,perch, pike,  salmon, seatrout, whitefish, not specified
 df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='otm',]$Freq=c(1,0,0,0,0,0,0)
-df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='icefishing',]$Freq=c(0,0.5,0.5,0,0,0,0)
+df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='icefishing',]$Freq=c(0,0.33,0.34,0,0,0.33,0)
 df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='gns_spf',]$Freq=c(1,0,0,0,0,0,0) # only herring
 
-round(coast.catch[coast.catch$metier=='GNS_FWS',]$prop, digits=2)
-sum(round(coast.catch[coast.catch$metier=='GNS_FWS',]$prop, digits=2))
-0.33+0.09# whitefish
-df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='gns_fws',]$Freq=c(0,0.45,0,0,0,0.42,0.13)
 
-round(coast.catch[coast.catch$metier=='FPN_ANA',]$prop, digits=2)
-sum(round(coast.catch[coast.catch$metier=='FPN_ANA',]$prop, digits=2))
-df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='fpn_ana',]$Freq=c(0,0,0,0.66,0.06,0.23,0.05)
 
-rec.catch
-df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='rod',]$Freq=c(0.07,0.29,0.18,0.05,0.13,0.03,0.25)
+catch.gns=coast.catch[coast.catch$metier=='GNS_FWS',]
+catch.gns[catch.gns$English_name=='Vendace', ]$English_name='whitefish vendace'
+catch.gns[catch.gns$English_name=='European perch', ]$English_name='perch'
+catch.gns$target.code=tolower(substr(catch.gns$English_name,1,3))
+catch.gns=catch.gns%>%dplyr::group_by(target.code)%>%
+  dplyr::summarise(value=sum(prop))
+trg1=df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='gns_fws',]%>%
+  distinct(target);trg1
+trg1$target.code=substr(trg1$target,1,3)
+trg1=left_join(trg1, catch.gns, by='target.code')%>%
+  replace(is.na(.),0)
+trg1[trg1$target=='not_specified',]$value=1-sum(trg1[trg1$target!='not_specified',]$value)
+df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='gns_fws',]$Freq=trg1$value
+
+
+catch.fpn=coast.catch[coast.catch$metier=='FPN_ANA',];catch.fpn
+catch.fpn[catch.fpn$English_name=='Vendace', ]$English_name='whitefish vendace'
+catch.fpn[catch.fpn$English_name=='Atlantic salmon', ]$English_name='salmon'
+catch.fpn$target.code=tolower(substr(catch.fpn$English_name,1,3))
+catch.fpn=catch.fpn%>%dplyr::group_by(target.code)%>%
+  dplyr::summarise(value=sum(prop))
+trg1=df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='fpn_ana',]%>%
+  distinct(target);trg1
+trg1$target.code=substr(trg1$target,1,3)
+trg1=left_join(trg1, catch.fpn, by='target.code')%>%
+  replace(is.na(.),0)
+trg1[trg1$target=='not_specified',]$value=1-sum(trg1[trg1$target!='not_specified',]$value)
+df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='fpn_ana',]$Freq=trg1$value
+
+
+
+rec.catch[rec.catch$name=='Trout', ]$name='sea trout'
+rec.catch$target.code=tolower(substr(rec.catch$name,1,3))
+
+trg1=df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='lhp',]%>%
+  distinct(target);trg1
+trg1$target.code=substr(trg1$target,1,3)
+trg1=left_join(trg1, rec.catch, by='target.code')%>%
+  replace(is.na(.),0)
+trg1[trg1$target=='not_specified',]$prop=1-sum(trg1[trg1$target!='not_specified',]$prop)
+df.var[df.var$strategy_to_change!='not_relevant' & df.var$gear=='lhp',]$Freq=trg1$prop
 
 pl=df.var%>%
   dplyr::filter(strategy_to_change=='cope')%>%
@@ -236,7 +268,7 @@ change.rec=data.frame(target=unique(df.var$target),
   dplyr::summarise(val=mean(val))%>%
   dplyr::mutate(change=val-1)
 rec.catch=df.var[df.var$strategy_to_change=='adapt' & 
-                   df.var$gear=='rod' &
+                   df.var$gear=='lhp' &
                    df.var$extreme_event=='hws',]
 
 change.rec=left_join( rec.catch, change.rec)
@@ -255,7 +287,7 @@ change.rec$new.freq=ifelse(is.na(change.rec$new.freq),change.rec$Freq ,change.re
 
 
 df.var[df.var$strategy_to_change=='adapt' & 
-         df.var$gear=='rod' &
+         df.var$gear=='lhp' &
          df.var$extreme_event=='hws',]$Freq=change.rec$new.freq # goes more for perch
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
@@ -266,7 +298,7 @@ pl=df.var%>%
   geom_col()+
   facet_wrap(~gear);pl
 
-ggsave(plot=pl, 'results/images/target.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/target.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 target.prob=df.var%>%
   dplyr::filter(strategy_to_change=='cope')%>%
@@ -357,7 +389,7 @@ pl=df.var%>%
   geom_col()+
   facet_grid(cols=vars(extreme_event));pl
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-ggsave(plot=pl, 'results/images/strategy.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/strategy.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 
 ## go fishing ####
@@ -436,7 +468,7 @@ pl=df.var%>%
   ggplot(aes(x=extreme_event, y=Freq, fill=go_fishing))+
   geom_col()+
   facet_wrap(~fishing_style);pl
-ggsave(plot=pl, 'results/images/go_out.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/go_out.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 # technical solutions ####
 i.node='additional_mitigation'
@@ -497,7 +529,7 @@ pl=df.var%>%
   geom_col()+
   facet_grid(cols=vars(fishing_style),
              rows=vars(extreme_event));pl
-ggsave(plot=pl, 'results/images/mitigation.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/mitigation.jpeg', width = 18, height = 8, units='cm', dpi=150)
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 
@@ -553,7 +585,7 @@ pl=df.var%>%
   geom_col()+
   facet_grid(rows=vars(additional_mitigation), cols=vars(gear));pl
 
-ggsave(plot=pl, 'results/images/safety.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/safety.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 ## damage ####
 i.node='damage'
@@ -606,7 +638,7 @@ pl=df.var%>%
   ggplot(aes(x=extreme_event, y=Freq, fill=damage))+
   geom_col()+
   facet_wrap(~gear);pl
-ggsave(plot=pl, 'results/images/damage.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/damage.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 
 ## catch_condition ####
@@ -691,7 +723,7 @@ pl=df.var%>%
   ggplot(aes(x=target, y=Freq, fill=catch_condition))+
   geom_col()+
   facet_grid(rows=vars(additional_mitigation), cols=vars(extreme_event));pl
-ggsave(plot=pl, 'results/images/catch_condition.jpeg', width = 18, height = 8, units='cm', dpi=150)
+#ggsave(plot=pl, 'results/images/catch_condition.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 
 ## catchability ####
@@ -832,23 +864,13 @@ df.var%>%
   geom_col()+
   theme(axis.text.x = element_text(angle=45))+
   facet_grid(cols=vars(fishing_style), rows=vars(damage))
-bnlearn::write.net( 'data/networks/BEWARE_r1_learn_pt1.net', net)
+#bnlearn::write.net( 'data/networks/BEWARE_r1_learn_pt1.net', net)
 
 # Load data ####
 # data from interviews
-questionnaire=read_excel("data/dialogues_raw.xlsx", 
-                         sheet = "questions")
-
-int.dat=read_csv("data/read_only/coding_report_unc.csv")
-
-evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
-                        sheet = "events")
-
-style.dataset=read_excel("data/dialogues_raw.xlsx", 
-                         sheet = "fishers")
 names(style.dataset)[3]='fishing_style'
-
-bn.desc=read_excel("data/nodes_text.xlsx")
+int.dat=read_csv("data/read_only/coding_report_unc.csv")
+bn.desc=read_excel("data/editable_files/nodes_text.xlsx")
 
 # data from literature
 cost.dat=read_csv("data/read_only/cost_df_v2.csv")
@@ -878,7 +900,7 @@ hc.dat=int.dat[int.dat$short_description %in% x.nodes,]
 ## temporary solution: this needs to be fixed
 hc.dat[hc.dat$uncertainty==-99.8 & !is.na(hc.dat$uncertainty),]$uncertainty=3/5 # this is the archipelago fisherman that does not know what to say
 #hc.dat[hc.dat$value==999 & !is.na(hc.dat$uncertainty),]$value=2 # recreational fisherman question about benefit to community. Need better interpretation
-
+unique(hc.dat$id_I)
 hc.dat=left_join(hc.dat,style.dataset[,c('id_I', "fishing_style")])
 
 i=4
@@ -1068,49 +1090,25 @@ p2=df.var%>%
   geom_col(aes(x=health, y=Freq, fill=non_monetary_value))+
   facet_grid(cols=vars(satisfaction), rows=vars(substitution_capacity))+
   theme(legend.position='bottom')
-ggpubr::ggarrange(p1,p2, common.legend = T, labels=c('a: no fishing', 'b: fishing'))
+#ggpubr::ggarrange(p1,p2, common.legend = T, labels=c('a: no fishing', 'b: fishing'))
 
 # realised catches ####
 x.var='catches'
 array.var=net[[x.var]][['prob']]
-xdim0=dim(array.var)
-xdim=dim(array.var)[c(1,3,4)]
+xdim=dim(array.var)
 xnam=dimnames(array.var)
-xnam2=xnam
-xnam2$catches=c( "poor","average", "good"  )
 
 df.var=as.data.frame(array.var)
 df.var[df.var$go_fishing%in% c('no', 'not_relevant'),]$Freq=c(1,0,0,0)
+df.var[df.var$go_fishing == 'yes' & df.var$catchability =='same',]$Freq=c(0,0,1,0)
+df.var[df.var$go_fishing == 'yes' & df.var$catchability =='worse',]$Freq=c(0,1,0,0)
+df.var[df.var$go_fishing == 'yes' & df.var$catchability =='better',]$Freq=c(0,0,0,1)
 
-x.lev=levels(df.var[,x.var])
-target.dims=names(df.var)
-target.dims=target.dims[-which(target.dims %in% c(x.var,'Freq', 'go_fishing'))]
-direction=c('pos', 'pos','pos')
-
-supp.data=data.frame(node=c(target.dims,x.var), 
-                     link.w=c(1,2,1),
-                     states=c(3,3,3),
-                     type=c(rep('parent', length(target.dims)) , 'child'),
-                     direction=direction,
-                     id=1:length(xdim)) 
-x.cpt=rank.cpt(nodes.df = supp.data, uncertainty = 0.1, algorithm = 'min', xnam=xnam2[c(1,3,4)])
-
-x.cpt[[1]]%>%
-  pivot_longer(cols=c('poor', 'average', 'good'), names_to = 'catches')%>%
-  ggplot(aes(x=catchability, y=value, fill=catches))+
-  facet_grid(cols=vars(stock_status))+
+df.var%>%
+  ggplot(aes(x=catchability, y=Freq, fill=catches))+
+  facet_grid(cols=vars(go_fishing))+
   geom_col()
-
-x.cpt=x.cpt[[1]]%>%
-  pivot_longer(cols=c('poor', 'average','good'), names_to = 'catches')%>%
-  dplyr::mutate(catches=factor(catches, levels=c('poor', 'average','good')))%>%
-  arrange(catchability , stock_status ,(catches))
-
-df.var[df.var$go_fishing%in% c('yes') & df.var$catches!='no',]$Freq=x.cpt$value
-df.var[df.var$go_fishing%in% c('yes') & df.var$catches=='no',]$Freq=0
-
-
-net[[x.var]]=array(df.var$Freq, dim=xdim0, dimnames=xnam)
+net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 
 
@@ -1319,16 +1317,16 @@ df.var%>%
 
 #
 if(sim.uncertainty==0){
-  bnlearn::write.net( 'data/networks/BEWARE_learnt_r1_0_0.net', net)
+  bnlearn::write.net( 'data/read_only/networks/BEWARE_learnt_r1_0_0.net', net)
 }else{
-  bnlearn::write.net( 'data/networks/BEWARE_learnt_r1_0_0_iter.net', net)
+  bnlearn::write.net( 'data/read_only/networks/iterations/BEWARE_learnt_r1_0_0_iter.net', net)
 }
 
 #save(net, file='data/networks/BEWARE_v3_learn_pt2.rdata')
 
-
-
-
+#})
+fin=Sys.time()
+fin-ini
 
 
 

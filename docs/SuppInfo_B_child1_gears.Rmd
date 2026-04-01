@@ -100,8 +100,7 @@ print(p)
 Dataset D3 shows the number of practitioners for each recreational fishing method. Fishing methods based on hook and lines are dominating the distribution reported in Fig. C.3. Cages and nets are the two main techniques tath does not base on hook and line. Cages are predominantly used in crustaceans fishery on the west coast of Sweden. The use of nets in popular in the Baltic Sea. For the purpose of this study we consider that only hook and line methods apply for the recreational fishing style, with no distinction among methods. We apply distinction between inland fishing and sea fishing, using estimates from Table 2 (5814 thousand practitioners inland; 4303 practitioners at sea). Nets applies to the household fishing style.
 
 ```{r, include=T, echo=F,message=FALSE,  results = 'asis', fig.width = 6, fig.height=4, warning=FALSE, fig.cap='Fishing days by fishing technique applied by swedish recreational fishers'}
-rec.eff=read_excel("C:/github/extreme_weather_risk/data/fisheries_statistics/recf_catch.xlsx", 
-                     sheet = "tab6")
+rec.eff=read.csv("C:/github/extreme_weather_risk/data/fisheries_statistics/rec_gears_SWE.csv")
 
 
 eff.plot=rec.eff%>%
@@ -269,18 +268,9 @@ For recreational fishers we are interested in the distribution of number of prac
 
 
 ```{r, include=T, echo=F,message=FALSE,  results = 'asis', fig.width = 6, fig.height=6, warning=FALSE, fig.cap='Catches for recreational fishers'}
-rec.catch=read_excel("C:/github/extreme_weather_risk/data/fisheries_statistics/recf_catch.xlsx", 
-                     sheet = "tab2")
-rec.practics=read_excel("C:/github/extreme_weather_risk/data/fisheries_statistics/recf_catch.xlsx", 
-           sheet = "tab1")
-
-
-
+rec.catch=read.csv("C:/github/extreme_weather_risk/data/fisheries_statistics/rec_catch_SWE.csv")
 rec.catch=rec.catch[rec.catch$name %in% c('Perch', 'Pike', 'Salmon', 'Zander', 'Whitefish', 'Trout', 'Herring','Cod',
                                 'Not specified'),]
-
-
-rec.catch=left_join(rec.catch, rec.practics)
 rec.catch$prop=rec.catch$practitioners/sum(rec.catch$practitioners)
 
 rec.catch%>%

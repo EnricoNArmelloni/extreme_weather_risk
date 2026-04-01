@@ -16,25 +16,25 @@ sim.uncertainty=0
 
 # Load data ####
 # data from interviews
-questionnaire=read_excel("data/dialogues_raw.xlsx", 
+questionnaire=read_excel("data/editable_files/dialogues_raw.xlsx", 
                          sheet = "questions")
 
 int.dat=read_csv("data/read_only/coding_report_unc.csv")
 
-evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
                         sheet = "events")
 
-style.dataset=read_excel("data/dialogues_raw.xlsx", 
+style.dataset=read_excel("data/editable_files/dialogues_raw.xlsx", 
                          sheet = "fishers")
 names(style.dataset)[3]='fishing_style'
 
-bn.desc=read_excel("data/nodes_text.xlsx")
+bn.desc=read_excel("data/editable_files/nodes_text.xlsx")
 
 # data from literature
 cost.dat=read_csv("data/read_only/cost_df_v2.csv")
 
 # BN
-net=read.net('data/networks/BEWARE_r1_learn_pt1.net', debug = T)
+net=read.net('data/editable_files/networks/BEWARE_r1_learn_pt1.net', debug = T)
 
 # format data ####
 int.dat=left_join(int.dat[,-which(colnames(int.dat)=='event_code')], evts, by='id_sub')

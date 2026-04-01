@@ -28,9 +28,8 @@ library(truncnorm)
 theme_set(theme_bw())
 int.dat=read_csv(file.path(scriptDir, '..',"data/read_only/coding_report_unc.csv"),  locale = locale(encoding = "ASCII"))
 aer.dat=read_csv(file.path(scriptDir, '..',"data/fisheries_statistics/AER_SWE.csv"))
-recf.numb=read_excel(file.path(scriptDir, '..',"data/fisheries_statistics/recf_catch.xlsx"),sheet = "tab4")
-recf.exp=read_excel(file.path(scriptDir, '..',"data/fisheries_statistics/recf_catch.xlsx"), sheet = "tab3")
-style.dataset=read_excel(file.path(scriptDir, '..',"data/dialogues_raw.xlsx"), 
+recf.dat=read.csv("C:/github/extreme_weather_risk/data/fisheries_statistics/rec_economics_SWE.csv")
+style.dataset=read_excel(file.path(scriptDir, '..',"data/editable_files/dialogues_raw.xlsx"), 
                          sheet = "fishers")
 
 # some formatting
@@ -398,17 +397,20 @@ Pelagic economic information is derived from the recreational fisheries statisti
 
 ```{r, include=T, echo=F, results = 'asis',message=FALSE, warning=FALSE, fig.width = 12, fig.height=4, warning=FALSE, fig.cap='CPT estimated for recreational fisherman'}
 ## economic data from Friskitverkeretet
+recf.numb=recf.dat[recf.dat$category=='effort',]
+recf.exp=recf.dat[recf.dat$category=='expenses',]
+
 # annual values per person
 sek_person=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
-                             y.mu=recf.numb[1,]$mean_value/1000, y.er=recf.numb[1,]$error/1000)
+                             y.mu=recf.numb[1,]$mean/1000, y.er=recf.numb[1,]$error/1000)
 sek_person$category=recf.exp$category
 
 sek_day=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
-                  y.mu=recf.numb[2,]$mean_value/1000, y.er=recf.numb[2,]$error/1000)
+                  y.mu=recf.numb[2,]$mean/1000, y.er=recf.numb[2,]$error/1000)
 sek_day$category=recf.exp$category
 
 sek_boat=error.propagation(x.mu=recf.exp$mean, x.er=recf.exp$error, 
-                           y.mu=recf.numb[3,]$mean_value/1000, y.er=recf.numb[3,]$error/1000)
+                           y.mu=recf.numb[3,]$mean/1000, y.er=recf.numb[3,]$error/1000)
 sek_boat$category=recf.exp$category
 
 ## get mean cost for trips

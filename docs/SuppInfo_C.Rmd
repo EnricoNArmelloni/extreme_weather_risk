@@ -1,9 +1,28 @@
 ---
-title: "Appendix B: conditional probability tables."
-output:
-  pdf_document:
-    toc: true
-    toc_depth: 3
+title: "Supplementary Info C: conditional probability tables."
+author:
+  - Mario Modesto-Mata:
+      email: paleomariomm@gmail.com
+      institute: [astro, med]
+      correspondence: true
+  - name: Christopher
+    institute: astro
+  - name: Seaghán Mhartain
+    institute: med
+  - name: Rita Yuri Ynoue
+    institute: astro
+institute:
+  - astro: Instituto de Astronomía, Geofísica e Ciências Atmosféricas, Universidade de São Paulo
+  - med: Faculdade de Medicina, Universidade de São Paulo
+date: "1 October 2018"
+output: 
+  pdf_document: 
+    number_sections: yes
+    toc: yes
+    toc_depth: 4
+    pandoc_args:
+      - '--lua-filter=scholarly-metadata.lua'
+      - '--lua-filter=author-info-blocks.lua'
 bibliography: references.bib
 ---
 
@@ -17,9 +36,9 @@ library(bnlearn)
 library(readxl)
 library(gRain)
 theme_set(theme_bw())
-net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_r1_learn_pt2.net'), debug = F)
+net=read.net(file.path(scriptDir, '..','data/read_only/networks/BEWARE_learnt_r1_0_0.net'), debug = F)
 net.node=nodes(net)
-node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
+node.text=read_excel(file.path(scriptDir, '..','data/editable_files/nodes_text.xlsx'))
 node.text=node.text[node.text$node %in% nodes(net), ]
 
 #node.text[-which(node.text$node %in% nodes(net)), ]
@@ -97,11 +116,11 @@ create.plots=function(target.nodes, net){
     p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
       geom_col()+
       facet_grid(cols = vars(!!as.name(x.parents[2])),
-                 rows = vars(!!as.name(x.parents[3])))+
+                 rows = vars(!!as.name(x.parents[3]),!!as.name(x.parents[4])))+
       scale_x_discrete(guide = guide_axis(n.dodge = 2))
-    plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'; rows are levels of the node ', x.parents[3],'.')
+     plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'; rows are combinations levels of the nodes ', x.parents[3],' and ', x.parents[4],'.')
   }
-  plot.list[[i]]=p+theme(legend.position = 'bottom')
+  plot.list[[i]]=p+theme(legend.position = 'bottom')+scale_y_continuous(breaks = c(0,0.5,1))
   names(plot.list)[[i]] = c(paste0("conditional distribution for ", target.nodes[i], plot.lab))
 }
   return(plot.list)
@@ -122,6 +141,8 @@ knit.fun=function(target.nodes, net){
     x.parents=names(xnam)
     x.parents=x.parents[x.parents!=i.node]
     x.levs=xnam[[i.node]]
+    
+    x.h=ifelse(length(x.parents)==4,8,5)
     
     # print characteristics
     cat("\n") 
@@ -144,7 +165,7 @@ knit.fun=function(target.nodes, net){
     # plotting
     cat('\n\n') 
     chunk_text <- paste0(
-      "```{r, echo=FALSE, fig.width=10, fig.height=5, fig.pos='H', fig.cap='",
+      "```{r, echo=FALSE, fig.width=10, fig.height=",x.h,", fig.pos='H', fig.cap='",
       (names(plot.list)[i]),
       "'}\n",
       "print(plot.list[[", i, "]])\n",
@@ -251,18 +272,6 @@ The node *Fishing style* is used to wrap all the fishing styles and seasons.
 -   **Pelagic trawlers** (trw), represented by pelagic trawlers active in winter and exclusively fishing for small pelagic with midwater trawl (otm);
 
 -   **Archipelago fishers** (arc), which is similar to an artisanal fishers but is by law prevented from selling their catches.
-
-## Stock status
-
-it controls how much fishing regulations allows fishers to implement adaptation strategies (e.g.: changing target species and gear).
-
-*Levels (and acronyms)*
-
--   **status quo** (SQ): each fishing style adopts strategies and behaviour according to interviews results
-
--   **improved stock status** (FLEX). Fishing style is allowed for more flexibility.
-
--   **worsened stock status**
 
 ## Aware
 

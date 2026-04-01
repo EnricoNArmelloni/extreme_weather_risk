@@ -17,13 +17,13 @@ library(kableExtra)
 
 coding=read_csv(file.path(scriptDir, '..', 'data/read_only', 'coding_report.csv'))
 
-evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
     sheet = "events")
 
-fisher=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+fisher=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
     sheet = "fishers")
 
-resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
                         sheet = "responses")
 #resp$id_I=as.character(resp$id_I)
 
@@ -122,7 +122,7 @@ Expert scoring of keywords produced the following results, which were used to as
 
 ```{r , echo=FALSE,message = FALSE,results = 'asis'}
 
-exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/coding_expert_revision_blind.xlsx")
+exp.scoring <- read_excel("C:/github/extreme_weather_risk/data/editable_files/coding_expert_revision_blind.xlsx")
 
 kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE, caption = 'scores assigned by experts to answers not providing an explicit scoring') %>%
             kable_styling(font_size = 7)%>% 

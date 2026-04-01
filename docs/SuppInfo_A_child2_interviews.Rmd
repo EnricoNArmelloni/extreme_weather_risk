@@ -33,16 +33,16 @@ rm(list = ls())
 ## load data
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
-resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
     sheet = "responses")
 
-quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+quest=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
     sheet = "questions")
 
-evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+evts=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
     sheet = "events")
 
-fisher=readxl::read_excel(file.path(scriptDir, '..', 'data', 'dialogues_raw.xlsx'), 
+fisher=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialogues_raw.xlsx'), 
     sheet = "fishers")
 
 coding= read_csv("C:/github/extreme_weather_risk/data/read_only/coding_report.csv")

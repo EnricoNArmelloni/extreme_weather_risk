@@ -9,7 +9,7 @@ library(ggrepel)
 library(readxl)
 library(gRain)
 theme_set(theme_bw())
-net=read.net('data/networks/BEWARE_r1_learn_pt2.net', debug = T)
+net=read.net('data/read_only/networks/BEWARE_learnt_r1_0_0.net', debug = T)
 source('code/supporting_r1.R')
 firstup <- function(x) {
   substr(x, 1, 1) <- toupper(substr(x, 1, 1))
@@ -19,7 +19,7 @@ sim.uncertainty=1
 
 # Load data ####
 # data from interviews
-style.dataset=read_excel("data/dialogues_raw.xlsx", 
+style.dataset=read_excel("data/editable_files/dialogues_raw.xlsx", 
                          sheet = "fishers")
 styles=style.dataset%>%distinct(f.style=code, short_description)
 
@@ -33,7 +33,6 @@ for(i in 1:length(ev.list)){
   # query
   i.res=cpdist(net, nodes = c('catch_condition', 'personal_safety', 'damage', 'catchability'), 
                evidence = list(extreme_event = ev.list[i],
-                               stock_status='status_quo',
                                aware_of_event='no', strategy_to_change='cope'), n=10^5, method='lw')
   i.res$extreme_event=ev.list[i]
   
@@ -56,8 +55,7 @@ for(i in 1:length(ev.list)){
   # query
   i.res=cpdist(net, nodes = c('economic_risk', 'societal_risk','individual_risk','go_fishing', 'strategy_to_change'), 
                evidence = list(extreme_event = ev.list[i],
-                               stock_status='status_quo',
-                               aware_of_event='yes'), n=10^5, method='lw')
+                                                   aware_of_event='yes'), n=10^5, method='lw')
   i.res$extreme_event=ev.list[i]
   
   # results are many observations. I summerise directly here
@@ -155,7 +153,6 @@ pca.plot=ggplot(scores, aes(PC1, PC2)) +
   scale_color_manual(values=c('darkgreen', 'lightgreen', 'yellow', 'red', 'brown' ))+
   xlab(paste('PC1 (', round(comp1, digits=3)*100 ,'%)'))+
   ylab(paste('PC2 (', round(comp2, digits=3)*100 ,'%)'));pca.plot
-
 ggsave(plot=pca.plot, 'results/scenarios/s1_pca.png', width = 120, height = 120, units='mm', dpi=500)
 
 # risks plot
@@ -231,7 +228,7 @@ ev.store.2=NULL
 for(i in 1:length(fi.list)){
   i.res=cpdist(net, nodes = c('economic_risk', 'societal_risk','individual_risk', 
                                  'strategy_to_change', 'go_fishing', 'substitution_capacity', 'economic_buffers', 'societal_importance', 'individual_importance', 'non_monetary_value', 'monetary_loss'), 
-               evidence = list(fishing_style = fi.list[i], stock_status='status_quo',
+               evidence = list(fishing_style = fi.list[i], 
                                aware_of_event='yes'), n=10^5, method='lw')
     i.res$fishing_style=fi.list[i]
     
@@ -319,9 +316,7 @@ ss1=rbind(ev.store[which(ev.store$node %in% c('go_fishing')),],
   scale_y_continuous(breaks=c(0,0.5,1))+
   scale_x_discrete(guide = guide_axis(n.dodge = 2))
 
-ggsave(plot=p.RQ2.c, 'results/scenarios/s2_effect.png', width = 210, height = 120, units='mm', dpi=500)
 ggsave(plot=ss1, 'results/scenarios/ss_effect.png', width = 210, height = 100, units='mm', dpi=500)
-ggsave(plot=p.f3, 'results/scenarios/s1_2.png', width = 180, height = 120, units='mm', dpi=500)
 
 new.buffer=effects.df%>%
   dplyr::filter(node %in% c('economic_buffers', 'societal_importance','individual_importance'))%>%
@@ -360,15 +355,6 @@ strat.df=p2%>%
   dplyr::mutate(st_prob=st_prob/sum(st_prob))
 
 extr2=left_join(obj.store, strat.df)
-
-
-
-prq2.1=ggpubr::ggarrange( pl.kobe,p.RQ2.c, labels=(c('a)','b)')), nrow=2);prq2.1
-
-p.rq2.2=ggpubr::ggarrange(p.f2,p.f1,  ncol=1, labels=(c('c)','d)')))
-pr2c=ggpubr::ggarrange(prq2.1, p.rq2.2, ncol=1)
-
-ggsave(plot=pr2c, 'results/scenarios/s3_c.png', width = 220, height = 250, units='mm', dpi=500)
 
 
 # radar plot
@@ -531,6 +517,38 @@ ggsave(plot=p.f2, 'results/scenarios/sS_risk.png', width = 200, height = 200, un
 
 
 
+## Table 4
+node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
+net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_learn_pt2.net'), debug = T)
+x.nodes=nodes(net)
+
+
+table.format=NULL
+i=5
+for(i in 1:length(x.nodes)){
+  
+  extra.info=node.text[node.text$node==x.nodes[i],]
+  x.var=x.nodes[i]
+  if(x.var %in% c('Node5', 'Node1')){next}
+  array.var=net[[x.var]][['prob']]
+  xdim=dim(array.var)
+  xnam=dimnames(array.var)
+  df.var=as.data.frame(array.var)
+  if(ncol(df.var)==2){
+    x.lev=levels(df.var$Var1)
+    x.parent=NA
+  }else{
+    x.lev=levels(df.var[,x.var])
+    x.parent=names(df.var)[-which(names(df.var)%in% c(x.var, 'Freq'))]
+  }
+  x.lev=paste(x.lev, collapse=', ')
+  x.parent=paste(x.parent, collapse=', ')
+  
+  result=data.frame(name=x.nodes[i], group= extra.info$group, specification=extra.info$short_text, levels= x.lev, parents= x.parent, cycle=extra.info$cycle)
+  table.format=rbind(table.format, result)
+}
+
+write.csv(table.format, file.path(scriptDir, '..','results/tables/tab4_cpt_description.csv'), row.names = F)
 
 
 
