@@ -12,9 +12,8 @@ output: github_document
 -   [Quick start](#quick-start)
 -   [Usage (GeNIe GUI)](#usage_1)
 -   [Usage (bnlearn)](#usage_2)
--   [Known issues and limitations](#known-issues-and-limitations)
--   [Getting help](#getting-help)
 -   [Contributing](#contributing)
+-   [Getting help](#getting-help)
 -   [License](#license)
 -   [Acknowledgments](#acknowledgments)
 
