@@ -1,45 +1,40 @@
 ---
 output: github_document
 ---
-
-Please send issues and questions to: [enrico.e.armelloni\@gmail.com](mailto:enrico.e.armelloni@gmail.com){.email}
-
-This page is under construction
-
-![Figure 1: discrete predictions of Instantaneous Growth Rate, with water temperature = 18 °, food amount = 0.8 \* libitum, food type = medium shrimps (grass shrimps)](Blank%20diagram.jpeg?raw=true "Title")
-
 # BEWARE: a Bayesian Extreme WeAtheR Event model for fishing operations
 
-
-[![License](https://img.shields.io/badge/License-CC0-lightgray.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Latest release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/mhucka/readmine/releases)
-[![DOI](http://img.shields.io/badge/DOI-10.5281%2fzenodo.10633361-blue.svg?style=flat-square)](https://zenodo.org/records/10633361)
-
+[![License](https://img.shields.io/badge/License-CC0-lightgray.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/) [![Latest release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/mhucka/readmine/releases) [![DOI](http://img.shields.io/badge/DOI-10.5281%2fzenodo.10633361-blue.svg?style=flat-square)](https://zenodo.org/records/10633361)
 
 ## Table of contents
 
-* [Introduction](#introduction)
-* [Quick start](#quick-start)
-* [Usage (GeNIe GUI)](#usage_1)
-* [Usage (bnlearn)](#usage_2)
-* [Known issues and limitations](#known-issues-and-limitations)
-* [Getting help](#getting-help)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgments](#acknowledgments)
+-   [Introduction](#introduction)
+-   [Quick start](#quick-start)
+-   [Usage (GeNIe GUI)](#usage_1)
+-   [Usage (bnlearn)](#usage_2)
+-   [Known issues and limitations](#known-issues-and-limitations)
+-   [Getting help](#getting-help)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Acknowledgments](#acknowledgments)
 
-
-## Introduction
+## Introduction {#introduction}
 
 Welcome to BEWARE repository. BEWARE is a Bayesian Network model for risk analysis regarding the effects of extreme weather events on fisheries. The model has been developed in a participatory approach with commercial and recreational Swedish fishers. The model description is provided in DOI.
 
-## Quick start
+## Quick start {#quick-start}
 
-BEWARE is released as .net file and is compatible with several softwares for Bayesian Network modeling. We have been using GeNIe Modeler (REF), a Graphical User Interface available as free software for academic research purposes (https://download.bayesfusion.com/files.html?category=Academia).
+BEWARE is released as .net file and is compatible with several softwares for Bayesian Network modeling. We have been using GeNIe Modeler (REF), a Graphical User Interface available as free software for academic research purposes (<https://download.bayesfusion.com/files.html?category=Academia>).
 
 Once you have GeNIe installed, you can just open the BEWARE.net file, adjust visualization settings in the software, and you are ready to explore the risks.
 
+### Adjusting visualisation
 
+The .net file format does not support visualisation rules to be interpreted by GeNIe software. When you import the .net file for the first time all nodes are shown as plain icons and are stacked on top of each other.  
+We recommend:
+-  to change visualization to Bar Chart. This is done by dragging a selection box around the icons, then right-click on the first icon on the pile. A side menu (Figure 1) would appear. Navigate on the *view as* option, then select *Bar Chart*.
+-  to display the nodes in your available screen space by dragging them. You can eventually change color backgrounds. Our preferred option is shown in Figure 2.
+
+![Figure 1: Changing visualisation from icon to Bar Chart](README_figures/fig_1bis.jpg){width="400"}
 
 ## Usage (GeNIe GUI)
 
@@ -47,6 +42,13 @@ After setting up the GeNIe software as explained in the [Quick start](#quick-sta
 
 ### Setting decision nodes and update the probability distribution
 
+Probabilities distributions are updated by clicking on the "flashing light" icon as shown in Figure 2. A simple update would show the probability distribution in absence of any evidence. This imply that all the levels of the decision nodes (colored in yellow in Figure 2) have equal probability. To include evidences there are two options: (1) left-click on one level of the decision node to select it with 100% probability (Figure), (2) using the virtual evidence panel (Figure) to set the probabilities for multiple levels. The virtual probability panel is accessible by right-clicking on a decision node. Once the evidences are included, right click again on the "update" icon.
+
+![Figure 2: Changing visualisation from icon to Bar Chart](README_figures/fig_3.jpg){width="350"}
+
+![Figure 3: Changing visualisation from icon to Bar Chart](README_figures/fig_3bis.jpg){width="350"}
+
+![Figure 4: Changing visualisation from icon to Bar Chart](README_figures/fig_4.jpg){width="300"}
 
 ## Usage (bnlearn)
 
@@ -54,47 +56,41 @@ After setting up the GeNIe software as explained in the [Quick start](#quick-sta
 
 ### Setting decision nodes and update the probability distribution
 
-
 ## Contributing - application to your case study
 
 If your project accepts open-source contributions, this is where you can welcome contributions and explain to readers how they can go about it. Mention the [`CONTRIBUTING.md`](CONTRIBUTING.md) file in your repository, if you have one.
 
-
-## Getting help
+## Getting help {#getting-help}
 
 Inform readers how they can contact you, or at least how they can report problems they may encounter. This could take the form of a request to use the issue tracker on your repository. Some projects have associated discussion forums or mailing lists, and this section is a good place to mention those.
 
-
-
-
-## License
+## License {#license}
 
 This section should state any copyright asserted on the project materials as well as the terms of use for the software, files and other materials found in the project repository.
 
-_This_ README file is itself distributed under the terms of the [Creative Commons 1.0 Universal license (CC0)](https://creativecommons.org/publicdomain/zero/1.0/). The license applies to this file and other files in the [GitHub repository](http://github.com/mhucka/readmine) hosting this file. This does _not_ mean that you, as a user of this README file in your software project, must also use CC0 license!  You may use whatever license for your work you prefer, or whatever you are required to use by your employer or sponsor.
+*This* README file is itself distributed under the terms of the [Creative Commons 1.0 Universal license (CC0)](https://creativecommons.org/publicdomain/zero/1.0/). The license applies to this file and other files in the [GitHub repository](http://github.com/mhucka/readmine) hosting this file. This does *not* mean that you, as a user of this README file in your software project, must also use CC0 license! You may use whatever license for your work you prefer, or whatever you are required to use by your employer or sponsor.
 
-
-## Acknowledgments
+## Acknowledgments {#acknowledgments}
 
 This final section is where you should acknowledge funding and/or institutional support, prior work that influenced or inspired your project, resources that you used (such as other people's software), important contributions from other people, and anything else that deserves mention. After all, nothing is truly done in isolation; everything is built on top of something, and we all owe debts to other projects and people who helped us, supported us, and influenced us.
 
 For example, in the process of developing this file, I used not only my own ideas: I read many (sometimes contradictory) recommendations for README files, examined real READMEs in actual use, and tried to distill the best ideas into the result you see here. Sources included the following:
 
-* [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
-* [How to Write a Good README](https://dev.to/merlos/how-to-write-a-good-readme-bog)
-* [How To Write A Great README](https://thoughtbot.com/blog/how-to-write-a-great-readme)
-* [How to Write an Awesome Readme](https://dev.to/documatic/how-to-write-an-awesome-readme-cfl)
-* [Readme Best Practices](https://github.com/jehna/readme-best-practices)
-* [Art of README](https://github.com/noffle/art-of-readme)
-* [Making a useful README file for research projects](http://jonathanpeelle.net/making-a-readme-file)
-* [Tips for Making your GitHub Profile Page Accessible](https://github.com/orgs/community/discussions/64778)
-* [Make a README](https://www.makeareadme.com)
-* [ReadMe.so](https://readme.so)
-* [common readme](https://github.com/noffle/common-readme)
-* [Standard Readme](https://github.com/RichardLitt/standard-readme)
-* [CFPB Open Source Project Template Instructions](https://github.com/cfpb/open-source-project-template)
-* [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [open-source-template](https://github.com/davidbgk/open-source-template/)
-* [Feedmereadmes: A README Help Exchange](https://github.com/lappleapple/feedmereadmes)
-* [Awesome README List](https://github.com/matiassingers/awesome-readme)
-* [Top ten reasons why I won't use your open source project](https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project)
+-   [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
+-   [How to Write a Good README](https://dev.to/merlos/how-to-write-a-good-readme-bog)
+-   [How To Write A Great README](https://thoughtbot.com/blog/how-to-write-a-great-readme)
+-   [How to Write an Awesome Readme](https://dev.to/documatic/how-to-write-an-awesome-readme-cfl)
+-   [Readme Best Practices](https://github.com/jehna/readme-best-practices)
+-   [Art of README](https://github.com/noffle/art-of-readme)
+-   [Making a useful README file for research projects](http://jonathanpeelle.net/making-a-readme-file)
+-   [Tips for Making your GitHub Profile Page Accessible](https://github.com/orgs/community/discussions/64778)
+-   [Make a README](https://www.makeareadme.com)
+-   [ReadMe.so](https://readme.so)
+-   [common readme](https://github.com/noffle/common-readme)
+-   [Standard Readme](https://github.com/RichardLitt/standard-readme)
+-   [CFPB Open Source Project Template Instructions](https://github.com/cfpb/open-source-project-template)
+-   [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+-   [open-source-template](https://github.com/davidbgk/open-source-template/)
+-   [Feedmereadmes: A README Help Exchange](https://github.com/lappleapple/feedmereadmes)
+-   [Awesome README List](https://github.com/matiassingers/awesome-readme)
+-   [Top ten reasons why I won't use your open source project](https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project)

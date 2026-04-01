@@ -1,16 +1,4 @@
 
-Please send issues and questions to: <enrico.e.armelloni@gmail.com>
-
-This page is under construction
-
-<figure>
-<img src="Blank%20diagram.jpeg?raw=true" title="Title"
-alt="Figure 1: discrete predictions of Instantaneous Growth Rate, with water temperature = 18 °, food amount = 0.8 * libitum, food type = medium shrimps (grass shrimps)" />
-<figcaption aria-hidden="true">Figure 1: discrete predictions of
-Instantaneous Growth Rate, with water temperature = 18 °, food amount =
-0.8 * libitum, food type = medium shrimps (grass shrimps)</figcaption>
-</figure>
-
 # BEWARE: a Bayesian Extreme WeAtheR Event model for fishing operations
 
 [![License](https://img.shields.io/badge/License-CC0-lightgray.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -50,6 +38,26 @@ Once you have GeNIe installed, you can just open the BEWARE.net file,
 adjust visualization settings in the software, and you are ready to
 explore the risks.
 
+### Adjusting visualisation
+
+The .net file format does not support visualisation rules to be
+interpreted by GeNIe software. When you import the .net file for the
+first time all nodes are shown as plain icons and are stacked on top of
+each other.  
+We recommend: - to change visualization to Bar Chart. This is done by
+dragging a selection box around the icons, then right-click on the first
+icon on the pile. A side menu (Figure 1) would appear. Navigate on the
+*view as* option, then select *Bar Chart*. - to display the nodes in
+your available screen space by dragging them. You can eventually change
+color backgrounds. Our preferred option is shown in Figure 2.
+
+<figure>
+<img src="README_figures/fig_1bis.jpg" width="400"
+alt="Figure 1: Changing visualisation from icon to Bar Chart" />
+<figcaption aria-hidden="true">Figure 1: Changing visualisation from
+icon to Bar Chart</figcaption>
+</figure>
+
 ## Usage (GeNIe GUI)
 
 After setting up the GeNIe software as explained in the [Quick
@@ -60,6 +68,38 @@ recommend to handle the software in R environment as explained in the
 [Usage (bnlearn)](#usage_2) section.
 
 ### Setting decision nodes and update the probability distribution
+
+Probabilities distributions are updated by clicking on the “flashing
+light” icon as shown in Figure 2. A simple update would show the
+probability distribution in absence of any evidence. This imply that all
+the levels of the decision nodes (colored in yellow in Figure 2) have
+equal probability. To include evidences there are two options: (1)
+left-click on one level of the decision node to select it with 100%
+probability (Figure), (2) using the virtual evidence panel (Figure) to
+set the probabilities for multiple levels. The virtual probability panel
+is accessible by right-clicking on a decision node. Once the evidences
+are included, right click again on the “update” icon.
+
+<figure>
+<img src="README_figures/fig_3.jpg" width="350"
+alt="Figure 2: Changing visualisation from icon to Bar Chart" />
+<figcaption aria-hidden="true">Figure 2: Changing visualisation from
+icon to Bar Chart</figcaption>
+</figure>
+
+<figure>
+<img src="README_figures/fig_3bis.jpg" width="350"
+alt="Figure 3: Changing visualisation from icon to Bar Chart" />
+<figcaption aria-hidden="true">Figure 3: Changing visualisation from
+icon to Bar Chart</figcaption>
+</figure>
+
+<figure>
+<img src="README_figures/fig_4.jpg" width="300"
+alt="Figure 4: Changing visualisation from icon to Bar Chart" />
+<figcaption aria-hidden="true">Figure 4: Changing visualisation from
+icon to Bar Chart</figcaption>
+</figure>
 
 ## Usage (bnlearn)
 
