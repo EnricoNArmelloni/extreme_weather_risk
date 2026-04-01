@@ -82,35 +82,87 @@ are included, right click again on the “update” icon.
 
 <figure>
 <img src="README_figures/fig_3.jpg" width="350"
-alt="Figure 2: Changing visualisation from icon to Bar Chart" />
-<figcaption aria-hidden="true">Figure 2: Changing visualisation from
-icon to Bar Chart</figcaption>
+alt="Figure 2: updating probability distribution" />
+<figcaption aria-hidden="true">Figure 2: updating probability
+distribution</figcaption>
 </figure>
 
 <figure>
 <img src="README_figures/fig_3bis.jpg" width="350"
-alt="Figure 3: Changing visualisation from icon to Bar Chart" />
-<figcaption aria-hidden="true">Figure 3: Changing visualisation from
-icon to Bar Chart</figcaption>
+alt="Figure 3: including evidence in decision nodes" />
+<figcaption aria-hidden="true">Figure 3: including evidence in decision
+nodes</figcaption>
 </figure>
 
 <figure>
 <img src="README_figures/fig_4.jpg" width="300"
-alt="Figure 4: Changing visualisation from icon to Bar Chart" />
-<figcaption aria-hidden="true">Figure 4: Changing visualisation from
-icon to Bar Chart</figcaption>
+alt="Figure 4:usage of the virtual evidence panel to set evidence on multiple levels of a decision node" />
+<figcaption aria-hidden="true">Figure 4:usage of the virtual evidence
+panel to set evidence on multiple levels of a decision node</figcaption>
 </figure>
 
 ## Usage (bnlearn)
 
-After setting up the GeNIe software as explained in the [Quick
-start](#quick-start) section, BEWARE is ready to be used for visualising
-the probability distributions. This type of utilisation is recommended
-for education and results dissemination. For more complex analysis we
-recommend to handle the software in R environment as explained in the
-[Usage (bnlearn)](#usage_2) section.
+In our research we handled the BEWARE model with the bnlearn R package.
+Functions from this package were also used to set up the conditional
+probability tables, ax explained in the SECTION. To start handling
+BEWARE in R, install the bnlearn package and, for some extra
+visualisation functions, we also recommend to install the Rgraphviz
+package.
+
+``` r
+install.packages('bnlearn')
+install.packages('Rgraphviz')
+```
+
+The model can be imported with the `read.net` function and visualized
+with `graphviz.plot`
+
+``` r
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+setwd(file.path(scriptDir, '..')) 
+library(Rgraphviz)
+library(bnlearn)
+theme_set(theme_bw())
+net=read.net('data/read_only/networks/BEWARE_learnt_r1_0_0.net', debug = T)
+graphviz.plot(net, layout = "dot", fontsize = 18)
+```
 
 ### Setting decision nodes and update the probability distribution
+
+Evidence can be set by implementing conditional probability queries. We
+used the `cpdist` function, which generates random samples conditional
+on the evidence using the method specified in the method argument.
+Arguments of the `cpdist` function are:
+
+fitted: an object of class bn.fit. nodes: a vector of character strings,
+the labels of the nodes whose conditional distribution we are interested
+in. evidence: named list, where each element corresponds to one node in
+the network and must contain the value that node will be set to when
+sampling n: a positive integer number, the number of random samples to
+generate from fitted. method: a character string, the method used to
+perform the conditional probability query. Currently only logic sampling
+(ls, the default) and likelihood weighting (lw) are implemented.
+
+``` r
+i.res=cpdist(fitted = net, 
+        nodes = c('economic_risk', 'societal_risk','individual_risk'), 
+        evidence = list(extreme_event = 'hws', aware_of_event='yes'), 
+        n=10^5, 
+        method='lw')
+```
+
+The output of `cpdist` is a dataframe of *n* rows, each including draws
+for the nodes requested
+
+<figure>
+<img src="README_figures/fig_5.jpg" width="300"
+alt="Figure 4:usage of the virtual evidence panel to set evidence on multiple levels of a decision node" />
+<figcaption aria-hidden="true">Figure 4:usage of the virtual evidence
+panel to set evidence on multiple levels of a decision node</figcaption>
+</figure>
 
 ## Contributing - application to your case study
 
