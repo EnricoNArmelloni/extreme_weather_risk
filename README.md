@@ -194,11 +194,11 @@ employer or sponsor.
 
 ## Acknowledgments
 
-The content of this repository was realised wityh funding support from
+The content of this repository was realised within the project [Marine
+extreme weather: ecological effects and risks to
+fisheries](https://www.slu.se/en/research/research-catalogue/projekt/m/marina-varmeboljor-och-extremvader-effekter-pa-fiskade-ekosystem-och-risker-for-fiske/),
+funded by the [FORMAS](https://formas.se/en/start-page.html) funding
+plan of the Swedish government.
 
-<https://www.slu.se/en/research/research-catalogue/projekt/m/marina-varmeboljor-och-extremvader-effekter-pa-fiskade-ekosystem-och-risker-for-fiske/>
-
-This README has been inspirted by
-
-- [READMINE: Suggested template for software
-  READMEs](https://github.com/mhucka/readmine/tree/main)
+This README has been inspired by [READMINE: Suggested template for
+software READMEs](https://github.com/mhucka/readmine/tree/main)
