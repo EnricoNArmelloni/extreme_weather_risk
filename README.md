@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-CC0-lightgray.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Latest
 release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/mhucka/readmine/releases)
-[![DOI](http://img.shields.io/badge/DOI-10.5281%2fzenodo.10633361-blue.svg?style=flat-square)](https://zenodo.org/records/10633361)
+[![DOI](http://img.shields.io/badge/DOI-XXXXX%2fzenodo.XXXXXX-blue.svg?style=flat-square)](https://zenodo.org)
 
 ## Table of contents
 
