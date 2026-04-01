@@ -1,0 +1,10 @@
+
+# Guidelines for contributing to this project
+
+## Table of contents
+
+- [Workflow overview](#introduction)
+- [Folders overview](#quick-start)
+- [Include observations](#usage_1)
+- [Generate CPT](#usage_2)
+- [Scenarios](#contributing)
