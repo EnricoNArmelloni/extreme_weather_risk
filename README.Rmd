@@ -91,11 +91,11 @@ The output of `cpdist` is a dataframe of *n* rows, each including draws for the 
 
 ## Contributing - application to your case study
 
-If your project accepts open-source contributions, this is where you can welcome contributions and explain to readers how they can go about it. Mention the [`CONTRIBUTING.md`](CONTRIBUTING.md) file in your repository, if you have one.
+If you want to use the software for your own case study you need to be able to include you own data. The [`CONTRIBUTING.md`](CONTRIBUTING.md) section provide more detailed guidelines on the procedure we used to geenrate the conditional probabilties distribution, and explains how and where to include your own data. 
 
 ## Getting help {#getting-help}
 
-Inform readers how they can contact you, or at least how they can report problems they may encounter. This could take the form of a request to use the issue tracker on your repository. Some projects have associated discussion forums or mailing lists, and this section is a good place to mention those.
+For any issue feel free to reach out enrico.e.armelloni@gmail.com
 
 ## License {#license}
 
@@ -105,25 +105,11 @@ This section should state any copyright asserted on the project materials as wel
 
 ## Acknowledgments {#acknowledgments}
 
-This final section is where you should acknowledge funding and/or institutional support, prior work that influenced or inspired your project, resources that you used (such as other people's software), important contributions from other people, and anything else that deserves mention. After all, nothing is truly done in isolation; everything is built on top of something, and we all owe debts to other projects and people who helped us, supported us, and influenced us.
+The content of this repository was realised wityh funding support from
 
-For example, in the process of developing this file, I used not only my own ideas: I read many (sometimes contradictory) recommendations for README files, examined real READMEs in actual use, and tried to distill the best ideas into the result you see here. Sources included the following:
+https://www.slu.se/en/research/research-catalogue/projekt/m/marina-varmeboljor-och-extremvader-effekter-pa-fiskade-ekosystem-och-risker-for-fiske/
 
--   [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
--   [How to Write a Good README](https://dev.to/merlos/how-to-write-a-good-readme-bog)
--   [How To Write A Great README](https://thoughtbot.com/blog/how-to-write-a-great-readme)
--   [How to Write an Awesome Readme](https://dev.to/documatic/how-to-write-an-awesome-readme-cfl)
--   [Readme Best Practices](https://github.com/jehna/readme-best-practices)
--   [Art of README](https://github.com/noffle/art-of-readme)
--   [Making a useful README file for research projects](http://jonathanpeelle.net/making-a-readme-file)
--   [Tips for Making your GitHub Profile Page Accessible](https://github.com/orgs/community/discussions/64778)
--   [Make a README](https://www.makeareadme.com)
--   [ReadMe.so](https://readme.so)
--   [common readme](https://github.com/noffle/common-readme)
--   [Standard Readme](https://github.com/RichardLitt/standard-readme)
--   [CFPB Open Source Project Template Instructions](https://github.com/cfpb/open-source-project-template)
--   [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
--   [open-source-template](https://github.com/davidbgk/open-source-template/)
--   [Feedmereadmes: A README Help Exchange](https://github.com/lappleapple/feedmereadmes)
--   [Awesome README List](https://github.com/matiassingers/awesome-readme)
--   [Top ten reasons why I won't use your open source project](https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project)
+This README has been inspirted by 
+
+-   [READMINE: Suggested template for software READMEs](https://github.com/mhucka/readmine/tree/main)
+
