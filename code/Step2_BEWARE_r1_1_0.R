@@ -1,4 +1,5 @@
 remove(list=ls())
+ini=Sys.time()
 scriptPath <- rstudioapi::getSourceEditorContext()$path
 scriptDir <- dirname(scriptPath)
 setwd(file.path(scriptDir, '..')) 
@@ -6,6 +7,7 @@ library(readxl)
 library(tidyverse)
 library(bnlearn)
 library(gRain)
+library(profvis)
 source('code/supporting_r1.R')
 sim.uncertainty=0
 show.plots=0
@@ -37,13 +39,6 @@ rec.catch$prop=rec.catch$practitioners/sum(rec.catch$practitioners)
 net=read.net('data/editable_files/networks/BEWARE_release_v1_0_0.net', debug = F)
 
 
-
-
-#graphviz.chart(net)
-library(profvis)
-ini=Sys.time()
-#profvis({
-  
 # format data ####
 evts=evts[!is.na(evts$event_code),]
 int.dat=left_join(int.dat[,-which(colnames(int.dat)=='event_code')], evts, by='id_sub')
@@ -61,18 +56,16 @@ int.dat$gear=ifelse(is.na(int.dat$gear), 'not_specified', int.dat$gear)
 int.dat=int.dat[is.na(int.dat$unit_range),]
 int.dat=int.dat[!is.na(int.dat$value.norm),]
 int.dat=int.dat[int.dat$area %in% c('not_specified', 'Baltic', 'deep','shallow'),]
-
 fish.simple=style.dataset[,c('short_description', 'id_I')]
 names(fish.simple)[1]='fishing_style'
 evt.relevance=evt.relevance%>%left_join(styles, by='f.style')
 
+profvis({
 # CPT filling ####
 x.nodes=nodes(net)
 
 # decision nodes ####
-# set defaults as equal probabilities for all the levels
-net <- initialize_equal_probabilities(net, c('extreme_event', 'fishing_style', 'aware_of_event'))
-
+net <- initialize_equal_probabilities(net, c('extreme_event', 'fishing_style', 'aware_of_event')) # set defaults as equal probabilities for all the levels
 
 # user####
 ## gear ####
@@ -171,7 +164,6 @@ gear.target.prob=full_join(gear.prob, target.prob, by='gear')%>%
 #¨write into the net
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
-
 ## strategy ####
 i.node='strategy_to_change'
 array.var=net[[i.node]]$prob
@@ -191,7 +183,7 @@ x.strat[is.na(x.strat$value),c('value', 'value.norm', 'unc.norm')]=c(2,0.125,0.2
 x.strat=x.strat%>%
   dplyr::group_by(id_I, id_q , strategy_value, event_code)%>%
   slice_max(value.norm,n=1)%>%
-  dplyr::summarise(value.norm=mean(value.norm), unc.norm=mean(unc.norm))# if there are multiple species per gear, pick the most probable
+  dplyr::summarise(value.norm=mean(value.norm), unc.norm=mean(unc.norm)) # if there are multiple species per gear, pick the most probable
 x.strat=x.strat%>%left_join(fish.simple, by='id_I')
 
 x.strat=uncertainty.function.2(x.strat, col.selection = c('fishing_style', 'event_code', 'strategy_value'))
@@ -210,7 +202,6 @@ x.strat[idx, c("A", "R")] <- x.strat[idx, c("A", "R")] / S[idx]
 if(nrow(x.strat[-which((x.strat$A+x.strat$R)==0),])>0){
   x.strat=x.strat[-which((x.strat$A+x.strat$R)==0),]
 }
-
 
 x.strat=x.strat%>%
   dplyr::mutate(C=1-(A+R), NR=0, extreme_event=event_code)
@@ -242,16 +233,7 @@ df.cpt=df.cpt%>%
 df.cpt=re.format.cpt(df.cpt , df.var)
 df.var$Freq=df.cpt$Freq
 
-pl=df.var%>%
-  ggplot(aes(x=fishing_style, y=Freq, fill=strategy_to_change))+
-  geom_col()+
-  facet_grid(cols=vars(extreme_event));pl
-net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-#ggsave(plot=pl, 'results/images/strategy.jpeg', width = 18, height = 8, units='cm', dpi=150)
-
-
 ## go fishing ####
-#sim.uncertainty=0
 i.node='go_fishing'
 array.var=net[[i.node]]$prob
 xdim=dim(array.var)
@@ -309,7 +291,6 @@ df.cpt=df.cpt%>%
 
 # re-format
 df.cpt=re.format.cpt(df.cpt , df.var)
-# assign and aet other categories
 df.var$Freq=df.cpt$Freq
 df.var[df.var$strategy_to_change=='not_relevant',]$Freq=c(0.5,0.5)
 df.var[df.var$strategy_to_change=='adapt',]$Freq=c(0,1)
@@ -317,76 +298,43 @@ df.var[df.var$strategy_to_change=='react',]$Freq=c(0,1)
 df.var[df.var$aware_of_event=='no',]$Freq=c(0,1)
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
-
-pl=df.var%>%
-  dplyr::filter(strategy_to_change=='cope' & aware_of_event=='yes')%>%
-  ggplot(aes(x=extreme_event, y=Freq, fill=go_fishing))+
-  geom_col()+
-  facet_wrap(~fishing_style);pl
-#ggsave(plot=pl, 'results/images/go_out.jpeg', width = 18, height = 8, units='cm', dpi=150)
-
 # technical solutions ####
 i.node='additional_mitigation'
 array.var=net[[i.node]]$prob
 xdim=dim(array.var)
 xnam=dimnames(array.var)
 df.var=as.data.frame(array.var)
+df.var$Freq=c(1,0,0,0)# set baseline
+
+# fill strategies when react
 tech.sol=strategy.dataset[!is.na(strategy.dataset$solution) & nchar(strategy.dataset$solution)>1,]%>%
-  distinct(style, id_I, id_q, solution, event_code, value)
-df.var$Freq=c(1,0,0,0)
-df.var[df.var$fishing_style=='trawler'&
-         df.var$extreme_event %in% c('hws','hww')&
-         df.var$strategy_to_change=='react',]$Freq=c(0,0,0,1)
+  distinct(style, id_I, id_q, solution, event_code, value)%>%
+  left_join(questionnaire[,c('id_q', 'min','max')], by='id_q')%>%
+  dplyr::filter(!is.na(value))
+tech.sol$normalised=(tech.sol$value-tech.sol$min)/(tech.sol$max -tech.sol$min)
+tech.sol=tech.sol%>%
+  dplyr::group_by(id_I, style, event_code, solution)%>%
+  dplyr::summarise(normalised=mean(normalised)) # average when multiple answers by fishers available
 
-# define the solutions for the baseline case
-for(z in 1:length(styles$f.style)){
-  z.style=styles[z,]
-  i.fisher=style.dataset[style.dataset$code==z.style$f.style,]
-  i.fisher=unique(i.fisher$id_I)
-  i.strategy=tech.sol[tech.sol$id_I %in% i.fisher,]
-  i.strategy=i.strategy%>%distinct(event_code,id_I, id_q, solution, value)
-  i.evts=unique(df.var$extreme_event)
-  j=2
-  for(j in 1:length(i.evts)){
-    j.event=i.evts[j]
-    j.strategy=i.strategy[i.strategy$event_code==i.evts[j],]
-    
-    if(nrow(j.strategy)==0){
-      df.var[df.var$extreme_event==j.event & 
-               df.var$fishing_style==styles[z,]$short_description &
-               df.var$strategy_to_change=='react',]$Freq=c(1,0,0,0)
-      next
-    }
-    
-    # weight multiple strategies
-    answ.range=questionnaire[questionnaire$id_q%in% j.strategy$id_q & !is.na(questionnaire$short_description),]
-    j.strategy=j.strategy%>%
-      left_join(answ.range)
-    j.strategy=j.strategy[!is.na(j.strategy$value),]
-    j.strategy$normalised=(j.strategy$value-j.strategy$min)/(j.strategy$max -j.strategy$min)
-    j.strategy=j.strategy%>%
-      dplyr::group_by(id_I, solution)%>%
-      dplyr::summarise(normalised=mean(normalised))%>%
-      dplyr::group_by(solution)%>%
-      dplyr::summarise(normalised=sum(normalised))%>%
-      dplyr::mutate(normalised=round(normalised/sum(normalised), digits=3))%>%
-      arrange(desc(solution))
-    mit=data.frame(mit=c('no','travel','short','other'), Freq=0)
-    mit[mit$mit%in%j.strategy$solution,]$Freq=j.strategy$normalised
-    
-    df.var[df.var$extreme_event==j.event & 
-             df.var$fishing_style==styles[z,]$short_description &
-             df.var$strategy_to_change=='react',]$Freq=mit$Freq
-  }
-}
-pl=df.var%>%
-  ggplot(aes(x=strategy_to_change, y=Freq, fill=additional_mitigation))+
-  geom_col()+
-  facet_grid(cols=vars(fishing_style),
-             rows=vars(extreme_event));pl
-#ggsave(plot=pl, 'results/images/mitigation.jpeg', width = 18, height = 8, units='cm', dpi=150)
+tech.sol=tech.sol%>%
+  dplyr::group_by(extreme_event=event_code, fishing_style=style, additional_mitigation=solution)%>%
+  dplyr::summarise(normalised=mean(normalised))%>%
+  dplyr::mutate(normalised=round(normalised/sum(normalised), digits=3))%>%
+  arrange(desc(additional_mitigation))
+
+react.strategy=df.var[df.var$strategy_to_change=='react',]%>%
+  left_join(tech.sol)%>%
+  replace(is.na(.),0)%>%
+  dplyr::group_by(fishing_style, extreme_event)%>%
+  dplyr::mutate(prob=ifelse(additional_mitigation=='no',1-sum(normalised), normalised))
+react.strategy=as.data.frame(react.strategy)
+react.strategy[react.strategy$fishing_style=='trawler'&
+                 react.strategy$extreme_event %in% c('hws','hww')&
+                 react.strategy$strategy_to_change=='react',]$prob=c(0,0,0,1)
+df.var[df.var$strategy_to_change=='react',]$Freq=react.strategy$prob
+
+#¨write into the net
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-
 
 ## personal_safety ####
 i.node='personal_safety'
@@ -411,13 +359,6 @@ for(i in 1:length(i.evts)){
     j.answ=x.answ[x.answ$id_I%in%i.fisher,]  
     
     if(nrow(j.answ)>1){j.answ=uncertainty.function(j.answ)}
-    
-    #i.cpt=answer.to.cpt(x.ans=j.answ$value.norm, 
-    #                    unc=0.2*j.answ$unc.norm+0.001,
-    #                    dim.name = i.node,
-    #                    dim.labs = x.lev,
-    #                    priors = x.answ.complete)
-    
     i.cpt=answ.cpt.det(j.answ$value.norm, x.lev)
     if(sim.uncertainty==1){
       prior = rep(0.1, length(x.lev))
@@ -433,14 +374,6 @@ df.var[df.var$extreme_event %in% c('sto','gal', 'hww') &
          df.var$additional_mitigation=='travel_further',]$Freq=c(1,0,0)
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-
-pl=df.var%>%
-  #dplyr::filter(additional_mitigation=='no')%>%
-  ggplot(aes(x=extreme_event, y=Freq, fill=personal_safety))+
-  geom_col()+
-  facet_grid(rows=vars(additional_mitigation), cols=vars(gear));pl
-
-#ggsave(plot=pl, 'results/images/safety.jpeg', width = 18, height = 8, units='cm', dpi=150)
 
 ## damage ####
 i.node='damage'
@@ -466,18 +399,11 @@ for(i in 1:length(i.evts)){
     j.answ=x.answ[x.answ$id_I%in%i.fisher,]  
     
     if(nrow(j.answ)>1){j.answ=uncertainty.function(j.answ)}
-    
-    #i.cpt=answer.to.cpt(x.ans=j.answ$value.norm, 
-    #                    unc=0.2*j.answ$unc.norm+0.001,
-    #                    dim.name = i.node,
-    #                    dim.labs = x.lev,
-    #                    priors = x.answ.complete)
     i.cpt=answ.cpt.det(j.answ$value.norm, x.lev)
     if(sim.uncertainty==1){
       prior = rep(0.1, length(x.lev))
       i.cpt=dir.draws(p=i.cpt, kappa=20*(1.001-j.answ$unc.norm)+prior)
     }
-    
     df.var[df.var$extreme_event==j.event & df.var$gear== i.gear[j],]$Freq=as.numeric(i.cpt)  
   }
 }
@@ -487,14 +413,6 @@ df.var[df.var$gear %in% c('not_relevant', 'inland'),]$Freq=c(1,0,0,0)
 df.var[df.var$extreme_event %in% c('sto','gal', 'hww') & 
          df.var$additional_mitigation=='travel_further',]$Freq=c(1,0,0,0)
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-
-pl=df.var%>%
-  dplyr::filter(additional_mitigation=='no')%>%
-  ggplot(aes(x=extreme_event, y=Freq, fill=damage))+
-  geom_col()+
-  facet_wrap(~gear);pl
-#ggsave(plot=pl, 'results/images/damage.jpeg', width = 18, height = 8, units='cm', dpi=150)
-
 
 ## catch_condition ####
 # nobody answered anything better for catch condition. (max is 3)
@@ -517,7 +435,6 @@ gear.style.prob=style.dataset%>%
   dplyr::select(fishing_style, id_I)%>%
   right_join(gear.target.prob)
 
-j=4
 for(j in 1:length(i.evts)){
   
   j.event=i.evts[j]
@@ -541,11 +458,6 @@ for(j in 1:length(i.evts)){
     i.unc.decl=(sum(i.answ$unc.norm*i.answ$importance))/sum(i.answ$importance)
     i.unc=min(c(max(c(i.unc.obs, i.unc.decl))))
     
-    #i.cpt=answer.to.cpt(x.ans=i.val/0.5, 
-    #                    unc=i.unc*0.25,
-    #                    dim.name = i.node,
-    #                    dim.labs = x.lev,
-    #                    priors = unique(i.answ$value.norm))
     i.cpt=answ.cpt.det(i.val/0.5, x.lev)
     if(sim.uncertainty==1){
       prior = rep(0.1, length(x.lev))
@@ -555,12 +467,6 @@ for(j in 1:length(i.evts)){
     df.var[df.var$extreme_event==j.event & df.var$target == i.target[i],]$Freq=as.numeric(i.cpt)  
   }
 }
-
-pl=df.var%>%
-  #dplyr::filter(additional_mitigation=='no')%>%
-  ggplot(aes(x=target, y=Freq, fill=catch_condition))+
-  geom_col()+
-  facet_grid(rows=vars(additional_mitigation), cols=vars(extreme_event));pl
 
 # mitigations for catch conditions are many
 solutions=strategy.dataset[!is.na(strategy.dataset$solution) & 
@@ -573,13 +479,6 @@ df.var[df.var$extreme_event%in%c('hws', 'sto', 'gal') & df.var$additional_mitiga
 df.var[df.var$extreme_event=='abl' & df.var$additional_mitigation=='travel_further',]$Freq=c(0,1) # ice machine 
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-pl=df.var%>%
-  #dplyr::filter(additional_mitigation=='no')%>%
-  ggplot(aes(x=target, y=Freq, fill=catch_condition))+
-  geom_col()+
-  facet_grid(rows=vars(additional_mitigation), cols=vars(extreme_event));pl
-#ggsave(plot=pl, 'results/images/catch_condition.jpeg', width = 18, height = 8, units='cm', dpi=150)
-
 
 ## catchability ####
 i.node='catchability'
@@ -595,14 +494,12 @@ x.answ=x.answ[is.na(x.answ$unit_range),]
 # prob for each event
 i.evts=unique(df.var$extreme_event)
 i.target=unique(df.var$target)
-j=1
 
 style.df2=style.dataset[,c('id_I','short_description')]
 names(style.df2)[2]='fishing_style'
 style.df2=style.df2%>%left_join(gear.prob)
 df.var$Freq=c(0,1,0)
 
-j=5
 for(j in 1:length(i.evts)){
   
   j.event=as.character(i.evts[j])
@@ -636,11 +533,6 @@ for(j in 1:length(i.evts)){
       i.unc.decl=(sum(k.answ$unc.norm*k.answ$importance))/sum(k.answ$importance)
       i.unc=min(1,c(max(c(i.unc.obs, i.unc.decl))))
       
-      #i.cpt=answer.to.cpt(x.ans=i.val, 
-      #                    unc=i.unc*0.25,
-      #                    dim.name = i.node,
-      #                    dim.labs = x.lev,
-      #                    priors = unique(i.answ$value.norm))
       i.cpt=answ.cpt.det(i.val, x.lev)
       if(sim.uncertainty==1){
         prior = rep(0.1, length(x.lev))
@@ -654,12 +546,6 @@ for(j in 1:length(i.evts)){
     }
   }
 }
-
-pl=df.var%>%
-  #dplyr::filter(additional_mitigation=='no')%>%
-  ggplot(aes(x=target, y=Freq, fill=catchability))+
-  geom_col()+
-  facet_grid( cols=vars(extreme_event), rows=vars(gear));pl
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
@@ -679,7 +565,6 @@ for(z in 1:length(styles$f.style)){
   i.fisher=style.dataset[style.dataset$code==z.style$f.style,]
   i.fisher=unique(i.fisher$id_I)
   dat=int.dat[int.dat$id_I%in%i.fisher,]
-  
   x.answ=dat[grep(i.node, dat$short_description),]%>%
     arrange(desc(id_sub))
   x.answ$short_description=x.answ$id_sub
@@ -713,52 +598,33 @@ for(z in 1:length(styles$f.style)){
 }
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-df.var%>%
-  #dplyr::filter(fishing_style=='small_scale')%>%
-  ggplot(aes(x=paste(catch_condition, personal_safety), y=Freq, fill=stress))+
-  geom_col()+
-  theme(axis.text.x = element_text(angle=45))+
-  facet_grid(cols=vars(fishing_style), rows=vars(damage))
-#bnlearn::write.net( 'data/networks/BEWARE_r1_learn_pt1.net', net)
 
-# Load data ####
+# Lower half ####
 # data from interviews
 names(style.dataset)[3]='fishing_style'
 int.dat=read_csv("data/read_only/coding_report_unc.csv")
 bn.desc=read_excel("data/editable_files/nodes_text.xlsx")
-
 # data from literature
 cost.dat=read_csv("data/read_only/cost_df_v2.csv")
 
-# BN
-#net=read.net('data/networks/BEWARE_r1_learn_pt1.net', debug = T)
-
 # format data ####
 int.dat=left_join(int.dat[,-which(colnames(int.dat)=='event_code')], evts, by='id_sub')
-
 styles=net[['fishing_style']]$prob
 styles=data.frame(styles)
 names(styles)[1]='f.style'
 
 # root nodes ####
-# select nodes
 root.nodes=bn.desc[bn.desc$group %in% c('economic', 'societal','individual'),]
 root.nodes=root.nodes[root.nodes$cycle==2,]
 root.nodes=root.nodes[-(grep('import', root.nodes$node)),]
 x.nodes=nodes(net)
 x.nodes=x.nodes[x.nodes %in% root.nodes$node]
 x.nodes=x.nodes[x.nodes %in% nodes(net)]
-
-
 hc.dat=int.dat[int.dat$short_description %in% x.nodes,]
 
-## temporary solution: this needs to be fixed
 hc.dat[hc.dat$uncertainty==-99.8 & !is.na(hc.dat$uncertainty),]$uncertainty=3/5 # this is the archipelago fisherman that does not know what to say
-#hc.dat[hc.dat$value==999 & !is.na(hc.dat$uncertainty),]$value=2 # recreational fisherman question about benefit to community. Need better interpretation
-unique(hc.dat$id_I)
 hc.dat=left_join(hc.dat,style.dataset[,c('id_I', "fishing_style")])
 
-i=4
 for(i in 1:length(x.nodes)){
   
   i.node=x.nodes[i]
@@ -780,11 +646,6 @@ for(i in 1:length(x.nodes)){
       df.var[df.var$fishing_style==styles[z,]$f.style ,]$Freq=c(1,0,0)
       next
     }
-    #i.cpt=answer.to.cpt(x.ans=dat$value.norm, 
-    #              unc=(dat$unc.norm+0.01)*0.5,
-    #              dim.name = i.node,
-    #              dim.labs = x.lev)
-    #
     i.cpt=answ.cpt.det(dat$value.norm, x.lev)
     if(sim.uncertainty==1){
       prior = rep(0.1, length(x.lev))
@@ -798,10 +659,6 @@ for(i in 1:length(x.nodes)){
   net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 }
 
-df.var%>%
-  ggplot()+
-  geom_col(aes(x=fishing_style, y=Freq, fill=sense_of_home))
-
 ## substitution capacity ####
 i.node='substitution_capacity'
 array.var=net[[i.node]]$prob
@@ -809,7 +666,6 @@ xdim=dim(array.var)
 xnam=dimnames(array.var)
 df.var=as.data.frame(array.var)
 x.lev=levels(df.var[,i.node])
-#x.lev=rev(x.lev)
 target.dims=names(df.var)
 target.dims=target.dims[-which(target.dims %in% c(i.node,'Freq'))]
 
@@ -824,10 +680,6 @@ for(z in 1:length(styles$f.style)){
     j.answ=uncertainty.function(j.answ)
   }
   
-  #i.cpt=answer.to.cpt(x.ans=j.answ$value.norm, 
-  #                      unc=(j.answ$unc.norm+0.001)*0.25,
-  #                      dim.name = i.node,
-  #                      dim.labs = x.lev)
   i.cpt=answ.cpt.det(j.answ$value.norm, x.lev)
   if(sim.uncertainty==1){
     i.cpt=dir.draws(p=i.cpt, kappa=20*(1.001-j.answ$unc.norm))
@@ -838,16 +690,9 @@ for(z in 1:length(styles$f.style)){
 
 net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
-df.var%>%
-  ggplot()+
-  geom_col(aes(x=fishing_style, y=Freq, fill=substitution_capacity))+
-  theme(legend.position = 'bottom')
-
 # Importance ####
-## Comments/to do: also here the order of states matters a lot: negative goes first!!! this has to be check
-
 imp.vars=c('societal_importance', 'individual_importance' ,'economic_buffers' )
-i=2
+
 for(i in 1:length(imp.vars)){
   
   x.var=imp.vars[i]
@@ -892,14 +737,6 @@ supp.data=data.frame(node=c(target.dims,x.var),
 x.cpt=rank.cpt(nodes.df = supp.data, uncertainty = 0.1, algorithm = 'min', xnam=xnam)
 net[[x.var]]=x.cpt$bn.cpt
 
-x.cpt[[1]]%>%
-  pivot_longer(cols=c('high','medium', 'low'), names_to = 'health')%>%
-  dplyr::mutate(health=factor(health, levels=c('low','medium','high')))%>%
-  ggplot(aes(x=personal_safety, y=value, fill=health))+
-  facet_wrap(~stress)+
-  geom_col()
-
-
 # non monetary value ####
 x.var='non_monetary_value'
 array.var=net[[x.var]][['prob']]
@@ -907,7 +744,6 @@ xdim0=dim(array.var)
 xdim=dim(array.var)[1:3]
 xnam=dimnames(array.var)[1:3]
 df.var=as.data.frame(array.var)
-
 x.lev=levels(df.var[,x.var])
 target.dims=names(df.var)
 target.dims=target.dims[-which(target.dims %in% c(x.var,'Freq', 'go_fishing', 'substitution_capacity'))]
@@ -926,46 +762,22 @@ x.cpt=x.cpt[[1]]%>%
   dplyr::mutate(nonmonval=factor(nonmonval, levels=c('low','medium','high')))%>%
   arrange(satisfaction, health,(nonmonval))
 df.var[df.var$go_fishing%in% c('yes'),]$Freq=x.cpt$value
-
 df.var[df.var$go_fishing%in% c('no', 'not_relevant') & df.var$substitution_capacity=='no',]$Freq=c(1,0,0)
 df.var[df.var$go_fishing%in% c('no', 'not_relevant') & df.var$substitution_capacity=='yes',]$Freq=c(0,1,0)
 
 net[[x.var]]=array(df.var$Freq, dim=xdim0, dimnames=dimnames(array.var))
-
-p1=df.var%>%
-  dplyr::filter(go_fishing=='no')%>%
-  ggplot()+
-  geom_col(aes(x=health, y=Freq, fill=non_monetary_value))+
-  facet_grid(cols=vars(satisfaction), rows=vars(substitution_capacity))+
-  theme(legend.position='bottom')
-
-p2=df.var%>%
-  dplyr::filter(go_fishing=='yes')%>%
-  ggplot()+
-  geom_col(aes(x=health, y=Freq, fill=non_monetary_value))+
-  facet_grid(cols=vars(satisfaction), rows=vars(substitution_capacity))+
-  theme(legend.position='bottom')
-#ggpubr::ggarrange(p1,p2, common.legend = T, labels=c('a: no fishing', 'b: fishing'))
 
 # realised catches ####
 x.var='catches'
 array.var=net[[x.var]][['prob']]
 xdim=dim(array.var)
 xnam=dimnames(array.var)
-
 df.var=as.data.frame(array.var)
 df.var[df.var$go_fishing%in% c('no', 'not_relevant'),]$Freq=c(1,0,0,0)
 df.var[df.var$go_fishing == 'yes' & df.var$catchability =='same',]$Freq=c(0,0,1,0)
 df.var[df.var$go_fishing == 'yes' & df.var$catchability =='worse',]$Freq=c(0,1,0,0)
 df.var[df.var$go_fishing == 'yes' & df.var$catchability =='better',]$Freq=c(0,0,0,1)
-
-df.var%>%
-  ggplot(aes(x=catchability, y=Freq, fill=catches))+
-  facet_grid(cols=vars(go_fishing))+
-  geom_col()
 net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
-
-
 
 ## cost ####
 x.var='costs'
@@ -1012,10 +824,6 @@ for(i in 1:length(i.gear)){
            df.var$damage=='major',]$Freq=dat[dat$damage=='major' & dat$additional=='no',]$prob
 }
 
-df.var%>%
-  ggplot(aes(x=fishing_style, y=Freq, fill=costs))+
-  facet_grid(cols=vars(additional_mitigation), rows=vars(damage))+
-  geom_col()
 net[[x.var]]=array(df.var$Freq, dim=xdim0, dimnames=xnam)
 
 # monetary loss ####
@@ -1064,14 +872,6 @@ for(i in 1:length(i.gear)){
 
 net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=dimnames(array.var))
 
-df.var%>%
-  dplyr::filter(fishing_style=='small_scale')%>%
-  ggplot()+
-  geom_col(aes(x=costs, y=Freq, fill=monetary_loss))+
-  facet_grid(rows=vars(substitution_capacity), cols=vars(go_fishing))+
-  theme(legend.position='bottom')
-
-
 # satisfaction #### 
 x.var='satisfaction'
 array.var=net[[x.var]][['prob']]
@@ -1104,13 +904,6 @@ df.var[df.var$catches=='no',]$Freq=c(1,0,0)
 
 net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
-df.var%>%
-  ggplot()+
-  geom_col(aes(x=catches, y=Freq, fill=satisfaction))+
-  facet_grid(rows=vars(catch_condition))+
-  theme(legend.position='bottom')
-
-
 # risks ####
 risk.vars=c('societal_risk', 'individual_risk')
 
@@ -1141,11 +934,6 @@ for(i in 1:length(risk.vars)){
   net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 }
 
-#df.var%>%
-#  ggplot(aes(x=societal_importance, y=Freq, fill=societal_risk))+
-#  geom_col()+
-#  facet_grid(cols=vars(non_monetary_value), rows=vars(strategy)) 
-
 # economic risk
 risk.vars=c('economic_risk')
 x.var=risk.vars
@@ -1165,11 +953,6 @@ df.var$Freq=x.risk.v
 df.var[df.var$strategy=='not_relevant',]$Freq=c(0,0,0,1)
 net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
-df.var%>%
-  ggplot(aes(x=economic_buffers, y=Freq, fill=economic_risk))+
-  geom_col()+
-  facet_grid(cols=vars(monetary_loss), rows=vars(strategy_to_change)) 
-
 #
 if(sim.uncertainty==0){
   bnlearn::write.net( 'data/read_only/networks/BEWARE_learnt_r1_0_0.net', net)
@@ -1179,7 +962,7 @@ if(sim.uncertainty==0){
 
 #save(net, file='data/networks/BEWARE_v3_learn_pt2.rdata')
 
-#})
+})
 fin=Sys.time()
 fin-ini
 
