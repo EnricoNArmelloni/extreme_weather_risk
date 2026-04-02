@@ -295,3 +295,13 @@ p.mixminmax=function(n=100,x.w, x.state, x.sd){
   p.y=rtruncnorm(n=n, a=0,b=1, mean=mu.y, sd=x.sd)
   return(p.y)
 }
+
+initialize_equal_probabilities <- function(net, node_names) {
+  for (node in node_names) {
+    array.var <- net[[node]]$prob
+    xdim <- dim(array.var)
+    array.var[1:xdim] <- rep(1/prod(xdim), xdim)
+    net[[node]] <- array.var
+  }
+  return(net)
+}
