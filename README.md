@@ -1,7 +1,6 @@
 
 # BEWARE: a Bayesian Extreme WeAtheR Event model for fishing operations
 
-[![License](https://img.shields.io/badge/License-CC0-lightgray.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Latest
 release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/mhucka/readmine/releases)
 [![DOI](http://img.shields.io/badge/DOI-XXXXX%2fzenodo.XXXXXX-blue.svg?style=flat-square)](https://zenodo.org)
@@ -12,10 +11,8 @@ release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-
 - [Quick start](#quick-start)
 - [Usage (GeNIe GUI)](#usage_1)
 - [Usage (bnlearn)](#usage_2)
-- [Known issues and limitations](#known-issues-and-limitations)
-- [Getting help](#getting-help)
 - [Contributing](#contributing)
-- [License](#license)
+- [Getting help](#getting-help)
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
@@ -29,9 +26,10 @@ provided in DOI.
 ## Quick start
 
 BEWARE is released as .net file and is compatible with several softwares
-for Bayesian Network modeling. We have been using GeNIe Modeler (REF), a
-Graphical User Interface available as free software for academic
-research purposes
+for Bayesian Network modeling. The model is available under
+data/read_only/networks/BEWARE_learnt_r1_0_0_0.net. We have been using
+GeNIe Modeler (REF), a Graphical User Interface available as free
+software for academic research purposes
 (<https://download.bayesfusion.com/files.html?category=Academia>).
 
 Once you have GeNIe installed, you can just open the BEWARE.net file,
@@ -60,12 +58,13 @@ icon to Bar Chart</figcaption>
 
 ## Usage (GeNIe GUI)
 
-After setting up the GeNIe software as explained in the [Quick
-start](#quick-start) section, BEWARE is ready to be used for visualising
-the probability distributions. This type of utilisation is recommended
-for education and results dissemination. For more complex analysis we
-recommend to handle the software in R environment as explained in the
-[Usage (bnlearn)](#usage_2) section.
+After setting up the model model available at
+data/read_only/networks/BEWARE_learnt_r1_0_0_0.net in the GeNIe software
+as explained in the [Quick start](#quick-start) section, BEWARE is ready
+to be used for visualising the probability distributions. This type of
+utilisation is recommended for education and results dissemination. For
+more complex analysis we recommend to handle the software in R
+environment as explained in the [Usage (bnlearn)](#usage_2) section.
 
 ### Setting decision nodes and update the probability distribution
 
@@ -164,33 +163,17 @@ alt="Figure 4:usage of the virtual evidence panel to set evidence on multiple le
 panel to set evidence on multiple levels of a decision node</figcaption>
 </figure>
 
-## Contributing - application to your case study
+## Including your own data
 
 If you want to use the software for your own case study you need to be
-able to include you own data. The [`CONTRIBUTING.md`](CONTRIBUTING.md)
-section provide more detailed guidelines on the procedure we used to
-geenrate the conditional probabilties distribution, and explains how and
-where to include your own data.
+able to include you own data. The [`GUIDELINES`](GUIDELINES.pdf) section
+provide more detailed guidelines on the procedure we used to geenrate
+the conditional probabilties distribution, and explains how and where to
+include your own data.
 
 ## Getting help
 
 For any issue feel free to reach out <enrico.e.armelloni@gmail.com>
-
-## License
-
-This section should state any copyright asserted on the project
-materials as well as the terms of use for the software, files and other
-materials found in the project repository.
-
-*This* README file is itself distributed under the terms of the
-[Creative Commons 1.0 Universal license
-(CC0)](https://creativecommons.org/publicdomain/zero/1.0/). The license
-applies to this file and other files in the [GitHub
-repository](http://github.com/mhucka/readmine) hosting this file. This
-does *not* mean that you, as a user of this README file in your software
-project, must also use CC0 license! You may use whatever license for
-your work you prefer, or whatever you are required to use by your
-employer or sponsor.
 
 ## Acknowledgments
 

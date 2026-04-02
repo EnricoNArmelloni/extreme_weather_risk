@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.8)  1 APR 2026 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.8)  2 APR 2026 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,10 +503,10 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count342
 ) (./SuppInfo_B.aux
 
-LaTeX Warning: Label `tab:unnamed-chunk-28' multiply defined.
+LaTeX Warning: Label `tab:unnamed-chunk-33' multiply defined.
 
 
-LaTeX Warning: Label `tab:unnamed-chunk-29' multiply defined.
+LaTeX Warning: Label `tab:unnamed-chunk-34' multiply defined.
 
 )
 \openout1 = `SuppInfo_B.aux'.
@@ -627,241 +627,277 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
                    \relax 
 l.306 \newpage
                [3]
-<SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf, id=68, 578.16pt x 289.08pt>
+<SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf, id=64, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 327.
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 330.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf, id=69, 578.16pt x 289.08pt>
+<SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf, id=65, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 347.
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 350.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf, id=70, 578.16pt x 289.08pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.366 
+       [4 <./SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>]
+<SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf, id=78, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 366.
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 369.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+
+Overfull \hbox (7.88239pt too wide) in paragraph at lines 381--381
+ []|\T1/lmr/bx/n/8 recreational|
+ []
+
+
+Overfull \hbox (7.13646pt too wide) in paragraph at lines 381--381
+ []|\T1/lmr/bx/n/8 small_scale|
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.401 \newpage
+               [5 <./SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>]
+<SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf, id=90, 578.16pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 433.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.369 \end{figure}
-                   [4 <./SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.371 \newpage
-               [5 <./SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>]
-<SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf, id=89, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 400.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf, id=90, 578.16pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 429.
-(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-<SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf, id=91, 578.16pt x 289.08pt>
+l.459 
+       [6 <./SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>]
+<SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf, id=102, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 435.
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 462.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.449 
-       [6 <./SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.449 
-       [7 <./SuppInfo_B_files/figure-latex/unnamed-chunk-10-1.pdf> <./SuppInfo_B_files/figure-latex/unnamed-chunk-12-1.pdf>]
-<SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf, id=117, 578.16pt x 289.08pt>
+<SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf, id=103, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 452.
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 468.
+(pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
+<SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf, id=104, 578.16pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf  used on input line 485.
 (pdftex.def)             Requested size: 469.75385pt x 234.8769pt.
 
+Overfull \hbox (7.0736pt too wide) in paragraph at lines 496--496
+ []|\T1/lmr/bx/n/8 gns_fws|
+ []
+
+
+Overfull \hbox (6.40382pt too wide) in paragraph at lines 496--496
+ []|\T1/lmr/bx/n/8 gns_spf|
+ []
+
+
+Overfull \hbox (7.95152pt too wide) in paragraph at lines 496--496
+ []|\T1/lmr/bx/n/8 fpn_ana|
+ []
+
+
+Overfull \hbox (11.01764pt too wide) in paragraph at lines 496--496
+ []|\T1/lmr/bx/n/8 icefishing|
+ []
+
+ignored error: Infinite glue shrinkage found in box being split
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.456 \newpage
-               [8 <./SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 470.
+l.513 \end{longtable}
+                      [7 <./SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.516 \newpage
+               [8]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.516 \newpage
+               [9 <./SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf> <./SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 530.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 506.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 566.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 517.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 577.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 557.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 617.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.582 \end{Shaded}
-                   [9 <./SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 582
+l.642 \end{Shaded}
+                   [10 <./SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf>]
+Underfull \vbox (badness 10000) detected at line 642
  []
 
 
-Underfull \vbox (badness 10000) detected at line 582
+Underfull \vbox (badness 10000) detected at line 642
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.582 \end{Shaded}
-                   [10]
+l.642 \end{Shaded}
+                   [11]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.584 \newpage
-               [11]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 604--604
+l.644 \newpage
+               [12]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 664--664
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 632--632
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 692--692
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
 
-Overfull \hbox (5.59526pt too wide) in paragraph at lines 634--634
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 694--694
 []|\T1/lmr/m/n/8 thousand 
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 634--635
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 694--695
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 636--637
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 696--697
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf, id=147, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf  used on input line 643.
+<SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf, id=156, 867.24pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf  used on input line 703.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.647 \newpage
-               [12 <./SuppInfo_B_files/figure-latex/unnamed-chunk-28-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 667--667
+l.707 \newpage
+               [13 <./SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 727--727
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 684--684
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 744--744
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
 
-Overfull \hbox (5.59526pt too wide) in paragraph at lines 686--686
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 746--746
 []|\T1/lmr/m/n/8 thousand 
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 686--687
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 746--747
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 688--689
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 748--749
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf, id=161, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf  used on input line 695.
+<SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf, id=169, 867.24pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf  used on input line 755.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.699 \newpage
-               [13 <./SuppInfo_B_files/figure-latex/unnamed-chunk-29-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 716--716
+l.759 \newpage
+               [14 <./SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 776--776
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 733--733
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 793--793
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf, id=174, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf  used on input line 744.
+<SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf, id=181, 867.24pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf  used on input line 804.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.748 \newpage
-               [14 <./SuppInfo_B_files/figure-latex/unnamed-chunk-30-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 761--761
+l.808 \newpage
+               [15 <./SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 821--821
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 780--780
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 840--840
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf, id=186, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf  used on input line 789.
+<SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf, id=193, 867.24pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf  used on input line 849.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.793 \newpage
-               [15 <./SuppInfo_B_files/figure-latex/unnamed-chunk-31-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 806--806
+l.853 \newpage
+               [16 <./SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 866--866
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 825--825
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 885--885
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf, id=198, 867.24pt x 289.08pt>
-File: SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pdf)
-<use SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf  used on input line 834.
+<SuppInfo_B_files/figure-latex/unnamed-chunk-37-1.pdf, id=205, 867.24pt x 289.08pt>
+File: SuppInfo_B_files/figure-latex/unnamed-chunk-37-1.pdf Graphic file (type pdf)
+<use SuppInfo_B_files/figure-latex/unnamed-chunk-37-1.pdf>
+Package pdftex.def Info: SuppInfo_B_files/figure-latex/unnamed-chunk-37-1.pdf  used on input line 894.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.838 \newpage
-               [16 <./SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>]
+l.898 \newpage
+               [17 <./SuppInfo_B_files/figure-latex/unnamed-chunk-37-1.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.875 \end{document}
-                     [17] (./SuppInfo_B.aux)
+l.935 \end{document}
+                     [18] (./SuppInfo_B.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
@@ -871,18 +907,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14507 strings out of 469519
- 231412 string characters out of 5467980
- 657002 words of memory out of 5000000
- 42826 multiletter control sequences out of 15000+600000
+ 14519 strings out of 469519
+ 231621 string characters out of 5467980
+ 658487 words of memory out of 5000000
+ 42832 multiletter control sequences out of 15000+600000
  689063 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,11n,93p,539b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,93p,530b,631s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtko10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on SuppInfo_B.pdf (17 pages, 433040 bytes).
+Output written on SuppInfo_B.pdf (18 pages, 435608 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

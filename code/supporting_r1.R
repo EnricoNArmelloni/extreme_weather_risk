@@ -12,7 +12,10 @@ library(truncnorm)
 #  prob.tab=array(table(base.dist)/100, dim = length(dim.labs), dimnames = dim.list)
 #  return(prob.tab)
 #}
-
+firstup <- function(x) {
+  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+  x
+}
 answer.to.cpt=function(x.ans, x.range=c(0,1),dim.name, dim.labs = c('L','M','H'), unc=0.05, k.thr=2, x.breaks=NULL, priors=NULL){
   # this is tested and working to import interviewee answers in CPT which configuration is defined in GeNie
   dim.list <- list(dim.labs)

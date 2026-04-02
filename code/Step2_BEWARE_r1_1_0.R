@@ -9,9 +9,11 @@ library(bnlearn)
 library(gRain)
 library(profvis)
 source('code/supporting_r1.R')
-sim.uncertainty=0
+sim.uncertainty=1
+nsim=100
 show.plots=0
-
+iterations=ifelse(sim.uncertainty==0,1,nsim)
+for(xx.iter in 1:iterations){
 # Load data ####
 # data from interviews
 questionnaire=read_excel("data/editable_files/dialogues_raw.xlsx", 
@@ -36,6 +38,8 @@ rec.catch=rec.catch[rec.catch$name %in% c('Perch', 'Pike', 'Salmon', 'Zander', '
 rec.catch$prop=rec.catch$practitioners/sum(rec.catch$practitioners)
 
 # DAG
+
+
 net=read.net('data/editable_files/networks/BEWARE_release_v1_0_0.net', debug = F)
 
 
@@ -60,7 +64,7 @@ fish.simple=style.dataset[,c('short_description', 'id_I')]
 names(fish.simple)[1]='fishing_style'
 evt.relevance=evt.relevance%>%left_join(styles, by='f.style')
 
-profvis({
+#profvis({
 # CPT filling ####
 x.nodes=nodes(net)
 
@@ -232,6 +236,7 @@ df.cpt=df.cpt%>%
 
 df.cpt=re.format.cpt(df.cpt , df.var)
 df.var$Freq=df.cpt$Freq
+net[[i.node]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 
 ## go fishing ####
 i.node='go_fishing'
@@ -957,12 +962,14 @@ net[[x.var]]=array(df.var$Freq, dim=xdim, dimnames=xnam)
 if(sim.uncertainty==0){
   bnlearn::write.net( 'data/read_only/networks/BEWARE_learnt_r1_0_0.net', net)
 }else{
-  bnlearn::write.net( 'data/read_only/networks/iterations/BEWARE_learnt_r1_0_0_iter.net', net)
+  bnlearn::write.net( paste0('data/read_only/networks/iterations/BEWARE_learnt_r1_0_0_iter',xx.iter, '.net'), net)
+}
+
 }
 
 #save(net, file='data/networks/BEWARE_v3_learn_pt2.rdata')
+#})
 
-})
 fin=Sys.time()
 fin-ini
 

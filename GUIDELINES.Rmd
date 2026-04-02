@@ -57,29 +57,30 @@ printtree::print_rtree("C:/github/extreme_weather_risk/data")
 printtree::print_rtree("C:/github/extreme_weather_risk/docs")
 ```
 
-# Workflow overview
+# Workflow
 
 ![fvd](README_figures/workflow.jpeg){width="741"}
 
-# Include observations
 
-The dataset questionnaires_coded.xlsx (Figure 2) is where all the dialogues answers are manually inserted. The dialogue text is reported in SuppInfo A (docs folder).
+## Include expert opinions
+
+The dataset questionnaires_coded.xlsx (Figure 2) is where all the dialogues answers are input manually, after revision. The dialogue text is reported in SuppInfo A (docs folder).
 
 The fields that describes the answer metadata are:
 
--   id:
+-   id: identifier of the answer
 
--   category
+-   category: domain of the BN
 
--   id_q
+-   id_q: identifier of the question
 
--   gear
+-   gear: field to indicate whether the value reported is associated to a specific gear. If blank, then the value is generic
 
--   area
+-   area: field to indicate whether the value reported is associated to a specific area If blank, then the value is generic
 
--   target
+-   target: field to indicate whether the value reported is associated to a specific target species If blank, then the value is generic
 
--   short_description
+-   short_description: short text to indicate the topic of the question
 
 The other fields are used to report dialogues results. There are three type of questions:
 
@@ -90,7 +91,19 @@ The other fields are used to report dialogues results. There are three type of q
 -   one value with uncertainty (e.g.: id_q 11-12): the lower and upper range are included in the columns range.lwr and range.upr, the unit in unit_range
 
 ![Figure 2: screenshot of one spreadsheet from the file questionnaires_coded.xlsx](README_figures/fig_handbook1.png)
+## Data from literature
 
-# Generate CPT
+Data from literature are treated as described in SuppInfo B, available in the Docs section.
+
+## Generate CPT
+
+- Format data
+
+The script "Step1_coding_treatments.R" is used to format the dialogues result in the proper format.
+
+- Use data to fill CPTs
+
+The script "Step2_BEWARE_r1_0_0.R" contains the rules to fill all the CPT of our case study. 
+
 
 # Scenarios

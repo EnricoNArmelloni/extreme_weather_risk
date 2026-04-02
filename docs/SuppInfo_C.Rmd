@@ -230,11 +230,11 @@ for(i in 1:nrow(scen.grid2)){
 
 # Network structure
 
-![complete representation of the Bayesian Network, showing conditional probabilties distributions. Colors are associated to node types. Yellow: decision nodes; THIS to be improved: open to suggestions. the categories of nodes that are used in this document are too many to be associated to colors](images/BN_outline.jpg){width="10cm"}
+![complete representation of the Bayesian Network, showing conditional probabilties distributions. Colors are associated to node types and group Yellow: decision nodes; lime green: chanche nodes - operational group; grey: chanche nodes - user group; navy blue: chanche nodes - individual group; light blue: chanche nodes - societal group; cyan: chanche nodes - economic group; orange: utility nodes -  risk](images/BN_outline.jpg){width="10cm"}
 
 \newpage
 
-# Algebric methods for Ranked nodes
+# Algebraic methods for Ranked nodes
 
 Ranked nodes have order-preserving meaning states (e.g.: low/medium/high) that can be mapped to a continuous numerical scale bounded to [0,1], assuming equal intervals [@fenton2019]. For instance, in a node having three states (low, medium, high), the “low” state takes the interval [0-0.33). The probability distribution of a ranked node in the numerical scale is described as *TNormal*( $\mu$ ,$\sigma^2$,0,1). The use of a numerical scale allow to use linear algebra to perform operations among variables, a technique that is particularly useful to build a CPT from a reduced number of questions [@fenton2007]. When a child has multiple parents with multiple states (binary or more), the distribution of a child node can be calculated by implementing algorithms based on the state, direction (positive or negative) and weight of their parents. The algorithms most commonly applied to ranked nodes gives equal (Eq. B1) or unequal contribution to states. Weighted max (Eq. B2) assigns more contribution to large states, while Weighted min (Eq. B3) assigns more contribution to small states.
 
@@ -248,11 +248,9 @@ $$\mu = max[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.B3]
 
 # Decision nodes
 
-Controls the climate and fishing management scenarios, those are defined *a priori* depending on the conditions to be explored in the scenario analyses.
+## Extreme weather events (node: extreme_event)
 
-## Extreme weather events (node: event)
-
-The node *Event* is used to wrap all the extreme weather events we are considering.
+The node *extreme_event* is used to wrap all the extreme weather events we are considering.
 
 *Levels (and acronyms)*
 
@@ -264,31 +262,31 @@ The node *Event* is used to wrap all the extreme weather events we are consideri
 
 -   **Algal bloom** (abl): intense algal bloom;
 
--   **Summer heatwaves** (hws): prolonged discrete anomalously warm water event (Hobday et al., 2016);
+-   **Summer heatwaves** (hws): prolonged discrete anomalously warm water event occurring in summer (Hobday et al., 2016);
 
--   **Winter heatwaves** (hww): prolonged discrete anomalously warm water event (Hobday et al., 2016);
+-   **Winter heatwaves** (hww): prolonged discrete anomalously warm water event occurring in winter (Hobday et al., 2016);
 
--   **Icing** (Ici): strong wind events associated to ice, which then forms icing pile up on gears and boats.
+-   **Icing** (ici): strong wind events associated to ice, which then forms icing pile up on gears and boats.
 
 ## Fishing style (and acronyms)
 
-The node *Fishing style* is used to wrap all the fishing styles and seasons.
+The node *fishing_style* is used to wrap all the fishing styles and seasons.
 
 *Levels (and acronyms)*
 
--   **Recreational fisher** (rcf): a fishing style that operates year round. In winter, it primarily performs ice fishing and potentially can fish in open water from the shore; in summer fish with fishing rods both inland and in coastal area;
+-   **Recreational fisher (recreational - rcf)**: fishers without a commercial fishing license, deploying hand-held gears for recreational purposes;
 
--   **fishing guide** (fgu): a fishing style that operates year round. In winter, it primarily performs ice fishing and potentially can fish in open water from the shore; in summer fish with fishing rods both inland and in coastal areas;
+-   **Fishing guides (guides - fgu)** (fgu): commercial actors who provide recreational fishers with fishing experience by sharing expert and local knowledge, giving access to angling concession and offering boat chartering ;
 
--   **Coastal small-scale fishers**, (ssf) a summer fishing style that use two kind of gillnets in coastal areas, and in some cases for salmon with fixed traps rigidly regulate. Gillnets types are herring gillnets (gns_spf) and freshwater gillnets (gns_fws). Traps are fpn_ana.
+-   **Small-scale coastal fishing (small_scale - ssf)**, fishers operating small boats (<12 m) deploying species-specific passive gears.
 
--   **Pelagic trawlers** (trw), represented by pelagic trawlers active in winter and exclusively fishing for small pelagic with midwater trawl (otm);
+-   **Pelagic trawling (trawlers - trw)**, fishers operating medium to large size vessels (24-60 m) deploying pelagic trawl nets;
 
--   **Archipelago fishers** (arc), which is similar to an artisanal fishers but is by law prevented from selling their catches.
+-   **Household fishing (household - hou)**, fishing by residents of the Swedish archipelago, using coastal-type passive gears, without commercial licences and without legal access to markets.
 
-## Aware
+## Aware of the event
 
-The node *aware* controls the fisherman awareness the event occurrence. In the case when fisher is not aware, he always goes out fishing. The fisher can still adopt react or adapt strategies.
+The node *aware_of_event* controls the fisherman awareness the event occurrence. In the case when fisher is not aware, he always goes out fishing. The fisher can still adopt react or adapt strategies.
 
 *Levels (and acronyms)*
 
@@ -381,3 +379,5 @@ Shape how different fisheries will perceive risk. To each of these variables, th
 ```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
 knit.fun(target.nodes = unique(node.text[node.text$group=='risk',]$node), net=net)
 ```
+
+# References

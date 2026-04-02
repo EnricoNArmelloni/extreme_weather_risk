@@ -8,12 +8,12 @@ library(bnlearn)
 theme_set(theme_bw())
 
 # load ####
-x.mod=list.files(path='results/iterations')
+x.mod=list.files(path='data/read_only/networks/iterations')
 x.st=x.st.2=x.st.3=NULL
 for(xx in 1:length(x.mod)){
   cat(xx)
   
-  net=read.net(paste0('results/iterations/',x.mod[xx]))
+  net=read.net(paste0('data/read_only/networks/iterations/',x.mod[xx]))
   
   # S2
   array.var=net[['extreme_event']]$prob
@@ -23,8 +23,7 @@ for(xx in 1:length(x.mod)){
   i.res=cpdist(net, nodes = c('economic_risk', 'societal_risk','individual_risk',
                               'go_fishing', 'strategy_to_change'), 
                 evidence = list(extreme_event = ev.list[i],
-                                stock_status='status_quo',
-                                aware_of_event='yes'), n=10^5, method='lw')
+                               aware_of_event='yes'), n=10^5, method='lw')
   i.res$extreme_event=ev.list[i]
   i.res=i.res%>%
     pivot_longer(-extreme_event, names_to = 'node', values_to = 'est')%>%
@@ -45,7 +44,7 @@ for(xx in 1:length(x.mod)){
   for(i in 1:length(fi.list)){
     i.res=cpdist(net, nodes = c('economic_risk', 'societal_risk','individual_risk', 
                                 'strategy_to_change', 'go_fishing', 'substitution_capacity', 'economic_buffers', 'societal_importance', 'individual_importance'), 
-                 evidence = list(fishing_style = fi.list[i], stock_status='status_quo',
+                 evidence = list(fishing_style = fi.list[i], 
                                  aware_of_event='yes'), n=10^5, method='lw')
     i.res$fishing_style=fi.list[i]
     i.res=i.res%>%
@@ -71,7 +70,6 @@ for(xx in 1:length(x.mod)){
                                 'strategy_to_change', 'go_fishing', 'substitution_capacity', 'economic_buffers', 'societal_importance', 'individual_importance'), 
                  evidence = list(fishing_style = fi.ev.list[i,]$Var2, 
                                  extreme_event = fi.ev.list[i,]$Var1,
-                                 stock_status='status_quo',
                                  aware_of_event='yes'), n=10^5, method='lw')
     
     
