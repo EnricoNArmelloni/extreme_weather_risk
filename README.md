@@ -2,7 +2,7 @@
 # BEWARE: a Bayesian Extreme WeAtheR Event model for fishing operations
 
 [![Latest
-release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/mhucka/readmine/releases)
+release](https://img.shields.io/github/v/release/EnricoNArmelloni/extreme_weather_risk.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/EnricoNArmelloni/extreme_weather_risk/releases)
 [![DOI](http://img.shields.io/badge/DOI-XXXXX%2fzenodo.XXXXXX-blue.svg?style=flat-square)](https://zenodo.org)
 
 ## Table of contents
