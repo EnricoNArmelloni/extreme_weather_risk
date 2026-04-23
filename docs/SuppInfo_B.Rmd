@@ -48,7 +48,7 @@ bibliography: references.bib
 
 ## Commercial fishers
 
-Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Framework, of which most recent update at the time of writing includes data until 2024. The dataset relevant for this study includes:
+Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Framework, of which most recent update at the time of writing includes data until 2024. Our case study area spans over four ICES statistical divisions (27, 29, 30, 31). The majority of the commercial fishers included in our dialogues operate in the area 30 (Bothnian Sea), which is chosen as reference area for statistical information. The dataset relevant for this study includes:
 
 -   *Fishery dependent information (FDI) for EU Fleets* [@jrc]: provides fishing effort (dataset D1; fishing days) and catch (dataset D2; weight and value) data by country, area, fleet segment and target species
 

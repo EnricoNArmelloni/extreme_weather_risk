@@ -236,7 +236,7 @@ for(i in 1:nrow(scen.grid2)){
 
 # Network structure
 
-![Bayesian Network representing risks to Swedish fisheries posed by Marine Extreme Weather events (abl algal bloom, hws summer heatwave, hww winter heatwave, gal gale, sto storm, erf extreme railfall, ici icing) effects on fishing operations, as identified at the conclusion of the third cycle of stakeholder (fishers) dialogues. The probability distributions shown in the boxes represents the example of how summer heatwave affects fishing operations across all fishing styles. Conditional probability distribution details and terminology are reported in Supp. Info. C. Colors are associated to node types and group Yellow: decision nodes; lime green: chanche nodes – operational group; grey: chanche nodes - user group; navy blue: chance nodes - individual group; light blue: chance nodes - societal group; cyan: chance nodes - economic group; orange: risk nodes](images/BN_outline.jpg){width="10cm"}
+![Bayesian Network representing risks to Swedish fisheries posed by Marine Extreme Weather events (abl algal bloom, hws summer heatwave, hww winter heatwave, gal gale, sto storm, erf extreme railfall, ici icing) effects on fishing operations, as identified at the conclusion of the third cycle of stakeholder (fishers) dialogues. The probability distributions shown in the boxes represents the example of how summer heatwave affects fishing operations across all fishing styles. Conditional probability distribution details and terminology are reported in Supp. Info. C. Colors are associated to node types and group Yellow: decision nodes; lime green: chanche nodes – operational group; grey: chanche nodes - user group; navy blue: chance nodes - individual group; light blue: chance nodes - societal group; cyan: chance nodes - economic group; orange: risk nodes](images/BN_outline.jpg){width="9.5cm"}
 
 \newpage
 
@@ -376,7 +376,7 @@ print(p)
 
 ```
 
-# Utilities - Risk
+# Risk
 
 Shape how different fisheries will perceive risk. To each of these variables, the effect of the human community variables is to be interpreted as “how much this variable is important”? The CPT table combine the concepts of ranked nodes and the classic definition of Risk = Hazard \* Vulnerability. In the case of individual and societal importance, Risk is exactly calculated as Hazard \* Vulnerability. Parent categories (Low, medium and high; as well as not important, somehow important and very important) are mapped to 0, 0.5 and 1 values. The parent value are multiplied.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  23 APR 2026 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  23 APR 2026 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1633,11 +1633,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has 
                    \relax 
 l.489 \end{longtable}
                      
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 531--532
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1659,11 +1654,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has 
                    \relax 
 l.566 \end{longtable}
                      
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 582--583
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [11]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 609--610
 []|\T1/lmr/bx/n/8 Score 
@@ -1674,42 +1664,13 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 609--610
 \T1/lmr/bx/n/8 (given)|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 631--632
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 665--666
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[12]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 704--705
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[13]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 743--744
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
+[12] [13]
 
 Package hyperref Warning: Suppressing link with empty target on input line 767.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 774--774
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 774--775
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 774--775
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 793--794
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -1721,11 +1682,6 @@ Overfull \hbox (9.01263pt too wide) in paragraph at lines 820--821
 
 Overfull \hbox (15.8515pt too wide) in paragraph at lines 820--821
 \T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 842--843
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [15]
@@ -1749,230 +1705,110 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 893--893
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 915--916
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 945--945
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 945--946
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 945--946
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [16]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 972--973
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1006--1006
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1006--1007
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1006--1007
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [17]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1026--1026
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1026--1027
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1026--1027
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1046--1046
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1046--1047
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1046--1047
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1067--1067
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1067--1068
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1067--1068
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1084--1085
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1084--1085
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [18]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1103--1103
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1124--1125
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1124--1124
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1143--1144
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1124--1125
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1143--1143
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1162--1163
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1143--1144
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1162--1162
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1162--1163
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [19]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1181--1181
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1181--1182
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1181--1182
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1199--1199
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1199--1200
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1199--1200
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1220--1221
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1220--1221
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1239--1239
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1239--1240
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1239--1240
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [20]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1258--1258
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1258--1259
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1258--1259
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1276--1276
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1276--1277
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1276--1277
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1294--1294
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1294--1295
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1294--1295
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1313--1313
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1313--1314
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1313--1314
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1331--1331
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1331--1332
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1331--1332
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [21]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1349--1349
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1349--1350
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1349--1350
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1367--1367
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1367--1368
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1367--1368
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1385--1385
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1385--1386
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1385--1386
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -2047,72 +1883,32 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 1517--1517
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1534--1534
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1534--1535
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1534--1535
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [24]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1552--1552
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1552--1553
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1552--1553
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (0.93246pt too wide) in paragraph at lines 1560--1560
+Overfull \hbox (0.93246pt too wide) in paragraph at lines 1560--1561
 \T1/lmr/m/n/8 Slus|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1578--1578
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1578--1579
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1578--1579
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1595--1595
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1595--1596
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1595--1596
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-ignored: Infinite glue shrinkage found in box being split [25]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1634--1635
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1669--1670
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[26]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1702--1703
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1736--1737
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[27]
+ignored: Infinite glue shrinkage found in box being split [25] [26] [27]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 1763--1764
 []|\T1/lmr/bx/n/8 Score 
  []
@@ -2123,44 +1919,19 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 1763--1764
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1785--1786
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [28]
 
 Package hyperref Warning: Suppressing link with empty target on input line 1810.
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1825--1826
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 Package hyperref Warning: Suppressing link with empty target on input line 1849.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1856--1856
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1856--1857
 []|\T1/lmr/bx/n/8 Score|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1856--1857
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[29]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1875--1876
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1908--1909
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[30]
+[29] [30]
 Overfull \hbox (1.62512pt too wide) in paragraph at lines 1940--1940
 \T1/lmr/bx/n/8 (given)|  
  []
@@ -2181,220 +1952,105 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 1959--1959
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1980--1981
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2010--2010
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2010--2011
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2010--2011
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [31]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2030--2031
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2064--2064
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2064--2065
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2064--2065
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2084--2084
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2084--2085
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2084--2085
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [32]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2105--2105
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2105--2106
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2105--2106
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2126--2126
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2126--2127
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2126--2127
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2143--2143
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2143--2144
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2162--2162
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2143--2144
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 [33]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2183--2183
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2183--2184
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2183--2184
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2202--2202
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2202--2203
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2202--2203
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2222--2222
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2222--2223
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2222--2223
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [34]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2241--2241
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2241--2242
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2241--2242
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2259--2259
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2259--2260
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2259--2260
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2280--2280
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2280--2281
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2280--2281
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2299--2299
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2299--2300
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2299--2300
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2318--2318
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2318--2319
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2318--2319
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [35]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2337--2337
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2337--2338
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2337--2338
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2355--2355
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2355--2356
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2355--2356
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2374--2374
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2374--2375
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2374--2375
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2392--2392
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2392--2393
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2392--2393
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [36]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2410--2410
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2410--2411
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2410--2411
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2428--2428
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2428--2429
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2428--2429
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -2484,56 +2140,26 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 2578--2578
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2595--2595
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2595--2596
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2595--2596
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [39]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2613--2613
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2613--2614
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2613--2614
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2633--2633
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2633--2634
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2633--2634
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2650--2650
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2650--2651
 []|\T1/lmr/bx/n/8 Score|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2650--2651
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[40]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2693--2694
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2728--2729
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-[41]
+[40] [41]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 2755--2756
 []|\T1/lmr/bx/n/8 Score 
  []
@@ -2544,52 +2170,18 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 2755--2756
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2786--2787
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [42]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2820--2821
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2853--2854
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [43]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2885--2886
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
 
 Package hyperref Warning: Suppressing link with empty target on input line 2909.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2916--2916
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2916--2917
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2916--2917
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [44]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2935--2936
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2968--2969
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [45]
 Overfull \hbox (1.62512pt too wide) in paragraph at lines 3000--3000
 \T1/lmr/bx/n/8 (given)|  
@@ -2611,220 +2203,105 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 3019--3019
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3040--3041
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [46]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3070--3070
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3070--3071
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3070--3071
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3090--3091
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3124--3124
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3124--3125
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3124--3125
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [47]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3144--3144
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3144--3145
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3144--3145
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3165--3165
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3165--3166
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3165--3166
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3186--3187
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3186--3187
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3203--3203
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3203--3204
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3203--3204
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [48]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3222--3222
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3243--3244
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3243--3243
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3262--3263
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3243--3244
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3262--3262
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3281--3282
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3262--3263
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3281--3281
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3281--3282
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [49]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3300--3300
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3300--3301
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3300--3301
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3318--3318
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3318--3319
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3318--3319
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3339--3339
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3339--3340
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3339--3340
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3358--3358
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3358--3359
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3358--3359
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [50]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3377--3377
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3377--3378
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3377--3378
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3396--3396
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3396--3397
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3396--3397
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3414--3414
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3414--3415
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3414--3415
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3433--3433
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3433--3434
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3433--3434
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [51]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3451--3451
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3451--3452
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3451--3452
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3469--3469
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3469--3470
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3469--3470
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3487--3487
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3487--3488
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3487--3488
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -2909,57 +2386,27 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 3637--3637
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3654--3654
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3654--3655
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3654--3655
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [54]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3672--3672
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3672--3673
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3672--3673
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3692--3692
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3692--3693
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3692--3693
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3709--3709
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3709--3710
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3709--3710
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [55]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3747--3748
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3782--3783
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [56]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 3809--3810
 []|\T1/lmr/bx/n/8 Score 
@@ -2970,52 +2417,18 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 3809--3810
 \T1/lmr/bx/n/8 (given)|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3831--3832
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
 [57]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3865--3866
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3898--3899
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [58]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3933--3934
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
 
 Package hyperref Warning: Suppressing link with empty target on input line 3957.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3964--3964
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3964--3965
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3964--3965
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3987--3988
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [59]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4020--4021
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 Overfull \hbox (1.62512pt too wide) in paragraph at lines 4052--4052
 \T1/lmr/bx/n/8 (given)|  
  []
@@ -3036,219 +2449,104 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 4071--4071
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4092--4093
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4122--4122
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4122--4123
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4122--4123
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [61]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4142--4143
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4176--4176
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4176--4177
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4176--4177
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4196--4196
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4196--4197
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4196--4197
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [62]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4217--4217
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4217--4218
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4217--4218
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4238--4238
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4238--4239
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4238--4239
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4255--4255
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4255--4256
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4274--4274
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4255--4256
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 [63]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4295--4295
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4295--4296
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4295--4296
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4314--4314
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4314--4315
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4314--4315
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4333--4333
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4333--4334
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4333--4334
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4352--4352
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4352--4353
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4352--4353
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [64]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4370--4370
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4370--4371
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4370--4371
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4391--4391
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4391--4392
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4391--4392
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4410--4410
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4410--4411
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4410--4411
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4429--4429
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4429--4430
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4429--4430
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [65]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4449--4449
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4449--4450
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4449--4450
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4467--4467
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4467--4468
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4467--4468
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4486--4486
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4486--4487
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4486--4487
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4504--4504
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4504--4505
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4504--4505
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [66]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4522--4522
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4522--4523
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4522--4523
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4540--4540
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4540--4541
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4540--4541
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -3332,49 +2630,24 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 4690--4690
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4707--4707
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4707--4708
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4707--4708
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4725--4725
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4725--4726
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4725--4726
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [69]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4745--4745
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4745--4746
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4745--4746
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4762--4762
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4762--4763
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4762--4763
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4799--4800
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -3389,11 +2662,6 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 4828--4829
  []
 
 [71]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4856--4857
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 4883--4884
 []|\T1/lmr/bx/n/8 Score 
  []
@@ -3403,50 +2671,15 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 4883--4884
 \T1/lmr/bx/n/8 (given)|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4911--4912
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
 [72]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4945--4946
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [73]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4978--4979
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5017--5018
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [74]
 
 Package hyperref Warning: Suppressing link with empty target on input line 5041.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5048--5048
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5048--5049
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5048--5049
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5067--5068
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5100--5101
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [75]
@@ -3474,11 +2707,6 @@ Overfull \hbox (1.29726pt too wide) in paragraph at lines 5153--5153
 []|\T1/lmr/m/n/8 1000000|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5172--5173
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
 [76]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 5199--5200
 []|\T1/lmr/bx/n/8 Score 
@@ -3490,213 +2718,103 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 5199--5200
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5218--5218
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5218--5219
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5218--5219
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5238--5239
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [77]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5272--5272
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5272--5273
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5272--5273
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5292--5292
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5292--5293
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5292--5293
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5313--5313
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5313--5314
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5313--5314
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [78]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5334--5334
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5334--5335
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5334--5335
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5351--5351
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5351--5352
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5351--5352
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5370--5370
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5391--5392
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5391--5391
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5391--5392
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [79]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5410--5410
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5410--5411
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5410--5411
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5429--5429
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5429--5430
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5429--5430
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5448--5448
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5448--5449
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5448--5449
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5466--5466
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5466--5467
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5466--5467
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [80]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5487--5487
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5487--5488
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5487--5488
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5506--5506
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5506--5507
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5506--5507
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5525--5525
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5525--5526
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5525--5526
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5544--5544
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5544--5545
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5544--5545
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5562--5562
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5562--5563
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5562--5563
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [81]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5581--5581
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5581--5582
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5581--5582
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5599--5599
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5599--5600
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5599--5600
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5617--5617
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5617--5618
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5617--5618
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5635--5635
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5635--5636
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5635--5636
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -3782,52 +2900,27 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 5786--5786
  []
 
 [84]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5803--5803
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5803--5804
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5803--5804
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5821--5821
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5821--5822
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5821--5822
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5841--5841
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5841--5842
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5841--5842
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5858--5858
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5858--5859
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5858--5859
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [85]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5896--5897
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [86]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 5925--5926
 []|\T1/lmr/bx/n/8 Score 
@@ -3836,11 +2929,6 @@ Overfull \hbox (9.01263pt too wide) in paragraph at lines 5925--5926
 
 Overfull \hbox (15.8515pt too wide) in paragraph at lines 5925--5926
 \T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5947--5948
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -3855,53 +2943,18 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 5974--5975
 
 
 ignored: Infinite glue shrinkage found in box being split [87]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5996--5997
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6030--6031
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [88]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6063--6064
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6103--6104
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [89]
 
 Package hyperref Warning: Suppressing link with empty target on input line 6127.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6134--6134
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6134--6135
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6134--6135
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6153--6154
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [90]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6186--6187
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 Overfull \hbox (1.62512pt too wide) in paragraph at lines 6218--6218
 \T1/lmr/bx/n/8 (given)|  
  []
@@ -3922,218 +2975,103 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 6239--6239
  []
 
 [91]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6260--6261
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6290--6290
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6290--6291
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6290--6291
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6310--6311
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [92]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6344--6344
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6344--6345
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6344--6345
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6364--6364
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6364--6365
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6364--6365
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6385--6385
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6385--6386
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6385--6386
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [93]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6406--6406
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6406--6407
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6406--6407
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6423--6423
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6423--6424
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6423--6424
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6442--6442
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6463--6464
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6463--6463
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6463--6464
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [94]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6482--6482
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6482--6483
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6482--6483
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6501--6501
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6501--6502
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6501--6502
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6520--6520
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6520--6521
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6520--6521
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6538--6538
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6538--6539
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6538--6539
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [95]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6559--6559
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6559--6560
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6559--6560
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6578--6578
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6578--6579
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6578--6579
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6597--6597
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6597--6598
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6597--6598
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6616--6616
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6616--6617
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6616--6617
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [96]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6634--6634
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6634--6635
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6634--6635
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6653--6653
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6653--6654
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6653--6654
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6671--6671
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6671--6672
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6671--6672
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6689--6689
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6689--6690
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6689--6690
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6707--6707
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6707--6708
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6707--6708
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [97]
@@ -4223,49 +3161,24 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 6857--6857
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6874--6874
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6874--6875
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6874--6875
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6892--6892
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6892--6893
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6892--6893
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [100]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6912--6912
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6912--6913
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6912--6913
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6929--6929
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6929--6930
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6929--6930
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6969--6970
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -4280,11 +3193,6 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 6998--6999
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7020--7021
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [102]
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 7047--7048
 []|\T1/lmr/bx/n/8 Score 
@@ -4296,17 +3204,7 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 7047--7048
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7069--7070
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [103]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7103--7104
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 Overfull \hbox (9.01263pt too wide) in paragraph at lines 7130--7131
 []|\T1/lmr/bx/n/8 Score 
  []
@@ -4317,33 +3215,13 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 7130--7131
  []
 
 [104]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7154--7155
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7187--7188
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
 ignored: Infinite glue shrinkage found in box being split [105]
 
 Package hyperref Warning: Suppressing link with empty target on input line 7211.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7218--7218
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7218--7219
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7218--7219
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7237--7238
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -4354,11 +3232,6 @@ Overfull \hbox (9.01263pt too wide) in paragraph at lines 7264--7265
 
 Overfull \hbox (15.8515pt too wide) in paragraph at lines 7264--7265
 \T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7286--7287
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [106]
@@ -4382,23 +3255,8 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 7337--7337
  []
 
 [107]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7358--7359
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7388--7388
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7388--7389
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7388--7389
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7408--7409
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [108]
@@ -4432,188 +3290,93 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 7456--7457
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7479--7479
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7479--7480
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7479--7480
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [109]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7500--7500
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7500--7501
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7500--7501
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7521--7521
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7521--7522
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7521--7522
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7538--7538
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7538--7539
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7538--7539
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [110]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7557--7557
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7578--7579
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7578--7578
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7597--7598
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7578--7579
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7597--7597
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7616--7617
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7597--7598
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7616--7616
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7616--7617
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [111]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7635--7635
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7635--7636
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7635--7636
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7653--7653
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7653--7654
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7653--7654
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7674--7674
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7674--7675
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7674--7675
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7693--7693
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7693--7694
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7693--7694
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7712--7712
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7712--7713
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7712--7713
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [112]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7731--7731
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7731--7732
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7731--7732
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7749--7749
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7749--7750
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7749--7750
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7768--7768
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7768--7769
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7768--7769
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7786--7786
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7786--7787
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7786--7787
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [113]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7804--7804
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7804--7805
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7804--7805
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7822--7822
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7822--7823
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7822--7823
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 
@@ -4698,43 +3461,23 @@ Overfull \hbox (1.62512pt too wide) in paragraph at lines 7975--7975
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7992--7992
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7992--7993
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7992--7993
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [116]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 8010--8010
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8010--8011
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 8010--8011
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 8030--8030
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8030--8031
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 8030--8031
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 8047--8047
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8047--8048
 []|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 8047--8048
-[]|\T1/lmr/bx/n/8 Method|  
  []
 
 [117] (./SuppInfo_A.aux)
@@ -4749,13 +3492,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  15171 strings out of 469339
  232753 string characters out of 5464315
- 799035 words of memory out of 5000000
+ 797684 words of memory out of 5000000
  42950 multiletter control sequences out of 15000+600000
  693863 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,11n,93p,743b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,93p,738b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on SuppInfo_A.pdf (117 pages, 522294 bytes).
+Output written on SuppInfo_A.pdf (117 pages, 518477 bytes).
 PDF statistics:
  1459 PDF objects out of 1728 (max. 8388607)
  1304 compressed objects within 14 object streams

@@ -94,8 +94,8 @@ for(i in 1:length(u.resp)){
         j.resp=merge(j.resp, j.coding[,c("id_sub", "value")], by='id_sub', all.x=T)
         j.resp$type=NA
         j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
-        j.resp=j.resp[,c('id_sub','description','text','value','type')]
-        names(j.resp)=c('','Event', 'Answer', 'Score', 'Method')  
+        j.resp=j.resp[,c('id_sub','description','text','value')]
+        names(j.resp)=c('','Event', 'Answer', 'Score')  
         kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i],
                                                                              'Q', u.quest[j]  )) %>%
             kable_styling(font_size = 8)%>% 
@@ -119,8 +119,8 @@ for(i in 1:length(u.resp)){
       j.resp$type=NA
       j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
       j.resp$type=ifelse(j.resp$score_obs=='M','M',j.resp$type)
-      j.resp=j.resp[,c('id_sub','description','text','value','type')]
-      names(j.resp)=c('','Event', 'Answer', 'Score', 'Method')  
+      j.resp=j.resp[,c('id_sub','description','text','value')]
+      names(j.resp)=c('','Event', 'Answer', 'Score')  
         
       kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i],
                                                                            'Q', u.quest[j]  )) %>%
@@ -190,8 +190,8 @@ for(i in 1:length(u.resp)){
           j.resp$value=j.coding$value
           j.resp$type=NA
           j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
-          j.resp=j.resp[,c('text','value','type')]
-          names(j.resp)=c('Answer','Score', 'Method')
+          j.resp=j.resp[,c('text','value')]
+          names(j.resp)=c('Answer','Score')
           kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i], 
                                                                                'Q', u.quest[j]  )) %>%
               kable_styling(font_size = 8)%>% 
@@ -223,8 +223,8 @@ for(i in 1:length(u.resp)){
        j.resp$type=ifelse(as.numeric(j.resp$score_obs)==as.numeric(j.resp$value), 'O','G')
        j.resp$short_description=ifelse(j.resp$id_sub=='a', 'Injuries',
                                        ifelse(j.resp$id_sub=='b', 'Damages to gear' , 'Fish condition'))
-       j.resp=j.resp[,c('id_sub','short_description','text','value','type')]
-       names(j.resp)=c('','Type','Answer', 'Score', 'Method')
+       j.resp=j.resp[,c('id_sub','short_description','text','value')]
+       names(j.resp)=c('','Type','Answer', 'Score')
        kable.obj=kableExtra::kable((j.resp), booktabs = TRUE, caption=paste('Interviewee: I', u.resp[i], 
                                                                             'Q', u.quest[j]  )) %>%
               kable_styling(font_size = 8)%>% 
@@ -232,8 +232,7 @@ for(i in 1:length(u.resp)){
               row_spec(1:(nrow(j.resp)-1),   hline_after=T)%>%
               column_spec(3, width = "8cm")%>%
               column_spec(2, width = "3cm")%>%
-              column_spec(1, width = "0.5cm")%>%
-              column_spec(4, width = "0.5cm")
+              column_spec(1, width = "0.5cm")
         print(kable.obj)
      }
      
