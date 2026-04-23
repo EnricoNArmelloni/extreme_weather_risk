@@ -1,14 +1,13 @@
 ---
 title: "Supplementary Information for: How do extreme weather events affect fishing operations? Knowledge engineering a risk analysis with Swedish Baltic Sea fishers"
-subtitle: 'Supp. Inf. B: treatment of fisheries statistics available in European and Swedish respositories.'
 author:
-  - Enrico Nicola Armelloni:
+  - Enrico Nicola Armelloni,:
       email: enrico.e.armelloni@gmail.com
       institute: [SLU]
       correspondence: true
-  - name: Jens Olsson
+  - name: Jens Olsson,
     institute: SLU
-  - name: Laura Uusitalo
+  - name: Laura Uusitalo,
     institute: LUKE
   - name: Anna Gårdmark
     institute: SLU
@@ -28,6 +27,13 @@ header-includes:
   - \pagenumbering{gobble}
 bibliography: references.bib
 ---
+\vspace{12pt}
+
+\fontsize{15}{18}\selectfont Supplementary Information B: Treatment of fisheries statistics available in European and Swedish repositories
+
+\normalfont\normalsize
+
+\pagenumbering{arabic}
 
 ```{=latex}
 \setcounter{tocdepth}{2}
@@ -42,13 +48,13 @@ bibliography: references.bib
 
 ## Commercial fishers
 
-Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Franmework, which most recent update at the time of writing includes data until 2024. The dataset relevant for this study includes:
+Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Framework, of which most recent update at the time of writing includes data until 2024. The dataset relevant for this study includes:
 
 -   *Fishery dependent information (FDI) for EU Fleets* [@jrc]: provides fishing effort (dataset D1; fishing days) and catch (dataset D2; weight and value) data by country, area, fleet segment and target species
 
 -   *Annual Economic report on EU fishing fleet* [@jrc2025]: provides economic overview (dataset D3; number of vessels, income, expenses) of european fishing fleets by country and fleet segment
 
-The FDI data resolution allow to obtain information for the study area (Bothnian Sea - ICES area 27.3.D.30), while the AER is only available at country (Sweden) level. Different aggregation of the data requires to implement some simplifications or assumptions, hereby explained. Terminology adopted is consistent with definitions in use in the Data collection framework of the European Union [@gear2026].
+The FDI data resolution allow us to obtain information for the study area (Bothnian Sea - ICES area 27.3.D.30), while the AER is only available at country (Sweden) level. Different aggregation of the data requires to implement some simplifications or assumptions, hereby explained. Terminology adopted is consistent with definitions in use in the Data collection framework of the European Union [@gear2026].
 
 ### Small scale fishers
 
@@ -60,7 +66,7 @@ Pelagic correspond to vessels of size \> 24m operating pelagic nets (gear code: 
 
 ## Recreational fishers
 
-Dataset for recreational fishers is available through Sweden statistic reports [@swam2024], which most recent update at the time of writing includes data until 2024. The dataset relevant for this study are the following tables (table number ios reported as it appears in Swam):
+Dataset for recreational fishers is available through Sweden statistic reports [@swam2024], which most recent update at the time of writing includes data until 2024. The dataset relevant for this study are the following tables (table number is reported as it appears in SwAM and SCB, 2024):
 
 -   Table 5: target species in the sea in 2024
 

@@ -11,7 +11,6 @@ release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-
 - [Quick start](#quick-start)
 - [Usage (GeNIe GUI)](#usage_1)
 - [Usage (bnlearn)](#usage_2)
-- [Contributing](#contributing)
 - [Getting help](#getting-help)
 - [Acknowledgments](#acknowledgments)
 
@@ -162,14 +161,6 @@ alt="Figure 4:usage of the virtual evidence panel to set evidence on multiple le
 <figcaption aria-hidden="true">Figure 4:usage of the virtual evidence
 panel to set evidence on multiple levels of a decision node</figcaption>
 </figure>
-
-## Including your own data
-
-If you want to use the software for your own case study you need to be
-able to include you own data. The [`GUIDELINES`](GUIDELINES.pdf) section
-provide more detailed guidelines on the procedure we used to geenrate
-the conditional probabilties distribution, and explains how and where to
-include your own data.
 
 ## Getting help
 

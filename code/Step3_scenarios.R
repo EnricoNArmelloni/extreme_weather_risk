@@ -179,7 +179,7 @@ p.RQ1.a=risk.df.R1%>%
   labs(fill='Risk')+
   ylab('Frequency')+
   xlab('Risk category')
-write.csv(risk.df.R1, 'results/scenarios/riskRQ1.csv', row.names = F)
+write.csv(risk.df.R1, 'results/scenarios/S2.csv', row.names = F)
 ggsave(plot=p.RQ1.a, 'results/scenarios/s1_risk.png', width = 120, height = 200, units='mm', dpi=500)
 
 
@@ -273,7 +273,7 @@ p.f2=risk.df.R2%>%
   ylab('Frequency')+
   xlab('Fishing style');p.f2
 
-write.csv(risk.df.R2, 'results/scenarios/riskRQ2.csv', row.names = F)
+write.csv(risk.df.R2, 'results/scenarios/S3.csv', row.names = F)
 ggsave(plot=p.f2, 'results/scenarios/s2_risk.png', width = 200, height = 70, units='mm', dpi=500)
 
 
@@ -316,7 +316,7 @@ ss1=rbind(ev.store[which(ev.store$node %in% c('go_fishing')),],
   scale_y_continuous(breaks=c(0,0.5,1))+
   scale_x_discrete(guide = guide_axis(n.dodge = 2))
 
-ggsave(plot=ss1, 'results/scenarios/ss_effect.png', width = 210, height = 100, units='mm', dpi=500)
+ggsave(plot=ss1, 'results/scenarios/ss_effect.png', width = 200, height = 60, units='mm', dpi=500)
 
 new.buffer=effects.df%>%
   dplyr::filter(node %in% c('economic_buffers', 'societal_importance','individual_importance'))%>%
@@ -476,8 +476,7 @@ for(i in 1:length(fi.list)){
       i.res=cpdist(net, nodes = c('economic_risk', 'societal_risk','individual_risk' ), 
                evidence = list(fishing_style = fi.list[i],
                                extreme_event = ev.list[j],
-                               stock_status='status_quo',
-                               aware_of_event='yes'), n=10^5, method='lw')
+                                                    aware_of_event='yes'), n=10^5, method='lw')
   i.res$fishing_style=fi.list[i]
   i.res$extreme_event=ev.list[j]
   
@@ -512,43 +511,43 @@ p.f2=risk.df.R2%>%
   ylab('Frequency')+
   xlab('Fishing style');p.f2
 
-write.csv(risk.df.R2, 'results/scenarios/riskRQ2.csv', row.names = F)
+write.csv(risk.df.R2, 'results/scenarios/S5.csv', row.names = F)
 ggsave(plot=p.f2, 'results/scenarios/sS_risk.png', width = 200, height = 200, units='mm', dpi=500)
 
 
 
 ## Table 4
-node.text=read_excel(file.path(scriptDir, '..','data/nodes_text.xlsx'))
-net=read.net(file.path(scriptDir, '..','data/networks/BEWARE_learn_pt2.net'), debug = T)
+node.text=read_excel(file.path(scriptDir, '..','data/editable_files/nodes_text.xlsx'))
+net=read.net(file.path(scriptDir, '..','data/editable_files/networks/BEWARE_release_v1_0_0.net'), debug = T)
 x.nodes=nodes(net)
 
 
-table.format=NULL
-i=5
-for(i in 1:length(x.nodes)){
-  
-  extra.info=node.text[node.text$node==x.nodes[i],]
-  x.var=x.nodes[i]
-  if(x.var %in% c('Node5', 'Node1')){next}
-  array.var=net[[x.var]][['prob']]
-  xdim=dim(array.var)
-  xnam=dimnames(array.var)
-  df.var=as.data.frame(array.var)
-  if(ncol(df.var)==2){
-    x.lev=levels(df.var$Var1)
-    x.parent=NA
-  }else{
-    x.lev=levels(df.var[,x.var])
-    x.parent=names(df.var)[-which(names(df.var)%in% c(x.var, 'Freq'))]
-  }
-  x.lev=paste(x.lev, collapse=', ')
-  x.parent=paste(x.parent, collapse=', ')
-  
-  result=data.frame(name=x.nodes[i], group= extra.info$group, specification=extra.info$short_text, levels= x.lev, parents= x.parent, cycle=extra.info$cycle)
-  table.format=rbind(table.format, result)
-}
-
-write.csv(table.format, file.path(scriptDir, '..','results/tables/tab4_cpt_description.csv'), row.names = F)
-
+#table.format=NULL
+#i=5
+#for(i in 1:length(x.nodes)){
+#  
+#  extra.info=node.text[node.text$node==x.nodes[i],]
+#  x.var=x.nodes[i]
+#  if(x.var %in% c('Node5', 'Node1')){next}
+#  array.var=net[[x.var]][['prob']]
+#  xdim=dim(array.var)
+#  xnam=dimnames(array.var)
+#  df.var=as.data.frame(array.var)
+#  if(ncol(df.var)==2){
+#    x.lev=levels(df.var$Var1)
+#    x.parent=NA
+#  }else{
+#    x.lev=levels(df.var[,x.var])
+#    x.parent=names(df.var)[-which(names(df.var)%in% c(x.var, 'Freq'))]
+#  }
+#  x.lev=paste(x.lev, collapse=', ')
+#  x.parent=paste(x.parent, collapse=', ')
+#  
+#  result=data.frame(name=x.nodes[i], group= extra.info$group, specification=extra.info$short_text, levels= x.lev, parents= x.parent, cycle=extra.info$cycle)
+#  table.format=rbind(table.format, result)
+#}
+#
+#write.csv(table.format, file.path(scriptDir, '..','results/scenarios/tab4_cpt_description.csv'), row.names = F)
+#
 
 

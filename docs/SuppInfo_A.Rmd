@@ -1,14 +1,14 @@
 ---
 title: "Supplementary Information for: How do extreme weather events affect fishing operations? Knowledge engineering a risk analysis with Swedish Baltic Sea fishers"
-subtitle: 'Supp. Inf. A: elicitation of parameters from fishers. Interviews plots, results and data treatment'
+
 author:
-  - Enrico Nicola Armelloni:
+  - Enrico Nicola Armelloni,:
       email: enrico.e.armelloni@gmail.com
       institute: [SLU]
       correspondence: true
-  - name: Jens Olsson
+  - name: Jens Olsson,
     institute: SLU
-  - name: Laura Uusitalo
+  - name: Laura Uusitalo,
     institute: LUKE
   - name: Anna Gårdmark
     institute: SLU
@@ -26,7 +26,17 @@ header-includes:
   - \usepackage{pdfpages}
   - \usepackage[nottoc, numbib]{tocbibind}
   - \pagenumbering{gobble}
+  
+ 
 ---
+
+\vspace{12pt}
+
+\fontsize{15}{18}\selectfont Supplementary Information A: Elicitation of parameters from fishers. Interviews plots, results and data treatment
+
+\normalfont\normalsize
+
+\pagenumbering{arabic}
 
 ```{=latex}
 \setcounter{tocdepth}{2}

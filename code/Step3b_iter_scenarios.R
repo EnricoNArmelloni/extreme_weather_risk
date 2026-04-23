@@ -76,9 +76,7 @@ for(xx in 1:length(x.mod)){
     i.res=i.res%>%
       pivot_longer(-c(fishing_style, extreme_event), names_to = 'node', values_to = 'est')%>%
       dplyr::group_by(fishing_style, extreme_event, node,est)%>%
-      tally()%>%
-      dplyr::group_by(fishing_style, node)%>%
-      dplyr::mutate(prob=n/sum(n))
+      tally()
     fi.ev.store=rbind(fi.ev.store, i.res)
     
   }
@@ -86,10 +84,19 @@ for(xx in 1:length(x.mod)){
   x.st.3=rbind(x.st.3, fi.ev.store)
   
 }
+write.csv(x.st,"results/scenarios/S4_1.csv" )
+write.csv(x.st.2,"results/scenarios/S4_2.csv" )
+write.csv(x.st.3,"results/scenarios/S4_3.csv" )
 
-rq1=read_csv("results/scenarios/riskRQ1.csv")
+
+
+###
+x.st=read_csv("results/scenarios/S4_1.csv")
+x.st.2=read_csv("results/scenarios/S4_2.csv")
+x.st.3=read_csv("results/scenarios/S4_3.csv")
+rq1=read_csv("results/scenarios/S2.csv")
 rq1=rq1[rq1$est=='high',]
-rq2=read_csv("results/scenarios/riskRQ2.csv")
+rq2=read_csv("results/scenarios/S3.csv")
 rq2=rq2[rq2$est=='high',]
 
 p.a=x.st%>%
@@ -103,203 +110,50 @@ p.a=x.st%>%
   scale_fill_manual(values=c('blue', 'chocolate', 'black' ))+
   scale_color_manual(values=c('blue', 'chocolate', 'black' ));p.a
 
-x.st.2%>%
-  #dplyr::filter(est=='high')%>%
+p.c=x.st.2%>%
+  dplyr::filter(est=='high')%>%
   #dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
   #dplyr::group_by(fishing_style, node, iter)%>%
   #dplyr::summarise(risk=sum(prob.2))%>%
-  #dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  dplyr::filter( node %in% c('strategy_to_change'))%>%
-  dplyr::filter(est!='not_relevant')%>%
+  dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
+  dplyr::filter(est=='high')%>%
   ggplot()+
-  geom_density(aes(x=prob, fill=est), alpha=0.5)+
+  xlim(c(0,1))+
   xlab('Probability of High risk')+
-  facet_grid( rows=vars(fishing_style), scales='free_y')
-  
-scale_fill_manual(values=c('blue', 'chocolate', 'black' ))+
-  scale_color_manual(values=c('blue', 'chocolate', 'black' ));p.c
+  geom_density(aes(x=prob, fill=node), alpha=0.5)+
+  xlab('Probability of High risk')+
+  facet_grid( rows=vars(fishing_style), scales='free_y')+
+  geom_vline(data=rq2[rq2$node %in% c('economic_risk', 'individual_risk', 'societal_risk'), ], aes(xintercept =prob, color=node))+
+  scale_fill_manual(values=c('blue', 'chocolate', 'black' ))+
+  scale_color_manual(values=c('blue', 'chocolate', 'black' ))
 
 
-po1=ggpubr::ggarrange(p.a,p.c, common.legend = T, ncol=2)
-ggsave(plot=po1, 'results/scenarios/s4_c.png', width = 220, height = 120, units='mm', dpi=500)
+po1=ggpubr::ggarrange(p.a,p.c, common.legend = T, ncol=2, labels=c('a)', 'b)'))
+ggsave(plot=po1, 'results/scenarios/s4_a.png', width = 220, height = 120, units='mm', dpi=500)
 
 
-x.st.3%>%
+p4c=x.st.3%>%
+  dplyr::group_by(fishing_style, extreme_event,node, iter)%>%
+  dplyr::mutate(prob=n/sum(n))%>%
   dplyr::filter(node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
   dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
   dplyr::group_by(fishing_style, extreme_event, node, iter)%>%
   dplyr::summarise(prob=sum(prob.2))%>%
   dplyr::filter(prob>0)%>%
+  dplyr::mutate(prob=round(prob, digits=3))%>%
   #dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
   ggplot()+
   #xlim(c(0,1))+
-  xlab('Probability of High risk')+
+  xlab('Probability of risk')+
   geom_density(aes(x=prob, fill=node), alpha=0.5)+
   #geom_vline(data=rq1, aes(xintercept =prob, color=node))+
-  #facet_grid( rows=vars(extreme_event),cols=vars(fishing_style), scales='free')+
-  facet_wrap(~fishing_style+extreme_event, scales='free_y')+
+  facet_grid( rows=vars(extreme_event),cols=vars(fishing_style), scales='free_y')+
+  #facet_grid(rows=vars(fishing_style), cols=vars(extreme), scales='free_y')+
   scale_fill_manual(values=c('blue', 'chocolate', 'black' ))+
   scale_color_manual(values=c('blue', 'chocolate', 'black' ))
 
-
-pz1=x.st.3%>%
-  #dplyr::filter(node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  #dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  #dplyr::group_by(fishing_style, extreme_event, node, iter)%>%
-  #dplyr::summarise(prob=sum(prob.2))%>%
-  #dplyr::filter(prob>0)%>%
-  dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  ggplot()+
-  #xlim(c(0,1))+
-  xlab('Probability of High risk')+
-  geom_density(aes(x=prob, fill=node), alpha=0.5)+
-  #geom_vline(data=rq1, aes(xintercept =prob, color=node))+
-  #facet_grid( rows=vars(extreme_event),cols=vars(fishing_style), scales='free')+
-  facet_wrap(~extreme_event+fishing_style, scales='free_y')+
-  scale_fill_manual(values=c('blue', 'chocolate', 'black' ))+
-  scale_color_manual(values=c('blue', 'chocolate', 'black' ))
-
-ggsave(plot=pz1, 'results/scenarios/risk_comb.png', width = 250, height = 200, units='mm', dpi=500)
+ggsave(plot=p4c, 'results/scenarios/s4_c.png', width = 220, height = 220, units='mm', dpi=500)
 
 
-pz2=x.st.3%>%
-  dplyr::filter(node %in% c('strategy_to_change'))%>%
-  #dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  #dplyr::group_by(fishing_style, extreme_event, node, iter)%>%
-  #dplyr::summarise(prob=sum(prob.2))%>%
-  #dplyr::filter(prob>0)%>%
-  #dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  ggplot()+
-  #xlim(c(0,1))+
-  xlab('Probability of High risk')+
-  geom_density(aes(x=prob, fill=est), alpha=0.5)+
-  #geom_vline(data=rq1, aes(xintercept =prob, color=node))+
-  #facet_grid( rows=vars(extreme_event),cols=vars(fishing_style), scales='free')+
-  facet_wrap(~fishing_style+extreme_event, scales='free_y')
-ggsave(plot=pz2, 'results/scenarios/strategy_comb.png', width = 250, height = 200, units='mm', dpi=500)
-
-pz3=x.st.3%>%
-  dplyr::filter(node %in% c('go_fishing'))%>%
-  #dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  #dplyr::group_by(fishing_style, extreme_event, node, iter)%>%
-  #dplyr::summarise(prob=sum(prob.2))%>%
-  #dplyr::filter(prob>0)%>%
-  #dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  ggplot()+
-  #xlim(c(0,1))+
-  xlab('Probability of High risk')+
-  geom_density(aes(x=prob, fill=est), alpha=0.5)+
-  #geom_vline(data=rq1, aes(xintercept =prob, color=node))+
-  #facet_grid( rows=vars(extreme_event),cols=vars(fishing_style), scales='free')+
-  facet_wrap(~fishing_style+extreme_event, scales='free_y')
-ggsave(plot=pz3, 'results/scenarios/fishing_comb.png', width = 250, height = 200, units='mm', dpi=500)
-
-
-
-x.st.3%>%
-  dplyr::filter(node %in% c('individual_importance'))%>%
-  #dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  #dplyr::group_by(fishing_style, extreme_event, node, iter)%>%
-  #dplyr::summarise(prob=sum(prob.2))%>%
-  #dplyr::filter(prob>0)%>%
-  #dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  ggplot()+
-  #xlim(c(0,1))+
-  xlab('Probability of High risk')+
-  geom_density(aes(x=prob, fill=est), alpha=0.5)+
-  #geom_vline(data=rq1, aes(xintercept =prob, color=node))+
-  #facet_grid( rows=vars(extreme_event),cols=vars(fishing_style), scales='free')+
-  facet_wrap(~fishing_style+extreme_event, scales='free_y')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-x.st.2%>%
-  #dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  #dplyr::group_by(fishing_style, node, iter)%>%
-  #dplyr::summarise(risk=sum(prob.2))%>%
-  #dplyr::filter(est=='high', node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  dplyr::filter( node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  ggplot()+
-  xlim(c(0,1))+
-  geom_vline(data=rq2, aes(xintercept =prob, color=node))+
-  geom_density(aes(x=prob, fill=node), alpha=0.5)+
-  xlab('Probability of High risk')+
-  facet_grid( rows=vars(fishing_style), scales='free_y')+
-  scale_fill_manual(values=c('blue', 'chocolate', 'black' ))+
-  scale_color_manual(values=c('blue', 'chocolate', 'black' ));p.c
-
-
-
-
-p.b=x.st%>%
-  dplyr::filter(node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  dplyr::select(-n)%>%
-  ungroup()%>%
-  dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  dplyr::group_by(extreme_event, node, iter)%>%
-  dplyr::summarise(risk=sum(prob.2))%>%
-  pivot_wider(names_from = node, values_from = risk)%>%
-  ggplot()+
-  xlim(c(0,1))+
-  geom_point(aes(x=economic_risk, y=individual_risk, color=extreme_event), alpha=0.5)+
-  facet_wrap(~extreme_event,  ncol=1)+
-  scale_fill_manual(values=c('blue', 'white', 'black' ))
-
-
-
-
-
-
-p.d=x.st.2%>%
-  dplyr::filter(node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  dplyr::select(-n)%>%
-  ungroup()%>%
-  dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  dplyr::group_by(fishing_style, node, iter)%>%
-  dplyr::summarise(risk=sum(prob.2))%>%
-  pivot_wider(names_from = node, values_from = risk)%>%
-  ggplot()+
-  xlim(c(0,1))+
-  ylim(c(0,1))+
-  geom_point(aes(x=economic_risk, y=individual_risk, color=fishing_style), alpha=0.5)+
-  geom_density_2d(aes(x=economic_risk, y=individual_risk, color=fishing_style), alpha=0.5)+
-  #facet_wrap(~fishing_style, scales='free_y', ncol=1)+
-  scale_fill_manual(values=c('blue', 'white', 'black' ));p.d
-
-p.d=x.st.2%>%
-  dplyr::filter(node %in% c('economic_risk', 'individual_risk', 'societal_risk'))%>%
-  dplyr::select(-n)%>%
-  ungroup()%>%
-  dplyr::mutate(prob.2=ifelse(est=='high', prob, ifelse(est=='medium', prob/2,0)))%>%
-  dplyr::group_by(fishing_style, node, iter)%>%
-  dplyr::summarise(risk=sum(prob.2))%>%
-  pivot_wider(names_from = node, values_from = risk)%>%
-  ggplot()+
-  #xlim(c(0,1))+
-  #ylim(c(0,1))+
-  geom_point(aes(x=economic_risk, y=individual_risk), alpha=0.5)+
-  geom_smooth(aes(x=economic_risk, y=individual_risk), alpha=0.5, method='lm')+
-  facet_wrap(~fishing_style, scales='free', ncol=1)+
-  scale_fill_manual(values=c('blue', 'white', 'black' ));p.d
-
-?geom_smooth
-
-po1=ggpubr::ggarrange(p.a,p.c, common.legend = T, ncol=2)
-ggsave(plot=po1, 'results/scenarios/s4_c.png', width = 220, height = 120, units='mm', dpi=500)
-
-po2=ggpubr::ggarrange(p.b,p.d, common.legend = T, ncol=2)
-
-ggpubr::ggarrange(po1,po2, ncol=1)
 
 

@@ -1,14 +1,13 @@
 ---
 title: "Supplementary Information for: How do extreme weather events affect fishing operations? Knowledge engineering a risk analysis with Swedish Baltic Sea fishers"
-subtitle: 'Supp. Inf. C: conditional probability tables.'
 author:
-  - Enrico Nicola Armelloni:
+  - Enrico Nicola Armelloni,:
       email: enrico.e.armelloni@gmail.com
       institute: [SLU]
       correspondence: true
-  - name: Jens Olsson
+  - name: Jens Olsson,
     institute: SLU
-  - name: Laura Uusitalo
+  - name: Laura Uusitalo,
     institute: LUKE
   - name: Anna Gårdmark
     institute: SLU
@@ -29,6 +28,14 @@ header-includes:
 bibliography: references.bib
 ---
 
+\vspace{12pt}
+
+\fontsize{15}{18}\selectfont Supplementary Information C: Conditional probability tables
+
+\normalfont\normalsize
+
+\pagenumbering{arabic}
+
 ```{=latex}
 \setcounter{tocdepth}{2}
 \tableofcontents
@@ -37,7 +44,6 @@ bibliography: references.bib
 \setcounter{table}{0} 
 \renewcommand{\thetable}{C.\arabic{table}} 
 \renewcommand{\thefigure}{C.\arabic{figure}}
-
 
 ```{r  setup, echo=FALSE,message = FALSE, warning=FALSE}
 remove(list=ls())
@@ -223,26 +229,26 @@ for(i in 1:nrow(scen.grid2)){
 ```
 
 \setcounter{table}{0}
-\renewcommand{\thetable}{B.\arabic{table}}
-\renewcommand{\thefigure}{B.\arabic{figure}}
+\renewcommand{\thetable}{C.\arabic{table}}
+\renewcommand{\thefigure}{C.\arabic{figure}}
 
 \newpage
 
 # Network structure
 
-![complete representation of the Bayesian Network, showing conditional probabilties distributions. Colors are associated to node types and group Yellow: decision nodes; lime green: chanche nodes - operational group; grey: chanche nodes - user group; navy blue: chanche nodes - individual group; light blue: chanche nodes - societal group; cyan: chanche nodes - economic group; orange: utility nodes -  risk](images/BN_outline.jpg){width="10cm"}
+![Bayesian Network representing risks to Swedish fisheries posed by Marine Extreme Weather events (abl algal bloom, hws summer heatwave, hww winter heatwave, gal gale, sto storm, erf extreme railfall, ici icing) effects on fishing operations, as identified at the conclusion of the third cycle of stakeholder (fishers) dialogues. The probability distributions shown in the boxes represents the example of how summer heatwave affects fishing operations across all fishing styles. Conditional probability distribution details and terminology are reported in Supp. Info. C. Colors are associated to node types and group Yellow: decision nodes; lime green: chanche nodes – operational group; grey: chanche nodes - user group; navy blue: chance nodes - individual group; light blue: chance nodes - societal group; cyan: chance nodes - economic group; orange: risk nodes](images/BN_outline.jpg){width="10cm"}
 
 \newpage
 
 # Algebraic methods for Ranked nodes
 
-Ranked nodes have order-preserving meaning states (e.g.: low/medium/high) that can be mapped to a continuous numerical scale bounded to [0,1], assuming equal intervals [@fenton2019]. For instance, in a node having three states (low, medium, high), the “low” state takes the interval [0-0.33). The probability distribution of a ranked node in the numerical scale is described as *TNormal*( $\mu$ ,$\sigma^2$,0,1). The use of a numerical scale allow to use linear algebra to perform operations among variables, a technique that is particularly useful to build a CPT from a reduced number of questions [@fenton2007]. When a child has multiple parents with multiple states (binary or more), the distribution of a child node can be calculated by implementing algorithms based on the state, direction (positive or negative) and weight of their parents. The algorithms most commonly applied to ranked nodes gives equal (Eq. B1) or unequal contribution to states. Weighted max (Eq. B2) assigns more contribution to large states, while Weighted min (Eq. B3) assigns more contribution to small states.
+Ranked nodes have order-preserving meaning states (e.g.: low/medium/high) that can be mapped to a continuous numerical scale bounded to [0,1], assuming equal intervals [@fenton2019]. For instance, in a node having three states (low, medium, high), the “low” state takes the interval [0-0.33). The probability distribution of a ranked node in the numerical scale is described as *TNormal*( $\mu$ ,$\sigma^2$,0,1). The use of a numerical scale allows us to use linear algebra to perform operations among variables, a technique that is particularly useful to build a CPT from a reduced number of questions [@fenton2007]. When a child has multiple parents with multiple states (binary or more), the distribution of a child node can be calculated by implementing algorithms based on the state, direction (positive or negative) and weight of their parents. The algorithms most commonly applied to ranked nodes gives equal (Eq. B1) or unequal contribution to states. Weighted max (Eq. B2) assigns more contribution to large states, while Weighted min (Eq. B3) assigns more contribution to small states.
 
-$$\mu = \frac{\sum_{i=1}^n{w_iX_i}}{\sum_{i=1}^n{w_i}}$$ [Eq.B1]
+$$\mu = \frac{\sum_{i=1}^n{w_iX_i}}{\sum_{i=1}^n{w_i}}$$ [Eq.C1]
 
-$$\mu = min[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.B2]
+$$\mu = min[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.C2]
 
-$$\mu = max[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.B3]
+$$\mu = max[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.C3]
 
 \newpage
 
@@ -276,9 +282,9 @@ The node *fishing_style* is used to wrap all the fishing styles and seasons.
 
 -   **Recreational fisher (recreational - rcf)**: fishers without a commercial fishing license, deploying hand-held gears for recreational purposes;
 
--   **Fishing guides (guides - fgu)** (fgu): commercial actors who provide recreational fishers with fishing experience by sharing expert and local knowledge, giving access to angling concession and offering boat chartering ;
+-   **Fishing guides (guides - fgu)**: commercial actors who provide recreational fishers with fishing experience by sharing expert and local knowledge, giving access to angling concession and offering boat chartering ;
 
--   **Small-scale coastal fishing (small_scale - ssf)**, fishers operating small boats (<12 m) deploying species-specific passive gears.
+-   **Small-scale coastal fishing (small_scale - ssf)**, fishers operating small boats (\<12 m) deploying species-specific passive gears.
 
 -   **Pelagic trawling (trawlers - trw)**, fishers operating medium to large size vessels (24-60 m) deploying pelagic trawl nets;
 
@@ -286,11 +292,11 @@ The node *fishing_style* is used to wrap all the fishing styles and seasons.
 
 ## Aware of the event
 
-The node *aware_of_event* controls the fisherman awareness the event occurrence. In the case when fisher is not aware, he always goes out fishing. The fisher can still adopt react or adapt strategies.
+The node *aware_of_event* controls the fisherman awareness of the event occurrence. In the case when fisher is not aware, they always goes out fishing. The fisher can still adopt react or adapt str
 
 *Levels (and acronyms)*
 
--   **yes**: the fisher is aware of the extreme event. Decisions wheter to go out fishing or not are taken according to interviews
+-   **yes**: the fisher is aware of the extreme event. Decisions whether to go out fishing or not are taken according to interviews
 
 -   **no**: the fisher is not aware of the extreme event. The probability of going out fishing are 100%
 
@@ -372,7 +378,7 @@ print(p)
 
 # Utilities - Risk
 
-Shape how different fisheries will perceive risk. To each of these variables, the effect of the human community variables is to be interpreted as “how much this variable is important”? The CPT table combine the concepts of ranked nodes and the classic definition of Risk = Hazard \* Vulnerability. In the case of individual and societal importance, Risk is exactly calculated as Hazard \* Vulnerability. Parent categories (Low, medium and high; as well as not importand, somehow important and very important) are mapped to 0, 0.5 and 1 values. The parent value are multiplied.
+Shape how different fisheries will perceive risk. To each of these variables, the effect of the human community variables is to be interpreted as “how much this variable is important”? The CPT table combine the concepts of ranked nodes and the classic definition of Risk = Hazard \* Vulnerability. In the case of individual and societal importance, Risk is exactly calculated as Hazard \* Vulnerability. Parent categories (Low, medium and high; as well as not important, somehow important and very important) are mapped to 0, 0.5 and 1 values. The parent value are multiplied.
 
 \newpage
 

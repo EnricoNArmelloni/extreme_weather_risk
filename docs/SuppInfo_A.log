@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.8)  1 APR 2026 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  23 APR 2026 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **SuppInfo_A.tex
 (./SuppInfo_A.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-11-14>
+L3 programming layer <2026-03-20>
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
@@ -21,7 +21,47 @@ File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
+\bibindent=\dimen150
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks18
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
@@ -30,22 +70,22 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen149
+\@emptytoks=\toks19
+\ex@=\dimen159
 )) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen150
+\pmbraise@=\dimen160
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count283
+\inf@bad=\count286
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count284
-\leftroot@=\count285
+\uproot@=\count287
+\leftroot@=\count288
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count286
-\DOTSCASE@=\count287
+\classnum@=\count289
+\DOTSCASE@=\count290
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -55,34 +95,34 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen151
+\big@size=\dimen161
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count288
+\macc@depth=\count291
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count289
+\c@MaxMatrixCols=\count292
 \dotsspace@=\muskip17
-\c@parentequation=\count290
-\dspbrk@lvl=\count291
-\tag@help=\toks18
-\row@=\count292
-\column@=\count293
-\maxfields@=\count294
-\andhelp@=\toks19
-\eqnshift@=\dimen152
-\alignsep@=\dimen153
-\tagshift@=\dimen154
-\tagwidth@=\dimen155
-\totwidth@=\dimen156
-\lineht@=\dimen157
-\@envbody=\toks20
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks20
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks21
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks22
 \multlinegap=\skip52
 \multlinetaggap=\skip53
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -94,14 +134,12 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+)) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks22
-\inpenc@posthook=\toks23
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
@@ -138,44 +176,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks24
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count295
-\Gm@cntv=\count296
-\c@Gm@tempcnt=\count297
-\Gm@bindingoffset=\dimen158
-\Gm@wd@mp=\dimen159
-\Gm@odd@mp=\dimen160
-\Gm@even@mp=\dimen161
-\Gm@layoutwidth=\dimen162
-\Gm@layoutheight=\dimen163
-\Gm@layouthoffset=\dimen164
-\Gm@layoutvoffset=\dimen165
-\Gm@dimlist=\toks25
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -187,18 +187,20 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen166
-\Gin@req@width=\dimen167
-) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+)
+\pandoc@box=\box55
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count298
 \calc@Bcount=\count299
-\calc@Adimen=\dimen168
-\calc@Bdimen=\dimen169
+\calc@Adimen=\dimen170
+\calc@Bdimen=\dimen171
 \calc@Askip=\skip54
 \calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 86.
@@ -206,27 +208,27 @@ LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count300
 \calc@Cskip=\skip56
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen170
-\ESO@tempdimb=\dimen171
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
+\ESO@tempdima=\dimen172
+\ESO@tempdimb=\dimen173
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count301
 )
-\AM@pagewidth=\dimen172
-\AM@pageheight=\dimen173
-\AM@fboxrule=\dimen174
+\AM@pagewidth=\dimen174
+\AM@pageheight=\dimen175
+\AM@fboxrule=\dimen176
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2026/03/30 v0.6h Pdfpages driver for pdfTeX (AM)
 )
 \pdfpages@includegraphics@status=\count302
-\AM@pagebox=\box55
+\AM@pagebox=\box56
 \AM@global@opts=\toks26
 \AM@pagecnt=\count303
 \AM@toc@title=\toks27
 \AM@lof@heading=\toks28
 \c@AM@survey=\count304
-\AM@templatesizebox=\box56
+\AM@templatesizebox=\box57
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
@@ -235,23 +237,23 @@ Package tocbibind Note: Using section or other style headings.
 
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen175
-\lightrulewidth=\dimen176
-\cmidrulewidth=\dimen177
-\belowrulesep=\dimen178
-\belowbottomsep=\dimen179
-\aboverulesep=\dimen180
-\abovetopsep=\dimen181
-\cmidrulesep=\dimen182
-\cmidrulekern=\dimen183
-\defaultaddspace=\dimen184
+\heavyrulewidth=\dimen177
+\lightrulewidth=\dimen178
+\cmidrulewidth=\dimen179
+\belowrulesep=\dimen180
+\belowbottomsep=\dimen181
+\aboverulesep=\dimen182
+\abovetopsep=\dimen183
+\cmidrulesep=\dimen184
+\cmidrulekern=\dimen185
+\defaultaddspace=\dimen186
 \@cmidla=\count305
 \@cmidlb=\count306
-\@aboverulesep=\dimen185
-\@belowrulesep=\dimen186
+\@aboverulesep=\dimen187
+\@belowrulesep=\dimen188
 \@thisruleclass=\count307
 \@lastruleclass=\count308
-\@thisrulewidth=\dimen187
+\@thisrulewidth=\dimen189
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip57
@@ -259,12 +261,12 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTpre=\skip59
 \LTpost=\skip60
 \LTchunksize=\count309
-\LTcapwidth=\dimen188
-\LT@head=\box57
-\LT@firsthead=\box58
-\LT@foot=\box59
-\LT@lastfoot=\box60
-\LT@gbox=\box61
+\LTcapwidth=\dimen190
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
 \LT@cols=\count310
 \LT@rows=\count311
 \c@LT@tables=\count312
@@ -272,33 +274,33 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LT@p@ftn=\toks29
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen189
-\ar@mcellbox=\box62
-\extrarowheight=\dimen190
+\col@sep=\dimen191
+\ar@mcellbox=\box63
+\extrarowheight=\dimen192
 \NC@list=\toks30
 \extratabsurround=\skip61
 \backup@length=\skip62
-\ar@cellbox=\box63
+\ar@cellbox=\box64
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip63
 \multirow@cntb=\count314
 \multirow@dima=\skip64
-\bigstrutjot=\dimen191
+\bigstrutjot=\dimen193
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen192
-\WF@size=\dimen193
+\wrapoverhang=\dimen194
+\WF@size=\dimen195
 \c@WF@wrappedlines=\count315
-\WF@box=\box64
+\WF@box=\box65
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count316
 \float@exts=\toks32
-\float@box=\box65
+\float@box=\box66
 \@float@everytoks=\toks33
-\@floatcapt=\box66
+\@floatcapt=\box67
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks34
@@ -316,10 +318,10 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box67
+\@vwid@box=\box68
 \sift@deathcycles=\count318
-\@vwid@loff=\dimen194
-\@vwid@roff=\dimen195
+\@vwid@loff=\dimen196
+\@vwid@roff=\dimen197
 )
 ==> First Aid for varwidth.sty applied!
 \c@taburow=\count319
@@ -328,25 +330,25 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@Xcol=\count322
 \tabu@alloc=\count323
 \tabu@nested=\count324
-\tabu@target=\dimen196
-\tabu@spreadtarget=\dimen197
-\tabu@naturalX=\dimen198
-\tabucolX=\dimen199
-\tabu@Xsum=\dimen256
-\extrarowdepth=\dimen257
-\abovetabulinesep=\dimen258
-\belowtabulinesep=\dimen259
-\tabustrutrule=\dimen260
+\tabu@target=\dimen198
+\tabu@spreadtarget=\dimen199
+\tabu@naturalX=\dimen256
+\tabucolX=\dimen257
+\tabu@Xsum=\dimen258
+\extrarowdepth=\dimen259
+\abovetabulinesep=\dimen260
+\belowtabulinesep=\dimen261
+\tabustrutrule=\dimen262
 \tabu@thebody=\toks35
 \tabu@footnotes=\toks36
-\tabu@box=\box68
-\tabu@arstrutbox=\box69
-\tabu@hleads=\box70
-\tabu@vleads=\box71
+\tabu@box=\box69
+\tabu@arstrutbox=\box70
+\tabu@hleads=\box71
+\tabu@vleads=\box72
 \tabu@cellskip=\skip66
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box72
+\@tempboxb=\box73
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
@@ -356,25 +358,25 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip67
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box73
-\UL@hyphenbox=\box74
+\UL@box=\box74
+\UL@hyphenbox=\box75
 \UL@skip=\skip68
 \UL@hook=\toks37
-\UL@height=\dimen261
+\UL@height=\dimen263
 \UL@pe=\count325
-\UL@pixel=\dimen262
-\ULC@box=\box75
+\UL@pixel=\dimen264
+\ULC@box=\box76
 Package: ulem 2019/11/18
-\ULdepth=\dimen263
+\ULdepth=\dimen265
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen264
+\rotheadsize=\dimen266
 \c@nlinenum=\count326
 \TeXr@lab=\toks38
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -394,7 +396,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
@@ -406,11 +408,11 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen265
+\@linkdim=\dimen267
 \Hy@linkcounter=\count328
 \Hy@pagecounter=\count329
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
@@ -418,47 +420,47 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count330
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4066.
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Option `unicode' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
+Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count331
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen266
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen268
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count332
-\Field@Width=\dimen267
-\Fld@charsize=\dimen268
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Field@Width=\dimen269
+\Fld@charsize=\dimen270
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
 \Hy@abspage=\count333
 \c@Item=\count334
 \c@Hfootnote=\count335
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count336
 \c@bookmark@seq@number=\count337
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
@@ -473,11 +475,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \BKM@id=\count338
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 102.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 92.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count339
 ) (./SuppInfo_A.aux
 
@@ -1494,24 +1496,24 @@ LaTeX Warning: Label `tab:unnamed-chunk-17' multiply defined.
 )
 \openout1 = `SuppInfo_A.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1552,43 +1554,43 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 102.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 104.
+Package hyperref Info: Link coloring OFF on input line 92.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 94.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 104.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 94.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 104.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 94.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 104.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 94.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 104.
+(Font)              <12> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 104.
+(Font)              <8> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 104.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104.
+(Font)              <6> on input line 94.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 105.
+(Font)              <10> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 105.
+(Font)              <7> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 105.
+(Font)              <5> on input line 95.
 (./SuppInfo_A.toc)
 \tf@toc=\write3
 \openout3 = `SuppInfo_A.toc'.
@@ -1596,81 +1598,42 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 131.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 130.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.194 \newpage
-               [2{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (6.02213pt too wide) in paragraph at lines 238--238
+) [2{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (6.02213pt too wide) in paragraph at lines 239--239
 []|\T1/lmr/bx/n/7 Exp2|  
  []
 
 
-Overfull \hbox (6.02213pt too wide) in paragraph at lines 238--238
+Overfull \hbox (6.02213pt too wide) in paragraph at lines 239--239
 []|\T1/lmr/bx/n/7 Exp3|  
  []
 
 
-Overfull \hbox (6.86812pt too wide) in paragraph at lines 238--238
+Overfull \hbox (6.86812pt too wide) in paragraph at lines 239--239
  []|\T1/lmr/bx/n/7 mean|
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.369 \end{longtable}
-                      [3]
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.369 \end{longtable}
-                      [4]
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.369 \end{longtable}
-                      [5]
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.369 \end{longtable}
-                      [6]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.371 \newpage
-               [7]
 
-Package hyperref Warning: Suppressing link with empty target on input line 381.
+ignored: Infinite glue shrinkage found in box being split [3]
+ignored: Infinite glue shrinkage found in box being split [4]
+ignored: Infinite glue shrinkage found in box being split [5]
+ignored: Infinite glue shrinkage found in box being split [6] [7]
+
+Package hyperref Warning: Suppressing link with empty target on input line 382.
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 400.
+Package hyperref Warning: Suppressing link with empty target on input line 401.
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.464 
-       [8]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.465 \newpage
-               [9]
+[8] [9]
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.488 \end{longtable}
+l.489 \end{longtable}
                      
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 530--531
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 531--532
 []|\T1/lmr/bx/n/8 Method|  
  []
 
@@ -1678,20 +1641,15 @@ Overfull \hbox (19.40686pt too wide) in paragraph at lines 530--531
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.549 \end{longtable}
+l.550 \end{longtable}
                      
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.549 \end{longtable}
-                      [10]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 559--560
+ignored: Infinite glue shrinkage found in box being split [10]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 560--561
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 559--560
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 560--561
 \T1/lmr/bx/n/8 (given)|  
  []
 
@@ -1699,3602 +1657,3108 @@ Overfull \hbox (15.8515pt too wide) in paragraph at lines 559--560
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.565 \end{longtable}
+l.566 \end{longtable}
                      
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 581--582
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 582--583
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.598 \end{longtable}
-                      [11]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 608--609
+
+ignored: Infinite glue shrinkage found in box being split [11]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 609--610
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 608--609
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 609--610
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 630--631
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 631--632
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 664--665
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 665--666
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[12]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 704--705
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[13]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 743--744
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.681 \end{longtable}
-                      [12]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 703--704
-[]|\T1/lmr/bx/n/8 Method|  
- []
+Package hyperref Warning: Suppressing link with empty target on input line 767.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.733   Y
-         es, I do have to change the setup of the fishing. With milder [13]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 742--743
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 766.
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 773--773
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 774--774
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 773--774
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 774--775
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 792--793
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 793--794
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.809 \end{longtable}
-                      [14]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 819--820
+
+ignored: Infinite glue shrinkage found in box being split [14]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 820--821
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 819--820
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 820--821
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 841--842
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 842--843
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.866 {[
-        }free text description{]} [15]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 873--873
+[15]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 874--874
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 873--873
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 874--874
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 892--892
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 893--893
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 892--892
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 893--893
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 914--915
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 915--916
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 944--944
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 945--945
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 944--945
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 945--946
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[16]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 972--973
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.948 \end{longtable}
-                      [16]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 971--972
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1006--1006
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1005--1006
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1009 \end{longtable}
-                       [17]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1025--1025
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1025--1026
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1006--1007
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1045--1045
+ignored: Infinite glue shrinkage found in box being split [17]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1026--1026
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1045--1046
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1026--1027
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1066--1066
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1046--1046
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1066--1067
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1046--1047
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1083--1083
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1067--1067
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1083--1084
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1087 \end{longtable}
-                       [18]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1102--1102
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1123--1123
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1123--1124
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1067--1068
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1142--1142
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1084--1084
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1142--1143
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1084--1085
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1161--1161
+ignored: Infinite glue shrinkage found in box being split [18]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1103--1103
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1161--1162
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1165 \end{longtable}
-                       [19]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1180--1180
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1124--1124
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1180--1181
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1124--1125
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1198--1198
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1143--1143
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1198--1199
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1143--1144
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1219--1219
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1162--1162
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1219--1220
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1162--1163
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1238--1238
+[19]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1181--1181
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1238--1239
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1181--1182
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1242 \end{longtable}
-                       [20]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1257--1257
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1199--1199
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1257--1258
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1199--1200
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1275--1275
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1220--1220
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1275--1276
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1220--1221
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1293--1293
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1239--1239
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1293--1294
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1239--1240
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1312--1312
+[20]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1258--1258
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1312--1313
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1258--1259
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1330--1330
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1276--1276
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1330--1331
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1276--1277
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1334 \end{longtable}
-                       [21]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1348--1348
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1294--1294
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1348--1349
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1294--1295
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1366--1366
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1313--1313
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1366--1367
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1313--1314
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1384--1384
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1331--1331
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1384--1385
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1331--1332
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[21]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1349--1349
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1349--1350
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1403--1403
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1367--1367
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1367--1368
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1385--1385
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1385--1386
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1404--1404
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1403--1403
-\T1/lmr/bx/n/8 (given)|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1407 \end{longtable}
-                       [22]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1422--1422
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1404--1404
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1422--1422
+ignored: Infinite glue shrinkage found in box being split [22]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1423--1423
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1441--1441
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1423--1423
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1441--1441
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1442--1442
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1459--1459
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1442--1442
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1459--1459
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1460--1460
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1477--1477
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1460--1460
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1477--1477
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1478--1478
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1481 \end{longtable}
-                       [23]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1497--1497
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1478--1478
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[23]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1498--1498
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1497--1497
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1498--1498
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1516--1516
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1517--1517
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1516--1516
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1517--1517
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1533--1533
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1534--1534
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1533--1534
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1534--1535
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1537 \end{longtable}
-                       [24]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1551--1551
+[24]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1552--1552
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1551--1552
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1552--1553
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (0.93246pt too wide) in paragraph at lines 1559--1559
+Overfull \hbox (0.93246pt too wide) in paragraph at lines 1560--1560
 \T1/lmr/m/n/8 Slus|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1577--1577
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1578--1578
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1577--1578
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1578--1579
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1594--1594
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1595--1595
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1594--1595
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1598 \end{longtable}
-                       [25]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1633--1634
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1595--1596
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1668--1669
+ignored: Infinite glue shrinkage found in box being split [25]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1634--1635
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1685 \end{longtable}
-                       [26]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1701--1702
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1669--1670
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[26]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1702--1703
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1735--1736
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1736--1737
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1752 \end{longtable}
-                       [27]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1762--1763
+[27]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1763--1764
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 1762--1763
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 1763--1764
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1784--1785
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1801 \end{longtable}
-                       [28]
-
-Package hyperref Warning: Suppressing link with empty target on input line 1809.
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1824--1825
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1785--1786
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 1848.
+ignored: Infinite glue shrinkage found in box being split [28]
+
+Package hyperref Warning: Suppressing link with empty target on input line 1810.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 1855--1855
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1825--1826
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 1849.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1856--1856
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1855--1856
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1856--1857
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[29]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1875--1876
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1867 {[
-         }0--2; 0 -- no concern, 1 -- personal injuries, 2 -- life-threatening [29]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1874--1875
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1908--1909
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1907--1908
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1932 {[
-         }free text description{]} [30]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1939--1939
+[30]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1940--1940
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1939--1939
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1940--1940
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1958--1958
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1959--1959
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 1958--1958
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1959--1959
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 1979--1980
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 1980--1981
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2009--2009
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2010--2010
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2009--2010
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2010--2011
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[31]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2030--2031
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2013 \end{longtable}
-                       [31]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2029--2030
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2063--2063
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2064--2064
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2063--2064
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2064--2065
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2083--2083
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2084--2084
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2083--2084
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2084--2085
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[32]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2105--2105
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2105--2106
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2087 \end{longtable}
-                       [32]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2104--2104
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2126--2126
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2104--2105
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2126--2127
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2125--2125
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2143--2143
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2125--2126
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2143--2144
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2142--2142
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2162--2162
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[33]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2183--2183
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2142--2143
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2183--2184
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2161--2161
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2202--2202
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2169 \end{longtable}
-                       [33]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2182--2182
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2182--2183
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2202--2203
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2201--2201
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2222--2222
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2201--2202
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2222--2223
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2221--2221
+ignored: Infinite glue shrinkage found in box being split [34]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2241--2241
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2221--2222
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2241--2242
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2225 \end{longtable}
-                       [34]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2240--2240
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2259--2259
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2240--2241
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2259--2260
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2258--2258
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2280--2280
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2258--2259
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2280--2281
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2279--2279
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2299--2299
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2279--2280
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2299--2300
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2298--2298
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2318--2318
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2298--2299
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2318--2319
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2317--2317
+[35]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2337--2337
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2317--2318
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2337--2338
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2321 \end{longtable}
-                       [35]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2355--2355
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2336--2337
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2355--2356
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2354--2354
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2374--2374
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2354--2355
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2374--2375
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2373--2373
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2392--2392
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2373--2374
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2392--2393
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2391--2391
+ignored: Infinite glue shrinkage found in box being split [36]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2410--2410
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2391--2392
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2410--2411
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2395 \end{longtable}
-                       [36]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2409--2409
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2428--2428
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2409--2410
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2428--2429
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2427--2427
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2427--2428
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2445--2445
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2446--2446
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2445--2445
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2446--2446
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2464--2464
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2465--2465
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2464--2464
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2465--2465
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.29726pt too wide) in paragraph at lines 2466--2466
+Overfull \hbox (1.29726pt too wide) in paragraph at lines 2467--2467
 []|\T1/lmr/m/n/8 1500000|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2468 \end{longtable}
-                       [37]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2483--2483
+
+ignored: Infinite glue shrinkage found in box being split [37]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2484--2484
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2483--2483
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2484--2484
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2502--2502
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2503--2503
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2502--2502
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2503--2503
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2520--2520
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2521--2521
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2520--2520
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2521--2521
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2538--2538
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2539--2539
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2538--2538
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2539--2539
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[38]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2559--2559
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2542 \end{longtable}
-                       [38]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2558--2558
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2559--2559
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2558--2558
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2578--2578
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2577--2577
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2578--2578
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2577--2577
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2594--2594
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2595--2595
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2594--2595
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2595--2596
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2598 \end{longtable}
-                       [39]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2612--2612
+[39]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2613--2613
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2612--2613
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2613--2614
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2632--2632
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2633--2633
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2632--2633
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2633--2634
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2649--2649
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2650--2650
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2649--2650
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2650--2651
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[40]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2693--2694
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2679 
-        [40]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2692--2693
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2728--2729
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2727--2728
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2744 \end{longtable}
-                       [41]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2754--2755
+[41]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2755--2756
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 2754--2755
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 2755--2756
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2785--2786
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2802 \end{longtable}
-                       [42]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2819--2820
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2786--2787
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2852--2853
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2869 \end{longtable}
-                       [43]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2884--2885
+ignored: Infinite glue shrinkage found in box being split [42]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2820--2821
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 2908.
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2853--2854
+[]|\T1/lmr/bx/n/8 Method|  
+ []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 2915--2915
+ignored: Infinite glue shrinkage found in box being split [43]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2885--2886
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 2909.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2916--2916
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2915--2916
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2919 \end{longtable}
-                       [44]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2934--2935
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2916--2917
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 2967--2968
+ignored: Infinite glue shrinkage found in box being split [44]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2935--2936
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2984 \end{longtable}
-                       [45]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2999--2999
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 2968--2969
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [45]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3000--3000
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 2999--2999
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3000--3000
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3018--3018
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3019--3019
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3018--3018
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3019--3019
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3039--3040
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3040--3041
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3056 \end{longtable}
-                       [46]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3069--3069
+
+ignored: Infinite glue shrinkage found in box being split [46]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3070--3070
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3069--3070
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3070--3071
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3089--3090
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3090--3091
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3123--3123
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3124--3124
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3123--3124
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3124--3125
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3127 \end{longtable}
-                       [47]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3143--3143
+[47]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3144--3144
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3143--3144
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3144--3145
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3164--3164
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3165--3165
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3164--3165
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3165--3166
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3186--3186
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3185--3186
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3186--3187
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3202--3202
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3203--3203
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3202--3203
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3203--3204
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[48]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3222--3222
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3243--3243
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3243--3244
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3206 \end{longtable}
-                       [48]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3221--3221
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3262--3262
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3242--3242
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3242--3243
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3262--3263
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3261--3261
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3281--3281
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3261--3262
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3281--3282
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3280--3280
+[49]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3300--3300
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3280--3281
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3300--3301
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3284 \end{longtable}
-                       [49]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3299--3299
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3318--3318
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3299--3300
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3318--3319
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3317--3317
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3339--3339
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3317--3318
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3339--3340
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3338--3338
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3358--3358
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3338--3339
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3358--3359
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3357--3357
+[50]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3377--3377
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3357--3358
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3377--3378
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3361 \end{longtable}
-                       [50]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3376--3376
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3396--3396
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3376--3377
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3396--3397
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3395--3395
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3414--3414
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3395--3396
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3414--3415
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3413--3413
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3433--3433
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3413--3414
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3433--3434
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3432--3432
+ignored: Infinite glue shrinkage found in box being split [51]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3451--3451
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3432--3433
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3451--3452
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3436 \end{longtable}
-                       [51]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3450--3450
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3469--3469
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3450--3451
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3469--3470
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3468--3468
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3487--3487
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3468--3469
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3487--3488
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3486--3486
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3486--3487
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3504--3504
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3505--3505
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3504--3504
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3505--3505
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3523--3523
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3524--3524
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3523--3523
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3524--3524
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[52]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3543--3543
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3527 \end{longtable}
-                       [52]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3542--3542
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3543--3543
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3542--3542
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3562--3562
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3561--3561
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3562--3562
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3561--3561
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3580--3580
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3579--3579
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3580--3580
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3579--3579
-\T1/lmr/bx/n/8 (given)|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3583 \end{longtable}
-                       [53]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3597--3597
+ignored: Infinite glue shrinkage found in box being split [53]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3598--3598
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3597--3597
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3598--3598
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3617--3617
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3618--3618
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3617--3617
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3618--3618
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3636--3636
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3637--3637
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 3636--3636
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3637--3637
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3653--3653
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3654--3654
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3653--3654
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3654--3655
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3657 \end{longtable}
-                       [54]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3671--3671
+
+ignored: Infinite glue shrinkage found in box being split [54]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3672--3672
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3671--3672
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3672--3673
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3691--3691
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3692--3692
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3691--3692
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3692--3693
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3708--3708
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3709--3709
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3708--3709
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3709--3710
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[55]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3747--3748
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3739 {[
-         }1--5; from 1 -- very unlikely, to 5 -- very likely{]} [55]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3746--3747
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3782--3783
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3781--3782
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3798 \end{longtable}
-                       [56]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3808--3809
+ignored: Infinite glue shrinkage found in box being split [56]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3809--3810
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 3808--3809
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 3809--3810
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3830--3831
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3831--3832
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[57]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3865--3866
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3856 {[
-         }1--5; from 1 -- much worse, 3 -- no difference, to 5 -- much better [57]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3864--3865
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3898--3899
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3897--3898
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3914 \end{longtable}
-                       [58]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3932--3933
+ignored: Infinite glue shrinkage found in box being split [58]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3933--3934
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 3956.
+Package hyperref Warning: Suppressing link with empty target on input line 3957.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 3963--3963
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3964--3964
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3963--3964
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3964--3965
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 3986--3987
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4003 \end{longtable}
-                       [59]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4019--4020
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 3987--3988
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4051--4051
+ignored: Infinite glue shrinkage found in box being split [59]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4020--4021
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4052--4052
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4051--4051
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4052--4052
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[60]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4071--4071
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4055 \end{longtable}
-                       [60]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4070--4070
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4071--4071
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4070--4070
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4092--4093
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4122--4122
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4122--4123
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[61]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4142--4143
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4176--4176
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4176--4177
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4196--4196
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4196--4197
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[62]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4217--4217
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4217--4218
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4238--4238
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4238--4239
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4255--4255
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4255--4256
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4274--4274
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[63]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4295--4295
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4295--4296
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4314--4314
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4314--4315
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4333--4333
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4333--4334
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4352--4352
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4352--4353
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[64]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4370--4370
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4370--4371
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4391--4391
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4391--4392
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4410--4410
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4410--4411
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4429--4429
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4429--4430
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [65]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4449--4449
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4449--4450
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4467--4467
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4467--4468
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4486--4486
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4486--4487
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4504--4504
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4504--4505
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[66]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4522--4522
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4522--4523
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4540--4540
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4540--4541
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4558--4558
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4091--4092
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4121--4121
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4121--4122
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4125 \end{longtable}
-                       [61]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4141--4142
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4175--4175
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4175--4176
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4195--4195
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4195--4196
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4199 \end{longtable}
-                       [62]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4216--4216
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4216--4217
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4237--4237
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4237--4238
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4254--4254
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4254--4255
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4273--4273
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4281 \end{longtable}
-                       [63]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4294--4294
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4294--4295
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4313--4313
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4313--4314
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4332--4332
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4332--4333
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4351--4351
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4351--4352
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4355 \end{longtable}
-                       [64]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4369--4369
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4369--4370
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4390--4390
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4390--4391
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4409--4409
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4409--4410
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4428--4428
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4428--4429
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4433 \end{longtable}
-                       [65]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4448--4448
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4448--4449
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4466--4466
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4466--4467
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4485--4485
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4485--4486
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4503--4503
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4503--4504
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4507 \end{longtable}
-                       [66]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4521--4521
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4521--4522
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4539--4539
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4539--4540
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4557--4557
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4558--4558
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4557--4557
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4577--4577
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4576--4576
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4577--4577
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[67]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4596--4596
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4576--4576
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4596--4596
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4588 {[
-         }free text description{]} [67]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4595--4595
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4615--4615
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4595--4595
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4615--4615
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4614--4614
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4633--4633
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4614--4614
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4633--4633
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4632--4632
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4651--4651
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4632--4632
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4651--4651
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4650--4650
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4671--4671
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4650--4650
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4671--4671
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[68]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4690--4690
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4670--4670
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4690--4690
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4670--4670
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4674 \end{longtable}
-                       [68]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4689--4689
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 4689--4689
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4706--4706
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4707--4707
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4706--4707
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4707--4708
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4724--4724
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4725--4725
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4724--4725
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4725--4726
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4728 \end{longtable}
-                       [69]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4744--4744
+
+ignored: Infinite glue shrinkage found in box being split [69]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4745--4745
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4744--4745
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4745--4746
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4761--4761
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4762--4762
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4761--4762
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4762--4763
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4798--4799
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4799--4800
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4817 \end{longtable}
-                       [70]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4827--4828
+
+ignored: Infinite glue shrinkage found in box being split [70]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4828--4829
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 4827--4828
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 4828--4829
 \T1/lmr/bx/n/8 (given)|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4847 {[
-         }1--5; from 1 -- much worse, 3 -- no difference, to 5 -- much [71]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4855--4856
+[71]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4856--4857
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 4882--4883
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4883--4884
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 4882--4883
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 4883--4884
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4910--4911
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4911--4912
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[72]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4945--4946
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4927 \end{longtable}
-                       [72]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4944--4945
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.4961 \end{longtable}
-                       [73]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 4977--4978
+ignored: Infinite glue shrinkage found in box being split [73]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 4978--4979
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5016--5017
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5017--5018
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5033 \end{longtable}
-                       [74]
 
-Package hyperref Warning: Suppressing link with empty target on input line 5040.
+ignored: Infinite glue shrinkage found in box being split [74]
+
+Package hyperref Warning: Suppressing link with empty target on input line 5041.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5047--5047
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5048--5048
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5047--5048
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5048--5049
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5066--5067
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5067--5068
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5099--5100
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5100--5101
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5116 \end{longtable}
-                       [75]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5131--5131
+[75]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5132--5132
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5131--5131
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5132--5132
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5150--5150
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5151--5151
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5150--5150
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5151--5151
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.29726pt too wide) in paragraph at lines 5152--5152
+Overfull \hbox (1.29726pt too wide) in paragraph at lines 5153--5153
 []|\T1/lmr/m/n/8 1000000|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5171--5172
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5172--5173
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5188 \end{longtable}
-                       [76]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5198--5199
+[76]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5199--5200
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 5198--5199
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 5199--5200
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5217--5217
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5218--5218
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5217--5218
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5218--5219
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5237--5238
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5238--5239
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5254 \end{longtable}
-                       [77]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5271--5271
+[77]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5272--5272
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5271--5272
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5272--5273
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5291--5291
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5292--5292
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5291--5292
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5292--5293
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5312--5312
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5313--5313
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5312--5313
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5313--5314
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[78]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5334--5334
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5334--5335
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5316 \end{longtable}
-                       [78]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5333--5333
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5351--5351
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5333--5334
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5351--5352
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5350--5350
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5370--5370
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5350--5351
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5391--5391
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5391--5392
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[79]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5410--5410
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5410--5411
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5369--5369
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5429--5429
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5390--5390
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5390--5391
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5429--5430
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5394 \end{longtable}
-                       [79]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5409--5409
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5448--5448
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5409--5410
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5448--5449
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5428--5428
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5466--5466
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5428--5429
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5466--5467
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5447--5447
+[80]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5487--5487
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5447--5448
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5487--5488
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5465--5465
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5506--5506
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5465--5466
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5506--5507
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5469 \end{longtable}
-                       [80]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5486--5486
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5525--5525
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5486--5487
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5525--5526
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5505--5505
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5544--5544
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5505--5506
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5544--5545
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5524--5524
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5562--5562
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5524--5525
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5562--5563
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5543--5543
+[81]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5581--5581
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5543--5544
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5581--5582
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5561--5561
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5599--5599
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5561--5562
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5599--5600
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5565 \end{longtable}
-                       [81]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5580--5580
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5617--5617
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5580--5581
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5617--5618
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5598--5598
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5635--5635
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5598--5599
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5635--5636
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5616--5616
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5616--5617
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5634--5634
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5634--5635
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5638 \end{longtable}
-                       [82]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5652--5652
+ignored: Infinite glue shrinkage found in box being split [82]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5653--5653
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5652--5652
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5653--5653
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5671--5671
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5672--5672
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5671--5671
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5672--5672
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5690--5690
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5691--5691
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5690--5690
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5691--5691
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5709--5709
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5710--5710
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5709--5709
-\T1/lmr/bx/n/8 (given)|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5713 \end{longtable}
-                       [83]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5727--5727
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5710--5710
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5727--5727
+ignored: Infinite glue shrinkage found in box being split [83]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5728--5728
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5745--5745
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5728--5728
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5745--5745
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5746--5746
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5765--5765
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5746--5746
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5765--5765
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5766--5766
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5785--5785
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5766--5766
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 5785--5785
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5786--5786
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5789 \end{longtable}
-                       [84]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5802--5802
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5786--5786
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[84]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5803--5803
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5802--5803
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5803--5804
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5820--5820
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5821--5821
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5820--5821
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5821--5822
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5840--5840
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5841--5841
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5840--5841
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5841--5842
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5857--5857
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5858--5858
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5857--5858
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5858--5859
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5861 \end{longtable}
-                       [85]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5895--5896
+
+ignored: Infinite glue shrinkage found in box being split [85]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5896--5897
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5914 \end{longtable}
-                       [86]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5924--5925
+
+ignored: Infinite glue shrinkage found in box being split [86]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5925--5926
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 5924--5925
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 5925--5926
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5946--5947
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5947--5948
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 5973--5974
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5974--5975
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 5973--5974
-\T1/lmr/bx/n/8 (given)|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5979 \end{longtable}
-                       [87]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 5995--5996
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6029--6030
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6046 \end{longtable}
-                       [88]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6062--6063
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6102--6103
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6119 \end{longtable}
-                       [89]
-
-Package hyperref Warning: Suppressing link with empty target on input line 6126.
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6133--6133
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6133--6134
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6152--6153
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6169 \end{longtable}
-                       [90]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6185--6186
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6217--6217
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 5974--5975
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6217--6217
+ignored: Infinite glue shrinkage found in box being split [87]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 5996--5997
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6030--6031
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [88]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6063--6064
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6103--6104
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [89]
+
+Package hyperref Warning: Suppressing link with empty target on input line 6127.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6134--6134
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6134--6135
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6153--6154
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [90]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6186--6187
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6218--6218
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6238--6238
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6218--6218
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6238--6238
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6239--6239
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6242 \end{longtable}
-                       [91]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6259--6260
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6239--6239
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[91]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6260--6261
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6289--6289
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6290--6290
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6289--6290
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6290--6291
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6309--6310
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6310--6311
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6326 \end{longtable}
-                       [92]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6343--6343
+[92]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6344--6344
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6343--6344
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6344--6345
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6363--6363
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6364--6364
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6363--6364
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6364--6365
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6384--6384
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6385--6385
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6384--6385
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6385--6386
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[93]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6406--6406
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6406--6407
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6388 \end{longtable}
-                       [93]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6405--6405
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6423--6423
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6405--6406
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6423--6424
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6422--6422
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6442--6442
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6422--6423
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6463--6463
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6463--6464
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[94]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6482--6482
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6482--6483
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6441--6441
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6501--6501
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6462--6462
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6462--6463
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6501--6502
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6466 \end{longtable}
-                       [94]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6481--6481
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6520--6520
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6481--6482
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6520--6521
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6500--6500
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6538--6538
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6500--6501
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6538--6539
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6519--6519
+[95]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6559--6559
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6519--6520
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6559--6560
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6537--6537
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6578--6578
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6537--6538
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6578--6579
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6541 \end{longtable}
-                       [95]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6558--6558
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6597--6597
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6558--6559
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6597--6598
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6577--6577
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6616--6616
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6577--6578
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6616--6617
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6596--6596
+[96]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6634--6634
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6596--6597
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6634--6635
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6615--6615
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6653--6653
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6615--6616
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6653--6654
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6619 \end{longtable}
-                       [96]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6633--6633
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6671--6671
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6633--6634
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6671--6672
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6652--6652
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6689--6689
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6652--6653
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6689--6690
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6670--6670
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6707--6707
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6670--6671
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6707--6708
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6688--6688
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6688--6689
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6706--6706
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6706--6707
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6710 \end{longtable}
-                       [97]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6724--6724
+[97]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6725--6725
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6724--6724
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6725--6725
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6743--6743
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6744--6744
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6743--6743
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6744--6744
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (17.3523pt too wide) in paragraph at lines 6745--6746
+Overfull \hbox (17.3523pt too wide) in paragraph at lines 6746--6747
 []|\T1/lmr/m/n/8 Million_sek_season|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6762--6762
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6763--6763
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6762--6762
-\T1/lmr/bx/n/8 (given)|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6766 \end{longtable}
-                       [98]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6781--6781
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6763--6763
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6781--6781
+ignored: Infinite glue shrinkage found in box being split [98]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6782--6782
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6799--6799
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6782--6782
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6799--6799
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6800--6800
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6817--6817
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6800--6800
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6817--6817
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6818--6818
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6830 {[
-         }free text description{]} [99]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6837--6837
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6818--6818
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[99]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6838--6838
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6837--6837
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6838--6838
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6856--6856
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6857--6857
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 6856--6856
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6857--6857
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6873--6873
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6874--6874
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6873--6874
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6874--6875
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6891--6891
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6892--6892
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6891--6892
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6892--6893
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6895 \end{longtable}
-                       [100]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6911--6911
+
+ignored: Infinite glue shrinkage found in box being split [100]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6912--6912
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6911--6912
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6912--6913
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6928--6928
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6929--6929
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6928--6929
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6929--6930
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 6968--6969
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 6969--6970
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6987 \end{longtable}
-                       [101]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 6997--6998
+
+ignored: Infinite glue shrinkage found in box being split [101]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6998--6999
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 6997--6998
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 6998--6999
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7019--7020
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7020--7021
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7036 \end{longtable}
-                       [102]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7046--7047
+
+ignored: Infinite glue shrinkage found in box being split [102]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7047--7048
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 7046--7047
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7047--7048
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7068--7069
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7085 \end{longtable}
-                       [103]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7102--7103
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7069--7070
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7129--7130
+ignored: Infinite glue shrinkage found in box being split [103]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7103--7104
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7130--7131
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 7129--7130
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7130--7131
 \T1/lmr/bx/n/8 (given)|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7146 {[
-         }1--5; from 1 -- very unlikely, to 5 -- very likely{]} [104]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7153--7154
+[104]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7154--7155
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7186--7187
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7187--7188
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7203 \end{longtable}
-                       [105]
 
-Package hyperref Warning: Suppressing link with empty target on input line 7210.
+ignored: Infinite glue shrinkage found in box being split [105]
+
+Package hyperref Warning: Suppressing link with empty target on input line 7211.
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7217--7217
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7218--7218
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7217--7218
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7218--7219
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7236--7237
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7237--7238
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7263--7264
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7264--7265
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 7263--7264
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7264--7265
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7285--7286
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7286--7287
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[106]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7318--7318
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7318--7318
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7337--7337
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7337--7337
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[107]
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7358--7359
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7302 \end{longtable}
-                       [106]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7317--7317
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7317--7317
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7336--7336
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7336--7336
-\T1/lmr/bx/n/8 (given)|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7340 \end{longtable}
-                       [107]
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7357--7358
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7387--7387
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7388--7388
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7387--7388
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7388--7389
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7407--7408
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7408--7409
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7424 \end{longtable}
-                       [108]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7441--7441
+[108]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7442--7442
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (7.73927pt too wide) in paragraph at lines 7441--7441
+Overfull \hbox (7.73927pt too wide) in paragraph at lines 7442--7442
 \T1/lmr/bx/n/8 (self)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7441--7442
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7442--7443
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 7441--7442
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7442--7443
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7455--7456
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7456--7457
 []|\T1/lmr/bx/n/8 Score 
  []
 
 
-Overfull \hbox (15.8515pt too wide) in paragraph at lines 7455--7456
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7456--7457
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7478--7478
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7479--7479
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7478--7479
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7479--7480
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[109]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7500--7500
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7500--7501
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7482 \end{longtable}
-                       [109]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7499--7499
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7521--7521
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7499--7500
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7521--7522
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7520--7520
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7538--7538
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7520--7521
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7538--7539
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[110]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7557--7557
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7578--7578
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7578--7579
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7537--7537
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7597--7597
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7537--7538
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7597--7598
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7549 {[
-         }1--5; from 1 -- really not stressful, to 5 -- very stressful{]} [110]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7556--7556
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7616--7616
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7577--7577
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7616--7617
+[]|\T1/lmr/bx/n/8 Method|  
+ []
+
+[111]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7635--7635
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7577--7578
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7635--7636
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7596--7596
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7653--7653
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7596--7597
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7653--7654
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7615--7615
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7674--7674
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7615--7616
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7674--7675
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7627 {[
-         }1--5; from 1 -- very difficult, to 5 -- very easy{]} [111]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7634--7634
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7693--7693
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7634--7635
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7693--7694
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7652--7652
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7712--7712
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7652--7653
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7712--7713
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7673--7673
+[112]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7731--7731
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7673--7674
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7731--7732
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7692--7692
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7749--7749
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7692--7693
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7749--7750
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7711--7711
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7768--7768
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7711--7712
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7768--7769
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7715 \end{longtable}
-                       [112]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7730--7730
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7786--7786
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7730--7731
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7786--7787
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7748--7748
+[113]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7804--7804
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7748--7749
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7804--7805
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7767--7767
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7822--7822
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7767--7768
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7822--7823
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7785--7785
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7785--7786
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7789 \end{longtable}
-                       [113]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7803--7803
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7803--7804
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7821--7821
-[]|\T1/lmr/bx/n/8 Score|  
- []
-
-
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7821--7822
-[]|\T1/lmr/bx/n/8 Method|  
- []
-
-
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7839--7839
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7840--7840
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7839--7839
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7840--7840
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7858--7858
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7859--7859
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7858--7858
-\T1/lmr/bx/n/8 (given)|  
- []
-
-ignored error: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7865 \end{longtable}
-                       [114]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7880--7880
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7859--7859
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7880--7880
+ignored: Infinite glue shrinkage found in box being split [114]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7881--7881
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7899--7899
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7881--7881
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7899--7899
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7900--7900
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7917--7917
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7900--7900
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7917--7917
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7918--7918
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7935--7935
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7918--7918
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7935--7935
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7936--7936
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7939 \end{longtable}
-                       [115]
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7955--7955
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7936--7936
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[115]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7956--7956
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7955--7955
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7956--7956
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7974--7974
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7975--7975
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (1.62512pt too wide) in paragraph at lines 7974--7974
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7975--7975
 \T1/lmr/bx/n/8 (given)|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 7991--7991
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7992--7992
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 7991--7992
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 7992--7993
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8002 {[
-         }free text description{]} [116]
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 8009--8009
+[116]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8010--8010
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 8009--8010
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 8010--8011
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 8029--8029
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8030--8030
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 8029--8030
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 8030--8031
 []|\T1/lmr/bx/n/8 Method|  
  []
 
 
-Overfull \hbox (9.01263pt too wide) in paragraph at lines 8046--8046
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8047--8047
 []|\T1/lmr/bx/n/8 Score|  
  []
 
 
-Overfull \hbox (19.40686pt too wide) in paragraph at lines 8046--8047
+Overfull \hbox (19.40686pt too wide) in paragraph at lines 8047--8048
 []|\T1/lmr/bx/n/8 Method|  
  []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8053 \end{document}
-                      [117] (./SuppInfo_A.aux)
+[117] (./SuppInfo_A.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-11-14>
+L3 programming layer <2026-03-20>
  ***********
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15029 strings out of 469519
- 231505 string characters out of 5467980
- 795353 words of memory out of 5000000
- 42745 multiletter control sequences out of 15000+600000
- 690848 words of font info for 87 fonts, out of 8000000 for 9000
+ 15171 strings out of 469339
+ 232753 string characters out of 5464315
+ 799035 words of memory out of 5000000
+ 42950 multiletter control sequences out of 15000+600000
+ 693863 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,11n,93p,743b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,93p,743b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on SuppInfo_A.pdf (117 pages, 518793 bytes).
+Output written on SuppInfo_A.pdf (117 pages, 522294 bytes).
 PDF statistics:
- 1317 PDF objects out of 1440 (max. 8388607)
- 1164 compressed objects within 12 object streams
- 678 named destinations out of 1000 (max. 500000)
+ 1459 PDF objects out of 1728 (max. 8388607)
+ 1304 compressed objects within 14 object streams
+ 794 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

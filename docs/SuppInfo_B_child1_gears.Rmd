@@ -5,11 +5,10 @@ output:
 bibliography: references.bib
 ---
 
-
-
 # Fishing gears
 
-## Exploration of fishery statistics data 
+## Exploration of fishery statistics data
+
 ### Small-scale coastal fishing
 
 ```{r, include=T, echo=F,message=FALSE}
@@ -115,7 +114,6 @@ eff.plot%>%
 
 ## Assignations
 
-
 ```{r, include=T, echo=F,message=FALSE,  results = 'asis', fig.width = 8, fig.height=4, warning=FALSE, fig.cap='Fishing days by fishing technique applied by swedish recreational fishers'}
 
 gear=c('otm','gns_fws','gns_spf','fpn_ana','lhp','icefishing','inland')
@@ -148,11 +146,6 @@ kable.obj=kableExtra::kable((kab.tab), booktabs = TRUE, caption='Baseline fishin
 print(kable.obj)
 
 ```
-
-
-
-
-
 
 \newpage
 
@@ -363,4 +356,3 @@ kable.obj=kableExtra::kable((kab.tab), booktabs = TRUE, caption='Baseline fishin
 print(kable.obj)
 
 ```
-

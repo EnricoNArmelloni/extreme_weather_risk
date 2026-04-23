@@ -51,7 +51,7 @@ kableExtra::kable(scoring.system, caption = 'coding system used to categorise an
 ```
 
 
-The questionnaires originated more than 500 scores. About half of the responses (266) were including a clear and unequivocal quantitative score. A large number (123) were not considered relevant by interviewee. Answers that were considered relevant but did not provide a clear score were 150, among which the large majority (105) contained enough information to attempt an interpretation.
+The questionnaires originated more than 500 scores. Of these, 267 enabled clear quantitative scoring, whereas 105 answers indicated clear information but no quantitative score and required interpretation. A total of 158 answers indicated that the combination of extreme events and questions was not relevant (123) for that question or there was not enough information to answer (35). Only 5 answers were considered incoherent with the question (e.g.: Supplementary Table A.165), and these were excluded from the analysis.
 
 ```{r , echo=FALSE,message = FALSE,results = 'asis'}
 evt.resp=coding[!is.na(coding$id_sub) & !is.na(coding$value),]%>%
