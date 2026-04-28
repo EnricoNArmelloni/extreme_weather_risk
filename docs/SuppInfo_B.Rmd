@@ -27,6 +27,7 @@ header-includes:
   - \pagenumbering{gobble}
 bibliography: references.bib
 ---
+
 \vspace{12pt}
 
 \fontsize{15}{18}\selectfont Supplementary Information B: Treatment of fisheries statistics available in European and Swedish repositories
@@ -48,7 +49,7 @@ bibliography: references.bib
 
 ## Commercial fishers
 
-Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Framework, of which most recent update at the time of writing includes data until 2024. Our case study area spans over four ICES statistical divisions (27, 29, 30, 31). The majority of the commercial fishers included in our dialogues operate in the area 30 (Bothnian Sea), which is chosen as reference area for statistical information. The dataset relevant for this study includes:
+Data for fishery dependent information for professional commercial fishers are available through the European Data Collection Framework, of which most recent update at the time of writing includes data until 2024. Our case study area spans over four ICES statistical divisions (northern part of 27, 29, 30, 31; Fig. B1). The majority of the commercial fishers included in our dialogues operate in the area 30 (Bothnian Sea), which is chosen as reference area for statistical information. The dataset relevant for this study includes:
 
 -   *Fishery dependent information (FDI) for EU Fleets* [@jrc]: provides fishing effort (dataset D1; fishing days) and catch (dataset D2; weight and value) data by country, area, fleet segment and target species
 
@@ -77,13 +78,15 @@ Dataset for recreational fishers is available through Sweden statistic reports [
 -   Table 9: Expenditures in recreational fishing in 2024, million SEK
 
 | Dataset ID | Dataset_name | Description |
-|------------------|------------------------|------------------------------|
+|----|----|----|
 | D1 | fdi_effort_SWE.csv | Fishing effort for commercial fisheries from FDI data call [@jrc] |
 | D2 | fdi_catch_SWE.csv | Catches for commercial fisheries from FDI data call [@jrc] |
 | D3 | fdi_SWE.csv | Economic overview (number of vessels, income, expenses) of european fishing fleets [@jrc2025] |
 | D4 | rec_gears_SWE.csv | Thousand of practitioners reported for recreational fishing technique in Sweden |
 | D5 | rec_catch_SWE.csv | Thousand of practitioners reported for target species in Sweden |
 | D6 | rec_economics_SWE.csv | Economic and fishing effort data |
+
+![Map of the Baltic Sea (numbers indicate the statistical divisions for fisheries data collection). The study area spans across Swedish fisheries in areas 3.d.31, 3.d.30, 3.d.29 and the northern part of 3.d.27.](images/ICES_Areas_Baltic_2016.jpg){width="13.8cm"}
 
 \newpage
 

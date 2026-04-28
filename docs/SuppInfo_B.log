@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  23 APR 2026 16:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  28 APR 2026 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,204 +617,210 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 219.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [3]
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf, id=66, 578.16pt x 289.08pt>
+) [2{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<SuppInfo_B_files/images/ICES_Areas_Baltic_2016.jpg, id=61, 378.6948pt x 384.9582pt>
+File: SuppInfo_B_files/images/ICES_Areas_Baltic_2016.jpg Graphic file (type jpg)
+<use SuppInfo_B_files/images/ICES_Areas_Baltic_2016.jpg>
+Package pdftex.def Info: SuppInfo_B_files/images/ICES_Areas_Baltic_2016.jpg  used on input line 312.
+(pdftex.def)             Requested size: 392.6545pt x 399.14879pt.
+[3] [4 <./SuppInfo_B_files/images/ICES_Areas_Baltic_2016.jpg>]
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf, id=72, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 334.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 343.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf, id=67, 578.16pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf, id=73, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 354.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 363.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
-[4 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>]
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf, id=81, 578.16pt x 289.08pt>
+[5 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-5-1.pdf>]
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf, id=87, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 373.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf  used on input line 382.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
 
-Overfull \hbox (7.88239pt too wide) in paragraph at lines 385--385
+Overfull \hbox (7.88239pt too wide) in paragraph at lines 394--394
  []|\T1/lmr/bx/n/8 recreational|
  []
 
 
-Overfull \hbox (7.13646pt too wide) in paragraph at lines 385--385
+Overfull \hbox (7.13646pt too wide) in paragraph at lines 394--394
  []|\T1/lmr/bx/n/8 small_scale|
  []
 
-[5 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>]
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf, id=94, 578.16pt x 289.08pt>
+[6 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-7-1.pdf>]
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf, id=100, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 437.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 446.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
-[6 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>]
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf, id=107, 578.16pt x 289.08pt>
+[7 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-8-1.pdf>]
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf, id=114, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 466.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 475.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf, id=108, 578.16pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf, id=115, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 472.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 481.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf, id=109, 578.16pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf, id=116, 578.16pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf  used on input line 489.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf  used on input line 498.
 (pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
 
-Overfull \hbox (7.0736pt too wide) in paragraph at lines 500--500
+Overfull \hbox (7.0736pt too wide) in paragraph at lines 509--509
  []|\T1/lmr/bx/n/8 gns_fws|
  []
 
 
-Overfull \hbox (6.40382pt too wide) in paragraph at lines 500--500
+Overfull \hbox (6.40382pt too wide) in paragraph at lines 509--509
  []|\T1/lmr/bx/n/8 gns_spf|
  []
 
 
-Overfull \hbox (7.95152pt too wide) in paragraph at lines 500--500
+Overfull \hbox (7.95152pt too wide) in paragraph at lines 509--509
  []|\T1/lmr/bx/n/8 fpn_ana|
  []
 
 
-Overfull \hbox (11.01764pt too wide) in paragraph at lines 500--500
+Overfull \hbox (11.01764pt too wide) in paragraph at lines 509--509
  []|\T1/lmr/bx/n/8 icefishing|
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [7 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf>] [8] [9 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf> <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 534.
+ignored: Infinite glue shrinkage found in box being split [8 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-11-1.pdf>] [9] [10 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-13-1.pdf> <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-14-1.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 543.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 570.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 579.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 581.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 590.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 621.
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 630.
 (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 646
+) [11 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-15-1.pdf>]
+Underfull \vbox (badness 10000) detected at line 655
  []
 
 
-Underfull \vbox (badness 10000) detected at line 646
+Underfull \vbox (badness 10000) detected at line 655
  []
 
-[11] [12]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 668--668
+[12] [13]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 677--677
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 696--696
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 705--705
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
 
-Overfull \hbox (5.59526pt too wide) in paragraph at lines 698--698
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 707--707
 []|\T1/lmr/m/n/8 thousand 
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 698--699
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 707--708
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 700--701
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 709--710
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf, id=167, 867.24pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf, id=174, 867.24pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf  used on input line 707.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf  used on input line 716.
 (pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
-[13 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 731--731
+[14 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-32-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 740--740
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 748--748
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 757--757
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
 
-Overfull \hbox (5.59526pt too wide) in paragraph at lines 750--750
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 759--759
 []|\T1/lmr/m/n/8 thousand 
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 750--751
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 759--760
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
 
-Overfull \hbox (10.41374pt too wide) in paragraph at lines 752--753
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 761--762
 []|\T1/lmr/m/n/8 STECF_AER|  
  []
 
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf, id=181, 867.24pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf, id=187, 867.24pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf  used on input line 759.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf  used on input line 768.
 (pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
-[14 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 780--780
+[15 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-33-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 789--789
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 797--797
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 806--806
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf, id=194, 867.24pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf, id=200, 867.24pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf  used on input line 808.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf  used on input line 817.
 (pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
-[15 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 825--825
+[16 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-34-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 834--834
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 844--844
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 853--853
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf, id=207, 867.24pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf, id=213, 867.24pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf  used on input line 853.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf  used on input line 862.
 (pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
-[16 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf>]
-Overfull \hbox (4.99065pt too wide) in paragraph at lines 870--870
+[17 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-35-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 879--879
  []|\T1/lmr/bx/n/8 id_I|
  []
 
 
-Overfull \hbox (9.61104pt too wide) in paragraph at lines 889--889
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 898--898
  []|\T1/lmr/bx/n/8 value_mean|
  []
 
-<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf, id=220, 867.24pt x 289.08pt>
+<SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf, id=226, 867.24pt x 289.08pt>
 File: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf Graphic file (type pdf)
 <use SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf>
-Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf  used on input line 898.
+Package pdftex.def Info: SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf  used on input line 907.
 (pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
-[17 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf>] [18] (./SuppInfo_B.aux)
+[18 <./SuppInfo_B_files/SuppInfo_B_files/figure-latex/unnamed-chunk-36-1.pdf>] [19] (./SuppInfo_B.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -824,18 +830,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14562 strings out of 469339
- 233586 string characters out of 5464315
- 662491 words of memory out of 5000000
- 43037 multiletter control sequences out of 15000+600000
+ 14571 strings out of 469339
+ 234000 string characters out of 5464315
+ 662493 words of memory out of 5000000
+ 43044 multiletter control sequences out of 15000+600000
  692078 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,11n,93p,530b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtko10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on SuppInfo_B.pdf (18 pages, 435507 bytes).
+Output written on SuppInfo_B.pdf (19 pages, 2129255 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 77 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 397 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 
