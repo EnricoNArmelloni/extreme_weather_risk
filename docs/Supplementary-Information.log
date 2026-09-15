@@ -1,0 +1,3891 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  19 AUG 2026 11:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Supplementary-Information.tex
+(./Supplementary-Information.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks18
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip51
+For additional information on amsmath, use the `?' option.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen159
+)) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen160
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count286
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count287
+\leftroot@=\count288
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count289
+\DOTSCASE@=\count290
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen161
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count291
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count292
+\dotsspace@=\muskip17
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks20
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks21
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count298
+\FV@InFile=\read2
+\FV@TabBox=\box55
+\c@FancyVerbLine=\count299
+\FV@StepNumber=\count300
+\FV@OutFile=\write3
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip54
+\fb@frw=\dimen168
+\fb@frh=\dimen169
+\FrameRule=\dimen170
+\FrameSep=\dimen171
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count301
+\LTcapwidth=\dimen172
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count302
+\LT@rows=\count303
+\c@LT@tables=\count304
+\c@LT@chunks=\count305
+\LT@p@ftn=\toks26
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen173
+\lightrulewidth=\dimen174
+\cmidrulewidth=\dimen175
+\belowrulesep=\dimen176
+\belowbottomsep=\dimen177
+\aboverulesep=\dimen178
+\abovetopsep=\dimen179
+\cmidrulesep=\dimen180
+\cmidrulekern=\dimen181
+\defaultaddspace=\dimen182
+\@cmidla=\count306
+\@cmidlb=\count307
+\@aboverulesep=\dimen183
+\@belowrulesep=\dimen184
+\@thisruleclass=\count308
+\@lastruleclass=\count309
+\@thisrulewidth=\dimen185
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+
+LaTeX Warning: You have requested release `2026/06/01' of LaTeX,
+               but only release `2025-11-01' is available.
+
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen186
+\ar@mcellbox=\box61
+\extrarowheight=\dimen187
+\NC@list=\toks27
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box62
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count310
+\calc@Bcount=\count311
+\calc@Adimen=\dimen188
+\calc@Bdimen=\dimen189
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count312
+\calc@Cskip=\skip63
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count313
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box63
+\fn@width=\dimen190
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen191
+\Gin@req@width=\dimen192
+)
+\pandoc@box=\box64
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2026/05/31 v3.0e eso-pic (RN)
+\ESO@tempdima=\dimen193
+\ESO@tempdimb=\dimen194
+)
+\AM@pagewidth=\dimen195
+\AM@pageheight=\dimen196
+\AM@fboxrule=\dimen197
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2026/03/30 v0.6h Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count314
+\AM@pagebox=\box65
+\AM@global@opts=\toks28
+\AM@pagecnt=\count315
+\AM@toc@title=\toks29
+\AM@lof@heading=\toks30
+\c@AM@survey=\count316
+\AM@templatesizebox=\box66
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2026/06/01 v1.5l extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+Package tocbibind Note: Using section or other style headings.
+
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count317
+\multirow@dima=\skip65
+\bigstrutjot=\dimen198
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen199
+\WF@size=\dimen256
+\c@WF@wrappedlines=\count318
+\WF@box=\box67
+\WF@everypar=\toks31
+Package: wrapfig 2003/01/31  v 3.6
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count319
+\float@exts=\toks32
+\float@box=\box68
+\@float@everytoks=\toks33
+\@floatcapt=\box69
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
+new hooks used!!
+\minrowclearance=\skip66
+\rownum=\count320
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box70
+\sift@deathcycles=\count321
+\@vwid@loff=\dimen257
+\@vwid@roff=\dimen258
+)
+==> First Aid for varwidth.sty applied!
+\c@taburow=\count322
+\tabu@nbcols=\count323
+\tabu@cnt=\count324
+\tabu@Xcol=\count325
+\tabu@alloc=\count326
+\tabu@nested=\count327
+\tabu@target=\dimen259
+\tabu@spreadtarget=\dimen260
+\tabu@naturalX=\dimen261
+\tabucolX=\dimen262
+\tabu@Xsum=\dimen263
+\extrarowdepth=\dimen264
+\abovetabulinesep=\dimen265
+\belowtabulinesep=\dimen266
+\tabustrutrule=\dimen267
+\tabu@thebody=\toks34
+\tabu@footnotes=\toks35
+\tabu@box=\box71
+\tabu@arstrutbox=\box72
+\tabu@hleads=\box73
+\tabu@vleads=\box74
+\tabu@cellskip=\skip67
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box75
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip68
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box76
+\UL@hyphenbox=\box77
+\UL@skip=\skip69
+\UL@hook=\toks36
+\UL@height=\dimen268
+\UL@pe=\count328
+\UL@pixel=\dimen269
+\ULC@box=\box78
+Package: ulem 2019/11/18
+\ULdepth=\dimen270
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen271
+\c@nlinenum=\count329
+\TeXr@lab=\toks37
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count330
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen272
+\Hy@linkcounter=\count331
+\Hy@pagecounter=\count332
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count333
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4070.
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count334
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen273
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count335
+\Field@Width=\dimen274
+\Fld@charsize=\dimen275
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count336
+\c@Item=\count337
+\c@Hfootnote=\count338
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2026-06-17 v7.01r Hyperref driver for pdfTeX
+\Fld@listcount=\count339
+\c@bookmark@seq@number=\count340
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip70
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count341
+) (c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
+\BKM@id=\count342
+))
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 139.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./Supplementary-Information.aux
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-20' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-54' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-55' multiply defined.
+
+)
+\openout1 = `Supplementary-Information.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 139.
+(./Supplementary-Information.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 2.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 2.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write4
+\openout4 = `Supplementary-Information.toc'.
+
+[1
+
+{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] [2]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 169.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [3{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (6.02213pt too wide) in paragraph at lines 278--278
+[]|\T1/lmr/bx/n/7 Exp2|  
+ []
+
+
+Overfull \hbox (6.02213pt too wide) in paragraph at lines 278--278
+[]|\T1/lmr/bx/n/7 Exp3|  
+ []
+
+
+Overfull \hbox (6.86812pt too wide) in paragraph at lines 278--278
+ []|\T1/lmr/bx/n/7 mean|
+ []
+
+[4] [5] [6] [7]
+
+Package hyperref Warning: Suppressing link with empty target on input line 421.
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 440.
+
+[8] [9] [10]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 595--596
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 595--596
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[11]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 644--645
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 644--645
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[12] [13]
+
+Package hyperref Warning: Suppressing link with empty target on input line 802.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 809--810
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[14]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 855--856
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 855--856
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[15]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 909--909
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 909--909
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 928--928
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 928--928
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 980--981
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[16]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1041--1042
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[17]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1061--1062
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1081--1082
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1102--1103
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1119--1120
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[18]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1159--1160
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1178--1179
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1197--1198
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[19]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1216--1217
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1234--1235
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1255--1256
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1274--1275
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[20]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1293--1294
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1311--1312
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1329--1330
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1348--1349
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1366--1367
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[21]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1384--1385
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1402--1403
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1420--1421
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1439--1439
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1439--1439
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[22]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1458--1458
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1458--1458
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1477--1477
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1477--1477
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1495--1495
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1495--1495
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1513--1513
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1513--1513
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[23]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1533--1533
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1533--1533
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1552--1552
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1552--1552
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1569--1570
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[24]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1587--1588
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (0.93246pt too wide) in paragraph at lines 1595--1596
+\T1/lmr/m/n/8 Slus|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1613--1614
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1630--1631
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[25] [26] [27]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1798--1799
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 1798--1799
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[28]
+
+Package hyperref Warning: Suppressing link with empty target on input line 1845.
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 1884.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 1891--1892
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[29] [30]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1975--1975
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1975--1975
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1994--1994
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 1994--1994
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2045--2046
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[31]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2099--2100
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2119--2120
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[32]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2140--2141
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2161--2162
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2178--2179
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[33]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2218--2219
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2237--2238
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2257--2258
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[34]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2276--2277
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2294--2295
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2315--2316
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2334--2335
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2353--2354
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[35]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2372--2373
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2390--2391
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2409--2410
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2427--2428
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[36]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2445--2446
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2463--2464
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2481--2481
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2481--2481
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2500--2500
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2500--2500
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.29726pt too wide) in paragraph at lines 2502--2502
+[]|\T1/lmr/m/n/8 1500000|  
+ []
+
+[37]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2519--2519
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2519--2519
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2538--2538
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2538--2538
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2556--2556
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2556--2556
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2574--2574
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2574--2574
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[38]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2594--2594
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2594--2594
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2613--2613
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 2613--2613
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2630--2631
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[39]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2648--2649
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2668--2669
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2685--2686
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[40] [41]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2790--2791
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 2790--2791
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[42] [43]
+
+Package hyperref Warning: Suppressing link with empty target on input line 2944.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 2951--2952
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[44] [45]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3035--3035
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3035--3035
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3054--3054
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3054--3054
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[46]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3105--3106
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3159--3160
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[47]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3179--3180
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3200--3201
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3221--3222
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3238--3239
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[48]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3278--3279
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3297--3298
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3316--3317
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[49]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3335--3336
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3353--3354
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3374--3375
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3393--3394
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[50]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3412--3413
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3431--3432
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3449--3450
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3468--3469
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[51]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3486--3487
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3504--3505
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3522--3523
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3540--3540
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3540--3540
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3559--3559
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3559--3559
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[52]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3578--3578
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3578--3578
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3597--3597
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3597--3597
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3615--3615
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3615--3615
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[53]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3633--3633
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3633--3633
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3653--3653
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3653--3653
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3672--3672
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 3672--3672
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3689--3690
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[54]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3707--3708
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3727--3728
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3744--3745
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[55] [56]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3844--3845
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 3844--3845
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[57] [58]
+
+Package hyperref Warning: Suppressing link with empty target on input line 3992.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 3999--4000
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[59]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4087--4087
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4087--4087
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[60]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4106--4106
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4106--4106
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4157--4158
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[61]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4211--4212
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4231--4232
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[62]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4252--4253
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4273--4274
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4290--4291
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[63]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4330--4331
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4349--4350
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4368--4369
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4387--4388
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[64]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4405--4406
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4426--4427
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4445--4446
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4464--4465
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[65]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4484--4485
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4502--4503
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4521--4522
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4539--4540
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[66]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4557--4558
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4575--4576
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4593--4593
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4593--4593
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4612--4612
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4612--4612
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[67]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4631--4631
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4631--4631
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4650--4650
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4650--4650
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4668--4668
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4668--4668
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4686--4686
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4686--4686
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4706--4706
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4706--4706
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[68]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4725--4725
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 4725--4725
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4742--4743
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4760--4761
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[69]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4780--4781
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4797--4798
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[70]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4863--4864
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 4863--4864
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[71]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 4918--4919
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 4918--4919
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[72] [73] [74]
+
+Package hyperref Warning: Suppressing link with empty target on input line 5076.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5083--5084
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[75]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5167--5167
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5167--5167
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5186--5186
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5186--5186
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.29726pt too wide) in paragraph at lines 5188--5188
+[]|\T1/lmr/m/n/8 1000000|  
+ []
+
+[76]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5234--5235
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 5234--5235
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5253--5254
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[77]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5307--5308
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5327--5328
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5348--5349
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[78]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5369--5370
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5386--5387
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5426--5427
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[79]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5445--5446
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5464--5465
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5483--5484
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5501--5502
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[80]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5522--5523
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5541--5542
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5560--5561
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5579--5580
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5597--5598
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[81]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5616--5617
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5634--5635
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5652--5653
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5670--5671
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[82]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5688--5688
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5688--5688
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5707--5707
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5707--5707
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5726--5726
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5726--5726
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5745--5745
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5745--5745
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[83]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5763--5763
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5763--5763
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5781--5781
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5781--5781
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5801--5801
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5801--5801
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5821--5821
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 5821--5821
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[84]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5838--5839
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5856--5857
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5876--5877
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5893--5894
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[85] [86]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 5960--5961
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 5960--5961
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6009--6010
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 6009--6010
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[87] [88] [89]
+
+Package hyperref Warning: Suppressing link with empty target on input line 6162.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6169--6170
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[90]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6253--6253
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6253--6253
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6274--6274
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6274--6274
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[91]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6325--6326
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[92]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6379--6380
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6399--6400
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6420--6421
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[93]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6441--6442
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6458--6459
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6498--6499
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[94]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6517--6518
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6536--6537
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6555--6556
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6573--6574
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[95]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6594--6595
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6613--6614
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6632--6633
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6651--6652
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[96]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6669--6670
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6688--6689
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6706--6707
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6724--6725
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6742--6743
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[97]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6760--6760
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6760--6760
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6779--6779
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6779--6779
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (17.3523pt too wide) in paragraph at lines 6781--6782
+[]|\T1/lmr/m/n/8 Million_sek_season|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6798--6798
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6798--6798
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[98]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6817--6817
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6817--6817
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6835--6835
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6835--6835
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6853--6853
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6853--6853
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[99]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6873--6873
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6873--6873
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6892--6892
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 6892--6892
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6909--6910
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6927--6928
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[100]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6947--6948
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 6964--6965
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[101]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7033--7034
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7033--7034
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[102]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7082--7083
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7082--7083
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[103]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7165--7166
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7165--7166
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[104] [105]
+
+Package hyperref Warning: Suppressing link with empty target on input line 7246.
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7253--7254
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7299--7300
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7299--7300
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[106]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7353--7353
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7353--7353
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7372--7372
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7372--7372
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[107]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7423--7424
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[108]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7477--7477
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (7.73927pt too wide) in paragraph at lines 7477--7477
+\T1/lmr/bx/n/8 (self)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7477--7478
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7477--7478
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7491--7492
+[]|\T1/lmr/bx/n/8 Score 
+ []
+
+
+Overfull \hbox (15.8515pt too wide) in paragraph at lines 7491--7492
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7514--7515
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[109]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7535--7536
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7556--7557
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7573--7574
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[110]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7613--7614
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7632--7633
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7651--7652
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[111]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7670--7671
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7688--7689
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7709--7710
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7728--7729
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7747--7748
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[112]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7766--7767
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7784--7785
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7803--7804
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7821--7822
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[113]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7839--7840
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 7857--7858
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7875--7875
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7875--7875
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7894--7894
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7894--7894
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[114]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7916--7916
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7916--7916
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7935--7935
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7935--7935
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7953--7953
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7953--7953
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7971--7971
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7971--7971
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+[115]
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7991--7991
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 7991--7991
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 8010--8010
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (1.62512pt too wide) in paragraph at lines 8010--8010
+\T1/lmr/bx/n/8 (given)|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8027--8028
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[116]
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8045--8046
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8065--8066
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+
+Overfull \hbox (9.01263pt too wide) in paragraph at lines 8082--8083
+[]|\T1/lmr/bx/n/8 Score|  
+ []
+
+[117] [118]
+<Supplementary-Information_files/images/ICES_Areas_Baltic_2016.jpg, id=1242, 378.6948pt x 384.9582pt>
+File: Supplementary-Information_files/images/ICES_Areas_Baltic_2016.jpg Graphic file (type jpg)
+<use Supplementary-Information_files/images/ICES_Areas_Baltic_2016.jpg>
+Package pdftex.def Info: Supplementary-Information_files/images/ICES_Areas_Baltic_2016.jpg  used on input line 8204.
+(pdftex.def)             Requested size: 392.6545pt x 399.14879pt.
+[119 <./Supplementary-Information_files/images/ICES_Areas_Baltic_2016.jpg>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-27-1.pdf, id=1249, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-27-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-27-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-27-1.pdf  used on input line 8235.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-29-1.pdf, id=1250, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-29-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-29-1.pdf  used on input line 8255.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-30-1.pdf, id=1251, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-30-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-30-1.pdf  used on input line 8274.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+Overfull \hbox (7.88239pt too wide) in paragraph at lines 8286--8286
+ []|\T1/lmr/bx/n/8 recreational|
+ []
+
+
+Overfull \hbox (7.13646pt too wide) in paragraph at lines 8286--8286
+ []|\T1/lmr/bx/n/8 small_scale|
+ []
+
+[120 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-27-1.pdf>] [121 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-29-1.pdf> <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-30-1.pdf>] [122]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-33-1.pdf, id=1290, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-33-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-33-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-33-1.pdf  used on input line 8338.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-35-1.pdf, id=1291, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-35-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-35-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-35-1.pdf  used on input line 8367.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-36-1.pdf, id=1292, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-36-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-36-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-36-1.pdf  used on input line 8373.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+[123 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-33-1.pdf>] [124 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-35-1.pdf> <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-36-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-37-1.pdf, id=1322, 578.16pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-37-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-37-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-37-1.pdf  used on input line 8390.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+Overfull \hbox (7.0736pt too wide) in paragraph at lines 8401--8401
+ []|\T1/lmr/bx/n/8 gns_fws|
+ []
+
+
+Overfull \hbox (6.40382pt too wide) in paragraph at lines 8401--8401
+ []|\T1/lmr/bx/n/8 gns_spf|
+ []
+
+
+Overfull \hbox (7.95152pt too wide) in paragraph at lines 8401--8401
+ []|\T1/lmr/bx/n/8 fpn_ana|
+ []
+
+
+Overfull \hbox (11.01764pt too wide) in paragraph at lines 8401--8401
+ []|\T1/lmr/bx/n/8 icefishing|
+ []
+
+[125 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-37-1.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8435.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 8471.
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 8482.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 8522.
+(c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [126] [127]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 8569--8569
+ []|\T1/lmr/bx/n/8 id_I|
+ []
+
+
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 8597--8597
+ []|\T1/lmr/bx/n/8 value_mean|
+ []
+
+
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 8599--8599
+[]|\T1/lmr/m/n/8 thousand 
+ []
+
+
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 8599--8600
+[]|\T1/lmr/m/n/8 STECF_AER|  
+ []
+
+
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 8601--8602
+[]|\T1/lmr/m/n/8 STECF_AER|  
+ []
+
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-54-1.pdf, id=1351, 867.24pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-54-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-54-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-54-1.pdf  used on input line 8608.
+(pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
+[128 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-54-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 8632--8632
+ []|\T1/lmr/bx/n/8 id_I|
+ []
+
+
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 8649--8649
+ []|\T1/lmr/bx/n/8 value_mean|
+ []
+
+
+Overfull \hbox (5.59526pt too wide) in paragraph at lines 8651--8651
+[]|\T1/lmr/m/n/8 thousand 
+ []
+
+
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 8651--8652
+[]|\T1/lmr/m/n/8 STECF_AER|  
+ []
+
+
+Overfull \hbox (10.41374pt too wide) in paragraph at lines 8653--8654
+[]|\T1/lmr/m/n/8 STECF_AER|  
+ []
+
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-55-1.pdf, id=1365, 867.24pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-55-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-55-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-55-1.pdf  used on input line 8660.
+(pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
+[129 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-55-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 8681--8681
+ []|\T1/lmr/bx/n/8 id_I|
+ []
+
+
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 8698--8698
+ []|\T1/lmr/bx/n/8 value_mean|
+ []
+
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-56-1.pdf, id=1379, 867.24pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-56-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-56-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-56-1.pdf  used on input line 8709.
+(pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
+[130 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-56-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 8726--8726
+ []|\T1/lmr/bx/n/8 id_I|
+ []
+
+
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 8745--8745
+ []|\T1/lmr/bx/n/8 value_mean|
+ []
+
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-57-1.pdf, id=1393, 867.24pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-57-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-57-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-57-1.pdf  used on input line 8754.
+(pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
+[131 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-57-1.pdf>]
+Overfull \hbox (4.99065pt too wide) in paragraph at lines 8771--8771
+ []|\T1/lmr/bx/n/8 id_I|
+ []
+
+
+Overfull \hbox (9.61104pt too wide) in paragraph at lines 8790--8790
+ []|\T1/lmr/bx/n/8 value_mean|
+ []
+
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-58-1.pdf, id=1407, 867.24pt x 289.08pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-58-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-58-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-58-1.pdf  used on input line 8799.
+(pdftex.def)             Requested size: 867.2379pt x 289.07928pt.
+[132 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-58-1.pdf>] [133]
+<Supplementary-Information_files/images/BN_outline.jpg, id=1427, 299.6796pt x 417.7206pt>
+File: Supplementary-Information_files/images/BN_outline.jpg Graphic file (type jpg)
+<use Supplementary-Information_files/images/BN_outline.jpg>
+Package pdftex.def Info: Supplementary-Information_files/images/BN_outline.jpg  used on input line 8816.
+(pdftex.def)             Requested size: 270.3173pt x 376.79279pt.
+[134 <./Supplementary-Information_files/images/BN_outline.jpg>] [135{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [136]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-85-1.pdf, id=1451, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-85-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-85-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-85-1.pdf  used on input line 8972.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[137 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-85-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-87-1.pdf, id=1463, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-87-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-87-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-87-1.pdf  used on input line 9001.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[138 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-87-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-89-1.pdf, id=1476, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-89-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-89-1.pdf  used on input line 9035.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[139 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-89-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-91-1.pdf, id=1490, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-91-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-91-1.pdf  used on input line 9057.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[140 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-91-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-93-1.pdf, id=1502, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-93-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-93-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-93-1.pdf  used on input line 9082.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[141 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-93-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-95-1.pdf, id=1514, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-95-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-95-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-95-1.pdf  used on input line 9107.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[142 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-95-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-97-1.pdf, id=1526, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-97-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-97-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-97-1.pdf  used on input line 9132.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[143 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-97-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-99-1.pdf, id=1538, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-99-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-99-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-99-1.pdf  used on input line 9160.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[144 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-99-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-101-1.pdf, id=1550, 722.7pt x 578.16pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-101-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-101-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-101-1.pdf  used on input line 9184.
+(pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
+[145 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-101-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-104-1.pdf, id=1564, 722.7pt x 578.16pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-104-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-104-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-104-1.pdf  used on input line 9213.
+(pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
+[146 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-104-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-106-1.pdf, id=1576, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-106-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-106-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-106-1.pdf  used on input line 9237.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[147 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-106-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-108-1.pdf, id=1588, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-108-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-108-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-108-1.pdf  used on input line 9258.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[148 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-108-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-110-1.pdf, id=1600, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-110-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-110-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-110-1.pdf  used on input line 9280.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[149 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-110-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-112-1.pdf, id=1612, 722.7pt x 578.16pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-112-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-112-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-112-1.pdf  used on input line 9302.
+(pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
+[150 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-112-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-115-1.pdf, id=1624, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-115-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-115-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-115-1.pdf  used on input line 9330.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[151 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-115-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-117-1.pdf, id=1637, 722.7pt x 578.16pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-117-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-117-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-117-1.pdf  used on input line 9354.
+(pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
+[152 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-117-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-119-1.pdf, id=1649, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-119-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-119-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-119-1.pdf  used on input line 9374.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[153 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-119-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-121-1.pdf, id=1661, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-121-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-121-1.pdf  used on input line 9393.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[154 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-121-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-123-1.pdf, id=1673, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-123-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-123-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-123-1.pdf  used on input line 9414.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[155 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-123-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-75-1.pdf, id=1685, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-75-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-75-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-75-1.pdf  used on input line 9426.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[156 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-75-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-127-1.pdf, id=1697, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-127-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-127-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-127-1.pdf  used on input line 9448.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[157 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-127-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-129-1.pdf, id=1710, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-129-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-129-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-129-1.pdf  used on input line 9468.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[158 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-129-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-131-1.pdf, id=1722, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-131-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-131-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-131-1.pdf  used on input line 9487.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[159 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-131-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-133-1.pdf, id=1734, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-133-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-133-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-133-1.pdf  used on input line 9507.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[160 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-133-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-77-1.pdf, id=1746, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-77-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-77-1.pdf  used on input line 9520.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[161 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-77-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-137-1.pdf, id=1757, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-137-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-137-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-137-1.pdf  used on input line 9542.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[162 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-137-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-139-1.pdf, id=1769, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-139-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-139-1.pdf  used on input line 9562.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[163 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-139-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-141-1.pdf, id=1782, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-141-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-141-1.pdf  used on input line 9581.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[164 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-141-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-143-1.pdf, id=1794, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-143-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-143-1.pdf  used on input line 9602.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[165 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-143-1.pdf>]
+Overfull \hbox (15.26537pt too wide) in paragraph at lines 9610--9612
+\T1/lmr/bx/n/10 Parents\T1/lmr/m/n/10 : knowl-edge_transmission, ben-e-fit_local_community, tra-di-tional_food, ben-e-fit_personal_community. 
+ []
+
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-145-1.pdf, id=1806, 722.7pt x 578.16pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-145-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-145-1.pdf  used on input line 9623.
+(pdftex.def)             Requested size: 722.69823pt x 578.15858pt.
+
+Underfull \hbox (badness 1533) in paragraph at lines 9627--9627
+[]\T1/lmr/m/n/10 Figure S.44: []conditional dis-tri-bu-tion for so-ci-etal_importance. Columns rep-re-sents lev-els of the
+ []
+
+[166 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-145-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-79-1.pdf, id=1818, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-79-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-79-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-79-1.pdf  used on input line 9637.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[167 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-79-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-149-1.pdf, id=1830, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-149-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-149-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-149-1.pdf  used on input line 9671.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+
+Underfull \hbox (badness 1097) in paragraph at lines 9674--9674
+[]\T1/lmr/m/n/10 Figure S.46: []conditional dis-tri-bu-tion for in-di-vid-ual_risk. Columns rep-re-sents lev-els of the node
+ []
+
+[168 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-149-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-151-1.pdf, id=1842, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-151-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-151-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-151-1.pdf  used on input line 9694.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+
+Underfull \hbox (badness 1960) in paragraph at lines 9697--9697
+[]\T1/lmr/m/n/10 Figure S.47: []conditional dis-tri-bu-tion for so-ci-etal_risk. Columns rep-re-sents lev-els of the node
+ []
+
+[169 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-151-1.pdf>]
+<Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-153-1.pdf, id=1855, 722.7pt x 361.35pt>
+File: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-153-1.pdf Graphic file (type pdf)
+<use Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-153-1.pdf>
+Package pdftex.def Info: Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-153-1.pdf  used on input line 9717.
+(pdftex.def)             Requested size: 722.69823pt x 361.34912pt.
+[170 <./Supplementary-Information_files/Supplementary-Information_files/figure-latex/unnamed-chunk-153-1.pdf>] (./Supplementary-Information.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 16514 strings out of 469339
+ 287150 string characters out of 5464315
+ 816221 words of memory out of 5000000
+ 44086 multiletter control sequences out of 15000+600000
+ 680393 words of font info for 77 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 89i,8n,93p,1033b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtko10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/eoar0001/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on Supplementary-Information.pdf (170 pages, 4253759 bytes).
+PDF statistics:
+ 2245 PDF objects out of 2487 (max. 8388607)
+ 1918 compressed objects within 20 object streams
+ 981 named destinations out of 1000 (max. 500000)
+ 449 words of extra memory for PDF output out of 10000 (max. 10000000)
+

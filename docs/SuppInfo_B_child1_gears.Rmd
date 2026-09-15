@@ -5,11 +5,11 @@ output:
 bibliography: references.bib
 ---
 
-# Fishing gears
+## Fishing gears
 
-## Exploration of fishery statistics data
+### Exploration of fishery statistics data
 
-### Small-scale coastal fishing
+#### Small-scale coastal fishing
 
 ```{r, include=T, echo=F,message=FALSE}
 library(tidyverse)
@@ -61,7 +61,7 @@ write.csv(coastal_fdays, "C:/github/extreme_weather_risk/data/read_only/coastal_
 
 ```
 
-### Pelagic trawling and large scale fleet
+#### Pelagic trawling and large scale fleet
 
 We analysed dataset D1, filtered to Swedish fleet, vessels categories VL2440 and VL40XX, to assess the fishing effort distribution by fishing technique in the Swedish large scale fleet. This information supports the interpretation of economic data, for which data are aggregated across fishing techniques. Figure B.3 shows that the fishing technique *Demersal Trawl Shelf* (DTS) and *Trawl Midwater* (TM) includes similar amount of fishing days, and togheter represents the vast majority of Swedish fishing effort. In the DTS category, pelagic trawling gears (OTM, OTT, PTM) dominates the fishing activity.
 
@@ -88,7 +88,7 @@ eff.plot%>%
 
 ```
 
-### Recreational fishing
+#### Recreational fishing
 
 Dataset D4 shows the number of practitioners by recreational fishing method. Fishing methods based on hook and lines are dominating the distribution reported in Fig. B.4. Cages and nets are the two main techniques that do not base on hook and line. Cages are predominantly used in crustaceans fishery on the west coast of Sweden. The use of nets in popular in the Baltic Sea. For the purpose of this study we consider that only hook and line methods apply for the recreational fishing style, with no distinction among methods. Nets applies to the household fishing style.
 
@@ -112,7 +112,7 @@ eff.plot%>%
 
 ```
 
-## Assignations
+### Assignations
 
 ```{r, include=T, echo=F,message=FALSE,  results = 'asis', fig.width = 8, fig.height=4, warning=FALSE, fig.cap='Fishing days by fishing technique applied by swedish recreational fishers'}
 
@@ -149,11 +149,11 @@ print(kable.obj)
 
 \newpage
 
-# Fishing target
+## Fishing target
 
-## Exploration of fishery statistics
+### Exploration of fishery statistics
 
-### Small-scale coastal fishing
+#### Small-scale coastal fishing
 
 We analysed dataset D2 to identify the catch composition associated to ssf métiers selected in the previous section. The dataset, filtered to Swedish fleet in ICES area 27.3.D.30, vessels categories VL0812 and VL0008, was subset to match the ssf métiers (1) gillnets-freshwater species (GNS-FWS), (2) gillnets-small pelagic species (GNS-SPF), (3) pound nets- anadromous species (FPN-ANA). Species scientific name were assigned according to ASFIS List of Species for Fishery Statistics Purposes [@fao2026].
 
@@ -211,7 +211,7 @@ write.csv(coastal.catch, "C:/github/extreme_weather_risk/data/read_only/coastal_
 
 ```
 
-### Pelagic trawling and large scale fleet
+#### Pelagic trawling and large scale fleet
 
 We analysed dataset D2 to evaluate the catch value associated with fishing gears deployed by Swedish large scale fleet, and then the catch composition of pelagic trawlers. The economic value of catches, filtered to Swedish fleet in ICES area 27.3.D.30, and vessel categories 'VL2440', 'VL40XX' was aggregated by metier and averaged over years. Figure B.6 shows that pelagic fleet (TM) dominates the distribution (58% of total), and the fishing gears Otter Trawl Midwater (OTM) contributes nearly to 37% of the entire landed value.
 
@@ -284,7 +284,7 @@ otm.catch%>%
   facet_wrap(~metier, scales='free_x')
 ```
 
-### Recreational fishing
+#### Recreational fishing
 
 For recreational fishers we are interested in the distribution of number of practitioners by target species, in the Sea. Dataset D5 was subset to exclude species that are not available in the Baltic Sea. Fig. B.8 shows that Perch and pike dominates the distribution. We excluded some relevant species (Cod, Zander) for simplifyng the model. Whitefish was included, although not contributing substantially to recreational fishing target, because it is a shared resource with small scale fishers.
 
@@ -300,7 +300,7 @@ rec.catch%>%
 
 ```
 
-## Assignations
+### Assignations
 
 ```{r, include=T, echo=F,message=FALSE,  results = 'asis', fig.width = 8, fig.height=4, warning=FALSE, fig.cap='Fishing days by fishing technique applied by swedish recreational fishers'}
 

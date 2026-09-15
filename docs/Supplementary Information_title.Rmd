@@ -1,0 +1,32 @@
+---
+title: "Supplementary Information: This Supplementary Information has not been peer reviewed. Title: How do extreme weather events affect fishing operations? Knowledge engineering a risk analysis with Swedish Baltic Sea fishers"
+
+author:
+  - Enrico Nicola Armelloni,:
+      email: enrico.e.armelloni@gmail.com
+      institute: [SLU]
+      correspondence: true
+  - name: Jens Olsson,
+    institute: SLU
+  - name: Laura Uusitalo,
+    institute: LUKE
+  - name: Anna Gårdmark
+    institute: SLU
+institute:
+  - SLU: Department of Aquatic Resources, Swedish University of Agricultural Sciences, Uppsala, Sweden
+  - LUKE: Fisheries and Fish Resources, Natural Resources Institute Finland (Luke), Helsinki, Finland
+output: 
+  pdf_document: 
+    pandoc_args:
+      - '--lua-filter=scholarly-metadata.lua'
+      - '--lua-filter=author-info-blocks.lua'
+    number_sections: false
+    toc: false
+header-includes:
+  - \usepackage{pdfpages}
+  - \usepackage[nottoc, numbib]{tocbibind}
+  - \pagenumbering{gobble}
+  
+ 
+---
+

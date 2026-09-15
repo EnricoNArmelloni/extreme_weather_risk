@@ -1,0 +1,345 @@
+---
+title: "Appendix C: CPT"
+output:
+  pdf_document:
+bibliography: references.bib
+---
+
+```{r  setup2, echo=FALSE,message = FALSE, warning=FALSE}
+remove(list=ls())
+scriptPath <- rstudioapi::getSourceEditorContext()$path
+scriptDir <- dirname(scriptPath)
+#setwd(file.path(scriptDir, '..')) 
+library(tidyverse)
+library(bnlearn)
+library(readxl)
+library(gRain)
+theme_set(theme_bw())
+net=read.net(file.path(scriptDir, '..','data/read_only/networks/BEWARE_learnt_r1_0_0.net'), debug = F)
+net.node=nodes(net)
+node.text=read_excel(file.path(scriptDir, '..','data/editable_files/nodes_text.xlsx'))
+node.text=node.text[node.text$node %in% nodes(net), ]
+
+#node.text[-which(node.text$node %in% nodes(net)), ]
+#net.node[-which(net.node %in% node.text$node)]
+
+#knitr::opts_chunk$set(fig.width=10, fig.height=5) 
+firstup <- function(x) {
+  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+  x
+}
+head_resp='###'
+#target.nodes=c('infrastructure', 'flexibility', 'strategy', 'personal_safety', 'gear', 'target', 'catchability')
+
+```
+
+```{r, include=T, echo=FALSE,message=FALSE, warning=FALSE}
+# function to create plots
+
+create.plots=function(target.nodes, net){
+  # plot creation
+  plot.list=list()
+  for( i in 1:length(target.nodes)){
+
+  # get values
+  i.node=target.nodes[i]
+  array.var=net[[i.node]]$prob
+  df.var=as.data.frame(array.var)
+  xnam=dimnames(array.var)
+  x.parents=names(xnam)
+  x.parents=x.parents[x.parents!=i.node]
+  x.levs=xnam[[i.node]]
+  if("aware" %in% names(df.var)){
+    df.var=df.var[df.var$aware=='yes',]
+  }
+  # format
+  if('fishing_style' %in% names(df.var)){
+    df.var=df.var%>%
+      dplyr::mutate(fishing_style=ifelse(fishing_style=='recreational',
+                                     'rcf', ifelse(fishing_style=='small_scale', 'ssf',
+                                                   ifelse(fishing_style=='coastal_salmon' , 'sal' ,
+                                                           ifelse(fishing_style=='household' ,'hou',
+                                                                  ifelse(fishing_style=='trawler' ,'trw','fgu'))))))
+  }
+    if('target' %in% names(df.var)){
+    df.var=df.var%>%
+      dplyr::mutate(target=ifelse(target=='herring',
+                                     'HER', ifelse(target=='perch', 'FPE',
+                                                   ifelse(target=='pike' , 'FPI' ,
+                                                           ifelse(target=='salmon' ,'SAL',
+                                                                  ifelse(target=='sea_trout' ,'TRS',
+                                                                         ifelse(target=='whitefish', 'WHF','Other')))))))
+  }
+  
+  # plotting
+  if(length(x.parents)==1){
+    p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+      geom_col()
+    plot.lab='.'
+  }
+  if(length(x.parents)==2){
+    p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+      geom_col()+
+      facet_grid(cols = vars(!!as.name(x.parents[2])))
+    plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'.')
+  }
+  if(length(x.parents)==3){
+   p= ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+        geom_col()+
+        facet_grid(cols = vars(!!as.name(x.parents[2])),
+               rows = vars(!!as.name(x.parents[3])))+
+      scale_x_discrete(guide = guide_axis(n.dodge = 2))
+   plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'; rows are levels of the node ', x.parents[3],'.')
+  }
+  if(length(x.parents)==4){
+    p=ggplot(data=df.var, aes_string(x = x.parents[1], y = "Freq", fill = i.node))+
+      geom_col()+
+      facet_grid(cols = vars(!!as.name(x.parents[2])),
+                 rows = vars(!!as.name(x.parents[3]),!!as.name(x.parents[4])))+
+      scale_x_discrete(guide = guide_axis(n.dodge = 2))
+     plot.lab=paste0('. Columns represents levels of the node ', x.parents[2],'; rows are combinations levels of the nodes ', x.parents[3],' and ', x.parents[4],'.')
+  }
+  plot.list[[i]]=p+theme(legend.position = 'bottom')+scale_y_continuous(breaks = c(0,0.5,1))
+  names(plot.list)[[i]] = c(paste0("conditional distribution for ", target.nodes[i], plot.lab))
+}
+  return(plot.list)
+}
+
+
+knit.fun=function(target.nodes, net){
+  
+  plot.list=create.plots(target.nodes = target.nodes, net=net)
+  
+  for( i in 1:length(target.nodes)){
+    
+    # get values
+    i.node=target.nodes[i]
+    array.var=net[[i.node]]$prob
+    df.var=as.data.frame(array.var)
+    xnam=dimnames(array.var)
+    x.parents=names(xnam)
+    x.parents=x.parents[x.parents!=i.node]
+    x.levs=xnam[[i.node]]
+    
+    x.h=ifelse(length(x.parents)==4,8,5)
+    
+    # print characteristics
+    cat("\n") 
+    cat(sprintf('%s %s\n\n', head_resp, firstup(str_replace(i.node, '_',' '))))
+    cat("\n")
+    cat(sprintf('**Parents**: %s  \n', paste0(paste(x.parents, collapse = ', '),'.')))
+    cat("\n")
+    cat(sprintf('**Levels**: %s  \n', paste0(paste(x.levs, collapse = ', '),'.')))
+    
+    # print description text
+    i.text=node.text[node.text$node==i.node,]
+    cat("\n")
+    cat(sprintf('**Description**: %s  \n', paste0(i.text$text ,'.')))
+    
+    # print method text
+    i.text=node.text[node.text$node==i.node,]
+    cat("\n")
+    cat(sprintf('**Method**: %s  \n', paste0(i.text$method_text ,'.')))
+    
+    # plotting
+    cat('\n\n') 
+    chunk_text <- paste0(
+      "```{r, echo=FALSE, fig.width=10, fig.height=",x.h,", fig.pos='H', fig.cap='",
+      (names(plot.list)[i]),
+      "'}\n",
+      "print(plot.list[[", i, "]])\n",
+      "```\n"
+    )
+    cat(knitr::knit_child(text = chunk_text, envir = environment(),quiet = TRUE))
+    cat("\n\\newpage\n")
+    
+  }
+  
+}
+
+
+```
+
+\newpage
+
+```{r, include=T, echo=FALSE}
+## compute importance - this adds later
+array.var=net[['fishing_style']]$prob
+xdim=dim(array.var)
+array.var[1:xdim]=rep(1/(xdim), xdim)
+#array.var[c(1,7)]=0
+net[['fishing_style']]=array.var
+fi.list=names(array.var[array.var>0])
+scen.grid2=expand.grid(fishing_style=fi.list)
+ev.store=NULL
+for(i in 1:nrow(scen.grid2)){
+    i.res=cpdist(net, nodes = c('societal_importance', 'individual_importance','economic_buffers'), 
+               evidence = list(fishing_style = as.character(scen.grid2[i,])), 
+               n=10^5, method='lw')
+  
+  i.res$fishing_style=as.character(scen.grid2[i,])
+  i.res=i.res%>%
+    pivot_longer(-c(fishing_style), names_to = 'node', values_to = 'est')%>%
+    dplyr::group_by(fishing_style, node,est)%>%
+    tally()%>%
+    dplyr::group_by(fishing_style,  node)%>%
+    dplyr::mutate(prob=n/sum(n))
+  ev.store=rbind(ev.store, i.res)
+}
+```
+
+\newpage
+
+## Network structure
+
+![Bayesian Network representing risks to Swedish fisheries posed by Marine Extreme Weather events (abl algal bloom, hws summer heatwave, hww winter heatwave, gal gale, sto storm, erf extreme railfall, ici icing) effects on fishing operations, as identified at the conclusion of the third cycle of stakeholder (fishers) dialogues. The probability distributions shown in the boxes represents the example of how summer heatwave affects fishing operations across all fishing styles. Conditional probability distribution details and terminology are reported in Supp. Info. C. Colors are associated to node types and group Yellow: decision nodes; lime green: chanche nodes – operational group; grey: chanche nodes - user group; navy blue: chance nodes - individual group; light blue: chance nodes - societal group; cyan: chance nodes - economic group; orange: risk nodes](images/BN_outline.jpg){width="9.5cm"}
+
+\newpage
+
+## Algebraic methods for Ranked nodes
+
+Ranked nodes have order-preserving meaning states (e.g.: low/medium/high) that can be mapped to a continuous numerical scale bounded to [0,1], assuming equal intervals [@fenton2019]. For instance, in a node having three states (low, medium, high), the “low” state takes the interval [0-0.33). The probability distribution of a ranked node in the numerical scale is described as *TNormal*( $\mu$ ,$\sigma^2$,0,1). The use of a numerical scale allows us to use linear algebra to perform operations among variables, a technique that is particularly useful to build a CPT from a reduced number of questions [@fenton2007]. When a child has multiple parents with multiple states (binary or more), the distribution of a child node can be calculated by implementing algorithms based on the state, direction (positive or negative) and weight of their parents. The algorithms most commonly applied to ranked nodes gives equal (Eq. B1) or unequal contribution to states. Weighted max (Eq. B2) assigns more contribution to large states, while Weighted min (Eq. B3) assigns more contribution to small states.
+
+$$\mu = \frac{\sum_{i=1}^n{w_iX_i}}{\sum_{i=1}^n{w_i}}$$ [Eq.C1]
+
+$$\mu = min[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.C2]
+
+$$\mu = max[\frac{w_iX_i+\sum_{i\neq j}^n{X_j}}{w_i+(n-1)}]$$ [Eq.C3]
+
+\newpage
+
+## Decision nodes
+
+### Extreme weather events (node: extreme_event)
+
+The node *extreme_event* is used to wrap all the extreme weather events we are considering.
+
+*Levels (and acronyms)*
+
+-   **Storms** (sto). Strong wind events, with intensity above 24.5 m/s. Season: summer.
+
+-   **Gales** (gal), or moderately strong wind events, with intensity between 15 m/s and 24.5 m/s;
+
+-   **Extreme precipitation** (erf) – rainstorm (summer), or deviation from average precipitation regime;
+
+-   **Algal bloom** (abl): intense algal bloom;
+
+-   **Summer heatwaves** (hws): prolonged discrete anomalously warm water event occurring in summer (Hobday et al., 2016);
+
+-   **Winter heatwaves** (hww): prolonged discrete anomalously warm water event occurring in winter (Hobday et al., 2016);
+
+-   **Icing** (ici): strong wind events associated to ice, which then forms icing pile up on gears and boats.
+
+### Fishing style (and acronyms)
+
+The node *fishing_style* is used to wrap all the fishing styles and seasons.
+
+*Levels (and acronyms)*
+
+-   **Recreational fisher (recreational - rcf)**: fishers without a commercial fishing license, deploying hand-held gears for recreational purposes;
+
+-   **Fishing guides (guides - fgu)**: commercial actors who provide recreational fishers with fishing experience by sharing expert and local knowledge, giving access to angling concession and offering boat chartering ;
+
+-   **Small-scale coastal fishing (small_scale - ssf)**, fishers operating small boats (\<12 m) deploying species-specific passive gears.
+
+-   **Pelagic trawling (trawlers - trw)**, fishers operating medium to large size vessels (24-60 m) deploying pelagic trawl nets;
+
+-   **Household fishing (household - hou)**, fishing by residents of the Swedish archipelago, using coastal-type passive gears, without commercial licences and without legal access to markets.
+
+### Aware of the event
+
+The node *aware_of_event* controls the fisherman awareness of the event occurrence. In the case when fisher is not aware, they always goes out fishing. The fisher can still adopt react or adapt str
+
+*Levels (and acronyms)*
+
+-   **yes**: the fisher is aware of the extreme event. Decisions whether to go out fishing or not are taken according to interviews
+
+-   **no**: the fisher is not aware of the extreme event. The probability of going out fishing are 100%
+
+\newpage
+
+## Chance nodes - Operational
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+knit.fun(target.nodes = unique(node.text[node.text$group=='operational',]$node), net=net)
+```
+
+\newpage
+
+## Chance nodes - User
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+knit.fun(target.nodes = unique(node.text[node.text$group=='user',]$node), net=net)
+```
+
+\newpage
+
+## Chance nodes - Economic
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+knit.fun(target.nodes = unique(node.text[node.text$group=='economic',]$node), net=net)
+```
+
+Next figure represent the conditional probability distribution of the node economic buffers by fishing style
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, fig.cap='conditional probability distribution of the node individual importance by fishing style'}
+p=ggplot(data=ev.store[ev.store$node=='economic_buffers',])+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)+
+  theme(legend.position = 'bottom')+
+  labs(fill='economic_buffers')
+print(p)
+
+```
+
+\newpage
+
+## Chance nodes - Individual
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+knit.fun(target.nodes = unique(node.text[node.text$group=='individual',]$node), net=net)
+```
+
+Next figure represent the conditional probability distribution of the node individual importance by fishing style
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, fig.cap='conditional probability distribution of the node individual importance by fishing style'}
+p=ggplot(data=ev.store[ev.store$node=='individual_importance',])+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)+
+  theme(legend.position = 'bottom')+
+  labs(fill='individual_importance')
+print(p)
+
+```
+
+\newpage
+
+## Chance nodes - Societal
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+knit.fun(target.nodes = unique(node.text[node.text$group=='societal',]$node), net=net)
+```
+
+Next figure represent the conditional probability distribution of the node societal importance by fishing style
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, fig.cap='conditional probability distribution of the node individual importance by fishing style'}
+p=ggplot(data=ev.store[ev.store$node=='societal_importance',])+
+  geom_col(aes(x=fishing_style, y=prob, fill=est))+
+  facet_wrap(~node)+
+  theme(legend.position = 'bottom')+
+  labs(fill='societal_importance')
+print(p)
+
+```
+
+## Risk
+
+Shape how different fisheries will perceive risk. To each of these variables, the effect of the human community variables is to be interpreted as “how much this variable is important”? The CPT table combine the concepts of ranked nodes and the classic definition of Risk = Hazard \* Vulnerability. In the case of individual and societal importance, Risk is exactly calculated as Hazard \* Vulnerability. Parent categories (Low, medium and high; as well as not important, somehow important and very important) are mapped to 0, 0.5 and 1 values. The parent value are multiplied.
+
+\newpage
+
+```{r, include=T, echo=FALSE, fig.width = 10, fig.height=5, fig.pos='H', message=FALSE, warning=FALSE, results='asis'}
+knit.fun(target.nodes = unique(node.text[node.text$group=='risk',]$node), net=net)
+```
+
+

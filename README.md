@@ -20,15 +20,27 @@ Welcome to BEWARE repository. BEWARE is a Bayesian Network model for
 risk analysis regarding the effects of extreme weather events on
 fisheries. The model has been developed in a participatory approach with
 commercial and recreational Swedish fishers. The model description is
-provided in DOI.
+currently under review and reference will be provided after acceptance.
+
+<figure>
+<img src="figure/BN_2.jpg"
+alt="BEWARE visualisation conditioned on summer heatwaves (hws) and equal probability for each fishing style, where fgu is fishing guide, hhf is household fisher, rcf is recreational fisher, ssf is small scale fisher, trw is trawl fisher. Other extreme events are: abl: algal bloom; hws: summer heatwave; hww: winter heatwave; gal: gale; sto: storm; erf: extreme railfall; ici: icing." />
+<figcaption aria-hidden="true">BEWARE visualisation conditioned on
+summer heatwaves (hws) and equal probability for each fishing style,
+where fgu is fishing guide, hhf is household fisher, rcf is recreational
+fisher, ssf is small scale fisher, trw is trawl fisher. Other extreme
+events are: abl: algal bloom; hws: summer heatwave; hww: winter
+heatwave; gal: gale; sto: storm; erf: extreme railfall; ici:
+icing.</figcaption>
+</figure>
 
 ## Quick start
 
 BEWARE is released as .net file and is compatible with several softwares
 for Bayesian Network modeling. The model is available under
 data/read_only/networks/BEWARE_learnt_r1_0_0_0.net. We have been using
-GeNIe Modeler (REF), a Graphical User Interface available as free
-software for academic research purposes
+GeNIe Modeler, a Graphical User Interface available as free software for
+academic research purposes
 (<https://download.bayesfusion.com/files.html?category=Academia>).
 
 Once you have GeNIe installed, you can just open the BEWARE.net file,

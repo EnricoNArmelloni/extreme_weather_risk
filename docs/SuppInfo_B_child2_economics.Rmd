@@ -8,7 +8,7 @@ bibliography: references.bib
 ---
 
 
-# Economic data
+## Economic data
 
 ```{r  setup, echo=FALSE,message = FALSE, warning=FALSE}
 remove(list=ls())
@@ -60,7 +60,7 @@ plot.format=function(xdat){
 
 ```
 
-## Methods
+### Methods
 
 The cost node reflects the economic impact of one single extreme weather event compared to annual average expenses. Cost categories to be used in the conditional probability table are: *negligible* (cost \< 0.05%); *low* (0.05% \< cost \< 2.5%); *medium* (2.5% \< cost \< 5%); *high* (\> 5%). 
 
@@ -169,7 +169,7 @@ error.propagation=function(x.mu, x.er, y.mu, y.er){
 
 \newpage
 
-## Small-scale coastal fishing
+### Small-scale coastal fishing
 
 Economic information for small scale coastal fishers, available in dataset D3 (Table C.1), filtered for vessel length categories VL0010 and VL0812, fishing technologies FPO and DFN and Swedish country code. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. Gross value of catches in a single fishing trip is obtained by dividing total annual value of catches by number of fishing trips. Other values are provided in the interviews.
 
@@ -278,7 +278,7 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Pelagic trawling
+### Pelagic trawling
 
 Pelagic economic information is derived from dataset D3, filtered for vessel length categories VL2440 and VL40XX, and Sweden country code. Cost of fuel per trip is calculated by dividing total fuel expenses by number of fishing trips. Annual spending is estimated by dividing total annual expenses by number of fishing vessels. The cost of longer travel was not available, and it is based on the assumption that an average travel costs between 80% and 120% of the average fuel cost, while a longer travel is between 100% and 300% of average fuel cost. Other values are provided in the interviews.
 
@@ -387,7 +387,7 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Recreational fishing
+### Recreational fishing
 
 Economic information is derived from dataset D6, representing the totality of recreational fisherman in Sweden with no distinction between region or inland vs coastal fishing. Cost of fuel per trip is separately calculated for travel and for boat fuel. These two costs are then averaged. All the uncertainties (on costs and on number of practitioners) are accounted for by propagating errors. Annual spending is estimated by dividing total annual expenses by number of practitioners. Other values are provided in the interviews.
 
@@ -485,7 +485,7 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Fishing guides
+### Fishing guides
 
 No updated public information is available for fishing guide economic aspects in Sweden. All estimations are based on interview results and our assumptions. Seasonal expenses are estimated by summing the declared maintenance costs and an estimation of fuel costs.
 
@@ -569,7 +569,7 @@ store.cpt=rbind(store.cpt, x.cost)
 
 \newpage
 
-## Household fishing
+### Household fishing
 
 No updated public information is available for archipelago fishers economic aspects in Sweden. All estimations are based on interview results and our assumptions. Seasonal expenses are estimated by summing the declared maintenance costs and an estimation of fuel costs.
 

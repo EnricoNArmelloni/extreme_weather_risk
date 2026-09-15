@@ -30,7 +30,7 @@ resp=readxl::read_excel(file.path(scriptDir, '..', 'data', 'editable_files/dialo
 ```
 
 
-# Scoring
+## Scoring
 
 The interview notes were reviewed to identify quantitative scores applying following criteria (in this ordered):
 
@@ -103,7 +103,7 @@ p=event.relevance%>%
 
 
 
-# Interpretation
+## Interpretation
 
 A structured coding approach was applied to those answers scored as 999 using both human expertise and artificial intelligence assistance.
 
@@ -116,7 +116,7 @@ A structured coding approach was applied to those answers scored as 999 using bo
 -   Answers without keywords that were needed to support narrative (i.e.: management) were left unscored.
 
 
-## Expert scoring
+### Expert scoring
 
 Expert scoring of keywords produced the following results, which were used to assign scores to 87 answers:
 
@@ -139,7 +139,7 @@ kable.obj=kableExtra::kable((exp.scoring[,c(3:10)]), booktabs = TRUE, caption = 
 ```
 \newpage
 
-## AI scoring
+### AI scoring
 
 This option was applied to a limited number of responses.
 
